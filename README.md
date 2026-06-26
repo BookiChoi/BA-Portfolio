@@ -157,8 +157,8 @@ By the end of this journey, I aim to be able to:
 
 # 📬 Contact
 
-- **LinkedIn:** [your-name](https://www.linkedin.com/in/bookichoi/)
-- **GitHub:** [@your-username](https://github.com/BookiChoi)
+- **LinkedIn:** https://www.linkedin.com/in/bookichoi/
+- **GitHub:** https://github.com/BookiChoi
 - **Email:** bookichoi98@gmail.com
 
 Feel free to reach out for collaboration, feedback, or opportunities.
