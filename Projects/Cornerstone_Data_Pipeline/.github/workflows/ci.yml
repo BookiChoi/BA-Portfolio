@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    paths:
+      - "Projects/Cornerstone_Data_Pipeline/**"
+  pull_request:
+    paths:
+      - "Projects/Cornerstone_Data_Pipeline/**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: Projects/Cornerstone_Data_Pipeline
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests
+        run: pytest
