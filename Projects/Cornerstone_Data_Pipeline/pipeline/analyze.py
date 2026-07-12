@@ -284,3 +284,100 @@ def analyze_large_order_impact(order_values: pd.DataFrame) -> pd.DataFrame:
         )
     return pd.DataFrame(rows)
 
+
+# ---------------------------------------------------------------------------
+# Q5 — Customer Value Analysis / 고객 가치 분석
+# ---------------------------------------------------------------------------
+
+
+def analyze_customer_value(cust_df: pd.DataFrame, top_n: int = 20) -> pd.DataFrame:
+    """Build a customer profile: revenue, order count, average order value.
+    고객 프로파일을 생성한다: 총매출, 주문 수, 평균 주문 금액.
+
+    Args:
+        cust_df: CustomerID-filtered DataFrame from clean.get_customer_df().
+                 clean.get_customer_df() 의 출력 (CustomerID NaN 제외된 DataFrame).
+        top_n:   Number of top customers to return.
+                 반환할 상위 고객 수.
+
+    Returns:
+        DataFrame with columns [CustomerID, TotalRevenue, OrderCount, AvgOrderValue],
+        sorted by TotalRevenue descending.
+        [CustomerID, TotalRevenue, OrderCount, AvgOrderValue] 컬럼의 DataFrame.
+        TotalRevenue 내림차순 정렬.
+    """
+    revenue = (
+        cust_df
+        .groupby("CustomerID")["Revenue"]
+        .sum()
+        .reset_index(name="TotalRevenue")
+    )
+    # Unique invoice count per customer = actual number of orders placed
+    # 고객별 고유 인보이스 수 = 실제 주문 횟수
+    freq = (
+        cust_df.groupby("CustomerID")["InvoiceNo"]
+        .nunique()
+        .reset_index(name="OrderCount")
+    )
+    result = (
+        revenue.merge(freq, on="CustomerID")
+        .assign(AvgOrderValue=lambda d: d["TotalRevenue"] / d["OrderCount"])
+        .sort_values("TotalRevenue", ascending=False)
+        .head(top_n)
+    )
+    logger.info("Q5: top %d customers computed", top_n)
+    return result
+
+
+def get_vip_ids(cust_df: pd.DataFrame) -> pd.Index:
+    """Return CustomerIDs above median on BOTH revenue and frequency (VIP definition).
+    매출과 구매 빈도가 둘 다 중앙값을 초과하는 고객 ID를 반환한다 (VIP 정의).
+
+    Args:
+        cust_df: CustomerID-filtered DataFrame.
+                 CustomerID 필터링된 DataFrame.
+
+    Returns:
+        Series of VIP CustomerIDs.
+        VIP CustomerID 배열.
+    """
+    profile = (
+        cust_df.groupby("CustomerID")
+        .agg(TotalRevenue=("Revenue", "sum"), OrderCount=("InvoiceNo", "nunique"))
+        .reset_index()
+    )
+    rev_med = profile["TotalRevenue"].median()
+    freq_med = profile["OrderCount"].median()
+    vip = profile[
+        (profile["TotalRevenue"] > rev_med) & (profile["OrderCount"] > freq_med)
+    ]["CustomerID"]
+    logger.info("VIP customers: %d (above median rev & freq)", len(vip))
+    return vip
+
+
+def analyze_customer_pareto(cust_df: pd.DataFrame) -> dict[str, float]:
+    """Check whether the top 20% of customers drive ~80% of revenue (Pareto check).
+    상위 20% 고객이 매출의 ~80%를 만드는지 확인한다 (파레토 검증).
+
+    Args:
+        cust_df: CustomerID-filtered DataFrame.
+                 CustomerID 필터링된 DataFrame.
+
+    Returns:
+        Dict with keys: total_customers, top_20pct_n, top_20pct_revenue_share.
+        total_customers, top_20pct_n, top_20pct_revenue_share 키를 가진 dict.
+    """
+    revenue = (
+        cust_df
+        .groupby("CustomerID")["Revenue"]
+        .sum()
+        .sort_values(ascending=False)
+    )
+    total_customers = len(revenue)
+    top_n = max(1, int(total_customers * 0.20))
+    top_share = revenue.iloc[:top_n].sum() / revenue.sum() * 100
+    return {
+        "total_customers": total_customers,
+        "top_20pct_n": top_n,
+        "top_20pct_revenue_share": round(top_share, 1),
+    }
