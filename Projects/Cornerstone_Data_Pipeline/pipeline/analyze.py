@@ -222,3 +222,65 @@ def analyze_product_scatter(df: pd.DataFrame) -> pd.DataFrame:
         .reset_index()
     )
     return result
+
+
+# ---------------------------------------------------------------------------
+# Q4 — Customer Purchase Behaviour / 고객 구매 행동 분석
+# ---------------------------------------------------------------------------
+
+
+def analyze_order_values(df: pd.DataFrame) -> pd.DataFrame:
+    """Compute total value per invoice (order).
+    인보이스(주문)별 총 금액을 계산한다.
+
+    Revenue is on a gross basis: cancellation invoices were already removed by
+    clean.clean(), but the original orders they cancelled are retained.
+    매출은 Gross 기준이다. 취소 인보이스는 clean.clean()에서 제거됐지만
+    취소된 원본 주문은 유지된다.
+
+    Args:
+        df: Cleaned DataFrame.
+            정제된 DataFrame.
+
+    Returns:
+        DataFrame with columns [InvoiceNo, OrderValue], sorted by OrderValue descending.
+        [InvoiceNo, OrderValue] 컬럼의 DataFrame. OrderValue 내림차순 정렬.
+    """
+    result = (
+        df.groupby("InvoiceNo")["Revenue"]
+        .sum()
+        .reset_index(name="OrderValue")
+        .sort_values("OrderValue", ascending=False)
+    )
+    logger.info("Q4: %d unique invoices", len(result))
+    return result
+
+
+def analyze_large_order_impact(order_values: pd.DataFrame) -> pd.DataFrame:
+    """Show how large orders affect order count share and revenue share.
+    대형 주문이 주문 건수 비중과 매출 비중에 미치는 영향을 보여준다.
+
+    Args:
+        order_values: Output of analyze_order_values().
+                      analyze_order_values() 의 출력.
+
+    Returns:
+        DataFrame with columns [Threshold, OrderCount, OrderPct, Revenue, RevenuePct].
+        [Threshold, OrderCount, OrderPct, Revenue, RevenuePct] 컬럼의 DataFrame.
+    """
+    total_revenue = order_values["OrderValue"].sum()
+    total_orders = len(order_values)
+    rows = []
+    for threshold in [500, 1_000, 5_000, 10_000]:
+        large = order_values[order_values["OrderValue"] > threshold]
+        rows.append(
+            {
+                "Threshold": threshold,
+                "OrderCount": len(large),
+                "OrderPct": round(len(large) / total_orders * 100, 2),
+                "Revenue": round(large["OrderValue"].sum(), 2),
+                "RevenuePct": round(large["OrderValue"].sum() / total_revenue * 100, 2),
+            }
+        )
+    return pd.DataFrame(rows)
+
