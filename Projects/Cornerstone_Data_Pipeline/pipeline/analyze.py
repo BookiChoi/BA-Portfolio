@@ -34,6 +34,7 @@ logger = logging.getLogger(__name__)
 # Q1 — Market Analysis / 시장 분석
 # ---------------------------------------------------------------------------
 
+
 def analyze_uk_vs_others(df: pd.DataFrame) -> pd.DataFrame:
     """Aggregate revenue split: United Kingdom vs all other countries combined.
     UK vs 기타 국가 합계 매출 비중을 집계한다 (도넛 차트용).
@@ -46,13 +47,15 @@ def analyze_uk_vs_others(df: pd.DataFrame) -> pd.DataFrame:
         DataFrame with columns [Label, Revenue] — 2 rows: UK / Other Countries.
         [Label, Revenue] 컬럼의 DataFrame (2행: UK / Other Countries).
     """
-    total  = df["Revenue"].sum()
-    uk     = df[df["Country"] == "United Kingdom"]["Revenue"].sum()
+    total = df["Revenue"].sum()
+    uk = df[df["Country"] == "United Kingdom"]["Revenue"].sum()
     others = total - uk
-    return pd.DataFrame({
-        "Label":   ["United Kingdom", "Other Countries"],
-        "Revenue": [uk, others],
-    })
+    return pd.DataFrame(
+        {
+            "Label": ["United Kingdom", "Other Countries"],
+            "Revenue": [uk, others],
+        }
+    )
 
 
 def analyze_country_revenue(df: pd.DataFrame) -> pd.DataFrame:
@@ -79,7 +82,7 @@ def analyze_country_revenue(df: pd.DataFrame) -> pd.DataFrame:
         sorted by Revenue descending, United Kingdom excluded.
         [Country, Revenue, RevenueShare_pct] 컬럼의 DataFrame. Revenue 내림차순 정렬. UK 제외.
     """
-    total = df["Revenue"].sum()   # full-dataset total including UK / UK 포함 전체 매출
+    total = df["Revenue"].sum()  # full-dataset total including UK / UK 포함 전체 매출
     result = (
         df[df["Country"] != "United Kingdom"]
         .groupby("Country")["Revenue"]
@@ -95,6 +98,7 @@ def analyze_country_revenue(df: pd.DataFrame) -> pd.DataFrame:
 # ---------------------------------------------------------------------------
 # Q2 — Sales Trend Analysis / 추세 분석
 # ---------------------------------------------------------------------------
+
 
 def analyze_monthly_revenue(df: pd.DataFrame) -> pd.DataFrame:
     """Aggregate revenue by calendar month.
@@ -120,4 +124,101 @@ def analyze_monthly_revenue(df: pd.DataFrame) -> pd.DataFrame:
         .sort_values("YearMonth")
     )
     logger.info("Q2: %d months of revenue data", len(result))
+    return result
+
+
+# ---------------------------------------------------------------------------
+# Q3 — Product Performance / 상품 성과 분석
+# ---------------------------------------------------------------------------
+
+
+def analyze_product_revenue(df: pd.DataFrame, top_n: int = 20) -> pd.DataFrame:
+    """Return top N products by revenue with their frequency rank.
+    매출 기준 상위 N 상품과 판매 빈도 순위를 반환한다.
+
+    Non-product descriptions (postage, fees, etc.) are excluded before ranking.
+    See clean.NON_PRODUCT_DESC for the exclusion list.
+    비상품 Description(배송비, 수수료 등)은 순위 계산 전 제거된다.
+    제외 목록은 clean.NON_PRODUCT_DESC 참조.
+
+    Args:
+        df:    Cleaned DataFrame.
+               정제된 DataFrame.
+        top_n: Number of top products to return.
+               반환할 상위 상품 수.
+
+    Returns:
+        DataFrame with columns [Description, Revenue, FrequencyRank],
+        sorted by Revenue descending.
+        [Description, Revenue, FrequencyRank] 컬럼의 DataFrame. Revenue 내림차순 정렬.
+    """
+    df_prod = remove_non_product_descriptions(df)
+
+    revenue = (
+        df_prod.groupby("Description")["Revenue"]
+        .sum()
+        .sort_values(ascending=False)
+        .reset_index(name="Revenue")
+    )
+
+    # Frequency rank: 1 = most frequently ordered product
+    # 빈도 순위: 1 = 가장 많이 주문된 상품
+    freq = (
+        df_prod.groupby("Description")
+        .size()
+        .rank(method="min", ascending=False)
+        .astype(int)
+    )
+
+    logger.info("Q3: top %d products by revenue", top_n)
+
+    return revenue.assign(FrequencyRank=lambda d: d["Description"].map(freq)).head(
+        top_n
+    )
+
+
+def analyze_pareto(df: pd.DataFrame) -> pd.DataFrame:
+    """Build a Pareto table to validate the 80/20 rule across all products.
+    전 상품에 걸쳐 파레토 법칙(80/20)을 검증하기 위한 테이블을 생성한다.
+
+    Args:
+        df: Cleaned DataFrame.
+            정제된 DataFrame.
+
+    Returns:
+        DataFrame with columns [Description, Revenue, cumulative_pct],
+        sorted by Revenue descending, covering all products.
+        [Description, Revenue, cumulative_pct] 컬럼의 DataFrame.
+        Revenue 내림차순, 전 상품 포함.
+    """
+    df_prod = remove_non_product_descriptions(df)
+    revenue = (
+        df_prod.groupby("Description")["Revenue"]
+        .sum()
+        .sort_values(ascending=False)
+        .reset_index(name="Revenue")
+    )
+    total = revenue["Revenue"].sum()
+    revenue["cumulative_pct"] = revenue["Revenue"].cumsum() / total * 100
+    return revenue
+
+
+def analyze_product_scatter(df: pd.DataFrame) -> pd.DataFrame:
+    """Build product-level Revenue + Frequency table for the 4-quadrant scatter plot.
+    4분면 산점도용 상품별 매출 + 판매 빈도 테이블을 생성한다.
+
+    Args:
+        df: Cleaned DataFrame.
+            정제된 DataFrame.
+
+    Returns:
+        DataFrame with columns [Description, Revenue, Frequency].
+        [Description, Revenue, Frequency] 컬럼의 DataFrame.
+    """
+    df_prod = remove_non_product_descriptions(df)
+    result = (
+        df_prod.groupby("Description")
+        .agg(Revenue=("Revenue", "sum"), Frequency=("InvoiceNo", "count"))
+        .reset_index()
+    )
     return result
