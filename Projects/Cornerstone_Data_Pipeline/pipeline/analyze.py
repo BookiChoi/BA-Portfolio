@@ -90,3 +90,34 @@ def analyze_country_revenue(df: pd.DataFrame) -> pd.DataFrame:
     result["RevenueShare_pct"] = (result["Revenue"] / total * 100).round(2)
     logger.info("Q1: %d non-UK countries computed", len(result))
     return result
+
+
+# ---------------------------------------------------------------------------
+# Q2 — Sales Trend Analysis / 추세 분석
+# ---------------------------------------------------------------------------
+
+def analyze_monthly_revenue(df: pd.DataFrame) -> pd.DataFrame:
+    """Aggregate revenue by calendar month.
+    월별 매출을 집계한다.
+
+    Note: December 2011 contains only 9 days of data. Rows are retained but the
+    partial month should be flagged in visualisations.
+    참고: 2011년 12월은 9일치 데이터만 존재한다. 행은 유지하되 시각화에서 부분 월임을 표시해야 한다.
+
+    Args:
+        df: Cleaned DataFrame with an InvoiceDate column.
+            InvoiceDate 컬럼이 있는 정제된 DataFrame.
+
+    Returns:
+        DataFrame with columns [YearMonth (Period), Revenue], sorted chronologically.
+        [YearMonth (Period), Revenue] 컬럼의 DataFrame. 시간순 정렬.
+    """
+    result = (
+        df.assign(YearMonth=df["InvoiceDate"].dt.to_period("M"))
+        .groupby("YearMonth")["Revenue"]
+        .sum()
+        .reset_index()
+        .sort_values("YearMonth")
+    )
+    logger.info("Q2: %d months of revenue data", len(result))
+    return result
