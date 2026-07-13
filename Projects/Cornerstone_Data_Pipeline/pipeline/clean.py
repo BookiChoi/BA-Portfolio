@@ -23,23 +23,44 @@ import pandas as pd
 
 logger = logging.getLogger(__name__)
 
+# Country name normalisation map: raw value → standardised name.
+# Handles alternative names and abbreviations found in the dataset.
+# 데이터셋에서 발견된 대체 국가명 및 약어를 표준 이름으로 매핑한다.
+COUNTRY_NAME_MAP: dict[str, str] = {
+    "EIRE": "Ireland",  # Irish-language name for Ireland / 아일랜드어 국가명
+    "RSA": "South Africa",  # outdated abbreviation / 옛 약어
+}
+
+# Country values that are not real countries and should be removed.
+# These rows cannot be attributed to any specific market.
+# 실제 국가가 아닌 값들 — 특정 시장에 귀속시킬 수 없어 제거한다.
+NON_COUNTRY_VALUES: frozenset[str] = frozenset(
+    {
+        "Unspecified",
+        "European Community",
+    }
+)
+
 # Non-product Description values identified during Q3 EDA (top-revenue list inspection).
 # Internal charges, shipping fees, and accounting entries — not sellable items.
 # Q3 EDA에서 상위 매출 목록 검토 중 발견된 비상품 Description 값들.
-NON_PRODUCT_DESC: frozenset[str] = frozenset({
-    "DOTCOM POSTAGE",
-    "POSTAGE",
-    "CARRIAGE",
-    "Manual",
-    "AMAZON FEE",
-    "Adjust bad debt",
-})
+NON_PRODUCT_DESC: frozenset[str] = frozenset(
+    {
+        "DOTCOM POSTAGE",
+        "POSTAGE",
+        "CARRIAGE",
+        "Manual",
+        "AMAZON FEE",
+        "Adjust bad debt",
+    }
+)
 
 
 # ---------------------------------------------------------------------------
 # Individual cleaning steps (private)
 # 개별 정제 단계 (내부 함수)
 # ---------------------------------------------------------------------------
+
 
 def _remove_non_positive_quantity(df: pd.DataFrame) -> pd.DataFrame:
     """Remove rows where Quantity <= 0.
@@ -71,6 +92,43 @@ def _remove_non_positive_price(df: pd.DataFrame) -> pd.DataFrame:
     before = len(df)
     df = df[df["UnitPrice"] > 0]
     logger.debug("remove_non_positive_price: dropped %d rows", before - len(df))
+    return df
+
+
+def _normalize_country_names(df: pd.DataFrame) -> pd.DataFrame:
+    """Standardise alternative country names and abbreviations.
+    대체 국가명 및 약어를 표준 이름으로 통일한다.
+
+    WHY: The dataset uses 'EIRE' (Irish name for Ireland) and 'RSA' (outdated
+    abbreviation for South Africa). These are the same markets as 'Ireland' and
+    'South Africa' and should be grouped together for consistent country-level analysis.
+    데이터셋에 'EIRE'(아일랜드어 국가명)와 'RSA'(남아공 옛 약어)가 사용됐다.
+    국가별 분석 시 동일 시장으로 집계되도록 표준 이름으로 통일한다.
+    """
+    before_unique = df["Country"].nunique()
+    df = df.copy()
+    df["Country"] = df["Country"].replace(COUNTRY_NAME_MAP)
+    logger.debug(
+        "normalize_country_names: %d → %d unique countries",
+        before_unique,
+        df["Country"].nunique(),
+    )
+    return df
+
+
+def _remove_non_country_rows(df: pd.DataFrame) -> pd.DataFrame:
+    """Remove rows whose Country value is not a real country.
+    실제 국가가 아닌 Country 값을 가진 행을 제거한다.
+
+    WHY: 'Unspecified' and 'European Community' cannot be attributed to any
+    specific market. Including them distorts country-level revenue analysis
+    (e.g., Q1 country ranking, UK vs Others split).
+    'Unspecified'와 'European Community'는 특정 시장에 귀속시킬 수 없다.
+    포함 시 Q1 국가별 매출 순위와 UK vs Others 비중이 왜곡된다.
+    """
+    before = len(df)
+    df = df[~df["Country"].isin(NON_COUNTRY_VALUES)]
+    logger.debug("remove_non_country_rows: dropped %d rows", before - len(df))
     return df
 
 
@@ -115,20 +173,25 @@ def _create_revenue(df: pd.DataFrame) -> pd.DataFrame:
 # 공개 API
 # ---------------------------------------------------------------------------
 
+
 def clean(df: pd.DataFrame) -> pd.DataFrame:
     """Apply all global cleaning rules and return a sales-ready DataFrame.
     전역 정제 규칙을 모두 적용하고 분석 준비된 DataFrame을 반환한다.
 
     Rules applied (see EDA Section 9-1):
-        1. Remove Quantity <= 0  (cancellations / returns)
-        2. Remove UnitPrice <= 0 (stock adjustments / data errors)
-        3. Remove non-sales InvoiceNo prefixes (accounting entries)
-        4. Create Revenue = Quantity x UnitPrice
+        1. Normalise country names  (EIRE → Ireland, RSA → South Africa)
+        2. Remove non-country rows  (Unspecified, European Community)
+        3. Remove Quantity <= 0     (cancellations / returns)
+        4. Remove UnitPrice <= 0    (stock adjustments / data errors)
+        5. Remove non-sales InvoiceNo prefixes (accounting entries)
+        6. Create Revenue = Quantity x UnitPrice
     적용 규칙 (EDA 섹션 9-1 참조):
-        1. Quantity <= 0 제거 (취소/반품)
-        2. UnitPrice <= 0 제거 (재고 조정/데이터 오류)
-        3. 비판매 InvoiceNo 접두사 제거 (회계 분개)
-        4. Revenue = Quantity x UnitPrice 생성
+        1. 국가명 표준화 (EIRE → Ireland, RSA → South Africa)
+        2. 비국가 행 제거 (Unspecified, European Community)
+        3. Quantity <= 0 제거 (취소/반품)
+        4. UnitPrice <= 0 제거 (재고 조정/데이터 오류)
+        5. 비판매 InvoiceNo 접두사 제거 (회계 분개)
+        6. Revenue = Quantity x UnitPrice 생성
 
     CustomerID NaN rows are intentionally retained — confirmed as guest purchases
     (EDA 8-2) and contribute to Q1-Q4 revenue. Use get_customer_df() to exclude them.
@@ -144,6 +207,8 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
         Revenue 컬럼이 추가된 정제된 DataFrame.
     """
     logger.info("Starting cleaning pipeline — %d input rows", len(df))
+    df = _normalize_country_names(df)
+    df = _remove_non_country_rows(df)
     df = _remove_non_positive_quantity(df)
     df = _remove_non_positive_price(df)
     df = _remove_non_sales_invoices(df)
@@ -175,7 +240,9 @@ def get_customer_df(df: pd.DataFrame) -> pd.DataFrame:
     cust_df = df[df["CustomerID"].notna()].copy()
     logger.info(
         "get_customer_df: %d → %d rows (%d guest rows excluded)",
-        before, len(cust_df), before - len(cust_df),
+        before,
+        len(cust_df),
+        before - len(cust_df),
     )
     return cust_df
 
