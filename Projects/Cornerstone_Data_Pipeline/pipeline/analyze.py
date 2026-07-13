@@ -307,10 +307,7 @@ def analyze_customer_value(cust_df: pd.DataFrame, top_n: int = 20) -> pd.DataFra
         TotalRevenue 내림차순 정렬.
     """
     revenue = (
-        cust_df
-        .groupby("CustomerID")["Revenue"]
-        .sum()
-        .reset_index(name="TotalRevenue")
+        cust_df.groupby("CustomerID")["Revenue"].sum().reset_index(name="TotalRevenue")
     )
     # Unique invoice count per customer = actual number of orders placed
     # 고객별 고유 인보이스 수 = 실제 주문 횟수
@@ -368,10 +365,7 @@ def analyze_customer_pareto(cust_df: pd.DataFrame) -> dict[str, float]:
         total_customers, top_20pct_n, top_20pct_revenue_share 키를 가진 dict.
     """
     revenue = (
-        cust_df
-        .groupby("CustomerID")["Revenue"]
-        .sum()
-        .sort_values(ascending=False)
+        cust_df.groupby("CustomerID")["Revenue"].sum().sort_values(ascending=False)
     )
     total_customers = len(revenue)
     top_n = max(1, int(total_customers * 0.20))

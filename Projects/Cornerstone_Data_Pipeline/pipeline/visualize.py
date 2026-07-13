@@ -20,10 +20,10 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
 import pandas as pd
 
-
 # ---------------------------------------------------------------------------
 # Q1 — UK vs Others Donut Chart / UK vs 기타 도넛 차트
 # ---------------------------------------------------------------------------
+
 
 def plot_uk_vs_others(df: pd.DataFrame) -> matplotlib.figure.Figure:
     """Donut chart: UK revenue share vs all other countries combined.
@@ -36,10 +36,10 @@ def plot_uk_vs_others(df: pd.DataFrame) -> matplotlib.figure.Figure:
     Returns:
         matplotlib Figure.
     """
-    labels  = df["Label"].tolist()
-    sizes   = df["Revenue"].tolist()
-    colors  = ["#4C72B0", "#DD8452"]
-    total   = sum(sizes)
+    labels = df["Label"].tolist()
+    sizes = df["Revenue"].tolist()
+    colors = ["#4C72B0", "#DD8452"]
+    total = sum(sizes)
 
     fig, ax = plt.subplots(figsize=(7, 7))
     _wedges, _texts, autotexts = ax.pie(
@@ -49,12 +49,14 @@ def plot_uk_vs_others(df: pd.DataFrame) -> matplotlib.figure.Figure:
         autopct=lambda p: f"{p:.1f}%\n(£{p * total / 100:,.0f})",
         startangle=90,
         pctdistance=0.75,
-        wedgeprops=dict(width=0.5),   # donut shape / 도넛 모양
+        wedgeprops=dict(width=0.5),  # donut shape / 도넛 모양
     )
     for at in autotexts:
         at.set_fontsize(10)
 
-    ax.set_title("Q1 — UK vs Other Countries Revenue Share", fontsize=13, fontweight="bold")
+    ax.set_title(
+        "Q1 — UK vs Other Countries Revenue Share", fontsize=13, fontweight="bold"
+    )
     fig.tight_layout()
     return fig
 
@@ -62,6 +64,7 @@ def plot_uk_vs_others(df: pd.DataFrame) -> matplotlib.figure.Figure:
 # ---------------------------------------------------------------------------
 # Q1 — Country Revenue Bar Chart / 국가별 매출 막대그래프
 # ---------------------------------------------------------------------------
+
 
 def plot_country_revenue(df: pd.DataFrame) -> matplotlib.figure.Figure:
     """Horizontal bar chart of revenue by country — all non-UK countries.
@@ -80,17 +83,26 @@ def plot_country_revenue(df: pd.DataFrame) -> matplotlib.figure.Figure:
     n = len(df)
     fig, ax = plt.subplots(figsize=(10, max(5, n * 0.35)))
 
+    max_rev = df["Revenue"].max()
     bars = ax.barh(df["Country"], df["Revenue"], color="#4C72B0")
     # Revenue share (%) label at each bar end / 각 막대 끝에 매출 비중(%) 라벨 추가
     for bar, (_, row) in zip(bars, df.iterrows()):
         ax.text(
-            bar.get_width() + df["Revenue"].max() * 0.01,
+            bar.get_width() + max_rev * 0.01,
             bar.get_y() + bar.get_height() / 2,
             f"{row['RevenueShare_pct']:.1f}%",
-            va="center", fontsize=9, color="#374151",
+            va="center",
+            fontsize=9,
+            color="#374151",
         )
 
-    ax.set_title("Q1 — Revenue by Country, excl. UK (All Countries)", fontsize=13, fontweight="bold")
+    # Extend x-axis so labels don't clip at the right edge / 라벨이 박스 밖으로 잘리지 않도록 x축 우측 여백 확보
+    ax.set_xlim(right=max_rev * 1.18)
+    ax.set_title(
+        "Q1 — Revenue by Country, excl. UK (All Countries)",
+        fontsize=13,
+        fontweight="bold",
+    )
     ax.set_xlabel("Total Revenue (£)")
     ax.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"£{x:,.0f}"))
     fig.tight_layout()
@@ -100,6 +112,7 @@ def plot_country_revenue(df: pd.DataFrame) -> matplotlib.figure.Figure:
 # ---------------------------------------------------------------------------
 # Q2 — Monthly Revenue Line Chart / 월별 매출 라인 차트
 # ---------------------------------------------------------------------------
+
 
 def plot_monthly_revenue(df: pd.DataFrame) -> matplotlib.figure.Figure:
     """Line chart of monthly revenue with Dec-2011 partial-month annotation.
@@ -129,10 +142,15 @@ def plot_monthly_revenue(df: pd.DataFrame) -> matplotlib.figure.Figure:
             xy=(idx, values[idx]),
             xytext=(idx - 1.2, values[idx] * 0.85),
             arrowprops=dict(arrowstyle="->", color="gray"),
-            fontsize=9, color="gray",
+            fontsize=9,
+            color="gray",
         )
 
-    ax.set_title("Q2 — Monthly Revenue Trend (Dec 2010 – Dec 2011)", fontsize=13, fontweight="bold")
+    ax.set_title(
+        "Q2 — Monthly Revenue Trend (Dec 2010 – Dec 2011)",
+        fontsize=13,
+        fontweight="bold",
+    )
     ax.set_xlabel("Month")
     ax.set_ylabel("Revenue (£)")
     ax.set_xticks(range(len(labels)))
@@ -146,6 +164,7 @@ def plot_monthly_revenue(df: pd.DataFrame) -> matplotlib.figure.Figure:
 # ---------------------------------------------------------------------------
 # Q2 (continued) — Monthly Revenue Bar Chart / 월별 매출 막대 차트
 # ---------------------------------------------------------------------------
+
 
 def plot_monthly_revenue_bar(df: pd.DataFrame) -> matplotlib.figure.Figure:
     """Bar chart of monthly revenue — same data as the line chart, different view.
@@ -191,6 +210,7 @@ def plot_monthly_revenue_bar(df: pd.DataFrame) -> matplotlib.figure.Figure:
 # Q3 — Product Charts / 상품 차트
 # ---------------------------------------------------------------------------
 
+
 def plot_pareto(pareto_df: pd.DataFrame) -> matplotlib.figure.Figure:
     """Pareto chart validating the 80/20 rule for product revenue.
     상품 매출의 80/20 법칙을 검증하는 파레토 차트.
@@ -219,7 +239,7 @@ def plot_pareto(pareto_df: pd.DataFrame) -> matplotlib.figure.Figure:
     plot_df = pareto_df.head(n_plot)
 
     fig, ax1 = plt.subplots(figsize=(13, 6))
-    ax2 = ax1.twinx()   # right y-axis: cumulative % / 오른쪽 Y축: 누적 비중
+    ax2 = ax1.twinx()  # right y-axis: cumulative % / 오른쪽 Y축: 누적 비중
 
     ax1.bar(range(n_plot), plot_df["Revenue"], color="#4C72B0", alpha=0.7)
     ax2.plot(range(n_plot), plot_df["cumulative_pct"], color="#e05c1a", linewidth=2)
@@ -228,15 +248,23 @@ def plot_pareto(pareto_df: pd.DataFrame) -> matplotlib.figure.Figure:
     ax2.axhline(80, color="#dc2626", linestyle="--", linewidth=1.5, label="80% Revenue")
 
     # Top-20% product reference line / 상위 20% 상품 기준선 (세로 파란 점선)
-    ax1.axvline(top_20pct_n - 1, color="#2563eb", linestyle="--", linewidth=1.5, label="Top 20% Products")
+    ax1.axvline(
+        top_20pct_n - 1,
+        color="#2563eb",
+        linestyle="--",
+        linewidth=1.5,
+        label="Top 20% Products",
+    )
 
     # Actual cumulative share at the 20% mark / 상위 20% 상품의 실제 누적 매출 비중 마커
     ax2.scatter(top_20pct_n - 1, actual_share, color="#dc2626", s=80, zorder=5)
     ax2.annotate(
         f"Actual share: {actual_share:.1f}%",
         xy=(top_20pct_n - 1, actual_share),
-        xytext=(-60, 12), textcoords="offset points",
-        fontsize=9, color="#dc2626",
+        xytext=(-60, 12),
+        textcoords="offset points",
+        fontsize=9,
+        color="#dc2626",
     )
 
     # Point where 80% revenue is first reached / 80% 매출 달성 지점 마커
@@ -244,11 +272,17 @@ def plot_pareto(pareto_df: pd.DataFrame) -> matplotlib.figure.Figure:
     ax2.annotate(
         f"80% revenue\nat top {pct_products_for_80:.1f}% products",
         xy=(n_for_80 - 1, 80),
-        xytext=(10, -30), textcoords="offset points",
-        fontsize=9, color="#16a34a",
+        xytext=(10, -30),
+        textcoords="offset points",
+        fontsize=9,
+        color="#16a34a",
     )
 
-    ax1.set_title("Q3 — Pareto Chart: Product Revenue (80/20 Validation)", fontsize=13, fontweight="bold")
+    ax1.set_title(
+        "Q3 — Pareto Chart: Product Revenue (80/20 Validation)",
+        fontsize=13,
+        fontweight="bold",
+    )
     ax1.set_xlabel("Product rank (by revenue)")
     ax1.set_ylabel("Revenue (£)")
     ax2.set_ylabel("Cumulative Revenue %")
@@ -278,17 +312,26 @@ def plot_top_products(df: pd.DataFrame) -> matplotlib.figure.Figure:
     df = df.sort_values("Revenue", ascending=True)
     fig, ax = plt.subplots(figsize=(12, 9))
 
+    max_rev = df["Revenue"].max()
     bars = ax.barh(df["Description"], df["Revenue"], color="#4C72B0")
     # Frequency rank label at each bar end / 막대 끝에 판매 빈도 순위 라벨 추가
     for bar, (_, row) in zip(bars, df.iterrows()):
         ax.text(
-            bar.get_width() + df["Revenue"].max() * 0.01,
+            bar.get_width() + max_rev * 0.01,
             bar.get_y() + bar.get_height() / 2,
             f"Freq Rank: #{int(row['FrequencyRank'])}",
-            va="center", fontsize=8, color="gray",
+            va="center",
+            fontsize=8,
+            color="gray",
         )
 
-    ax.set_title("Q3 — Top 20 Products by Revenue (with Frequency Rank)", fontsize=13, fontweight="bold")
+    # Extend x-axis so labels don't clip at the right edge / 라벨이 박스 밖으로 잘리지 않도록 x축 우측 여백 확보
+    ax.set_xlim(right=max_rev * 1.22)
+    ax.set_title(
+        "Q3 — Top 20 Products by Revenue (with Frequency Rank)",
+        fontsize=13,
+        fontweight="bold",
+    )
     ax.set_xlabel("Total Revenue (£)")
     ax.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"£{x:,.0f}"))
     fig.tight_layout()
@@ -298,6 +341,7 @@ def plot_top_products(df: pd.DataFrame) -> matplotlib.figure.Figure:
 # ---------------------------------------------------------------------------
 # Q3 (continued) — Product Revenue vs Frequency Scatter / 상품 매출 vs 판매량 산점도
 # ---------------------------------------------------------------------------
+
 
 def plot_product_segments(df: pd.DataFrame, top_n: int = 5) -> matplotlib.figure.Figure:
     """Revenue vs Frequency scatter with 4-quadrant segmentation for products.
@@ -326,36 +370,101 @@ def plot_product_segments(df: pd.DataFrame, top_n: int = 5) -> matplotlib.figure
 
     fig, ax = plt.subplots(figsize=(11, 8))
 
-    ax.scatter(df["Frequency"], df["Revenue"],
-               alpha=0.3, s=15, color="#94a3b8", label="All products")
-    ax.scatter(top_items["Frequency"], top_items["Revenue"],
-               color="#f59e0b", s=60, zorder=5, label=f"Top {top_n} by revenue")
+    ax.scatter(
+        df["Frequency"],
+        df["Revenue"],
+        alpha=0.3,
+        s=15,
+        color="#94a3b8",
+        label="All products",
+    )
+    ax.scatter(
+        top_items["Frequency"],
+        top_items["Revenue"],
+        color="#f59e0b",
+        s=60,
+        zorder=5,
+        label=f"Top {top_n} by revenue",
+    )
 
+    freq_max = df["Frequency"].max()
+
+    # Flip annotation to the left for high-frequency items to avoid right-edge overflow.
+    # 고빈도 점은 우측 경계 밖으로 라벨이 넘치지 않도록 텍스트를 왼쪽에 배치.
     for _, row in top_items.iterrows():
+        right_half = row["Frequency"] > freq_max * 0.5
+        xoff = -6 if right_half else 6
+        ha = "right" if right_half else "left"
         ax.annotate(
             row["Description"][:25],
             xy=(row["Frequency"], row["Revenue"]),
-            xytext=(6, 4), textcoords="offset points",
-            fontsize=7, color="#b45309",
+            xytext=(xoff, 4),
+            textcoords="offset points",
+            fontsize=7,
+            color="#b45309",
+            ha=ha,
         )
 
     ax.axvline(x_med, color="navy", linestyle="--", linewidth=1, alpha=0.6)
     ax.axhline(y_med, color="navy", linestyle="--", linewidth=1, alpha=0.6)
 
-    rev_max  = df["Revenue"].max()
-    freq_max = df["Frequency"].max()
+    rev_max = df["Revenue"].max()
 
     quadrants = [
-        (freq_max * 0.98, rev_max * 0.97,  "right", "top",    "High Rev / High Freq\n(Star Product)",    "#166534", "#dcfce7"),
-        (x_med   * 0.02, rev_max * 0.97,  "left",  "top",    "High Rev / Low Freq\n(Niche / Premium)",  "#92400e", "#fef3c7"),
-        (freq_max * 0.98, y_med   * 0.05, "right", "bottom", "Low Rev / High Freq\n(Low-price Popular)", "#1e3a5f", "#dbeafe"),
-        (x_med   * 0.02, y_med   * 0.05, "left",  "bottom", "Low Rev / Low Freq\n(General)",            "#4b5563", "#f3f4f6"),
+        (
+            freq_max * 0.98,
+            rev_max * 0.97,
+            "right",
+            "top",
+            "High Rev / High Freq\n(Star Product)",
+            "#166534",
+            "#dcfce7",
+        ),
+        (
+            x_med * 0.02,
+            rev_max * 0.95,
+            "left",
+            "top",
+            "High Rev / Low Freq\n(Niche / Premium)",
+            "#92400e",
+            "#fef3c7",
+        ),
+        (
+            freq_max * 0.98,
+            y_med * 0.05,
+            "right",
+            "bottom",
+            "Low Rev / High Freq\n(Low-price Popular)",
+            "#1e3a5f",
+            "#dbeafe",
+        ),
+        (
+            x_med * 0.02,
+            y_med * 0.05,
+            "left",
+            "bottom",
+            "Low Rev / Low Freq\n(General)",
+            "#4b5563",
+            "#f3f4f6",
+        ),
     ]
     for x, y, ha, va, label, fc, bg in quadrants:
-        ax.text(x, y, label, ha=ha, va=va, fontsize=9, color=fc,
-                bbox=dict(boxstyle="round,pad=0.3", fc=bg, alpha=0.7))
+        ax.text(
+            x,
+            y,
+            label,
+            ha=ha,
+            va=va,
+            fontsize=9,
+            color=fc,
+            bbox=dict(boxstyle="round,pad=0.3", fc=bg, alpha=0.7),
+        )
 
-    ax.set_title("Q3 — Product Segmentation: Revenue vs Frequency", fontsize=13, fontweight="bold")
+    ax.set_title(
+        "Q3 — Product Segmentation: Revenue vs Frequency",
+        fontsize=13,
+        fontweight="bold",
+    )
     ax.set_xlabel("Frequency (Order Count)")
     ax.set_ylabel("Total Revenue (£)")
     ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"£{x:,.0f}"))
@@ -367,6 +476,7 @@ def plot_product_segments(df: pd.DataFrame, top_n: int = 5) -> matplotlib.figure
 # ---------------------------------------------------------------------------
 # Q4 — Order Value Distribution / 주문 금액 분포
 # ---------------------------------------------------------------------------
+
 
 def plot_order_value_histogram(order_values: pd.DataFrame) -> matplotlib.figure.Figure:
     """Histogram of order values capped at the 99th percentile.
@@ -389,16 +499,32 @@ def plot_order_value_histogram(order_values: pd.DataFrame) -> matplotlib.figure.
     p99 = order_values["OrderValue"].quantile(0.99)
     data = order_values[order_values["OrderValue"] <= p99]["OrderValue"]
     median_val = data.median()
-    mean_val   = data.mean()
+    mean_val = data.mean()
 
     fig, ax = plt.subplots(figsize=(10, 5))
     ax.hist(data, bins=60, color="#4C72B0", edgecolor="white", linewidth=0.4)
     # Median (orange) and mean (red) dashed lines confirm right skew
     # 중앙값(오렌지)과 평균(빨강) 점선으로 우편향 확인
-    ax.axvline(median_val, color="orange", linestyle="--", linewidth=1.5, label=f"Median £{median_val:,.0f}")
-    ax.axvline(mean_val,   color="red",    linestyle="--", linewidth=1.5, label=f"Mean   £{mean_val:,.0f}")
+    ax.axvline(
+        median_val,
+        color="orange",
+        linestyle="--",
+        linewidth=1.5,
+        label=f"Median £{median_val:,.0f}",
+    )
+    ax.axvline(
+        mean_val,
+        color="red",
+        linestyle="--",
+        linewidth=1.5,
+        label=f"Mean   £{mean_val:,.0f}",
+    )
 
-    ax.set_title(f"Q4 — Order Value Distribution (capped at 99th pct = £{p99:,.0f})", fontsize=13, fontweight="bold")
+    ax.set_title(
+        f"Q4 — Order Value Distribution (capped at 99th pct = £{p99:,.0f})",
+        fontsize=13,
+        fontweight="bold",
+    )
     ax.set_xlabel("Order Value (£)")
     ax.set_ylabel("Number of Orders")
     ax.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"£{x:,.0f}"))
@@ -427,11 +553,17 @@ def plot_order_value_boxplot(order_values: pd.DataFrame) -> matplotlib.figure.Fi
     ax.boxplot(
         data,
         patch_artist=True,
-        boxprops=dict(facecolor="#bfdbfe"),                    # box fill / 박스 색
-        medianprops=dict(color="orange", linewidth=2),          # median line / 중앙값 선
-        flierprops=dict(marker=".", color="gray", alpha=0.3),   # outlier dots / 이상값 점
+        boxprops=dict(facecolor="#bfdbfe"),  # box fill / 박스 색
+        medianprops=dict(color="orange", linewidth=2),  # median line / 중앙값 선
+        flierprops=dict(
+            marker=".", color="gray", alpha=0.3
+        ),  # outlier dots / 이상값 점
     )
-    ax.set_title(f"Q4 — Order Value Box Plot (capped at 99th pct = £{p99:,.0f})", fontsize=12, fontweight="bold")
+    ax.set_title(
+        f"Q4 — Order Value Box Plot (capped at 99th pct = £{p99:,.0f})",
+        fontsize=12,
+        fontweight="bold",
+    )
     ax.set_ylabel("Order Value (£)")
     ax.set_xticks([])
     ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"£{x:,.0f}"))
@@ -442,6 +574,7 @@ def plot_order_value_boxplot(order_values: pd.DataFrame) -> matplotlib.figure.Fi
 # ---------------------------------------------------------------------------
 # Q5 — Customer Value Charts / 고객 가치 차트
 # ---------------------------------------------------------------------------
+
 
 def plot_top_customers(df: pd.DataFrame) -> matplotlib.figure.Figure:
     """Horizontal bar chart of top 20 customers by revenue with order count labels.
@@ -464,16 +597,25 @@ def plot_top_customers(df: pd.DataFrame) -> matplotlib.figure.Figure:
         df["TotalRevenue"],
         color="#4C72B0",
     )
+    max_rev = df["TotalRevenue"].max()
     # Order count label at each bar end / 막대 끝에 주문 횟수 라벨 추가
     for bar, (_, row) in zip(bars, df.iterrows()):
         ax.text(
-            bar.get_width() + df["TotalRevenue"].max() * 0.01,
+            bar.get_width() + max_rev * 0.01,
             bar.get_y() + bar.get_height() / 2,
             f"{int(row['OrderCount'])} orders",
-            va="center", fontsize=8, color="gray",
+            va="center",
+            fontsize=8,
+            color="gray",
         )
 
-    ax.set_title("Q5 — Top 20 Customers by Revenue (with Order Count)", fontsize=13, fontweight="bold")
+    # Extend x-axis so labels don't clip at the right edge / 라벨이 박스 밖으로 잘리지 않도록 x축 우측 여백 확보
+    ax.set_xlim(right=max_rev * 1.20)
+    ax.set_title(
+        "Q5 — Top 20 Customers by Revenue (with Order Count)",
+        fontsize=13,
+        fontweight="bold",
+    )
     ax.set_xlabel("Total Revenue (£)")
     ax.set_ylabel("CustomerID")
     ax.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"£{x:,.0f}"))
@@ -481,7 +623,9 @@ def plot_top_customers(df: pd.DataFrame) -> matplotlib.figure.Figure:
     return fig
 
 
-def plot_customer_revenue_histogram(cust_profile: pd.DataFrame) -> matplotlib.figure.Figure:
+def plot_customer_revenue_histogram(
+    cust_profile: pd.DataFrame,
+) -> matplotlib.figure.Figure:
     """Histogram of total revenue per customer, capped at 99th percentile.
     고객별 총매출 분포 히스토그램 (99분위수 cap).
 
@@ -499,17 +643,30 @@ def plot_customer_revenue_histogram(cust_profile: pd.DataFrame) -> matplotlib.fi
     p99 = cust_profile["TotalRevenue"].quantile(0.99)
     data = cust_profile[cust_profile["TotalRevenue"] <= p99]["TotalRevenue"]
     median_val = data.median()
-    mean_val   = data.mean()
+    mean_val = data.mean()
 
     fig, ax = plt.subplots(figsize=(10, 5))
     ax.hist(data, bins=60, color="#7c3aed", edgecolor="white", linewidth=0.4)
-    ax.axvline(median_val, color="orange", linestyle="--", linewidth=1.5,
-               label=f"Median £{median_val:,.0f}")
-    ax.axvline(mean_val,   color="red",    linestyle="--", linewidth=1.5,
-               label=f"Mean   £{mean_val:,.0f}")
+    ax.axvline(
+        median_val,
+        color="orange",
+        linestyle="--",
+        linewidth=1.5,
+        label=f"Median £{median_val:,.0f}",
+    )
+    ax.axvline(
+        mean_val,
+        color="red",
+        linestyle="--",
+        linewidth=1.5,
+        label=f"Mean   £{mean_val:,.0f}",
+    )
 
-    ax.set_title(f"Q5 — Customer Revenue Distribution (capped at 99th pct = £{p99:,.0f})",
-                 fontsize=13, fontweight="bold")
+    ax.set_title(
+        f"Q5 — Customer Revenue Distribution (capped at 99th pct = £{p99:,.0f})",
+        fontsize=13,
+        fontweight="bold",
+    )
     ax.set_xlabel("Total Revenue per Customer (£)")
     ax.set_ylabel("Number of Customers")
     ax.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"£{x:,.0f}"))
@@ -545,35 +702,48 @@ def plot_vip_seasonal(
     Returns:
         matplotlib Figure.
     """
-    vip_df     = cust_df[cust_df["CustomerID"].isin(vip_ids)].copy()
+    vip_df = cust_df[cust_df["CustomerID"].isin(vip_ids)].copy()
     non_vip_df = cust_df[~cust_df["CustomerID"].isin(vip_ids)].copy()
 
     for frame in (vip_df, non_vip_df):
         frame["YearMonth"] = frame["InvoiceDate"].dt.to_period("M")
 
-    vip_monthly     = vip_df.groupby("YearMonth")["Revenue"].sum()
+    vip_monthly = vip_df.groupby("YearMonth")["Revenue"].sum()
     non_vip_monthly = non_vip_df.groupby("YearMonth")["Revenue"].sum()
 
     def _normalise(s: pd.Series) -> pd.Series:
         rng = s.max() - s.min()
         return (s - s.min()) / rng * 100 if rng > 0 else s * 0
 
-    vip_norm     = _normalise(vip_monthly)
+    vip_norm = _normalise(vip_monthly)
     non_vip_norm = _normalise(non_vip_monthly)
 
-    months       = sorted(set(vip_monthly.index) | set(non_vip_monthly.index))
+    months = sorted(set(vip_monthly.index) | set(non_vip_monthly.index))
     month_labels = [str(m) for m in months]
 
     fig, ax = plt.subplots(figsize=(13, 5))
-    ax.plot(month_labels, [vip_norm.get(m, None) for m in months],
-            marker="s", linewidth=2, color="#dc2626",
-            label=f"VIP (n={len(vip_ids):,})")
-    ax.plot(month_labels, [non_vip_norm.get(m, None) for m in months],
-            marker="o", linewidth=2, color="#3b82f6",
-            label="Non-VIP")
+    ax.plot(
+        month_labels,
+        [vip_norm.get(m, None) for m in months],
+        marker="s",
+        linewidth=2,
+        color="#dc2626",
+        label=f"VIP (n={len(vip_ids):,})",
+    )
+    ax.plot(
+        month_labels,
+        [non_vip_norm.get(m, None) for m in months],
+        marker="o",
+        linewidth=2,
+        color="#3b82f6",
+        label="Non-VIP",
+    )
 
-    ax.set_title("Q5 — Monthly Revenue: VIP vs Non-VIP (normalised 0–100)",
-                 fontsize=13, fontweight="bold")
+    ax.set_title(
+        "Q5 — Monthly Revenue: VIP vs Non-VIP (normalised 0–100)",
+        fontsize=13,
+        fontweight="bold",
+    )
     ax.set_xlabel("Month")
     ax.set_ylabel("Normalised Revenue (0 = min, 100 = max)")
     ax.set_xticks(range(len(month_labels)))
@@ -584,7 +754,9 @@ def plot_vip_seasonal(
     return fig
 
 
-def plot_customer_segments(cust_profile: pd.DataFrame, top_n: int = 10) -> matplotlib.figure.Figure:
+def plot_customer_segments(
+    cust_profile: pd.DataFrame, top_n: int = 10
+) -> matplotlib.figure.Figure:
     """Revenue vs Frequency scatter plot with 4-quadrant customer segmentation.
     매출 vs 구매 빈도 산점도 (4분면 고객 세그멘테이션).
 
@@ -610,38 +782,96 @@ def plot_customer_segments(cust_profile: pd.DataFrame, top_n: int = 10) -> matpl
     fig, ax = plt.subplots(figsize=(11, 8))
 
     # All customers (grey, translucent) / 전체 고객 산점도 (회색, 반투명)
-    ax.scatter(cust_profile["OrderCount"], cust_profile["TotalRevenue"],
-               alpha=0.3, s=15, color="#94a3b8", label="All customers")
+    ax.scatter(
+        cust_profile["OrderCount"],
+        cust_profile["TotalRevenue"],
+        alpha=0.3,
+        s=15,
+        color="#94a3b8",
+        label="All customers",
+    )
     # Top-N customers highlighted in red / 상위 N 고객 강조 (빨간색)
-    ax.scatter(top10["OrderCount"], top10["TotalRevenue"],
-               color="#ef4444", s=60, zorder=5, label=f"Top {top_n} by revenue")
+    ax.scatter(
+        top10["OrderCount"],
+        top10["TotalRevenue"],
+        color="#ef4444",
+        s=60,
+        zorder=5,
+        label=f"Top {top_n} by revenue",
+    )
 
     for _, row in top10.iterrows():
         ax.annotate(
             f"ID {int(row['CustomerID'])}",
             xy=(row["OrderCount"], row["TotalRevenue"]),
-            xytext=(6, 4), textcoords="offset points",
-            fontsize=7, color="#ef4444",
+            xytext=(6, 4),
+            textcoords="offset points",
+            fontsize=7,
+            color="#ef4444",
         )
 
     # Quadrant dividers (median-based) / 4분면 기준선 (중앙값 기준)
     ax.axvline(x_med, color="navy", linestyle="--", linewidth=1, alpha=0.6)
     ax.axhline(y_med, color="navy", linestyle="--", linewidth=1, alpha=0.6)
 
-    rev_max  = cust_profile["TotalRevenue"].max()
+    rev_max = cust_profile["TotalRevenue"].max()
     freq_max = cust_profile["OrderCount"].max()
 
     quadrants = [
-        (freq_max * 0.98, rev_max * 0.97,  "right", "top",    "High Rev / High Freq\n(VIP)",             "#166534", "#dcfce7"),
-        (x_med   * 0.02, rev_max * 0.97,  "left",  "top",    "High Rev / Low Freq\n(Big Spender)",       "#92400e", "#fef3c7"),
-        (freq_max * 0.98, y_med   * 0.05, "right", "bottom", "Low Rev / High Freq\n(Loyal Small Buyer)", "#1e3a5f", "#dbeafe"),
-        (x_med   * 0.02, y_med   * 0.05, "left",  "bottom", "Low Rev / Low Freq\n(Casual)",             "#4b5563", "#f3f4f6"),
+        (
+            freq_max * 0.98,
+            rev_max * 0.97,
+            "right",
+            "top",
+            "High Rev / High Freq\n(VIP)",
+            "#166534",
+            "#dcfce7",
+        ),
+        (
+            x_med * 0.02,
+            rev_max * 0.97,
+            "left",
+            "top",
+            "High Rev / Low Freq\n(Big Spender)",
+            "#92400e",
+            "#fef3c7",
+        ),
+        (
+            freq_max * 0.98,
+            y_med * 0.05,
+            "right",
+            "bottom",
+            "Low Rev / High Freq\n(Loyal Small Buyer)",
+            "#1e3a5f",
+            "#dbeafe",
+        ),
+        (
+            x_med * 0.02,
+            y_med * 0.05,
+            "left",
+            "bottom",
+            "Low Rev / Low Freq\n(Casual)",
+            "#4b5563",
+            "#f3f4f6",
+        ),
     ]
     for x, y, ha, va, label, fc, bg in quadrants:
-        ax.text(x, y, label, ha=ha, va=va, fontsize=9, color=fc,
-                bbox=dict(boxstyle="round,pad=0.3", fc=bg, alpha=0.7))
+        ax.text(
+            x,
+            y,
+            label,
+            ha=ha,
+            va=va,
+            fontsize=9,
+            color=fc,
+            bbox=dict(boxstyle="round,pad=0.3", fc=bg, alpha=0.7),
+        )
 
-    ax.set_title("Q5 — Customer Segmentation: Revenue vs Purchase Frequency", fontsize=13, fontweight="bold")
+    ax.set_title(
+        "Q5 — Customer Segmentation: Revenue vs Purchase Frequency",
+        fontsize=13,
+        fontweight="bold",
+    )
     ax.set_xlabel("Order Count (Frequency)")
     ax.set_ylabel("Total Revenue (£)")
     ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"£{x:,.0f}"))

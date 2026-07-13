@@ -17,6 +17,7 @@ import pandas as pd
 
 logger = logging.getLogger(__name__)
 
+
 def load_raw(path: str | Path) -> pd.DataFrame:
     """Load the Online Retail dataset from an Excel file.
     Online Retail 데이터셋을 Excel 파일에서 로드한다.
