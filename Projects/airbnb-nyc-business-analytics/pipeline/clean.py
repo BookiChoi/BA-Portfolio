@@ -22,13 +22,9 @@ import logging
 
 import pandas as pd
 
-logger = logging.getLogger(__name__)
+from pipeline.constants import REGISTRATION_MIN_NIGHTS_THRESHOLD
 
-# NYC Local Law 18 only regulates stays under 30 nights — listings already set up
-# as 30+ night rentals are exempt from short-term-rental registration entirely.
-# NYC Local Law 18은 30박 미만 단기 임대만 규제 대상이다 — 이미 30박 이상으로
-# 설정된 매물은 애초에 등록 의무 대상이 아니다.
-REGISTRATION_MIN_NIGHTS_THRESHOLD = 30
+logger = logging.getLogger(__name__)
 
 
 # ---------------------------------------------------------------------------

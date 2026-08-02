@@ -4,6 +4,8 @@ Airbnb NYC 비즈니스 분석 파이프라인 패키지.
 Modular building blocks:
 모듈형 빌딩 블록:
 
+- ``constants``: shared thresholds and fixed analysis parameters.
+  공유 임계값·고정 분석 파라미터.
 - ``load``: read SQLite tables into DataFrames.
   SQLite 테이블을 DataFrame으로 읽기.
 - ``clean``: prepare and type-correct listing data.
