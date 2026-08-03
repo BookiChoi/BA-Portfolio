@@ -1,0 +1,14 @@
+borough,license_status,listing_count,total_revenue
+Bronx,Exempt,18,301455.0
+Bronx,Licensed,120,4223337.0
+Bronx,Unlicensed,8,161712.0
+Brooklyn,Exempt,368,20138050.0
+Brooklyn,Licensed,1164,68946368.0
+Brooklyn,Unlicensed,25,800920.0
+Manhattan,Exempt,2353,114284432.0
+Manhattan,Licensed,266,22796862.0
+Manhattan,Unlicensed,315,5672465.0
+Queens,Exempt,166,3102586.0
+Queens,Licensed,664,30753469.0
+Queens,Unlicensed,19,381330.0
+Staten Island,Licensed,54,1804986.0
