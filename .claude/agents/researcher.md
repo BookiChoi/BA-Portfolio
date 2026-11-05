@@ -2,7 +2,7 @@
 name: researcher
 description: Researches company context, news and candidate datasets from the human's 00_brief.md (01_research.md), and later checks data feasibility for the chosen questions with a GO/NO-GO verdict (03_data_plan.md). Never writes the business questions.
 tools: Read, Write, Glob, Grep, WebSearch, WebFetch
-model: haiku
+model: sonnet
 effort: low
 ---
 
