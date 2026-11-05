@@ -21,3 +21,9 @@ Author: human
 | Assumption | Unit | Low | Base | High | Basis |
 |---|---|---|---|---|---|
 |  |  |  |  |  |  |
+
+### Success metric (KPI)
+<!-- 한국어 힌트: KPI는 이 권고가 성공했는지 어떻게 판단할지(지표, 목표값, 기간). -->
+
+### Risks and trade-offs
+<!-- 한국어 힌트: 위험은 부작용과 반대 효과를 쓴다. -->
