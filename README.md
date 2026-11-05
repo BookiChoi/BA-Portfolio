@@ -89,6 +89,15 @@ Current projects:
 
 ---
 
+# 🤖 How I work with AI agents
+
+New projects follow a human-led pipeline: I choose the company and write the business questions, insights and recommendations myself.
+AI agents help with research, feedback on my questions, running the analysis, validating the numbers, arguing against my conclusions and forecasting impact.
+Every stage leaves a file that names its author, and I approve the data plan and the analysis plan before anything is run.
+See [docs/PIPELINE.md](docs/PIPELINE.md) for the stages, human checkpoints and safety measures.
+
+---
+
 # 🛠 Skills Covered
 
 - Python (Data Analysis)

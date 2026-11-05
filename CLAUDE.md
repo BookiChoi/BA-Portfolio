@@ -34,6 +34,15 @@ Defaults; deviate if you have a better approach, and note the reason briefly in 
 - Never `git add -A` or `git add .`; add explicit paths (untracked study notebooks must not get mixed in).
 - Never push without the owner's permission. Never amend or rebase commits that were already pushed.
 
+## Workflow
+- New project: `python scripts/new_project.py <slug> --company "<name>"`.
+- Advance it with `/run-project <slug>`: one AI stage per call, then stop; on the human's turn it only says what to do.
+- Human documents (00, 02, 07, 09), `06_fail_resolution.md` and the `Approved: human` line (03, 04) are written by the human only.
+- Do not edit `.claude/hooks/` or `.claude/settings.json` unless asked (write-guard hook).
+- Run `python scripts/check_commits.py` before any push.
+- Tests: root `pytest -q tests/`; a project: `pytest -q` inside its folder.
+- Details: `docs/PIPELINE.md`.
+
 ## Safety
 - Do not read or print the contents of `.env`, `.zshrc`, `.envrc`.
 - Open `.ipynb` only when necessary, read only parts, and skip cells with large outputs.
