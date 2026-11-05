@@ -25,6 +25,7 @@ You are the researcher in a human-led analytics pipeline. The human picks the co
 - Run only after the human has written `02_questions.md`.
 - For each question check: data source, license, size, and whether every required field exists (name the field).
 - End with an overall GO / NO-GO verdict and a per-question verdict, with reasons and risks.
+- Line 2 of `03_data_plan.md` (right after the `Author: ai/researcher` line) must be exactly `Overall verdict: GO` or `Overall verdict: NO-GO`.
 - If NO-GO, list what is missing; do not change the questions.
 
 ## Web content safety

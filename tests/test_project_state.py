@@ -366,3 +366,81 @@ def test_cli_missing_project_is_an_error(tmp_path):
     proc = run_cli("nothing-here", "--projects-dir", str(make(tmp_path, {})))
     assert proc.returncode == 1
     assert "error" in json.loads(proc.stdout)
+
+
+# ---------------------------------------------------------------------------
+# verdict lines (line 2 is primary; table cells are the fallback)
+# ---------------------------------------------------------------------------
+TABLE_PASS = "| number | PASS/FAIL |\n|---|---|\n| a | PASS |"
+TABLE_FAIL = "| number | PASS/FAIL |\n|---|---|\n| a | FAIL |"
+
+
+def val(verdict_line: str | None, table: str = TABLE_PASS) -> str:
+    body = (verdict_line + "\n" if verdict_line is not None else "") + table
+    return ai("validator", body)
+
+
+def test_validation_verdict_pass_proceeds_without_warnings(tmp_path):
+    r = state(tmp_path, {**BASE_06, "06_validation.md": val("Overall verdict: PASS")})
+    check(r, "07_insights", "human")
+    assert "validation_warnings" not in r["info"]
+
+
+def test_validation_verdict_fail_blocks_even_when_table_looks_clean(tmp_path):
+    r = state(tmp_path, {**BASE_06, "06_validation.md": val("Overall verdict: FAIL", TABLE_PASS)})
+    check(r, "06_fail_decision", "human")
+
+
+def test_validation_pass_with_fail_cell_is_treated_as_fail(tmp_path):
+    r = state(tmp_path, {**BASE_06, "06_validation.md": val("Overall verdict: PASS", TABLE_FAIL)})
+    check(r, "06_fail_decision", "human")
+    assert any("PASS but" in w for w in r["info"]["validation_warnings"])
+
+
+@pytest.mark.parametrize("line", [None, "Overall verdict: MAYBE", "overall: pass", "Verdict: PASS"])
+def test_missing_or_invalid_verdict_line_falls_back_to_table_with_warning(tmp_path, line):
+    r = state(tmp_path, {**BASE_06, "06_validation.md": val(line, TABLE_PASS)})
+    check(r, "07_insights", "human")
+    assert r["info"]["validation_warnings"]
+    r = state(tmp_path / "b", {**BASE_06, "06_validation.md": val(line, TABLE_FAIL)})
+    check(r, "06_fail_decision", "human")
+
+
+@pytest.mark.parametrize("line", ["overall VERDICT: pass", "Overall verdict:PASS", "  Overall verdict : PASS  "])
+def test_verdict_line_is_case_and_space_tolerant(tmp_path, line):
+    r = state(tmp_path, {**BASE_06, "06_validation.md": val(line)})
+    check(r, "07_insights", "human")
+    assert "validation_warnings" not in r["info"]
+
+
+def test_verdict_must_be_on_line_two(tmp_path):
+    text = "Author: ai/validator\n\nOverall verdict: PASS\n" + TABLE_PASS + "\n"
+    r = state(tmp_path, {**BASE_06, "06_validation.md": text})
+    assert r["info"]["validation_warnings"]  # not recognized as the verdict line
+
+
+def test_fail_resolution_still_unblocks_a_fail_verdict(tmp_path):
+    files = {**BASE_06, "06_validation.md": val("Overall verdict: FAIL"), "06_fail_resolution.md": resolution()}
+    r = state(tmp_path, files)
+    check(r, "07_insights", "human")
+    assert r["info"]["fail_resolution"] == "accept-with-caveat"
+
+
+@pytest.mark.parametrize("line, expected", [
+    ("Overall verdict: GO", "GO"),
+    ("Overall verdict: NO-GO", "NO-GO"),
+    ("overall verdict: no-go", "NO-GO"),
+    ("Overall verdict: MAYBE", None),
+    (None, None),
+])
+def test_data_plan_verdict_is_reported_at_the_review_stage(tmp_path, line, expected):
+    body = (line + "\n" if line else "") + "details"
+    r = state(tmp_path, {**BASE_03, "03_data_plan.md": ai("researcher", body)})
+    check(r, "03_review", "human")
+    assert r["info"]["verdict"] == expected
+    assert bool(r["blockers"]) == (expected != "GO")
+
+
+def test_approved_data_plan_moves_on_whatever_the_verdict(tmp_path):
+    files = {**BASE_03, "03_data_plan.md": approved(ai("researcher", "Overall verdict: NO-GO\nx"))}
+    check(state(tmp_path, files), "04_plan", "ai", "analyst", "phase-a")

@@ -68,6 +68,37 @@ def second_line_value(text: str, key: str) -> str | None:
     return m.group(1).lower() if m else None
 
 
+def verdict_on_second_line(text: str, allowed: set[str]) -> str | None:
+    """'Overall verdict: X' on exactly line 2, X upper-cased and in `allowed`, else None."""
+    lines = text.splitlines()
+    if len(lines) < 2:
+        return None
+    m = re.fullmatch(r"\s*Overall\s+verdict\s*:\s*(\S+)\s*", lines[1], re.IGNORECASE)
+    if not m:
+        return None
+    value = m.group(1).upper()
+    return value if value in allowed else None
+
+
+def validation_failed(text: str) -> tuple[bool, list[str]]:
+    """Did validation fail? Returns (failed, warnings).
+
+    Primary: line 2 'Overall verdict: PASS|FAIL'. The table-cell rule (has_fail) is
+    the fallback when that line is missing or invalid, and a safety net: a PASS
+    verdict next to a FAIL cell counts as FAIL.
+    """
+    verdict = verdict_on_second_line(text, {"PASS", "FAIL"})
+    table_fail = has_fail(text)
+    if verdict == "FAIL":
+        return True, []
+    if verdict == "PASS":
+        if table_fail:
+            return True, ["line 2 says PASS but the report contains a FAIL; treated as FAIL"]
+        return False, []
+    warning = "line 2 is not 'Overall verdict: PASS' or 'Overall verdict: FAIL'; fell back to the FAIL cells"
+    return table_fail, [warning]
+
+
 def has_fail(text: str) -> bool:
     """FAIL in the validation report.
 
@@ -174,10 +205,16 @@ def decide(slug: str, projects_dir: Path) -> dict:
                    inputs=["workflow/00_brief.md", "workflow/01_research.md", "workflow/02_questions.md"],
                    outputs=["workflow/03_data_plan.md"])
     if not has_approval_line(plan03):
+        verdict = verdict_on_second_line(plan03, {"GO", "NO-GO"})
+        blockers = []
+        if verdict == "NO-GO":
+            blockers.append("the data plan verdict is NO-GO (see the NO-GO procedure before approving)")
+        elif verdict is None:
+            blockers.append("line 2 of workflow/03_data_plan.md is not 'Overall verdict: GO' or 'Overall verdict: NO-GO'")
         return out("03_review", "human",
                    "Review the verdict in workflow/03_data_plan.md, put the data in data/ (or confirm the approved URL), "
                    "then add the approval line to workflow/03_data_plan.md yourself.",
-                   info={"file": "workflow/03_data_plan.md"})
+                   blockers=blockers, info={"file": "workflow/03_data_plan.md", "verdict": verdict})
 
     # 04 analysis plan
     plan04 = read(wf / "04_analysis_plan.md")
@@ -202,7 +239,8 @@ def decide(slug: str, projects_dir: Path) -> dict:
         return out("06_validation", "ai", "Independently recompute and validate the analysis numbers.",
                    agent="validator", inputs=["workflow/04_analysis_plan.md", "workflow/05_analysis.md", "data_manifest.json"],
                    outputs=["workflow/06_validation.md"])
-    if has_fail(val):
+    failed, val_warnings = validation_failed(val)
+    if failed:
         res = read(wf / "06_fail_resolution.md")
         blockers: list[str] = []
         decision = None
@@ -226,10 +264,13 @@ def decide(slug: str, projects_dir: Path) -> dict:
                        "Validation has FAIL. Decide yourself: write workflow/06_fail_resolution.md (Author: human, "
                        "Status: final, Decision: accept-with-caveat|drop-question), or move 05 and 06 into "
                        "workflow/archive/run1/ with git mv to re-run the analysis.",
-                       blockers=blockers, info={"file": "workflow/06_validation.md"})
+                       blockers=blockers,
+                       info={"file": "workflow/06_validation.md", "validation_warnings": val_warnings})
         resolved_info = {"fail_resolution": decision}
     else:
         resolved_info = {}
+    if val_warnings:
+        resolved_info["validation_warnings"] = val_warnings
 
     # 07 insights
     r = human_doc("07_insights.md", "07_insights", "final",
