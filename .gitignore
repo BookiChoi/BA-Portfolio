@@ -30,3 +30,6 @@ LinkedIn/
 # Personal config (untracked, kept on disk)
 .zshrc
 .envrc
+
+# Set by the /run-project skill while a subagent runs
+.claude/active_project

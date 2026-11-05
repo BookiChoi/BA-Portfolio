@@ -13,10 +13,14 @@ Rules
        (markdown prefixes, case and spacing variants included); a Bash command is
        rejected when it contains the phrase anywhere.
   G2 subagents (hook input has agent_type):
-     - write only inside Projects/<slug>/ where slug does not start with "_"
+     - write only inside Projects/<slug>/ where slug does not start with "_" AND
+       equals the slug in .claude/active_project (missing, empty or invalid file:
+       deny, fail closed; the /run-project skill writes and clears that file)
      - never write .claude/, CLAUDE.md, .git/, scripts/, root tests/, Learning/,
-       Practice/, Projects/_*/ ; never write the four human workflow documents;
-       never modify 04_analysis_plan.md once it carries the approval line
+       Practice/, Projects/_*/ ; never write the human workflow documents (00, 02,
+       07, 09 and 06_fail_resolution.md);
+       never modify 03_data_plan.md or 04_analysis_plan.md once they carry the
+       approval line
      - MultiEdit and NotebookEdit are rejected outright (no path parsing)
   G3 per-agent allow lists (relative to Projects/<slug>/); other agent types: G2 only
   G4 subagent Bash: BEST EFFORT, see "Limits" below
@@ -31,7 +35,7 @@ Limits of the Bash check (G4). It only inspects the command text:
   - only `bash|sh|zsh|dash -c "..."` is re-checked (two levels)
   - writers other than > >> tee sed -i mv cp (touch, mkdir, ln, install, rsync, ...) are not checked
   - commands that cannot be parsed are rejected, which can block unusual but valid input
-  - the project of a subagent is unknown: it may write into ANY Projects/<slug>/ it is allowed in
+  - the active project comes from .claude/active_project, not from the call itself
 Tools outside the matcher (Grep, Glob, ...) are never seen by this hook.
 """
 
@@ -66,8 +70,21 @@ SENSITIVE_CMD_RE = re.compile(r"(?<!\w)\.(?:envrc|zshrc|env(?:\.[\w.-]*)?)(?![\w
 
 # --- G2 / G3 ---------------------------------------------------------------
 PROTECTED_TOP = {".claude", ".git", "scripts", "tests", "learning", "practice"}
-HUMAN_FILES = {"00_brief.md", "02_questions.md", "07_insights.md", "09_recommendations.md"}
-PLAN_FILE = ("workflow", "04_analysis_plan.md")
+HUMAN_FILES = {
+    "00_brief.md",
+    "02_questions.md",
+    "07_insights.md",
+    "09_recommendations.md",
+    "06_fail_resolution.md",
+}
+# files a subagent may no longer modify once they carry the approval line
+APPROVAL_LOCKED = {("workflow", "03_data_plan.md"), ("workflow", "04_analysis_plan.md")}
+ACTIVE_PROJECT_FILE = (".claude", "active_project")
+SLUG_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+NO_ACTIVE_PROJECT = (
+    "no active project: .claude/active_project is missing, empty or invalid; "
+    "the /run-project skill writes the slug there before it starts a subagent"
+)
 
 ALLOW = {
     "researcher": ["workflow/01_research.md", "workflow/03_data_plan.md"],
@@ -205,6 +222,16 @@ def g1_reason(tool: str, ti: dict, cwd: str) -> str | None:
 # ---------------------------------------------------------------------------
 # G2 + G3
 # ---------------------------------------------------------------------------
+def _active_slug(root: str) -> str | None:
+    """Slug in .claude/active_project, or None when missing, empty or invalid (fail closed)."""
+    try:
+        with open(os.path.join(root, *ACTIVE_PROJECT_FILE), encoding="utf-8") as fh:
+            slug = fh.read().strip()
+    except OSError:
+        return None
+    return slug if SLUG_RE.fullmatch(slug) else None
+
+
 def subagent_write_reason(real: str, root: str, agent_type: str | None) -> str | None:
     try:
         parts = Path(real).relative_to(root).parts
@@ -222,15 +249,20 @@ def subagent_write_reason(real: str, root: str, agent_type: str | None) -> str |
         return "subagents may write only inside Projects/<slug>/"
     if low[1].startswith("_"):
         return f"Projects/{parts[1]}/ is not a project (names starting with _ are protected)"
+    active = _active_slug(root)
+    if active is None:
+        return NO_ACTIVE_PROJECT
+    if low[1] != active.casefold():
+        return f"Projects/{parts[1]}/ is not the active project ({active})"
 
     inner = low[2:]
     inner_s = "/".join(inner)
     if len(inner) == 2 and inner[0] == "workflow" and inner[1] in HUMAN_FILES:
         return f"{parts[-1]} is a human-authored document"
-    if tuple(inner) == PLAN_FILE and os.path.isfile(real):
+    if tuple(inner) in APPROVAL_LOCKED and os.path.isfile(real):
         with open(real, encoding="utf-8", errors="ignore") as fh:
             if has_approval_line(fh.read()):
-                return "04_analysis_plan.md is already approved by the human; do not modify it"
+                return f"{parts[-1]} is already approved by the human; do not modify it"
 
     if agent_type in _ALLOW_RE:
         if any(rx.match(inner_s) for rx in _DENY_RE.get(agent_type, [])):

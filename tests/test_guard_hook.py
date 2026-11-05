@@ -16,7 +16,8 @@ from pathlib import Path
 import pytest
 
 REPO = Path(__file__).resolve().parent.parent
-GUARD = REPO / ".claude" / "hooks" / "guard.py"
+# GUARD_PATH lets a modified copy be tested before it replaces the live hook
+GUARD = Path(os.environ.get("GUARD_PATH", REPO / ".claude" / "hooks" / "guard.py"))
 SETTINGS = REPO / ".claude" / "settings.json"
 
 APPROVAL = "Appro" + "ved" + ": " + "hu" + "man"
@@ -62,6 +63,7 @@ def repo(tmp_path):
         d.mkdir(parents=True, exist_ok=True)
     (root / "CLAUDE.md").write_text("rules\n", encoding="utf-8")
     (root / ".claude" / "settings.json").write_text("{}\n", encoding="utf-8")
+    (root / ".claude" / "active_project").write_text("demo\n", encoding="utf-8")
     (root / ".env").write_text("SECRET=1\n", encoding="utf-8")
     (root / ".env.example").write_text("SECRET=\n", encoding="utf-8")
     (root / ".zshrc").write_text("x\n", encoding="utf-8")
@@ -492,3 +494,90 @@ def test_registered_command_blocks_when_guard_crashes_or_is_missing(tmp_path):
     crash.write_text("import sys\nsys.exit(1)\n", encoding="utf-8")
     proc = subprocess.run(["sh", "-c", f'{sys.executable} "{crash}" || exit 2'], capture_output=True, text=True)
     assert proc.returncode == 2
+
+
+# ---------------------------------------------------------------------------
+# active project (.claude/active_project)
+# ---------------------------------------------------------------------------
+def set_active(repo: Path, text: str | None) -> None:
+    path = repo / ".claude" / "active_project"
+    if text is None:
+        path.unlink()
+    else:
+        path.write_text(text, encoding="utf-8")
+
+
+@pytest.mark.parametrize("text", [None, "", "   \n", "../demo", "Demo!", "-demo", "de_mo", "demo extra", "a--b"])
+@pytest.mark.parametrize("agent", ["analyst", "general-purpose"])
+def test_missing_empty_or_invalid_active_project_denies_project_writes(repo, agent, text):
+    set_active(repo, text)
+    code, err = write(repo, agent, P + "pipeline/x.py") if agent == "analyst" else write(repo, agent, P + "anything.txt")
+    assert code == 2
+    assert "active project" in err
+    assert ".claude/active_project" in err
+
+
+def test_writes_are_limited_to_the_active_project(repo):
+    other = repo / "Projects" / "other" / "pipeline"
+    other.mkdir(parents=True)
+    denied(write(repo, "analyst", "Projects/other/pipeline/x.py"))
+    denied(write(repo, "general-purpose", "Projects/other/notes.txt"))
+    allowed(write(repo, "analyst", P + "pipeline/x.py"))
+    set_active(repo, "other\n")
+    allowed(write(repo, "analyst", "Projects/other/pipeline/x.py"))
+    denied(write(repo, "analyst", P + "pipeline/x.py"))
+
+
+def test_active_project_comparison_ignores_case_and_whitespace(repo):
+    set_active(repo, "  demo  \n")  # valid slug with whitespace around it
+    allowed(write(repo, "analyst", P + "pipeline/x.py"))
+    allowed(write(repo, "analyst", "Projects/Demo/pipeline/x.py"))  # same folder on a case-insensitive disk
+
+
+def test_active_project_does_not_unlock_protected_places(repo):
+    set_active(repo, "_template\n")
+    denied(write(repo, "general-purpose", "Projects/_template/README.md"))
+    set_active(repo, "demo\n")
+    for rel in ["CLAUDE.md", ".claude/active_project", ".claude/settings.json", "scripts/x.py"]:
+        denied(write(repo, "analyst", rel))
+
+
+def test_bash_redirects_follow_the_active_project(repo):
+    cwd = repo / PROJ_CWD
+    allowed(bash(repo, "analyst", "python main.py > outputs/log.txt", cwd=cwd))
+    set_active(repo, None)
+    denied(bash(repo, "analyst", "python main.py > outputs/log.txt", cwd=cwd))
+    allowed(bash(repo, "analyst", "python main.py > /dev/null 2>&1", cwd=cwd))
+    allowed(bash(repo, "analyst", "pytest -q", cwd=cwd))
+
+
+def test_main_session_is_not_affected_by_active_project(repo):
+    set_active(repo, None)
+    allowed(write(repo, None, P + "workflow/00_brief.md"))
+    allowed(write(repo, None, ".claude/active_project", "demo\n"))
+
+
+def test_subagent_reads_do_not_need_an_active_project(repo):
+    set_active(repo, None)
+    allowed(call(repo, "Read", {"file_path": str(repo / "CLAUDE.md")}, "analyst"))
+
+
+# ---------------------------------------------------------------------------
+# approval protection also covers 03_data_plan.md; fail resolution is human-only
+# ---------------------------------------------------------------------------
+def test_approved_data_plan_is_locked_for_subagents(repo):
+    plan = repo / "Projects" / "demo" / "workflow" / "03_data_plan.md"
+    plan.write_text("Author: ai/researcher\nplan\n", encoding="utf-8")
+    allowed(call(repo, "Edit", {"file_path": str(plan), "old_string": "plan", "new_string": "better"}, "researcher"))
+    allowed(write(repo, "researcher", P + "workflow/03_data_plan.md", "Author: ai/researcher\nnew\n"))
+    plan.write_text("Author: ai/researcher\nplan\n" + APPROVAL + "\n", encoding="utf-8")
+    denied(call(repo, "Edit", {"file_path": str(plan), "old_string": "plan", "new_string": "worse"}, "researcher"))
+    denied(write(repo, "researcher", P + "workflow/03_data_plan.md", "Author: ai/researcher\nrewritten\n"))
+    denied(write(repo, "general-purpose", P + "workflow/03_data_plan.md", "x\n"))
+    allowed(call(repo, "Edit", {"file_path": str(plan), "old_string": "plan", "new_string": "human edit"}, None))
+
+
+@pytest.mark.parametrize("agent", ALL_AGENTS + ["general-purpose"])
+def test_fail_resolution_is_human_only(repo, agent):
+    denied(write(repo, agent, P + "workflow/06_fail_resolution.md"))
+    allowed(write(repo, None, P + "workflow/06_fail_resolution.md"))
