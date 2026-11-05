@@ -1,4 +1,4 @@
-"""Cornerstone_Data_Pipeline pipeline package.
+"""Online Retail Growth Analysis pipeline package.
 
 This package contains the modular building blocks of the data pipeline:
 

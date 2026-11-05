@@ -1,5 +1,5 @@
-"""Entry point for the Cornerstone Data Pipeline.
-Cornerstone 데이터 파이프라인 진입점.
+"""Entry point for the Online Retail Growth Analysis pipeline.
+Online Retail 성장 분석 파이프라인 진입점.
 
 전체 파이프라인 실행:
 
@@ -192,7 +192,7 @@ def run_pipeline(data_path: Path = DATA_PATH, outputs_dir: Path = OUTPUTS_DIR) -
 # ---------------------------------------------------------------------------
 
 def _parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run the Cornerstone Data Pipeline.")
+    parser = argparse.ArgumentParser(description="Run the Online Retail Growth Analysis pipeline.")
     parser.add_argument(
         "--data", type=Path, default=DATA_PATH,
         help=f"원본 데이터 파일 경로 (기본값: {DATA_PATH})",

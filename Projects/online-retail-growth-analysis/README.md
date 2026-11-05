@@ -56,13 +56,13 @@ Five questions were defined before analysis began, following the logic:
 ## Project Structure / 프로젝트 구조
 
 ```
-Cornerstone_Data_Pipeline/
+online-retail-growth-analysis/
 │
 ├── README.md
 ├── main.py                         # Pipeline entry point / 파이프라인 진입점 (CLI)
-├── requirements.txt
 │
 ├── data/
+│   ├── .gitkeep
 │   └── online_retail.xlsx          # Raw dataset — not tracked in git / 원본 데이터 (git 미추적)
 │
 ├── outputs/                        # Generated charts and CSVs / 생성된 차트 및 요약 CSV
@@ -88,13 +88,13 @@ Cornerstone_Data_Pipeline/
 │   └── visualize.py                # Returns Figure objects — no plt.show() / Figure 객체 반환
 │
 ├── notebooks/
-│   └── business_eda.ipynb          # Question-driven EDA notebook / 질문 중심 EDA 노트북
-│
-└── tests/                          # (planned) / 예정
-    ├── test_load.py
-    └── test_clean.py
+│   ├── business_eda.ipynb          # Question-driven EDA notebook / 질문 중심 EDA 노트북
+│   └── archived_eda.ipynb          # Earlier EDA version (archived) / 이전 EDA 버전 (보관용)
 ```
 
+> No automated tests yet. Dependencies are managed at the repo root (`requirements.txt`).
+> 아직 자동화 테스트는 없다. 의존성은 레포 루트의 `requirements.txt`로 관리한다.
+>
 > `.gitignore` is managed at the **BA-Portfolio repo root** (monorepo).
 > `.gitignore`는 **BA-Portfolio 레포 루트**에서 관리한다 (모노레포).
 
@@ -134,12 +134,14 @@ main.py                         Save 13 PNGs + 5 CSVs to outputs/
 ## Installation / 설치
 
 ```bash
-cd Projects/Cornerstone_Data_Pipeline
+cd BA-Portfolio                  # repo root / 레포 루트
 
-python -m venv .venv
+python -m venv .venv             # Python 3.12 (.python-version)
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 
-pip install -r requirements.txt
+pip install -r requirements.txt  # run from repo root / 루트에서 실행
+
+cd Projects/online-retail-growth-analysis
 ```
 
 Place the raw dataset at `data/online_retail.xlsx`.
@@ -163,12 +165,6 @@ MPLBACKEND=Agg python main.py --data data/online_retail.xlsx --output outputs/
 
 All 13 charts and 5 summary CSVs are saved to `outputs/`.
 13개 차트와 5개 요약 CSV가 `outputs/` 에 저장된다.
-
-**Run tests / 테스트 실행:**
-
-```bash
-pytest
-```
 
 ---
 
@@ -226,4 +222,3 @@ These map directly to the High Rev / Low Freq "Big Spender" segment — likely B
 - Python 3.12
 - pandas, openpyxl
 - matplotlib, seaborn
-- pytest
