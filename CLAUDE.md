@@ -4,6 +4,7 @@
 - Business Analyst portfolio monorepo (Learning/, Practice/, Projects/).
 - Learning/ and Practice/ are the owner's study material: never modify unless asked.
 - The two existing projects in Projects/ follow a school-style structure; treat them as reference only.
+- Folders under Projects/ whose names start with `_` (for example `_template`) are not projects.
 
 ## Environment
 - Python 3.12, root `.venv`. Deps: `requirements.txt` (direct), `requirements-dev.txt` (dev).

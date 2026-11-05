@@ -1,4 +1,4 @@
-"""Create a new analysis project from templates/project/.
+"""Create a new analysis project from Projects/_template/.
 
 Usage:
     python scripts/new_project.py <slug> --company "<name>" [--target-dir <path>]
@@ -17,7 +17,7 @@ from datetime import date
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-TEMPLATE_DIR = REPO_ROOT / "templates" / "project"
+TEMPLATE_DIR = REPO_ROOT / "Projects" / "_template"
 DEFAULT_TARGET_DIR = REPO_ROOT / "Projects"
 
 SLUG_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
