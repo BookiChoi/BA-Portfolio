@@ -9,17 +9,20 @@ __pycache__/
 venv/
 .env
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
 # Jupyter
 .ipynb_checkpoints/
 
-# IDE
+# IDE / editor tooling
 .idea/
+.cursor/
 
-# Large data files (keep data/.gitkeep)
+# Data files: ignore everything in Projects/*/data/ (keep data/.gitkeep)
 *.sqlite
-Projects/*/data/*.xlsx
-Projects/*/data/*.csv
+Projects/*/data/*
+!Projects/*/data/.gitkeep
 
 # LinkedIn (personal drafts, not for the public repo)
 LinkedIn/
