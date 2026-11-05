@@ -1,0 +1,6 @@
+# Development / validation tools (install after requirements.txt)
+-r requirements.txt
+pytest==9.1.1
+ruff==0.15.12
+PyYAML==6.0.3
+jsonschema==4.26.0
