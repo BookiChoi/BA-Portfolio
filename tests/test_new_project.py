@@ -62,8 +62,9 @@ def test_placeholders_are_substituted(tmp_path):
     assert '"project": "acme-churn"' in (project / "data_manifest.json").read_text(encoding="utf-8")
     assert "Acme" in (project / "README.md").read_text(encoding="utf-8")
     for name in ("00_brief", "02_questions", "07_insights", "09_recommendations"):
-        first = (project / "workflow" / f"{name}.md").read_text(encoding="utf-8").splitlines()[0]
-        assert first == "Author: human"
+        lines = (project / "workflow" / f"{name}.md").read_text(encoding="utf-8").splitlines()
+        assert lines[0] == "Author: human"
+        assert lines[1] == "Status: draft"
 
 
 def test_duplicate_slug_is_rejected_without_overwriting(tmp_path):

@@ -1,4 +1,6 @@
 Author: human
+Status: draft
+<!-- 한국어 힌트: 둘째 줄은 항상 Status 줄이다. 허용 값은 draft(작성 중) 또는 final(완료). 반론에 답한 뒤 final로 바꾼다. -->
 
 # 09 Recommendations
 

@@ -1,4 +1,6 @@
 Author: human
+Status: draft
+<!-- 한국어 힌트: 둘째 줄은 항상 Status 줄이다. 허용 값은 draft(작성 중), ready-for-coach(질문 코치 피드백 요청), final(피드백 반영 완료). -->
 
 # 02 Business Questions
 
