@@ -87,7 +87,20 @@ Run exactly this one stage.
 
    If anything else changed (outside the table, a human document, a data file, a file that was already dirty before the run), commit nothing, list the unexpected paths in Korean, and stop.
 7. **Commit** only the new or changed in-scope paths, each named explicitly (never `git add -A` or `git add .`):
-   `git add <path> <path> ...` then `git commit -m "[AI-PROJECT] $slug <stage label>: <summary>"` ending with the Co-Authored-By trailer required by the repo rules. Stage labels: `01 research`, `02 coach feedback`, `03 data plan`, `04 analysis plan`, `05 analysis`, `06 validation`, `08 critique`, `10 impact`. Do not push.
+   `git add <path> <path> ...` then `git commit -m "[AI-PROJECT] $slug <stage>: <summary>"` ending with the Co-Authored-By trailer required by the repo rules. The `<stage>` name is fixed by the agent and mode (no spaces, exactly as written here):
+
+   | Agent and mode | `<stage>` |
+   |---|---|
+   | researcher, mode `research` | `01-research` |
+   | question-coach | `02-feedback` |
+   | researcher, mode `data-feasibility` | `03-data-plan` |
+   | analyst, `phase-a` | `04-analysis-plan` |
+   | analyst, `phase-b` | `05-analysis` |
+   | validator | `06-validation` |
+   | critic | `08-critique` |
+   | impact-modeler | `10-impact` |
+
+   Example: `[AI-PROJECT] acme-churn 04-analysis-plan: draft analysis plan for Q1-Q3`. Do not push.
 8. **Clear the active project:** truncate `.claude/active_project` (empty file). Do this also when the run failed or was stopped after step 2.
 9. **Report in Korean and stop:** what was produced (paths), a short summary of the result, the next stage (run `project_state.py` once more and describe it), and a reminder to check `/usage`.
    If the validator's report contains FAIL, say so plainly and do not suggest an automatic fix; the next step is the human's decision.
