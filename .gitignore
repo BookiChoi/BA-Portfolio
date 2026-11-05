@@ -20,3 +20,10 @@ venv/
 *.sqlite
 Projects/*/data/*.xlsx
 Projects/*/data/*.csv
+
+# LinkedIn (personal drafts, not for the public repo)
+LinkedIn/
+
+# Personal config (untracked, kept on disk)
+.zshrc
+.envrc
