@@ -29,8 +29,9 @@ BA-Portfolio/
 ├── Learning/          # Concept learning notebooks (theory + examples)
 ├── Practice/          # Daily problem-solving notebooks (hands-on work)
 ├── Projects/          # End-to-end data analysis projects
-├── Business_Cases/    # Business thinking & case studies (no heavy code)
-├── Resources/         # Datasets, references, cheat sheets
+│   ├── airbnb-nyc-business-analytics/
+│   └── online-retail-growth-analysis/
+├── requirements.txt   # Direct dependencies (see also requirements-dev.txt / .lock)
 └── README.md
 ```
 
@@ -81,29 +82,10 @@ Each project includes:
 - Business insights
 - Final recommendations
 
-Examples of projects:
+Current projects:
 
-- Netflix Data Analysis
-- Airbnb Market Analysis
-- Customer Churn Analysis
-- E-commerce Sales Analysis
-
----
-
-# 🧠 Business Cases
-
-This folder focuses on **business thinking rather than coding**.
-
-Each case includes:
-
-- Business problem definition
-- Hypothesis building
-- Required data
-- Analytical approach
-- Expected outcomes
-- Final recommendations
-
-This helps me think like a real Business Analyst.
+- [Airbnb NYC Business Analytics](Projects/airbnb-nyc-business-analytics) — SQL-based EDA and a modular Python pipeline
+- [Online Retail Growth Analysis](Projects/online-retail-growth-analysis) — question-driven EDA and a modular Python pipeline
 
 ---
 
