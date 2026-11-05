@@ -1,0 +1,5 @@
+# 한국어 힌트: new_project.py가 자리표시자를 채운다. company는 따옴표 안에서 이스케이프된다.
+slug: "{{slug}}"
+company: "{{company}}"
+created: "{{created}}"
+language: en

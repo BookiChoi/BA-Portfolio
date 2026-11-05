@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "project": "{{slug}}",
+  "datasets": [],
+  "entry_template": {
+    "name": "",
+    "file_path": "data/<file>",
+    "source_url": "",
+    "license": "",
+    "downloaded_on": "YYYY-MM-DD",
+    "row_count": 0,
+    "checksum": {
+      "algorithm": "sha256",
+      "value": ""
+    },
+    "notes": ""
+  }
+}
