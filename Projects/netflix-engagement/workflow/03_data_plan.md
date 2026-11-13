@@ -56,3 +56,14 @@ Field-by-field verdict for the fields Q1 names:
 
 ## Blockers
 None found. If step 03/04 profiling shows that any of the seven files is unavailable, or that no genre source reaches usable coverage for the top N titles, the verdict for Q1 changes to NO-GO.
+
+## Human decisions at Gate 1 (2026-11-12)
+- All seven report files are in hand (verified by the data profile in 01b). Source URLs and download dates are recorded in data_manifest.json.
+- Genre source: TMDB, used under its non-commercial terms with the required attribution. No ads or monetisation on any page that shows this work. Approved endpoints: TMDB search, details and genre-list endpoints for movies and TV (the analyst lists the exact URLs in the analysis plan). IMDb/OMDb are not approved.
+- Primary genre: assigned by a priority-ordered mapping table that I write and commit before any genre share is computed. "First listed genre" is not used.
+- Pilot: label 30 titles (English and non-English) and report the match rate before full labelling. If the match rate is below 85%, revise the matching method first.
+- Coverage rule: if unlabelled titles exceed 10% of a half-year's viewing hours within the labelled scope, Q1 is reported as inconclusive.
+- Multiple testing: the analysis plan must estimate the chance of a spurious pass across all tested genres (for example by permutation). Any pass is reported as a lead to re-check, and genres that move as a pair count as one finding.
+- API keys stay outside the repository and are never pasted into files or chat.
+
+Approved: human
