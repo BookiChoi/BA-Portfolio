@@ -161,36 +161,39 @@ class ImdbIndex:
             year_src, ref = "none", None
 
         norms = [norm_title(s) for s in segments]
-        steps = []
+        # Gate 2 amendment 1: stage 1 (basics) over ALL segments; only if no segment gives a
+        # candidate after the filters does stage 2 (akas) run. Candidates are pooled across segments;
+        # a candidate found by more than one segment is preferred, then votes, then lowest tconst.
         for stage, table in (("stage1", self.by_norm), ("stage2_akas", self.akas_by_norm)):
+            seg_hits: dict[int, set[int]] = {}   # candidate row -> segment numbers that found it
             for si, n in enumerate(norms):
-                if n:
-                    steps.append((f"{stage}:seg{si + 1}", table.get(n, [])))
-        for label, cand in steps:
-            if not cand:
+                cand = table.get(n, []) if n else []
+                if not cand:
+                    continue
+                if year_src == "none":
+                    rule = "none"
+                elif allowed is FILM_TYPES or year_src == "tag_year":
+                    rule = "film_pm1"  # |diff|<=1 (films, and any type when the hint is a year tag)
+                elif allowed is SERIES_TYPES:
+                    rule = "series_le"  # series start <= release year + 1 (release-date rule)
+                else:
+                    rule = "mixed"
+                if rule == "mixed":
+                    f = self._filter(cand, FILM_TYPES, "film_pm1", ref) + self._filter(cand, SERIES_TYPES, "series_le", ref)
+                else:
+                    f = self._filter(cand, allowed, rule, ref)
+                for i in f:
+                    seg_hits.setdefault(i, set()).add(si + 1)
+            if not seg_hits:
                 continue
-            # Film rows use |diff|<=1 (movie rule); series rows use "series start <= release year + 1"
-            # when the year comes from a release date, and |diff|<=1 when it comes from the year tag.
-            if year_src == "none":
-                rule = "none"
-            elif allowed is FILM_TYPES or year_src == "tag_year":
-                rule = "film_pm1"
-            elif allowed is SERIES_TYPES:
-                rule = "series_le"
-            else:  # unknown->all with a release date: apply the film rule to films, series rule to series
-                rule = "mixed"
-            if rule == "mixed":
-                f = self._filter(cand, FILM_TYPES, "film_pm1", ref) + self._filter(cand, SERIES_TYPES, "series_le", ref)
-            else:
-                f = self._filter(cand, allowed, rule, ref)
-            if not f:
-                continue
-            ranked = sorted(f, key=lambda i: (-self.votes.get(self.b.at[i, "tconst"], 0),
-                                              int(self.b.at[i, "tconst"][2:])))
+            ranked = sorted(seg_hits, key=lambda i: (-len(seg_hits[i]), -self.votes.get(self.b.at[i, "tconst"], 0),
+                                                     int(self.b.at[i, "tconst"][2:])))
             top = ranked[0]
             tv = self.votes.get(self.b.at[top, "tconst"], 0)
             if len(ranked) == 1:
                 tb = "none"
+            elif len(seg_hits[ranked[1]]) < len(seg_hits[top]):
+                tb = "multi_segment"
             elif self.votes.get(self.b.at[ranked[1], "tconst"], 0) < tv:
                 tb = "votes"
             else:
@@ -199,9 +202,10 @@ class ImdbIndex:
             return {
                 "matched": True, "tconst": row["tconst"], "imdb_title": row["primaryTitle"],
                 "imdb_type": row["titleType"], "imdb_year": row["startYear"], "imdb_genres": row["genres"],
-                "stage": label, "candidates_after_filter": len(f), "tie_break": tb,
+                "stage": stage, "segments_matched": ",".join(map(str, sorted(seg_hits[top]))),
+                "candidates_after_filter": len(ranked), "tie_break": tb,
                 "type_rule": type_rule, "year_source": year_src,
             }
         return {"matched": False, "tconst": None, "imdb_title": None, "imdb_type": None, "imdb_year": np.nan,
-                "imdb_genres": None, "stage": None, "candidates_after_filter": 0, "tie_break": None,
-                "type_rule": type_rule, "year_source": year_src}
+                "imdb_genres": None, "stage": None, "segments_matched": None, "candidates_after_filter": 0,
+                "tie_break": None, "type_rule": type_rule, "year_source": year_src}

@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "outputs" / "q1"
 SEED = 42
 PILOT_GATE = 0.85
-MAX_KEYS = 3000
+MAX_KEYS = 4500  # Gate 2 amendment 1: raised from 3,000 (local IMDb files, compute-only cost)
 
 
 def stage_manifest() -> None:
@@ -40,7 +40,9 @@ def stage_pilot() -> None:
     (OUT / "clean_log.json").write_text(json.dumps(cl.log, indent=2, default=str) + "\n")
 
     # ---- P4 scope (hours only)
-    sc = clean.scope_counts(cl.half_keys)
+    cl.collisions.to_csv(OUT / "collisions_top20.csv", index=False)
+    print("TOP 20 TITLE-ONLY MOVIE/SHOW COLLISIONS\n", cl.collisions.to_string())
+    sc = clean.scope_counts(cl.half_keys, id_col="kid")
     print("SCOPE CANDIDATES\n", sc.to_string())
     sc.to_csv(OUT / "scope_candidates.csv", index=False)
     chosen = None
@@ -51,7 +53,7 @@ def stage_pilot() -> None:
     if chosen is None:
         print("STOP: even the 80% target exceeds", MAX_KEYS, "unique keys; ask the human (plan P4).")
         sys.exit(3)
-    in_scope = clean.scope_keys(cl.half_keys, chosen)
+    in_scope = clean.scope_keys(cl.half_keys, chosen, id_col="kid")
     union = sorted(set().union(*in_scope.values()))
     print(f"CHOSEN TARGET {chosen:.0%}; union keys {len(union)}")
     json.dump({"target": chosen, "union_keys": len(union),
@@ -59,7 +61,7 @@ def stage_pilot() -> None:
               open(OUT / "scope.json", "w"), indent=2)
 
     # ---- P5 pilot sample: 15 tagged + 15 untagged, seed 42
-    ki = cl.key_info.set_index("key")
+    ki = cl.key_info.set_index("kid")
     cand = ki.loc[union]
     rng = np.random.default_rng(SEED)
     pick = []
@@ -78,7 +80,7 @@ def stage_pilot() -> None:
         sys.exit(4)
     votes = load.load_votes(load.IMDB_DIR / "title.ratings.tsv.gz")
 
-    needed = {label.norm_title(s) for k in pick for s in ki.at[k, "segments"]}
+    needed = {label.norm_title(s) for k in pick for s in ki.at[k, "segments"]}  # akas filtered to these only
     idx = label.ImdbIndex(basics, votes, needed)
     n_akas = idx.add_akas(load.IMDB_DIR / "title.akas.tsv.gz", needed)
     print("akas hits loaded:", n_akas)
@@ -92,11 +94,11 @@ def stage_pilot() -> None:
         m = idx.match(list(r["segments"]), r["type_known"], bool(r["series_tag_stripped"]), rel_year, tag_year)
         grp = label.genre_group(m["imdb_genres"], mapping) if m["matched"] else None
         rows.append({
-            "key": k, "netflix_title": r["rep_title"], "language_tag": "tagged" if r["tagged"] else "untagged",
+            "key": ki.at[k, "key"], "kid": k, "netflix_title": r["rep_title"], "language_tag": "tagged" if r["tagged"] else "untagged",
             "netflix_type": r["type_known"], "release_year_used": rel_year, "tag_year": tag_year,
             "matched": m["matched"], "tconst": m["tconst"], "imdb_title": m["imdb_title"],
             "imdb_type": m["imdb_type"], "imdb_year": m["imdb_year"], "imdb_genres": m["imdb_genres"],
-            "group": grp, "stage": m["stage"], "candidates_after_filter": m["candidates_after_filter"],
+            "group": grp, "stage": m["stage"], "segments_matched": m["segments_matched"], "candidates_after_filter": m["candidates_after_filter"],
             "tie_break": m["tie_break"], "type_rule": m["type_rule"], "year_source": m["year_source"],
         })
     pilot = pd.DataFrame(rows)
@@ -105,7 +107,7 @@ def stage_pilot() -> None:
     rate = pilot["matched"].mean()
     print(f"PILOT match rate {rate:.3f} ({int(pilot['matched'].sum())}/30); labelled {pilot['labelled'].mean():.3f}")
     print(pilot.groupby("language_tag")[["matched", "labelled"]].mean().to_string())
-    print(pilot.drop(columns=["tconst"]).to_string())
+    print(pilot.drop(columns=["tconst", "kid"]).to_string())
     if rate < PILOT_GATE:
         print(f"STOP: pilot match rate below {PILOT_GATE:.0%}.")
         sys.exit(5)

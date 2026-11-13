@@ -51,10 +51,11 @@ def test_unknown_rows_resolved_against_series_keys_and_merge():
         "is_other": [False] * 4, "sheet": ["x"] * 4,
     })
     out = clean.clean_reports(raw)
-    hk = out.half_keys.set_index(["half", "key"])["hours"]
-    assert hk[("H1 2023", "stranger things")] == 10.0
-    assert hk[("H1 2023", "fast & furious 9")] == 5.0
-    assert hk[("H2 2023", "stranger things")] == 10.0  # seasons merged by sum
+    hk = out.half_keys.set_index(["half", "kid"])["hours"]
+    # H1 2023 type is taken from H2 2023 (one type there); an unseen title stays unknown
+    assert hk[("H1 2023", "stranger things [series]")] == 10.0
+    assert hk[("H1 2023", "fast & furious 9 [unknown]")] == 5.0
+    assert hk[("H2 2023", "stranger things [series]")] == 10.0  # seasons merged by sum
 
 
 def test_scope_counts_target():
@@ -87,3 +88,36 @@ def test_match_filters_and_tiebreak():
     assert m["tconst"] == "tt2" and m["tie_break"] == "votes"
     m = idx.match(["alpha"], "series", False, None, None)
     assert m["tconst"] == "tt3"
+
+
+def test_type_in_key_splits_collisions():
+    raw = pd.DataFrame({
+        "half": ["H2 2023", "H2 2023"], "title": ["Dark", "Dark"], "hours_viewed": [4.0, 6.0],
+        "release_date": [pd.NaT] * 2, "content_type": ["film", "series"], "is_other": [False] * 2, "sheet": ["x"] * 2,
+    })
+    out = clean.clean_reports(raw)
+    assert set(out.half_keys["kid"]) == {"dark [film]", "dark [series]"}
+    assert out.log["collisions_before_type_in_key"]["within_half_collision_pairs"] == 1
+
+
+def test_tagged_title_prefers_candidate_found_by_two_segments():
+    basics = pd.DataFrame({
+        "tconst": ["tt1", "tt2"], "titleType": ["movie", "movie"],
+        "primaryTitle": ["Alpha", "Beta"], "originalTitle": ["Beta", "Beta"],
+        "startYear": [2020.0, 2020.0], "genres": ["Drama", "Comedy"],
+    })
+    # tt1 is found by segment 1 (primary) and segment 2 (original); tt2 by segment 2 only, with more votes
+    idx = label.ImdbIndex(basics, {"tt1": 1, "tt2": 99}, {"alpha", "beta"})
+    m = idx.match(["alpha", "beta"], "film", False, None, None)
+    assert m["tconst"] == "tt1" and m["tie_break"] == "multi_segment" and m["segments_matched"] == "1,2"
+
+
+def test_akas_only_used_when_stage1_has_no_candidate():
+    basics = pd.DataFrame({"tconst": ["tt1", "tt2"], "titleType": ["movie", "movie"],
+                           "primaryTitle": ["Alpha", "Zeta"], "originalTitle": ["Alpha", "Zeta"],
+                           "startYear": [2020.0, 2020.0], "genres": ["Drama", "Comedy"]})
+    idx = label.ImdbIndex(basics, {}, {"alpha", "gamma"})
+    idx.akas_by_norm["alpha"] = [1]
+    idx.akas_by_norm["gamma"] = [1]
+    assert idx.match(["alpha"], "film", False, None, None)["stage"] == "stage1"
+    assert idx.match(["gamma"], "film", False, None, None)["stage"] == "stage2_akas"

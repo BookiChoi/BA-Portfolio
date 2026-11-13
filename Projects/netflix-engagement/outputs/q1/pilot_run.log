@@ -8,14 +8,85 @@ CLEAN LOG {
   "dropped_missing_hours_or_title": 0,
   "unknown_rows_trailing_number_resolved": 200,
   "duplicate_full_rows": 0,
-  "merged_rows": 9502,
-  "rows_absorbed_by_merge": 21378,
-  "movie_series_collisions_within_half": 767,
-  "movie_series_collisions_across_halves": 411
+  "h1_2023_rows_type_from_h2_2023": 13767,
+  "h1_2023_rows_type_unknown": 4447,
+  "merged_rows": 9111,
+  "rows_absorbed_by_merge": 20611,
+  "collisions_before_type_in_key": {
+    "title_only_unique_keys": 25849,
+    "within_half_collision_pairs": 767,
+    "within_half_collision_hours_share": 0.036350678093817264,
+    "across_halves_collision_keys": 411,
+    "across_halves_collision_hours_share": 0.05795138554858547,
+    "note": "after the type is added to the key these are separate keys, so collisions are 0 by construction"
+  },
+  "unknown_type_keys": 3836
 }
+TOP 20 TITLE-ONLY MOVIE/SHOW COLLISIONS
+                    key         hours   film_hours  series_hours
+0             s.w.a.t.  2.677000e+09   15900000.0  2.392900e+09
+1           the rookie  2.516700e+09    2300000.0  2.428500e+09
+2         the resident  1.935700e+09     400000.0  1.934900e+09
+3   the lincoln lawyer  1.932200e+09   10600000.0  1.871000e+09
+4        love is blind  1.751700e+09     500000.0  1.407300e+09
+5            the flash  1.545900e+09   49800000.0  1.185100e+09
+6                 lost  1.463700e+09    1700000.0  1.460900e+09
+7            outlander  1.444900e+09    2400000.0  1.204200e+09
+8       animal kingdom  8.905000e+08     600000.0  8.765000e+08
+9         the diplomat  8.187000e+08   34900000.0  5.697000e+08
+10       the gentlemen  7.590000e+08   38400000.0  7.076000e+08
+11            homeland  6.451000e+08     800000.0  6.353000e+08
+12          the smurfs  5.331000e+08   37900000.0  4.255000e+08
+13          parenthood  4.194000e+08    2400000.0  4.135000e+08
+14             warrior  4.166000e+08   21900000.0  3.889000e+08
+15            ragnarok  3.885000e+08     200000.0  3.520000e+08
+16             one day  3.422000e+08    7000000.0  3.327000e+08
+17       the equalizer  3.381000e+08  186500000.0  1.237000e+08
+18         man on fire  3.372000e+08  112900000.0  2.243000e+08
+19         van helsing  3.235000e+08   47000000.0  2.250000e+08
 SCOPE CANDIDATES
     target  union_keys  n_H1 2023  n_H2 2023  n_H1 2024  n_H2 2024  n_H1 2025  n_H2 2025  n_H1 2026
-0    0.90        7342       3033       2991       2904       2784       2931       3106       3264
-1    0.85        5548       2169       2154       2076       2000       2094       2227       2326
-2    0.80        4287       1600       1599       1538       1496       1553       1650       1698
-STOP: even the 80% target exceeds 3000 unique keys; ask the human (plan P4).
+0    0.90        7523       3033       3024       2941       2818       2964       3138       3296
+1    0.85        5683       2169       2178       2105       2023       2115       2248       2345
+2    0.80        4398       1600       1617       1559       1511       1565       1663       1710
+CHOSEN TARGET 80%; union keys 4398
+pool sizes tagged/untagged: 1401 2997
+DISTINCT GENRES IN title.basics: 28 ['Action', 'Adult', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Family', 'Fantasy', 'Film-Noir', 'Game-Show', 'History', 'Horror', 'Music', 'Musical', 'Mystery', 'News', 'Reality-TV', 'Romance', 'Sci-Fi', 'Short', 'Sport', 'Talk-Show', 'Thriller', 'War', 'Western']
+akas hits loaded: 60
+PILOT match rate 1.000 (30/30); labelled 1.000
+              matched  labelled
+language_tag                   
+tagged            1.0       1.0
+untagged          1.0       1.0
+                                  key                                                            netflix_title language_tag netflix_type  release_year_used  tag_year  matched                         imdb_title imdb_type  imdb_year                   imdb_genres                  group        stage segments_matched  candidates_after_filter tie_break type_rule   year_source  labelled
+0   bangkok breaking: heaven and hell  Bangkok Breaking: Heaven and Hell // Bangkok Breaking: ฝ่านรกเมืองเทวดา       tagged         film             2024.0       NaN     True  Bangkok Breaking: Heaven and Hell     movie     2024.0            Action,Crime,Drama       Crime & Thriller       stage1                1                        1      none      film  release_date      True
+1             beauty and mr. romantic                                       Beauty and Mr. Romantic // 미녀와 순정남       tagged       series                NaN       NaN     True            Beauty and Mr. Romantic  tvSeries     2024.0          Drama,Family,Romance          Kids & Family       stage1                1                        1      none    series          none      True
+2                         reborn rich                                                  Reborn Rich // 재벌집 막내아들       tagged       series                NaN       NaN     True                        Reborn Rich  tvSeries     2022.0         Drama,Fantasy,Romance       Sci-Fi & Fantasy       stage1                1                        1      none    series          none      True
+3                      the bequeathed                           The Bequeathed: Limited Series // 선산: 리미티드 시리즈       tagged       series             2024.0       NaN     True                     The Bequeathed  tvSeries     2024.0           Crime,Drama,Mystery       Crime & Thriller       stage1                1                        1      none    series  release_date      True
+4                            deadwind                                    Deadwind: Season 1 // Karppi: Kausi 1       tagged       series             2018.0       NaN     True                           Deadwind  tvSeries     2018.0           Crime,Drama,Mystery       Crime & Thriller       stage1                1                        1      none    series  release_date      True
+5                            srikanth                                                     Srikanth // श्रीकांत       tagged         film                NaN       NaN     True                           Srikanth     movie     2024.0               Biography,Drama                  Drama       stage1                1                        1      none      film          none      True
+6         baki hanma vs kengan ashura                            Baki Hanma VS Kengan Ashura // 範馬刃牙VSケンガンアシュラ       tagged         film             2024.0       NaN     True        Baki Hanma VS Kengan Ashura     movie     2024.0        Action,Animation,Drama              Animation       stage1                1                        1      none      film  release_date      True
+7                      suzuki=bakudan                                                     SUZUKI=BAKUDAN // 爆弾       tagged         film                NaN       NaN     True                               Bomb     movie     2025.0              Mystery,Thriller       Crime & Thriller  stage2_akas              1,2                        1      none      film          none      True
+8                         land of sin                         Land of Sin: Limited Series // Synden: Miniserie       tagged       series             2026.0       NaN     True                        Land of Sin  tvSeries     2026.0           Crime,Drama,Mystery       Crime & Thriller       stage1                1                        1      none    series  release_date      True
+9                  the price of glory                        The Price of Glory: Season 1 // Ventino: Season 1       tagged       series                NaN       NaN     True    Ventino. El precio de la gloria  tvSeries     2023.0                         Drama                  Drama  stage2_akas              1,2                        1      none    series          none      True
+10                   korea-khitan war                   Korea-Khitan War: Limited Series // 고려 거란 전쟁: 리미티드 시리즈       tagged       series                NaN       NaN     True                   Korea-Khitan War  tvSeries     2023.0          Action,Drama,History     Action & Adventure       stage1                1                        1      none    series          none      True
+11    mr. car and the knights templar        Mr. Car and the Knights Templar // Pan Samochodzik i templariusze       tagged         film             2023.0       NaN     True    Mr. Car and the Knights Templar     movie     2023.0        Adventure,Drama,Family          Kids & Family       stage1              1,2                        1      none      film  release_date      True
+12             the buckingham murders                               The Buckingham Murders // द बकिंघम मर्डर्स       tagged         film                NaN       NaN     True             The Buckingham Murders     movie     2023.0           Crime,Drama,Mystery       Crime & Thriller       stage1                1                        1      none      film          none      True
+13           single's inferno reunion          Single's Inferno Reunion: Limited Series // 솔로지옥 리유니언: 리미티드 시리즈       tagged       series                NaN       NaN     True           Single's Inferno Reunion  tvSeries     2026.0                    Reality-TV  Documentary & Reality       stage1                1                        1      none    series          none      True
+14                   who killed sara?           Who Killed Sara?: Season 1 // ¿Quién mató a Sara?: Temporada 1       tagged       series             2021.0       NaN     True                   Who Killed Sara?  tvSeries     2021.0           Crime,Drama,Mystery       Crime & Thriller       stage1              1,2                        1      none    series  release_date      True
+15                       out of death                                                             Out of Death     untagged         film                NaN       NaN     True                       Out of Death     movie     2021.0         Action,Crime,Thriller       Crime & Thriller       stage1                1                        1      none      film          none      True
+16                           beastars                                                       BEASTARS: Season 1     untagged       series             2019.0       NaN     True                           Beastars  tvSeries     2019.0         Animation,Crime,Drama              Animation       stage1                1                        1      none    series  release_date      True
+17            ghostbusters: afterlife                                                  Ghostbusters: Afterlife     untagged         film                NaN       NaN     True            Ghostbusters: Afterlife     movie     2021.0      Adventure,Comedy,Fantasy       Sci-Fi & Fantasy       stage1                1                        1      none      film          none      True
+18        lost on a mountain in maine                                              Lost on a Mountain in Maine     untagged         film                NaN       NaN     True        Lost on a Mountain in Maine     movie     2024.0              Adventure,Family          Kids & Family       stage1                1                        1      none      film          none      True
+19               the call of the wild                                              The Call of the Wild (2020)     untagged         film                NaN    2020.0     True               The Call of the Wild     movie     2020.0        Adventure,Drama,Family          Kids & Family       stage1                1                        1      none      film      tag_year      True
+20                     the loud house                                                 The Loud House: Season 3     untagged       series                NaN       NaN     True                     The Loud House  tvSeries     2015.0    Action,Adventure,Animation              Animation       stage1                1                        1      none    series          none      True
+21                        escape room                                                       Escape Room (2019)     untagged         film                NaN    2019.0     True                        Escape Room     movie     2019.0       Action,Adventure,Horror       Crime & Thriller       stage1                1                        1      none      film      tag_year      True
+22                   independence day                                                  Independence Day (1996)     untagged         film                NaN    1996.0     True                   Independence Day     movie     1996.0       Action,Adventure,Sci-Fi       Sci-Fi & Fantasy       stage1                1                        1      none      film      tag_year      True
+23                     anyone but you                                                           Anyone But You     untagged         film                NaN       NaN     True                     Anyone But You     movie     2023.0                Comedy,Romance       Comedy & Romance       stage1                1                        1      none      film          none      True
+24                  cook at all costs                                              Cook at all Costs: Season 1     untagged       series             2022.0       NaN     True                  Cook at All Costs  tvSeries     2022.0          Game-Show,Reality-TV  Documentary & Reality       stage1                1                        1      none    series  release_date      True
+25               the queenstown kings                                                     The Queenstown Kings     untagged         film             2023.0       NaN     True               The Queenstown Kings     movie     2023.0                   Drama,Sport     Action & Adventure       stage1                1                        1      none      film  release_date      True
+26              s.w.a.t.: under siege                                                    S.W.A.T.: Under Siege     untagged         film                NaN       NaN     True              S.W.A.T.: Under Siege     movie     2017.0               Action,Thriller       Crime & Thriller       stage1                1                        1      none      film          none      True
+27                          the union                                                                The Union     untagged         film             2024.0       NaN     True                          The Union     movie     2024.0        Action,Comedy,Thriller       Crime & Thriller       stage1                1                        1      none      film  release_date      True
+28               spy kids: armageddon                                                     Spy Kids: Armageddon     untagged         film             2023.0       NaN     True               Spy Kids: Armageddon     movie     2023.0       Action,Adventure,Comedy     Action & Adventure       stage1                1                        1      none      film  release_date      True
+29                    love island usa                                                Love Island USA: Season 2     untagged       series                NaN       NaN     True                    Love Island USA  tvSeries     2019.0  Game-Show,Reality-TV,Romance  Documentary & Reality       stage1                1                        1      none    series          none      True
+Pilot done. Full-scope labelling is NOT run: waiting for workflow/05_pilot_check.md.

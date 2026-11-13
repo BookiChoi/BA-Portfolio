@@ -99,6 +99,7 @@ class Cleaned:
     half_keys: pd.DataFrame       # one row per (half, key): hours, content types seen
     key_info: pd.DataFrame        # one row per key
     log: dict = field(default_factory=dict)
+    collisions: pd.DataFrame | None = None  # 20 largest movie/show title collisions by hours
 
 
 def clean_reports(raw: pd.DataFrame) -> Cleaned:
@@ -141,11 +142,30 @@ def clean_reports(raw: pd.DataFrame) -> Cleaned:
 
     log["duplicate_full_rows"] = int(df.duplicated(["half", "title", "hours_viewed", "release_date"]).sum())
 
-    # Merge rows with the same key within a half by summing hours (seasons become one series).
-    # Per-type hours as plain columns: vectorised and avoids slow per-group lambdas.
+    # Title-only collision statistics, computed BEFORE the type enters the key (Gate 2 amendment 1).
+    # Why content_type here: it is the sheet's own movie/show label; H1 2023 rows have none.
     df["film_hours"] = df["hours_viewed"].where(df["content_type"] == "film", 0.0)
     df["series_hours"] = df["hours_viewed"].where(df["content_type"] == "series", 0.0)
-    half_keys = df.groupby(["half", "key"], sort=False).agg(
+    collisions = _collision_report(df)
+
+    # Media type is part of the key wherever the file gives it. H1 2023 has no type: take it from
+    # the H2 2023 file if the cleaned title appears there with exactly one type, else 'unknown'.
+    # Why H2 2023: it is the nearest file with a movie/show split (plan amendment 1).
+    df["ktype"] = df["content_type"]
+    h2 = df[df["half"] == "H2 2023"].groupby("key")["content_type"].agg(lambda x: set(x))
+    one_type = {k: next(iter(v)) for k, v in h2.items() if len(v) == 1}
+    is_h1_unknown = (df["half"] == "H1 2023") & (df["content_type"] == "unknown")
+    resolved = df.loc[is_h1_unknown, "key"].map(one_type)
+    df.loc[is_h1_unknown, "ktype"] = resolved.fillna("unknown")
+    log["h1_2023_rows_type_from_h2_2023"] = int(resolved.notna().sum())
+    log["h1_2023_rows_type_unknown"] = int(resolved.isna().sum())
+    df["kid"] = df["key"] + " [" + df["ktype"] + "]"
+
+    # Merge rows with the same key within a half by summing hours (seasons become one series).
+    # Per-type hours as plain columns: vectorised and avoids slow per-group lambdas.
+    half_keys = df.groupby(["half", "kid"], sort=False).agg(
+        key=("key", "first"),
+        ktype=("ktype", "first"),
         hours=("hours_viewed", "sum"),
         n_rows=("hours_viewed", "size"),
         film_hours=("film_hours", "sum"),
@@ -153,30 +173,47 @@ def clean_reports(raw: pd.DataFrame) -> Cleaned:
     ).reset_index()
     log["merged_rows"] = int((half_keys["n_rows"] > 1).sum())
     log["rows_absorbed_by_merge"] = int((half_keys["n_rows"] - 1).sum())
-    both = (half_keys["film_hours"] > 0) & (half_keys["series_hours"] > 0)
-    log["movie_series_collisions_within_half"] = int(both.sum())
+    log["collisions_before_type_in_key"] = collisions["summary"]
 
     # Key-level facts used for matching.
     df = df.sort_values("hours_viewed", ascending=False, kind="stable")
-    rep = df.groupby("key", sort=False).first()  # representative row = highest-hours raw row
+    rep = df.groupby("kid", sort=False).first()  # representative row = highest-hours raw row
     ki = pd.DataFrame(index=rep.index)
+    ki["key"] = rep["key"]
+    ki["type_known"] = rep["ktype"]
     ki["rep_title"] = rep["title"]
     ki["tagged"] = rep["tagged"]
     ki["segments"] = rep["segments"]
-    ki["series_tag_stripped"] = df.groupby("key")["series_tag_stripped"].any()
-    ki["tag_year"] = df.dropna(subset=["tag_year"]).groupby("key")["tag_year"].first()
-    ki["release_date"] = df.groupby("key")["release_date"].min()  # earliest listed date for the key
-    fh = half_keys.groupby("key")[["film_hours", "series_hours"]].sum()
-    ki = ki.join(fh)
-    ki["type_known"] = np.where((ki["film_hours"] == 0) & (ki["series_hours"] == 0), "unknown",
-                                np.where(ki["film_hours"] >= ki["series_hours"], "film", "series"))
-    log["movie_series_collisions_across_halves"] = int(((ki["film_hours"] > 0) & (ki["series_hours"] > 0)).sum())
-    ki.index.name = "key"
-    return Cleaned(half_keys=half_keys, key_info=ki.reset_index(), log=log)
+    ki["series_tag_stripped"] = df.groupby("kid")["series_tag_stripped"].any()
+    ki["tag_year"] = df.dropna(subset=["tag_year"]).groupby("kid")["tag_year"].first()
+    ki["release_date"] = df.groupby("kid")["release_date"].min()  # earliest listed date for the key
+    ki.index.name = "kid"
+    log["unknown_type_keys"] = int((ki["type_known"] == "unknown").sum())
+    return Cleaned(half_keys=half_keys, key_info=ki.reset_index(), log=log,
+                   collisions=collisions["top20"])
+
+
+def _collision_report(df: pd.DataFrame) -> dict:
+    """Movie/show collisions of the title-only key: counts, hours share and the 20 largest."""
+    total = float(df["hours_viewed"].sum())
+    hk = df.groupby(["half", "key"]).agg(h=("hours_viewed", "sum"), f=("film_hours", "sum"), s=("series_hours", "sum"))
+    within = hk[(hk["f"] > 0) & (hk["s"] > 0)]
+    k = df.groupby("key").agg(h=("hours_viewed", "sum"), f=("film_hours", "sum"), s=("series_hours", "sum"))
+    across = k[(k["f"] > 0) & (k["s"] > 0)].sort_values("h", ascending=False)
+    top = across.head(20).reset_index().rename(columns={"h": "hours", "f": "film_hours", "s": "series_hours"})
+    summary = {
+        "title_only_unique_keys": int(len(k)),
+        "within_half_collision_pairs": int(len(within)),
+        "within_half_collision_hours_share": float(within["h"].sum() / total),
+        "across_halves_collision_keys": int(len(across)),
+        "across_halves_collision_hours_share": float(across["h"].sum() / total),
+        "note": "after the type is added to the key these are separate keys, so collisions are 0 by construction",
+    }
+    return {"summary": summary, "top20": top}
 
 
 # --------------------------------------------------------------------------- scope (P4)
-def scope_counts(half_keys: pd.DataFrame, targets=(0.90, 0.85, 0.80)) -> pd.DataFrame:
+def scope_counts(half_keys: pd.DataFrame, targets=(0.90, 0.85, 0.80), id_col: str = "key") -> pd.DataFrame:
     """Number of keys per half needed to reach each cumulative-hours target, and the union size.
 
     Hours only (no genre information). Keys are sorted by hours desc, then key (deterministic
@@ -187,21 +224,21 @@ def scope_counts(half_keys: pd.DataFrame, targets=(0.90, 0.85, 0.80)) -> pd.Data
         union: set[str] = set()
         per_half = {}
         for half, g in half_keys.groupby("half", sort=False):
-            g = g.sort_values(["hours", "key"], ascending=[False, True])
+            g = g.sort_values(["hours", id_col], ascending=[False, True])
             cum = g["hours"].cumsum() / g["hours"].sum()
             n = int(np.searchsorted(cum.to_numpy(), t - 1e-12) + 1)
             per_half[half] = n
-            union.update(g["key"].iloc[:n])
+            union.update(g[id_col].iloc[:n])
         rows.append({"target": t, "union_keys": len(union), **{f"n_{h}": n for h, n in per_half.items()}})
     return pd.DataFrame(rows)
 
 
-def scope_keys(half_keys: pd.DataFrame, target: float) -> dict[str, set[str]]:
+def scope_keys(half_keys: pd.DataFrame, target: float, id_col: str = "key") -> dict[str, set[str]]:
     """Keys inside the scope for each half at a cumulative-hours target."""
     out = {}
     for half, g in half_keys.groupby("half", sort=False):
-        g = g.sort_values(["hours", "key"], ascending=[False, True])
+        g = g.sort_values(["hours", id_col], ascending=[False, True])
         cum = g["hours"].cumsum() / g["hours"].sum()
         n = int(np.searchsorted(cum.to_numpy(), target - 1e-12) + 1)
-        out[half] = set(g["key"].iloc[:n])
+        out[half] = set(g[id_col].iloc[:n])
     return out
