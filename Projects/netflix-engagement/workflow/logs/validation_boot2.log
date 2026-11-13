@@ -1,0 +1,10 @@
+GMARGIN-BOOT Documentary & Reality    mine [  -4.78,  -0.67] analyst [  -5.02,  -0.67] pass2 frac mine=0.0000
+GMARGIN-BOOT Kids & Family            mine [  -3.35,  -0.35] analyst [  -3.26,  -0.42] pass2 frac mine=0.0000
+GMARGIN-BOOT Animation                mine [  -4.97,  -0.89] analyst [  -4.97,  -0.85] pass2 frac mine=0.0000
+GMARGIN-BOOT Sci-Fi & Fantasy         mine [  -7.72,  -0.30] analyst [  -7.43,  -0.29] pass2 frac mine=0.0000
+GMARGIN-BOOT Crime & Thriller         mine [ -12.69,  -2.47] analyst [ -12.88,  -2.50] pass2 frac mine=0.0000
+GMARGIN-BOOT Action & Adventure       mine [  -5.49,  -0.47] analyst [  -5.37,  -0.53] pass2 frac mine=0.0000
+GMARGIN-BOOT Comedy & Romance         mine [ -10.11,  -1.89] analyst [ -10.55,  -1.85] pass2 frac mine=0.0000
+GMARGIN-BOOT worst endpoint difference (pp): 0.44345356063656993
+.
+1 passed in 67.98s (0:01:07)

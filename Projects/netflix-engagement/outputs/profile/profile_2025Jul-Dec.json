@@ -1,0 +1,708 @@
+{
+  "file": "2025Jul-Dec.xlsx",
+  "sha256": "a06b0f510264336ad31f29a0ed4aaa51247374dcaa8aee780bbecf50227635cb",
+  "size_bytes": 931483,
+  "sheets": [
+    "Shows",
+    "Movies"
+  ],
+  "content_type_split_source": "sheet name",
+  "data_rows_all_sheets": 16470,
+  "file_total": {
+    "rows_data": 16470,
+    "rows_other": 2,
+    "rows_title_level": 16468,
+    "distinct_titles": 16465,
+    "rows_by_content_type": {
+      "film": 8724,
+      "series": 7746
+    },
+    "columns": {
+      "title": {
+        "column_present": true,
+        "non_null": 16470,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 16467,
+        "duplicate_values": 3,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "available_globally": {
+        "column_present": true,
+        "non_null": 16470,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 3,
+        "duplicate_values": 16467,
+        "placeholder_star": 2,
+        "header_phrase_rows": 0
+      },
+      "release_date": {
+        "column_present": true,
+        "non_null": 5718,
+        "missing": 10752,
+        "missing_pct": 65.2823,
+        "distinct": 2112,
+        "duplicate_values": 3606,
+        "placeholder_star": 2,
+        "header_phrase_rows": 0
+      },
+      "hours_viewed": {
+        "column_present": true,
+        "non_null": 16470,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 702,
+        "duplicate_values": 15768,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "runtime": {
+        "column_present": true,
+        "non_null": 16470,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 1390,
+        "duplicate_values": 15080,
+        "placeholder_star": 175,
+        "header_phrase_rows": 0
+      },
+      "views": {
+        "column_present": true,
+        "non_null": 16470,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 289,
+        "duplicate_values": 16181,
+        "placeholder_star": 2,
+        "header_phrase_rows": 0
+      }
+    },
+    "duplicate_full_rows": 0,
+    "rows_with_header_phrase": 0,
+    "hours": {
+      "total_incl_other": 96207800000.0,
+      "total_title_level": 95450600000.0,
+      "top10_hours": 5885800000.0,
+      "top10_share_of_total_incl_other": 0.061177991805238245,
+      "top10_share_of_title_level": 0.06166331065493564
+    },
+    "numeric": {
+      "hours_viewed": {
+        "count": 16470,
+        "min": 100000.0,
+        "p25": 300000.0,
+        "median": 1100000.0,
+        "mean": 5841396.478445658,
+        "p75": 4300000.0,
+        "p90": 13100000.0,
+        "p99": 69830999.99999996,
+        "max": 964100000.0
+      },
+      "runtime_minutes": {
+        "count": 16193,
+        "min": 9.0,
+        "p25": 100.0,
+        "median": 123.0,
+        "mean": 274.9880812696844,
+        "p75": 308.0,
+        "p90": 576.0,
+        "p99": 1717.199999999999,
+        "max": 23853.0
+      },
+      "views": {
+        "count": 16468,
+        "min": 100000.0,
+        "p25": 100000.0,
+        "median": 300000.0,
+        "mean": 1469097.6439154723,
+        "p75": 1200000.0,
+        "p90": 3300000.0,
+        "p99": 16332999.999999993,
+        "max": 481600000.0
+      }
+    },
+    "outliers": {
+      "hours_viewed": {
+        "iqr_upper_fence": 10300000.0,
+        "count_above_fence": 2080,
+        "top5": [
+          {
+            "title": "Wednesday: Season 2",
+            "value": 964100000.0
+          },
+          {
+            "title": "Stranger Things 5",
+            "value": 879700000.0
+          },
+          {
+            "title": "KPop Demon Hunters",
+            "value": 802600000.0
+          },
+          {
+            "title": "Bon Appétit, Your Majesty: Limited Series // 폭군의 셰프: 리미티드 시리즈",
+            "value": 588300000.0
+          },
+          {
+            "title": "Stranger Things 4",
+            "value": 562200000.0
+          }
+        ]
+      },
+      "views": {
+        "iqr_upper_fence": 2850000.0,
+        "count_above_fence": 1950,
+        "top5": [
+          {
+            "title": "KPop Demon Hunters",
+            "value": 481600000.0
+          },
+          {
+            "title": "Happy Gilmore 2",
+            "value": 135100000.0
+          },
+          {
+            "title": "Wednesday: Season 2",
+            "value": 123900000.0
+          },
+          {
+            "title": "Frankenstein",
+            "value": 97600000.0
+          },
+          {
+            "title": "Stranger Things 5",
+            "value": 93500000.0
+          }
+        ]
+      },
+      "runtime_minutes": {
+        "iqr_upper_fence": 620.0,
+        "count_above_fence": 1330,
+        "top5": [
+          {
+            "title": "As Aventuras de Poliana: Season 1",
+            "value": 23853.0
+          },
+          {
+            "title": "Chiquititas (2013)",
+            "value": 19907.0
+          },
+          {
+            "title": "Carinha de Anjo: Season 1",
+            "value": 14604.0
+          },
+          {
+            "title": "Pedro el escamoso: Season 1",
+            "value": 13805.0
+          },
+          {
+            "title": "Cúmplices de um Resgate: Season 1",
+            "value": 13152.0
+          }
+        ]
+      }
+    },
+    "release_date": {
+      "rows_considered": 16468,
+      "missing": 10752,
+      "missing_pct": 65.2903,
+      "placeholder_star": 0,
+      "unparsable": 0,
+      "min": "2010-04-01",
+      "max": "2025-12-31"
+    },
+    "available_globally": {
+      "No": {
+        "count": 11472,
+        "pct": 69.6539
+      },
+      "Yes": {
+        "count": 4996,
+        "pct": 30.3339
+      },
+      "*": {
+        "count": 2,
+        "pct": 0.0121
+      }
+    }
+  },
+  "per_sheet": [
+    {
+      "rows_data": 7746,
+      "rows_other": 1,
+      "rows_title_level": 7745,
+      "distinct_titles": 7744,
+      "rows_by_content_type": {
+        "series": 7746
+      },
+      "columns": {
+        "title": {
+          "column_present": true,
+          "non_null": 7746,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 7745,
+          "duplicate_values": 1,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "available_globally": {
+          "column_present": true,
+          "non_null": 7746,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 3,
+          "duplicate_values": 7743,
+          "placeholder_star": 1,
+          "header_phrase_rows": 0
+        },
+        "release_date": {
+          "column_present": true,
+          "non_null": 3883,
+          "missing": 3863,
+          "missing_pct": 49.8709,
+          "distinct": 1916,
+          "duplicate_values": 1967,
+          "placeholder_star": 1,
+          "header_phrase_rows": 0
+        },
+        "hours_viewed": {
+          "column_present": true,
+          "non_null": 7746,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 662,
+          "duplicate_values": 7084,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "runtime": {
+          "column_present": true,
+          "non_null": 7746,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 1384,
+          "duplicate_values": 6362,
+          "placeholder_star": 174,
+          "header_phrase_rows": 0
+        },
+        "views": {
+          "column_present": true,
+          "non_null": 7746,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 196,
+          "duplicate_values": 7550,
+          "placeholder_star": 1,
+          "header_phrase_rows": 0
+        }
+      },
+      "duplicate_full_rows": 0,
+      "rows_with_header_phrase": 0,
+      "hours": {
+        "total_incl_other": 71393300000.0,
+        "total_title_level": 70734300000.0,
+        "top10_hours": 5403300000.0,
+        "top10_share_of_total_incl_other": 0.07568357254812426,
+        "top10_share_of_title_level": 0.0763886827182852
+      },
+      "numeric": {
+        "hours_viewed": {
+          "count": 7746,
+          "min": 100000.0,
+          "p25": 700000.0,
+          "median": 2400000.0,
+          "mean": 9216795.765556416,
+          "p75": 7600000.0,
+          "p90": 21600000.0,
+          "p99": 97450000.00000018,
+          "max": 964100000.0
+        },
+        "runtime_minutes": {
+          "count": 7470,
+          "min": 11.0,
+          "p25": 218.0,
+          "median": 326.0,
+          "mean": 471.32168674698795,
+          "p75": 545.0,
+          "p90": 930.1000000000004,
+          "p99": 2872.2999999999847,
+          "max": 23853.0
+        },
+        "views": {
+          "count": 7745,
+          "min": 100000.0,
+          "p25": 100000.0,
+          "median": 400000.0,
+          "mean": 1335545.5132343448,
+          "p75": 1200000.0,
+          "p90": 3000000.0,
+          "p99": 13567999.999999847,
+          "max": 123900000.0
+        }
+      },
+      "outliers": {
+        "hours_viewed": {
+          "iqr_upper_fence": 17950000.0,
+          "count_above_fence": 939,
+          "top5": [
+            {
+              "title": "Wednesday: Season 2",
+              "value": 964100000.0
+            },
+            {
+              "title": "Stranger Things 5",
+              "value": 879700000.0
+            },
+            {
+              "title": "Bon Appétit, Your Majesty: Limited Series // 폭군의 셰프: 리미티드 시리즈",
+              "value": 588300000.0
+            },
+            {
+              "title": "Stranger Things 4",
+              "value": 562200000.0
+            },
+            {
+              "title": "Squid Game: Season 3 // 오징어 게임: 시즌 3",
+              "value": 484300000.0
+            }
+          ]
+        },
+        "views": {
+          "iqr_upper_fence": 2850000.0,
+          "count_above_fence": 833,
+          "top5": [
+            {
+              "title": "Wednesday: Season 2",
+              "value": 123900000.0
+            },
+            {
+              "title": "Stranger Things 5",
+              "value": 93500000.0
+            },
+            {
+              "title": "UNTAMED: Season 1",
+              "value": 92800000.0
+            },
+            {
+              "title": "Squid Game: Season 3 // 오징어 게임: 시즌 3",
+              "value": 79000000.0
+            },
+            {
+              "title": "Stranger Things",
+              "value": 56600000.0
+            }
+          ]
+        },
+        "runtime_minutes": {
+          "iqr_upper_fence": 1035.5,
+          "count_above_fence": 517,
+          "top5": [
+            {
+              "title": "As Aventuras de Poliana: Season 1",
+              "value": 23853.0
+            },
+            {
+              "title": "Chiquititas (2013)",
+              "value": 19907.0
+            },
+            {
+              "title": "Carinha de Anjo: Season 1",
+              "value": 14604.0
+            },
+            {
+              "title": "Pedro el escamoso: Season 1",
+              "value": 13805.0
+            },
+            {
+              "title": "Cúmplices de um Resgate: Season 1",
+              "value": 13152.0
+            }
+          ]
+        }
+      },
+      "release_date": {
+        "rows_considered": 7745,
+        "missing": 3863,
+        "missing_pct": 49.8773,
+        "placeholder_star": 0,
+        "unparsable": 0,
+        "min": "2010-04-01",
+        "max": "2025-12-31"
+      },
+      "available_globally": {
+        "No": {
+          "count": 4749,
+          "pct": 61.3091
+        },
+        "Yes": {
+          "count": 2996,
+          "pct": 38.678
+        },
+        "*": {
+          "count": 1,
+          "pct": 0.0129
+        }
+      },
+      "sheet": "Shows",
+      "content_type": "series",
+      "header_row_excel": 6,
+      "skipped_rows_above_header": [
+        "What We Watched: A Netflix Engagement Report",
+        "Views from July to December 2025* (see footnote)"
+      ],
+      "header_columns": [
+        "Title",
+        "Available Globally?",
+        "Release Date",
+        "Hours Viewed",
+        "Runtime",
+        "Views"
+      ],
+      "rows_blank": 1,
+      "rows_footnote": 1,
+      "footnotes": [
+        "*The 2025 H2 report includes two additional rows: “Other Movies” and “Other Shows”, which capture viewing from titles with <50k views. These rows allow the report to reflect 100% of viewing. Note, viewing from titles with <50k views was not captured in previous reports. “Other” in 2024 H2 totalled 581,200,000 view hours."
+      ]
+    },
+    {
+      "rows_data": 8724,
+      "rows_other": 1,
+      "rows_title_level": 8723,
+      "distinct_titles": 8721,
+      "rows_by_content_type": {
+        "film": 8724
+      },
+      "columns": {
+        "title": {
+          "column_present": true,
+          "non_null": 8724,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 8722,
+          "duplicate_values": 2,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "available_globally": {
+          "column_present": true,
+          "non_null": 8724,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 3,
+          "duplicate_values": 8721,
+          "placeholder_star": 1,
+          "header_phrase_rows": 0
+        },
+        "release_date": {
+          "column_present": true,
+          "non_null": 1835,
+          "missing": 6889,
+          "missing_pct": 78.9661,
+          "distinct": 1096,
+          "duplicate_values": 739,
+          "placeholder_star": 1,
+          "header_phrase_rows": 0
+        },
+        "hours_viewed": {
+          "column_present": true,
+          "non_null": 8724,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 346,
+          "duplicate_values": 8378,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "runtime": {
+          "column_present": true,
+          "non_null": 8724,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 194,
+          "duplicate_values": 8530,
+          "placeholder_star": 1,
+          "header_phrase_rows": 0
+        },
+        "views": {
+          "column_present": true,
+          "non_null": 8724,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 244,
+          "duplicate_values": 8480,
+          "placeholder_star": 1,
+          "header_phrase_rows": 0
+        }
+      },
+      "duplicate_full_rows": 0,
+      "rows_with_header_phrase": 0,
+      "hours": {
+        "total_incl_other": 24814500000.0,
+        "total_title_level": 24716300000.0,
+        "top10_hours": 2289600000.0,
+        "top10_share_of_total_incl_other": 0.09226863325878015,
+        "top10_share_of_title_level": 0.0926352245279431
+      },
+      "numeric": {
+        "hours_viewed": {
+          "count": 8724,
+          "min": 100000.0,
+          "p25": 200000.0,
+          "median": 500000.0,
+          "mean": 2844394.77303989,
+          "p75": 2100000.0,
+          "p90": 6500000.0,
+          "p99": 33077000.000000045,
+          "max": 802600000.0
+        },
+        "runtime_minutes": {
+          "count": 8723,
+          "min": 9.0,
+          "p25": 94.0,
+          "median": 104.0,
+          "mean": 106.85647139745501,
+          "p75": 117.0,
+          "p90": 132.0,
+          "p99": 171.0,
+          "max": 4484.0
+        },
+        "views": {
+          "count": 8723,
+          "min": 100000.0,
+          "p25": 100000.0,
+          "median": 300000.0,
+          "mean": 1587676.2581680615,
+          "p75": 1200000.0,
+          "p90": 3700000.0,
+          "p99": 18178000.000000067,
+          "max": 481600000.0
+        }
+      },
+      "outliers": {
+        "hours_viewed": {
+          "iqr_upper_fence": 4950000.0,
+          "count_above_fence": 1131,
+          "top5": [
+            {
+              "title": "KPop Demon Hunters",
+              "value": 802600000.0
+            },
+            {
+              "title": "Happy Gilmore 2",
+              "value": 265700000.0
+            },
+            {
+              "title": "Frankenstein",
+              "value": 247300000.0
+            },
+            {
+              "title": "My Oxford Year",
+              "value": 162200000.0
+            },
+            {
+              "title": "The Old Guard 2",
+              "value": 145300000.0
+            }
+          ]
+        },
+        "views": {
+          "iqr_upper_fence": 2850000.0,
+          "count_above_fence": 1117,
+          "top5": [
+            {
+              "title": "KPop Demon Hunters",
+              "value": 481600000.0
+            },
+            {
+              "title": "Happy Gilmore 2",
+              "value": 135100000.0
+            },
+            {
+              "title": "Frankenstein",
+              "value": 97600000.0
+            },
+            {
+              "title": "My Oxford Year",
+              "value": 86100000.0
+            },
+            {
+              "title": "The Old Guard 2",
+              "value": 81500000.0
+            }
+          ]
+        },
+        "runtime_minutes": {
+          "iqr_upper_fence": 151.5,
+          "count_above_fence": 297,
+          "top5": [
+            {
+              "title": "Nihontouitsu Series: Film Series // 日本統一シリーズ: 映画シリーズ",
+              "value": 4484.0
+            },
+            {
+              "title": "CONNECT -Road to Conquest-: Season 1 // CONNECT -覇者への道-: 映画シリーズ",
+              "value": 651.0
+            },
+            {
+              "title": "30 for 30: Celtics/Lakers: The Best of Enemies: Season 1",
+              "value": 255.0
+            },
+            {
+              "title": "Zack Snyder's Justice League",
+              "value": 242.0
+            },
+            {
+              "title": "A Lion in the House: Limited Series",
+              "value": 230.0
+            }
+          ]
+        }
+      },
+      "release_date": {
+        "rows_considered": 8723,
+        "missing": 6889,
+        "missing_pct": 78.9751,
+        "placeholder_star": 0,
+        "unparsable": 0,
+        "min": "2013-12-12",
+        "max": "2025-12-30"
+      },
+      "available_globally": {
+        "No": {
+          "count": 6723,
+          "pct": 77.0633
+        },
+        "Yes": {
+          "count": 2000,
+          "pct": 22.9253
+        },
+        "*": {
+          "count": 1,
+          "pct": 0.0115
+        }
+      },
+      "sheet": "Movies",
+      "content_type": "film",
+      "header_row_excel": 6,
+      "skipped_rows_above_header": [
+        "What We Watched: A Netflix Engagement Report",
+        "Views from July to December 2025* (see footnote)"
+      ],
+      "header_columns": [
+        "Title",
+        "Available Globally?",
+        "Release Date",
+        "Hours Viewed",
+        "Runtime",
+        "Views"
+      ],
+      "rows_blank": 1,
+      "rows_footnote": 1,
+      "footnotes": [
+        "*The 2025 H2 report includes two additional rows: “Other Movies” and “Other Shows”, which capture viewing from titles with <50k views. These rows allow the report to reflect 100% of viewing. Note, viewing from titles with <50k views was not captured in previous reports. “Other” in 2024 H2 totalled 581,200,000 view hours."
+      ]
+    }
+  ]
+}

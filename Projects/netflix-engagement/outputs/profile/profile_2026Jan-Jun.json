@@ -1,0 +1,708 @@
+{
+  "file": "2026Jan-Jun.xlsx",
+  "sha256": "bcfda87e87d09d923472a1e1b30d5c7c799457aacba41310a9d223e834fe2f5f",
+  "size_bytes": 988392,
+  "sheets": [
+    "Shows",
+    "Movies"
+  ],
+  "content_type_split_source": "sheet name",
+  "data_rows_all_sheets": 17372,
+  "file_total": {
+    "rows_data": 17372,
+    "rows_other": 2,
+    "rows_title_level": 17370,
+    "distinct_titles": 17367,
+    "rows_by_content_type": {
+      "film": 9178,
+      "series": 8194
+    },
+    "columns": {
+      "title": {
+        "column_present": true,
+        "non_null": 17372,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 17369,
+        "duplicate_values": 3,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "available_globally": {
+        "column_present": true,
+        "non_null": 17372,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 3,
+        "duplicate_values": 17369,
+        "placeholder_star": 2,
+        "header_phrase_rows": 0
+      },
+      "release_date": {
+        "column_present": true,
+        "non_null": 6048,
+        "missing": 11324,
+        "missing_pct": 65.1854,
+        "distinct": 2211,
+        "duplicate_values": 3837,
+        "placeholder_star": 2,
+        "header_phrase_rows": 0
+      },
+      "hours_viewed": {
+        "column_present": true,
+        "non_null": 17372,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 707,
+        "duplicate_values": 16665,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "runtime": {
+        "column_present": true,
+        "non_null": 17372,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 1443,
+        "duplicate_values": 15929,
+        "placeholder_star": 195,
+        "header_phrase_rows": 0
+      },
+      "views": {
+        "column_present": true,
+        "non_null": 17372,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 265,
+        "duplicate_values": 17107,
+        "placeholder_star": 2,
+        "header_phrase_rows": 0
+      }
+    },
+    "duplicate_full_rows": 0,
+    "rows_with_header_phrase": 0,
+    "hours": {
+      "total_incl_other": 97664500000.0,
+      "total_title_level": 96804600000.0,
+      "top10_hours": 4535400000.0,
+      "top10_share_of_total_incl_other": 0.046438572869363995,
+      "top10_share_of_title_level": 0.046851079390855394
+    },
+    "numeric": {
+      "hours_viewed": {
+        "count": 17372,
+        "min": 100000.0,
+        "p25": 300000.0,
+        "median": 1000000.0,
+        "mean": 5621949.113516003,
+        "p75": 4000000.0,
+        "p90": 12300000.0,
+        "p99": 70300000.0,
+        "max": 889800000.0
+      },
+      "runtime_minutes": {
+        "count": 17060,
+        "min": 9.0,
+        "p25": 100.0,
+        "median": 123.0,
+        "mean": 275.40005861664713,
+        "p75": 308.0,
+        "p90": 571.0,
+        "p99": 1709.5099999999984,
+        "max": 23853.0
+      },
+      "views": {
+        "count": 17370,
+        "min": 100000.0,
+        "p25": 100000.0,
+        "median": 300000.0,
+        "mean": 1346597.5820379965,
+        "p75": 1100000.0,
+        "p90": 3200000.0,
+        "p99": 14531000.00000013,
+        "max": 146900000.0
+      }
+    },
+    "outliers": {
+      "hours_viewed": {
+        "iqr_upper_fence": 9550000.0,
+        "count_above_fence": 2185,
+        "top5": [
+          {
+            "title": "Bridgerton: Season 4",
+            "value": 889800000.0
+          },
+          {
+            "title": "Stranger Things 5",
+            "value": 578400000.0
+          },
+          {
+            "title": "Teach You a Lesson: Limited Series // 참교육: 리미티드 시리즈",
+            "value": 514700000.0
+          },
+          {
+            "title": "His & Hers: Limited Series",
+            "value": 454300000.0
+          },
+          {
+            "title": "ONE PIECE: Season 2",
+            "value": 383500000.0
+          }
+        ]
+      },
+      "views": {
+        "iqr_upper_fence": 2600000.0,
+        "count_above_fence": 2101,
+        "top5": [
+          {
+            "title": "War Machine",
+            "value": 146900000.0
+          },
+          {
+            "title": "The Rip",
+            "value": 136100000.0
+          },
+          {
+            "title": "Swapped",
+            "value": 130800000.0
+          },
+          {
+            "title": "KPop Demon Hunters",
+            "value": 130400000.0
+          },
+          {
+            "title": "Apex",
+            "value": 129000000.0
+          }
+        ]
+      },
+      "runtime_minutes": {
+        "iqr_upper_fence": 620.0,
+        "count_above_fence": 1382,
+        "top5": [
+          {
+            "title": "As Aventuras de Poliana: Season 1",
+            "value": 23853.0
+          },
+          {
+            "title": "Chiquititas (2013)",
+            "value": 19907.0
+          },
+          {
+            "title": "Rebelde (2004)",
+            "value": 19445.0
+          },
+          {
+            "title": "Carinha de Anjo: Season 1",
+            "value": 14604.0
+          },
+          {
+            "title": "Pedro el escamoso: Season 1",
+            "value": 13805.0
+          }
+        ]
+      }
+    },
+    "release_date": {
+      "rows_considered": 17370,
+      "missing": 11324,
+      "missing_pct": 65.1929,
+      "placeholder_star": 0,
+      "unparsable": 0,
+      "min": "2010-04-01",
+      "max": "2026-06-29"
+    },
+    "available_globally": {
+      "No": {
+        "count": 12088,
+        "pct": 69.5832
+      },
+      "Yes": {
+        "count": 5282,
+        "pct": 30.4052
+      },
+      "*": {
+        "count": 2,
+        "pct": 0.0115
+      }
+    }
+  },
+  "per_sheet": [
+    {
+      "rows_data": 8194,
+      "rows_other": 1,
+      "rows_title_level": 8193,
+      "distinct_titles": 8193,
+      "rows_by_content_type": {
+        "series": 8194
+      },
+      "columns": {
+        "title": {
+          "column_present": true,
+          "non_null": 8194,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 8194,
+          "duplicate_values": 0,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "available_globally": {
+          "column_present": true,
+          "non_null": 8194,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 3,
+          "duplicate_values": 8191,
+          "placeholder_star": 1,
+          "header_phrase_rows": 0
+        },
+        "release_date": {
+          "column_present": true,
+          "non_null": 4142,
+          "missing": 4052,
+          "missing_pct": 49.4508,
+          "distinct": 2011,
+          "duplicate_values": 2131,
+          "placeholder_star": 1,
+          "header_phrase_rows": 0
+        },
+        "hours_viewed": {
+          "column_present": true,
+          "non_null": 8194,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 673,
+          "duplicate_values": 7521,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "runtime": {
+          "column_present": true,
+          "non_null": 8194,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 1439,
+          "duplicate_values": 6755,
+          "placeholder_star": 194,
+          "header_phrase_rows": 0
+        },
+        "views": {
+          "column_present": true,
+          "non_null": 8194,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 186,
+          "duplicate_values": 8008,
+          "placeholder_star": 1,
+          "header_phrase_rows": 0
+        }
+      },
+      "duplicate_full_rows": 0,
+      "rows_with_header_phrase": 0,
+      "hours": {
+        "total_incl_other": 74354300000.0,
+        "total_title_level": 73597300000.0,
+        "top10_hours": 4535400000.0,
+        "top10_share_of_total_incl_other": 0.06099714475154766,
+        "top10_share_of_title_level": 0.061624543291669664
+      },
+      "numeric": {
+        "hours_viewed": {
+          "count": 8194,
+          "min": 100000.0,
+          "p25": 700000.0,
+          "median": 2300000.0,
+          "mean": 9074237.246765926,
+          "p75": 7300000.0,
+          "p90": 21200000.0,
+          "p99": 100906999.99999997,
+          "max": 889800000.0
+        },
+        "runtime_minutes": {
+          "count": 7883,
+          "min": 9.0,
+          "p25": 215.0,
+          "median": 325.0,
+          "mean": 471.1422047443867,
+          "p75": 533.0,
+          "p90": 931.0,
+          "p99": 2855.0,
+          "max": 23853.0
+        },
+        "views": {
+          "count": 8193,
+          "min": 100000.0,
+          "p25": 100000.0,
+          "median": 400000.0,
+          "mean": 1274466.0075674355,
+          "p75": 1100000.0,
+          "p90": 3000000.0,
+          "p99": 12400000.0,
+          "max": 104000000.0
+        }
+      },
+      "outliers": {
+        "hours_viewed": {
+          "iqr_upper_fence": 17200000.0,
+          "count_above_fence": 1002,
+          "top5": [
+            {
+              "title": "Bridgerton: Season 4",
+              "value": 889800000.0
+            },
+            {
+              "title": "Stranger Things 5",
+              "value": 578400000.0
+            },
+            {
+              "title": "Teach You a Lesson: Limited Series // 참교육: 리미티드 시리즈",
+              "value": 514700000.0
+            },
+            {
+              "title": "His & Hers: Limited Series",
+              "value": 454300000.0
+            },
+            {
+              "title": "ONE PIECE: Season 2",
+              "value": 383500000.0
+            }
+          ]
+        },
+        "views": {
+          "iqr_upper_fence": 2600000.0,
+          "count_above_fence": 950,
+          "top5": [
+            {
+              "title": "His & Hers: Limited Series",
+              "value": 104000000.0
+            },
+            {
+              "title": "Bridgerton: Season 4",
+              "value": 100200000.0
+            },
+            {
+              "title": "I Will Find You: Limited Series",
+              "value": 63900000.0
+            },
+            {
+              "title": "Stranger Things 5",
+              "value": 55600000.0
+            },
+            {
+              "title": "Run Away: Limited Series",
+              "value": 50300000.0
+            }
+          ]
+        },
+        "runtime_minutes": {
+          "iqr_upper_fence": 1010.0,
+          "count_above_fence": 568,
+          "top5": [
+            {
+              "title": "As Aventuras de Poliana: Season 1",
+              "value": 23853.0
+            },
+            {
+              "title": "Chiquititas (2013)",
+              "value": 19907.0
+            },
+            {
+              "title": "Rebelde (2004)",
+              "value": 19445.0
+            },
+            {
+              "title": "Carinha de Anjo: Season 1",
+              "value": 14604.0
+            },
+            {
+              "title": "Pedro el escamoso: Season 1",
+              "value": 13805.0
+            }
+          ]
+        }
+      },
+      "release_date": {
+        "rows_considered": 8193,
+        "missing": 4052,
+        "missing_pct": 49.4569,
+        "placeholder_star": 0,
+        "unparsable": 0,
+        "min": "2010-04-01",
+        "max": "2026-06-29"
+      },
+      "available_globally": {
+        "No": {
+          "count": 5067,
+          "pct": 61.8379
+        },
+        "Yes": {
+          "count": 3126,
+          "pct": 38.1499
+        },
+        "*": {
+          "count": 1,
+          "pct": 0.0122
+        }
+      },
+      "sheet": "Shows",
+      "content_type": "series",
+      "header_row_excel": 6,
+      "skipped_rows_above_header": [
+        "Netflix's What We Watched Report",
+        "Views from January to June 2026* (see footnote)"
+      ],
+      "header_columns": [
+        "Title",
+        "Available Globally?",
+        "Release Date",
+        "Hours Viewed",
+        "Runtime",
+        "Views"
+      ],
+      "rows_blank": 1,
+      "rows_footnote": 1,
+      "footnotes": [
+        "*“Other Movies” and “Other Shows” rows in this report capture total viewing from titles with <50k views. Additionally, all video podcasts are calculated under “Other Shows”. These rows allow the report to reflect 100% of viewing. “Other” in 2025 H1 totalled 662,600,000 view hours."
+      ]
+    },
+    {
+      "rows_data": 9178,
+      "rows_other": 1,
+      "rows_title_level": 9177,
+      "distinct_titles": 9174,
+      "rows_by_content_type": {
+        "film": 9178
+      },
+      "columns": {
+        "title": {
+          "column_present": true,
+          "non_null": 9178,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 9175,
+          "duplicate_values": 3,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "available_globally": {
+          "column_present": true,
+          "non_null": 9178,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 3,
+          "duplicate_values": 9175,
+          "placeholder_star": 1,
+          "header_phrase_rows": 0
+        },
+        "release_date": {
+          "column_present": true,
+          "non_null": 1906,
+          "missing": 7272,
+          "missing_pct": 79.2329,
+          "distinct": 1145,
+          "duplicate_values": 761,
+          "placeholder_star": 1,
+          "header_phrase_rows": 0
+        },
+        "hours_viewed": {
+          "column_present": true,
+          "non_null": 9178,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 332,
+          "duplicate_values": 8846,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "runtime": {
+          "column_present": true,
+          "non_null": 9178,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 198,
+          "duplicate_values": 8980,
+          "placeholder_star": 1,
+          "header_phrase_rows": 0
+        },
+        "views": {
+          "column_present": true,
+          "non_null": 9178,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 228,
+          "duplicate_values": 8950,
+          "placeholder_star": 1,
+          "header_phrase_rows": 0
+        }
+      },
+      "duplicate_full_rows": 0,
+      "rows_with_header_phrase": 0,
+      "hours": {
+        "total_incl_other": 23310200000.0,
+        "total_title_level": 23207300000.0,
+        "top10_hours": 1823800000.0,
+        "top10_share_of_total_incl_other": 0.07824042693756382,
+        "top10_share_of_title_level": 0.07858734105216893
+      },
+      "numeric": {
+        "hours_viewed": {
+          "count": 9178,
+          "min": 100000.0,
+          "p25": 200000.0,
+          "median": 500000.0,
+          "mean": 2539790.8040967532,
+          "p75": 2000000.0,
+          "p90": 6100000.0,
+          "p99": 29591999.999999825,
+          "max": 266800000.0
+        },
+        "runtime_minutes": {
+          "count": 9177,
+          "min": 9.0,
+          "p25": 94.0,
+          "median": 104.0,
+          "mean": 107.25847226762559,
+          "p75": 117.0,
+          "p90": 132.0,
+          "p99": 171.0,
+          "max": 4821.0
+        },
+        "views": {
+          "count": 9177,
+          "min": 100000.0,
+          "p25": 100000.0,
+          "median": 300000.0,
+          "mean": 1410994.8785005994,
+          "p75": 1100000.0,
+          "p90": 3300000.0,
+          "p99": 16171999.999999935,
+          "max": 146900000.0
+        }
+      },
+      "outliers": {
+        "hours_viewed": {
+          "iqr_upper_fence": 4700000.0,
+          "count_above_fence": 1164,
+          "top5": [
+            {
+              "title": "War Machine",
+              "value": 266800000.0
+            },
+            {
+              "title": "The Rip",
+              "value": 256400000.0
+            },
+            {
+              "title": "Swapped",
+              "value": 222400000.0
+            },
+            {
+              "title": "KPop Demon Hunters",
+              "value": 217300000.0
+            },
+            {
+              "title": "Apex",
+              "value": 204200000.0
+            }
+          ]
+        },
+        "views": {
+          "iqr_upper_fence": 2600000.0,
+          "count_above_fence": 1151,
+          "top5": [
+            {
+              "title": "War Machine",
+              "value": 146900000.0
+            },
+            {
+              "title": "The Rip",
+              "value": 136100000.0
+            },
+            {
+              "title": "Swapped",
+              "value": 130800000.0
+            },
+            {
+              "title": "KPop Demon Hunters",
+              "value": 130400000.0
+            },
+            {
+              "title": "Apex",
+              "value": 129000000.0
+            }
+          ]
+        },
+        "runtime_minutes": {
+          "iqr_upper_fence": 151.5,
+          "count_above_fence": 303,
+          "top5": [
+            {
+              "title": "Nihontouitsu Series: Film Series // 日本統一シリーズ: 映画シリーズ",
+              "value": 4821.0
+            },
+            {
+              "title": "CONNECT -Road to Conquest-: Season 1 // CONNECT -覇者への道-: 映画シリーズ",
+              "value": 1056.0
+            },
+            {
+              "title": "Seiji Oda: Film Series // 織田同志会 織田征仁: 映画シリーズ",
+              "value": 781.0
+            },
+            {
+              "title": "Mobile Suit Gundam The Origin: Season 1 // 機動戦士ガンダムTHE ORIGIN: シーズン1",
+              "value": 426.0
+            },
+            {
+              "title": "Navarasa: Limited Series",
+              "value": 312.0
+            }
+          ]
+        }
+      },
+      "release_date": {
+        "rows_considered": 9177,
+        "missing": 7272,
+        "missing_pct": 79.2416,
+        "placeholder_star": 0,
+        "unparsable": 0,
+        "min": "2013-12-12",
+        "max": "2026-06-26"
+      },
+      "available_globally": {
+        "No": {
+          "count": 7021,
+          "pct": 76.4981
+        },
+        "Yes": {
+          "count": 2156,
+          "pct": 23.491
+        },
+        "*": {
+          "count": 1,
+          "pct": 0.0109
+        }
+      },
+      "sheet": "Movies",
+      "content_type": "film",
+      "header_row_excel": 6,
+      "skipped_rows_above_header": [
+        "Netflix's What We Watched Report",
+        "Views from January to June 2026* (see footnote)"
+      ],
+      "header_columns": [
+        "Title",
+        "Available Globally?",
+        "Release Date",
+        "Hours Viewed",
+        "Runtime",
+        "Views"
+      ],
+      "rows_blank": 1,
+      "rows_footnote": 1,
+      "footnotes": [
+        "*“Other Movies” and “Other Shows” rows in this report capture total viewing from titles with <50k views. Additionally, all video podcasts are calculated under “Other Shows”. These rows allow the report to reflect 100% of viewing. “Other” in 2025 H1 totalled 662,600,000 view hours."
+      ]
+    }
+  ]
+}

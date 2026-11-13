@@ -1,0 +1,14 @@
+file,sheet,header_row_excel,n_columns,columns_in_order,same_as_reference,reference,has[Title],has[Available Globally?],has[Release Date],has[Hours Viewed],has[Runtime],has[Views]
+2023Jan-Jun.xlsx,Engagement,6,4,Title | Available Globally? | Release Date | Hours Viewed,False,2026Jan-Jun.xlsx:Shows,True,True,True,True,False,False
+2023Jul-Dec.xlsx,TV,6,6,Title | Available Globally? | Release Date | Hours Viewed | Runtime | Views,True,2026Jan-Jun.xlsx:Shows,True,True,True,True,True,True
+2023Jul-Dec.xlsx,Film,6,6,Title | Available Globally? | Release Date | Hours Viewed | Runtime | Views,True,2026Jan-Jun.xlsx:Shows,True,True,True,True,True,True
+2024Jan-Jun.xlsx,TV,6,6,Title | Available Globally? | Release Date | Hours Viewed | Runtime | Views,True,2026Jan-Jun.xlsx:Shows,True,True,True,True,True,True
+2024Jan-Jun.xlsx,Film,6,6,Title | Available Globally? | Release Date | Hours Viewed | Runtime | Views,True,2026Jan-Jun.xlsx:Shows,True,True,True,True,True,True
+2024Jul-Dec.xlsx,TV,6,6,Title | Available Globally? | Release Date | Hours Viewed | Runtime | Views,True,2026Jan-Jun.xlsx:Shows,True,True,True,True,True,True
+2024Jul-Dec.xlsx,Film,6,6,Title | Available Globally? | Release Date | Hours Viewed | Runtime | Views,True,2026Jan-Jun.xlsx:Shows,True,True,True,True,True,True
+2025Jan-Jun.xlsx,Shows,6,6,Title | Available Globally? | Release Date | Hours Viewed | Runtime | Views,True,2026Jan-Jun.xlsx:Shows,True,True,True,True,True,True
+2025Jan-Jun.xlsx,Movies,6,6,Title | Available Globally? | Release Date | Hours Viewed | Runtime | Views,True,2026Jan-Jun.xlsx:Shows,True,True,True,True,True,True
+2025Jul-Dec.xlsx,Shows,6,6,Title | Available Globally? | Release Date | Hours Viewed | Runtime | Views,True,2026Jan-Jun.xlsx:Shows,True,True,True,True,True,True
+2025Jul-Dec.xlsx,Movies,6,6,Title | Available Globally? | Release Date | Hours Viewed | Runtime | Views,True,2026Jan-Jun.xlsx:Shows,True,True,True,True,True,True
+2026Jan-Jun.xlsx,Shows,6,6,Title | Available Globally? | Release Date | Hours Viewed | Runtime | Views,True,2026Jan-Jun.xlsx:Shows,True,True,True,True,True,True
+2026Jan-Jun.xlsx,Movies,6,6,Title | Available Globally? | Release Date | Hours Viewed | Runtime | Views,True,2026Jan-Jun.xlsx:Shows,True,True,True,True,True,True

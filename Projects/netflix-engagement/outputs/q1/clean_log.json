@@ -1,0 +1,24 @@
+{
+  "rows_in": 115956,
+  "other_rows": 4,
+  "other_hours_by_half": {
+    "H2 2025": 757200000.0,
+    "H1 2026": 859900000.0
+  },
+  "dropped_missing_hours_or_title": 0,
+  "unknown_rows_trailing_number_resolved": 200,
+  "duplicate_full_rows": 0,
+  "h1_2023_rows_type_from_h2_2023": 13767,
+  "h1_2023_rows_type_unknown": 4447,
+  "merged_rows": 9111,
+  "rows_absorbed_by_merge": 20611,
+  "collisions_before_type_in_key": {
+    "title_only_unique_keys": 25849,
+    "within_half_collision_pairs": 767,
+    "within_half_collision_hours_share": 0.036350678093817264,
+    "across_halves_collision_keys": 411,
+    "across_halves_collision_hours_share": 0.05795138554858547,
+    "note": "after the type is added to the key these are separate keys, so collisions are 0 by construction"
+  },
+  "unknown_type_keys": 3836
+}

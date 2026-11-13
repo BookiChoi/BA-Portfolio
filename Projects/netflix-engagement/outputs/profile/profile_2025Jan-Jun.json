@@ -1,0 +1,692 @@
+{
+  "file": "2025Jan-Jun.xlsx",
+  "sha256": "7208fc0207818f961652748d19500221b1d3edce8999b83e0f954f27fb31e8dd",
+  "size_bytes": 913605,
+  "sheets": [
+    "Shows",
+    "Movies"
+  ],
+  "content_type_split_source": "sheet name",
+  "data_rows_all_sheets": 16182,
+  "file_total": {
+    "rows_data": 16182,
+    "rows_other": 0,
+    "rows_title_level": 16182,
+    "distinct_titles": 16177,
+    "rows_by_content_type": {
+      "film": 8674,
+      "series": 7508
+    },
+    "columns": {
+      "title": {
+        "column_present": true,
+        "non_null": 16182,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 16177,
+        "duplicate_values": 5,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "available_globally": {
+        "column_present": true,
+        "non_null": 16182,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 2,
+        "duplicate_values": 16180,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "release_date": {
+        "column_present": true,
+        "non_null": 5474,
+        "missing": 10708,
+        "missing_pct": 66.1723,
+        "distinct": 2003,
+        "duplicate_values": 3471,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "hours_viewed": {
+        "column_present": true,
+        "non_null": 16182,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 709,
+        "duplicate_values": 15473,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "runtime": {
+        "column_present": true,
+        "non_null": 16182,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 1388,
+        "duplicate_values": 14794,
+        "placeholder_star": 171,
+        "header_phrase_rows": 0
+      },
+      "views": {
+        "column_present": true,
+        "non_null": 16182,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 293,
+        "duplicate_values": 15889,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      }
+    },
+    "duplicate_full_rows": 0,
+    "rows_with_header_phrase": 0,
+    "hours": {
+      "total_incl_other": 95186500000.0,
+      "total_title_level": 95186500000.0,
+      "top10_hours": 4738100000.0,
+      "top10_share_of_total_incl_other": 0.049777016698796576,
+      "top10_share_of_title_level": 0.049777016698796576
+    },
+    "numeric": {
+      "hours_viewed": {
+        "count": 16182,
+        "min": 100000.0,
+        "p25": 300000.0,
+        "median": 1000000.0,
+        "mean": 5882245.705104437,
+        "p75": 4200000.0,
+        "p90": 13400000.0,
+        "p99": 75719000.00000004,
+        "max": 840300000.0
+      },
+      "runtime_minutes": {
+        "count": 15923,
+        "min": 2.0,
+        "p25": 100.0,
+        "median": 122.0,
+        "mean": 274.594297556993,
+        "p75": 306.0,
+        "p90": 580.0,
+        "p99": 1812.0,
+        "max": 23853.0
+      },
+      "views": {
+        "count": 16182,
+        "min": 100000.0,
+        "p25": 100000.0,
+        "median": 300000.0,
+        "mean": 1471622.7907551602,
+        "p75": 1100000.0,
+        "p90": 3400000.0,
+        "p99": 17200000.0,
+        "max": 164700000.0
+      }
+    },
+    "outliers": {
+      "hours_viewed": {
+        "iqr_upper_fence": 10050000.0,
+        "count_above_fence": 2105,
+        "top5": [
+          {
+            "title": "Squid Game: Season 2 // 오징어 게임: 시즌 2",
+            "value": 840300000.0
+          },
+          {
+            "title": "When Life Gives You Tangerines: Limited Series // 폭싹 속았수다: 리미티드 시리즈",
+            "value": 577000000.0
+          },
+          {
+            "title": "Adolescence: Limited Series",
+            "value": 555100000.0
+          },
+          {
+            "title": "Ginny & Georgia: Season 3",
+            "value": 508200000.0
+          },
+          {
+            "title": "The Night Agent: Season 2",
+            "value": 457800000.0
+          }
+        ]
+      },
+      "views": {
+        "iqr_upper_fence": 2600000.0,
+        "count_above_fence": 2017,
+        "top5": [
+          {
+            "title": "Back in Action",
+            "value": 164700000.0
+          },
+          {
+            "title": "Adolescence: Limited Series",
+            "value": 144800000.0
+          },
+          {
+            "title": "Squid Game: Season 2 // 오징어 게임: 시즌 2",
+            "value": 117300000.0
+          },
+          {
+            "title": "STRAW",
+            "value": 102900000.0
+          },
+          {
+            "title": "The Life List",
+            "value": 95500000.0
+          }
+        ]
+      },
+      "runtime_minutes": {
+        "iqr_upper_fence": 615.0,
+        "count_above_fence": 1368,
+        "top5": [
+          {
+            "title": "As Aventuras de Poliana: Season 1",
+            "value": 23853.0
+          },
+          {
+            "title": "Chiquititas (2013)",
+            "value": 19907.0
+          },
+          {
+            "title": "Carinha de Anjo: Season 1",
+            "value": 14604.0
+          },
+          {
+            "title": "Pedro el escamoso: Season 1",
+            "value": 13805.0
+          },
+          {
+            "title": "Cúmplices de um Resgate: Season 1",
+            "value": 13152.0
+          }
+        ]
+      }
+    },
+    "release_date": {
+      "rows_considered": 16182,
+      "missing": 10708,
+      "missing_pct": 66.1723,
+      "placeholder_star": 0,
+      "unparsable": 0,
+      "min": "2010-04-01",
+      "max": "2025-06-30"
+    },
+    "available_globally": {
+      "No": {
+        "count": 11555,
+        "pct": 71.4065
+      },
+      "Yes": {
+        "count": 4627,
+        "pct": 28.5935
+      }
+    }
+  },
+  "per_sheet": [
+    {
+      "rows_data": 7508,
+      "rows_other": 0,
+      "rows_title_level": 7508,
+      "distinct_titles": 7507,
+      "rows_by_content_type": {
+        "series": 7508
+      },
+      "columns": {
+        "title": {
+          "column_present": true,
+          "non_null": 7508,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 7507,
+          "duplicate_values": 1,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "available_globally": {
+          "column_present": true,
+          "non_null": 7508,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 2,
+          "duplicate_values": 7506,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "release_date": {
+          "column_present": true,
+          "non_null": 3742,
+          "missing": 3766,
+          "missing_pct": 50.1598,
+          "distinct": 1818,
+          "duplicate_values": 1924,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "hours_viewed": {
+          "column_present": true,
+          "non_null": 7508,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 667,
+          "duplicate_values": 6841,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "runtime": {
+          "column_present": true,
+          "non_null": 7508,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 1383,
+          "duplicate_values": 6125,
+          "placeholder_star": 171,
+          "header_phrase_rows": 0
+        },
+        "views": {
+          "column_present": true,
+          "non_null": 7508,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 195,
+          "duplicate_values": 7313,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        }
+      },
+      "duplicate_full_rows": 0,
+      "rows_with_header_phrase": 0,
+      "hours": {
+        "total_incl_other": 71128300000.0,
+        "total_title_level": 71128300000.0,
+        "top10_hours": 4733800000.0,
+        "top10_share_of_total_incl_other": 0.06655297539797803,
+        "top10_share_of_title_level": 0.06655297539797803
+      },
+      "numeric": {
+        "hours_viewed": {
+          "count": 7508,
+          "min": 100000.0,
+          "p25": 700000.0,
+          "median": 2300000.0,
+          "mean": 9473668.087373469,
+          "p75": 7625000.0,
+          "p90": 23300000.0,
+          "p99": 106979000.00000009,
+          "max": 840300000.0
+        },
+        "runtime_minutes": {
+          "count": 7249,
+          "min": 2.0,
+          "p25": 218.0,
+          "median": 324.0,
+          "mean": 475.4843426679542,
+          "p75": 550.0,
+          "p90": 947.1999999999998,
+          "p99": 2786.0,
+          "max": 23853.0
+        },
+        "views": {
+          "count": 7508,
+          "min": 100000.0,
+          "p25": 100000.0,
+          "median": 400000.0,
+          "mean": 1378782.63185935,
+          "p75": 1200000.0,
+          "p90": 3100000.0,
+          "p99": 14393000.00000003,
+          "max": 144800000.0
+        }
+      },
+      "outliers": {
+        "hours_viewed": {
+          "iqr_upper_fence": 18012500.0,
+          "count_above_fence": 968,
+          "top5": [
+            {
+              "title": "Squid Game: Season 2 // 오징어 게임: 시즌 2",
+              "value": 840300000.0
+            },
+            {
+              "title": "When Life Gives You Tangerines: Limited Series // 폭싹 속았수다: 리미티드 시리즈",
+              "value": 577000000.0
+            },
+            {
+              "title": "Adolescence: Limited Series",
+              "value": 555100000.0
+            },
+            {
+              "title": "Ginny & Georgia: Season 3",
+              "value": 508200000.0
+            },
+            {
+              "title": "The Night Agent: Season 2",
+              "value": 457800000.0
+            }
+          ]
+        },
+        "views": {
+          "iqr_upper_fence": 2850000.0,
+          "count_above_fence": 834,
+          "top5": [
+            {
+              "title": "Adolescence: Limited Series",
+              "value": 144800000.0
+            },
+            {
+              "title": "Squid Game: Season 2 // 오징어 게임: 시즌 2",
+              "value": 117300000.0
+            },
+            {
+              "title": "Squid Game: Season 3 // 오징어 게임: 시즌 3",
+              "value": 71500000.0
+            },
+            {
+              "title": "Zero Day: Limited Series",
+              "value": 61300000.0
+            },
+            {
+              "title": "Missing You: Limited Series",
+              "value": 58000000.0
+            }
+          ]
+        },
+        "runtime_minutes": {
+          "iqr_upper_fence": 1048.0,
+          "count_above_fence": 515,
+          "top5": [
+            {
+              "title": "As Aventuras de Poliana: Season 1",
+              "value": 23853.0
+            },
+            {
+              "title": "Chiquititas (2013)",
+              "value": 19907.0
+            },
+            {
+              "title": "Carinha de Anjo: Season 1",
+              "value": 14604.0
+            },
+            {
+              "title": "Pedro el escamoso: Season 1",
+              "value": 13805.0
+            },
+            {
+              "title": "Cúmplices de um Resgate: Season 1",
+              "value": 13152.0
+            }
+          ]
+        }
+      },
+      "release_date": {
+        "rows_considered": 7508,
+        "missing": 3766,
+        "missing_pct": 50.1598,
+        "placeholder_star": 0,
+        "unparsable": 0,
+        "min": "2010-04-01",
+        "max": "2025-06-30"
+      },
+      "available_globally": {
+        "No": {
+          "count": 4724,
+          "pct": 62.9196
+        },
+        "Yes": {
+          "count": 2784,
+          "pct": 37.0804
+        }
+      },
+      "sheet": "Shows",
+      "content_type": "series",
+      "header_row_excel": 6,
+      "skipped_rows_above_header": [
+        "What We Watched: A Netflix Engagement Report",
+        "Views from January to June 2025"
+      ],
+      "header_columns": [
+        "Title",
+        "Available Globally?",
+        "Release Date",
+        "Hours Viewed",
+        "Runtime",
+        "Views"
+      ],
+      "rows_blank": 0,
+      "rows_footnote": 0,
+      "footnotes": []
+    },
+    {
+      "rows_data": 8674,
+      "rows_other": 0,
+      "rows_title_level": 8674,
+      "distinct_titles": 8670,
+      "rows_by_content_type": {
+        "film": 8674
+      },
+      "columns": {
+        "title": {
+          "column_present": true,
+          "non_null": 8674,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 8670,
+          "duplicate_values": 4,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "available_globally": {
+          "column_present": true,
+          "non_null": 8674,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 2,
+          "duplicate_values": 8672,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "release_date": {
+          "column_present": true,
+          "non_null": 1732,
+          "missing": 6942,
+          "missing_pct": 80.0323,
+          "distinct": 1029,
+          "duplicate_values": 703,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "hours_viewed": {
+          "column_present": true,
+          "non_null": 8674,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 358,
+          "duplicate_values": 8316,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "runtime": {
+          "column_present": true,
+          "non_null": 8674,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 192,
+          "duplicate_values": 8482,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "views": {
+          "column_present": true,
+          "non_null": 8674,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 247,
+          "duplicate_values": 8427,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        }
+      },
+      "duplicate_full_rows": 0,
+      "rows_with_header_phrase": 0,
+      "hours": {
+        "total_incl_other": 24058200000.0,
+        "total_title_level": 24058200000.0,
+        "top10_hours": 1608900000.0,
+        "top10_share_of_total_incl_other": 0.06687532733122178,
+        "top10_share_of_title_level": 0.06687532733122178
+      },
+      "numeric": {
+        "hours_viewed": {
+          "count": 8674,
+          "min": 100000.0,
+          "p25": 200000.0,
+          "median": 500000.0,
+          "mean": 2773599.2621627855,
+          "p75": 1800000.0,
+          "p90": 6500000.0,
+          "p99": 34400000.0,
+          "max": 313000000.0
+        },
+        "runtime_minutes": {
+          "count": 8674,
+          "min": 9.0,
+          "p25": 95.0,
+          "median": 104.0,
+          "mean": 106.70728614249481,
+          "p75": 116.0,
+          "p90": 132.0,
+          "p99": 170.0,
+          "max": 4417.0
+        },
+        "views": {
+          "count": 8674,
+          "min": 100000.0,
+          "p25": 100000.0,
+          "median": 300000.0,
+          "mean": 1551982.9375144108,
+          "p75": 1000000.0,
+          "p90": 3600000.0,
+          "p99": 19127000.000000045,
+          "max": 164700000.0
+        }
+      },
+      "outliers": {
+        "hours_viewed": {
+          "iqr_upper_fence": 4200000.0,
+          "count_above_fence": 1228,
+          "top5": [
+            {
+              "title": "Back in Action",
+              "value": 313000000.0
+            },
+            {
+              "title": "The Life List",
+              "value": 198900000.0
+            },
+            {
+              "title": "STRAW",
+              "value": 185200000.0
+            },
+            {
+              "title": "Exterritorial",
+              "value": 159000000.0
+            },
+            {
+              "title": "The Electric State",
+              "value": 158200000.0
+            }
+          ]
+        },
+        "views": {
+          "iqr_upper_fence": 2350000.0,
+          "count_above_fence": 1226,
+          "top5": [
+            {
+              "title": "Back in Action",
+              "value": 164700000.0
+            },
+            {
+              "title": "STRAW",
+              "value": 102900000.0
+            },
+            {
+              "title": "The Life List",
+              "value": 95500000.0
+            },
+            {
+              "title": "Exterritorial",
+              "value": 87500000.0
+            },
+            {
+              "title": "Havoc",
+              "value": 86900000.0
+            }
+          ]
+        },
+        "runtime_minutes": {
+          "iqr_upper_fence": 147.5,
+          "count_above_fence": 336,
+          "top5": [
+            {
+              "title": "Nihontouitsu Series: Film Series // 日本統一シリーズ: 映画シリーズ",
+              "value": 4417.0
+            },
+            {
+              "title": "Yamazaki Ichimon -Nihontouitsu Gaiden-: Season 1 // 山崎一門 ～日本統一外伝～: シーズン1",
+              "value": 695.0
+            },
+            {
+              "title": "CONNECT -Road to Conquest-: Season 1 // CONNECT -覇者への道-: 映画シリーズ",
+              "value": 437.0
+            },
+            {
+              "title": "FireAid Benefit Concert",
+              "value": 345.0
+            },
+            {
+              "title": "30 for 30: Celtics/Lakers: The Best of Enemies: Season 1",
+              "value": 255.0
+            }
+          ]
+        }
+      },
+      "release_date": {
+        "rows_considered": 8674,
+        "missing": 6942,
+        "missing_pct": 80.0323,
+        "placeholder_star": 0,
+        "unparsable": 0,
+        "min": "2013-12-12",
+        "max": "2025-06-30"
+      },
+      "available_globally": {
+        "No": {
+          "count": 6831,
+          "pct": 78.7526
+        },
+        "Yes": {
+          "count": 1843,
+          "pct": 21.2474
+        }
+      },
+      "sheet": "Movies",
+      "content_type": "film",
+      "header_row_excel": 6,
+      "skipped_rows_above_header": [
+        "What We Watched: A Netflix Engagement Report",
+        "Views from January to June 2025"
+      ],
+      "header_columns": [
+        "Title",
+        "Available Globally?",
+        "Release Date",
+        "Hours Viewed",
+        "Runtime",
+        "Views"
+      ],
+      "rows_blank": 0,
+      "rows_footnote": 0,
+      "footnotes": []
+    }
+  ]
+}

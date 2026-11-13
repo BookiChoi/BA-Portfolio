@@ -1,0 +1,8 @@
+genre,check1_margin_up,check1_margin_down,check1_margin_unweighted_best,check1_pass_theta_1.5_poststrat,check1_pass_theta_1.5_plain,check1_pass_theta_2.0_poststrat,check1_pass_theta_2.0_plain,check1_pass_theta_3.0_poststrat,check1_pass_theta_3.0_plain
+Documentary & Reality,-0.6155887667722375,-0.2762740079706347,-0.26916572163170294,False,False,False,False,False,False
+Kids & Family,0.13300138269438122,-0.9669962988127114,0.13204015287179427,False,False,False,False,False,False
+Animation,-1.0194361389735178,-1.3972122523698562,-1.0207811955651316,False,False,False,False,False,False
+Sci-Fi & Fantasy,0.49804347968349916,-4.860714590937082,0.48522316158970646,False,False,False,False,False,False
+Crime & Thriller,-2.763465983424357,-2.6930433267886613,-2.6915098582574863,False,False,False,False,False,False
+Action & Adventure,-1.316914490426015,-0.6032014025240215,-0.584104113858432,False,False,False,False,False,False
+Comedy & Romance,-1.8669096762721118,-2.760211164847451,-1.8255348991233795,False,False,False,False,False,False

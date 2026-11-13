@@ -1,0 +1,29 @@
+imdb_genre,group,group_priority
+Documentary,Documentary & Reality,1
+News,Documentary & Reality,1
+Reality-TV,Documentary & Reality,1
+Talk-Show,Documentary & Reality,1
+Game-Show,Documentary & Reality,1
+Family,Kids & Family,2
+Animation,Animation,3
+Sci-Fi,Sci-Fi & Fantasy,4
+Fantasy,Sci-Fi & Fantasy,4
+Crime,Crime & Thriller,5
+Mystery,Crime & Thriller,5
+Thriller,Crime & Thriller,5
+Horror,Crime & Thriller,5
+Film-Noir,Crime & Thriller,5
+Action,Action & Adventure,6
+Adventure,Action & Adventure,6
+Western,Action & Adventure,6
+Sport,Action & Adventure,6
+Comedy,Comedy & Romance,7
+Romance,Comedy & Romance,7
+Drama,Drama,8
+History,Drama,8
+War,Drama,8
+Biography,Drama,8
+Music,Drama,8
+Musical,Drama,8
+Short,,
+Adult,,

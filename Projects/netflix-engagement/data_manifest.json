@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "project": "netflix-engagement",
+  "datasets": [
+    {
+      "name": "2023Jan-Jun.xlsx",
+      "file_path": "~/Downloads/netflix-reports/2023Jan-Jun.xlsx",
+      "source_url": "https://about.netflix.com/en/news/what-we-watched-a-netflix-engagement-report",
+      "license": "",
+      "downloaded_on": "2026-11-12",
+      "row_count": 18214,
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "c6fd33eb4c243e6e18d81a248ad71a28e8ccc3d0dd2b1fbc9f8538c649d28637"
+      },
+      "notes": "Stored outside the repo (read-only). row_count = non-empty data rows below the header on all sheets, including the 'Other Movies/Other Shows' rows, excluding blank and footnote rows. downloaded_on = file modification date."
+    },
+    {
+      "name": "2023Jul-Dec.xlsx",
+      "file_path": "~/Downloads/netflix-reports/2023Jul-Dec.xlsx",
+      "source_url": "https://about.netflix.com/en/news/what-we-watched-the-second-half-of-2023",
+      "license": "",
+      "downloaded_on": "2026-11-12",
+      "row_count": 15994,
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "ea536b6e1f3771ba662e57a72ab847efd0200b3e4adb93a2f7d3e2b133f5b655"
+      },
+      "notes": "Stored outside the repo (read-only). row_count = non-empty data rows below the header on all sheets, including the 'Other Movies/Other Shows' rows, excluding blank and footnote rows. downloaded_on = file modification date."
+    },
+    {
+      "name": "2024Jan-Jun.xlsx",
+      "file_path": "~/Downloads/netflix-reports/2024Jan-Jun.xlsx",
+      "source_url": "https://about.netflix.com/en/news/what-we-watched-the-first-half-of-2024",
+      "license": "",
+      "downloaded_on": "2026-11-12",
+      "row_count": 16161,
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "2803512229889f91b51c214b9494b7a55799767d63e3f5cf2c142b1917a18d62"
+      },
+      "notes": "Stored outside the repo (read-only). row_count = non-empty data rows below the header on all sheets, including the 'Other Movies/Other Shows' rows, excluding blank and footnote rows. downloaded_on = file modification date."
+    },
+    {
+      "name": "2024Jul-Dec.xlsx",
+      "file_path": "~/Downloads/netflix-reports/2024Jul-Dec.xlsx",
+      "source_url": "https://about.netflix.com/en/news/what-we-watched-the-second-half-of-2024",
+      "license": "",
+      "downloaded_on": "2026-11-12",
+      "row_count": 15563,
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "3030e3630fb0ff90d8d84b9cda3c22c83f4e9e356d4f1742bda729bfa2fc738c"
+      },
+      "notes": "Stored outside the repo (read-only). row_count = non-empty data rows below the header on all sheets, including the 'Other Movies/Other Shows' rows, excluding blank and footnote rows. downloaded_on = file modification date."
+    },
+    {
+      "name": "2025Jan-Jun.xlsx",
+      "file_path": "~/Downloads/netflix-reports/2025Jan-Jun.xlsx",
+      "source_url": "https://about.netflix.com/en/news/what-we-watched-the-first-half-of-2025",
+      "license": "",
+      "downloaded_on": "2026-11-12",
+      "row_count": 16182,
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "7208fc0207818f961652748d19500221b1d3edce8999b83e0f954f27fb31e8dd"
+      },
+      "notes": "Stored outside the repo (read-only). row_count = non-empty data rows below the header on all sheets, including the 'Other Movies/Other Shows' rows, excluding blank and footnote rows. downloaded_on = file modification date."
+    },
+    {
+      "name": "2025Jul-Dec.xlsx",
+      "file_path": "~/Downloads/netflix-reports/2025Jul-Dec.xlsx",
+      "source_url": "https://about.netflix.com/en/news/what-we-watched-the-second-half-of-2025",
+      "license": "",
+      "downloaded_on": "2026-11-12",
+      "row_count": 16470,
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "a06b0f510264336ad31f29a0ed4aaa51247374dcaa8aee780bbecf50227635cb"
+      },
+      "notes": "Stored outside the repo (read-only). row_count = non-empty data rows below the header on all sheets, including the 'Other Movies/Other Shows' rows, excluding blank and footnote rows. downloaded_on = file modification date."
+    },
+    {
+      "name": "2026Jan-Jun.xlsx",
+      "file_path": "~/Downloads/netflix-reports/2026Jan-Jun.xlsx",
+      "source_url": "https://about.netflix.com/en/news/what-we-watched-the-first-half-of-2026",
+      "license": "",
+      "downloaded_on": "2026-11-12",
+      "row_count": 17372,
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "bcfda87e87d09d923472a1e1b30d5c7c799457aacba41310a9d223e834fe2f5f"
+      },
+      "notes": "Stored outside the repo (read-only). row_count = non-empty data rows below the header on all sheets, including the 'Other Movies/Other Shows' rows, excluding blank and footnote rows. downloaded_on = file modification date."
+    },
+    {
+      "name": "title.basics.tsv.gz",
+      "file_path": "~/Downloads/imdb-datasets/title.basics.tsv.gz",
+      "source_url": "https://datasets.imdbws.com/title.basics.tsv.gz",
+      "license": "IMDb Non-Commercial Datasets (personal, non-commercial use; only aggregates published)",
+      "downloaded_on": "2026-11-12",
+      "row_count": 12953566,
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "0cc1480ce29cd313c18a83da6333757bc0e7c3aff7c3040d459213c0ad3f1ef6"
+      },
+      "notes": "Stored outside the repo (read-only). row_count = data rows excluding the header line. downloaded_on = file modification date."
+    },
+    {
+      "name": "title.ratings.tsv.gz",
+      "file_path": "~/Downloads/imdb-datasets/title.ratings.tsv.gz",
+      "source_url": "https://datasets.imdbws.com/title.ratings.tsv.gz",
+      "license": "IMDb Non-Commercial Datasets (personal, non-commercial use; only aggregates published)",
+      "downloaded_on": "2026-11-12",
+      "row_count": 1731454,
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "50b091b46e73946f5e5de9acba86bc16fc6552cee90e7ef7ff2743645a7513f5"
+      },
+      "notes": "Stored outside the repo (read-only). row_count = data rows excluding the header line. downloaded_on = file modification date."
+    },
+    {
+      "name": "title.akas.tsv.gz",
+      "file_path": "~/Downloads/imdb-datasets/title.akas.tsv.gz",
+      "source_url": "https://datasets.imdbws.com/title.akas.tsv.gz",
+      "license": "IMDb Non-Commercial Datasets (personal, non-commercial use; only aggregates published)",
+      "downloaded_on": "2026-11-12",
+      "row_count": 60353877,
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "72508408a4b45d16bd5c687d65fa80bb398e291d108f4fe108c6cfe3e17d7c77"
+      },
+      "notes": "Stored outside the repo (read-only). row_count = data rows excluding the header line. downloaded_on = file modification date."
+    }
+  ],
+  "entry_template": {
+    "name": "",
+    "file_path": "data/<file>",
+    "source_url": "",
+    "license": "",
+    "downloaded_on": "YYYY-MM-DD",
+    "row_count": 0,
+    "checksum": {
+      "algorithm": "sha256",
+      "value": ""
+    },
+    "notes": ""
+  }
+}

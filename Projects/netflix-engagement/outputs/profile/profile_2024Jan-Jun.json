@@ -1,0 +1,692 @@
+{
+  "file": "2024Jan-Jun.xlsx",
+  "sha256": "2803512229889f91b51c214b9494b7a55799767d63e3f5cf2c142b1917a18d62",
+  "size_bytes": 896503,
+  "sheets": [
+    "TV",
+    "Film"
+  ],
+  "content_type_split_source": "sheet name",
+  "data_rows_all_sheets": 16161,
+  "file_total": {
+    "rows_data": 16161,
+    "rows_other": 0,
+    "rows_title_level": 16161,
+    "distinct_titles": 16160,
+    "rows_by_content_type": {
+      "film": 9360,
+      "series": 6801
+    },
+    "columns": {
+      "title": {
+        "column_present": true,
+        "non_null": 16161,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 16160,
+        "duplicate_values": 1,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "available_globally": {
+        "column_present": true,
+        "non_null": 16161,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 2,
+        "duplicate_values": 16159,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "release_date": {
+        "column_present": true,
+        "non_null": 5069,
+        "missing": 11092,
+        "missing_pct": 68.6344,
+        "distinct": 1814,
+        "duplicate_values": 3255,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "hours_viewed": {
+        "column_present": true,
+        "non_null": 16161,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 724,
+        "duplicate_values": 15437,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "runtime": {
+        "column_present": true,
+        "non_null": 16161,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 1284,
+        "duplicate_values": 14877,
+        "placeholder_star": 188,
+        "header_phrase_rows": 0
+      },
+      "views": {
+        "column_present": true,
+        "non_null": 16161,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 285,
+        "duplicate_values": 15876,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      }
+    },
+    "duplicate_full_rows": 0,
+    "rows_with_header_phrase": 0,
+    "hours": {
+      "total_incl_other": 94003500000.0,
+      "total_title_level": 94003500000.0,
+      "top10_hours": 4880100000.0,
+      "top10_share_of_total_incl_other": 0.051914024477811994,
+      "top10_share_of_title_level": 0.051914024477811994
+    },
+    "numeric": {
+      "hours_viewed": {
+        "count": 16161,
+        "min": 100000.0,
+        "p25": 300000.0,
+        "median": 1000000.0,
+        "mean": 5816688.323742343,
+        "p75": 4200000.0,
+        "p90": 13500000.0,
+        "p99": 73459999.99999967,
+        "max": 733800000.0
+      },
+      "runtime_minutes": {
+        "count": 15973,
+        "min": 6.0,
+        "p25": 98.0,
+        "median": 117.0,
+        "mean": 252.30050710574093,
+        "p75": 284.0,
+        "p90": 549.0,
+        "p99": 1510.9200000000092,
+        "max": 23853.0
+      },
+      "views": {
+        "count": 16161,
+        "min": 100000.0,
+        "p25": 100000.0,
+        "median": 300000.0,
+        "mean": 1497729.1009219727,
+        "p75": 1200000.0,
+        "p90": 3400000.0,
+        "p99": 17239999.999999963,
+        "max": 143800000.0
+      }
+    },
+    "outliers": {
+      "hours_viewed": {
+        "iqr_upper_fence": 10050000.0,
+        "count_above_fence": 2060,
+        "top5": [
+          {
+            "title": "Bridgerton: Season 3",
+            "value": 733800000.0
+          },
+          {
+            "title": "Fool Me Once: Limited Series",
+            "value": 689500000.0
+          },
+          {
+            "title": "Queen of Tears: Limited Series // 눈물의 여왕: 리미티드 시리즈",
+            "value": 682600000.0
+          },
+          {
+            "title": "Avatar The Last Airbender: Season 1",
+            "value": 515300000.0
+          },
+          {
+            "title": "The Gentlemen: Season 1",
+            "value": 507300000.0
+          }
+        ]
+      },
+      "views": {
+        "iqr_upper_fence": 2850000.0,
+        "count_above_fence": 1963,
+        "top5": [
+          {
+            "title": "Damsel",
+            "value": 143800000.0
+          },
+          {
+            "title": "Lift",
+            "value": 129400000.0
+          },
+          {
+            "title": "Fool Me Once: Limited Series",
+            "value": 107500000.0
+          },
+          {
+            "title": "Society of the Snow // La sociedad de la nieve",
+            "value": 103800000.0
+          },
+          {
+            "title": "Bridgerton: Season 3",
+            "value": 91900000.0
+          }
+        ]
+      },
+      "runtime_minutes": {
+        "iqr_upper_fence": 563.0,
+        "count_above_fence": 1501,
+        "top5": [
+          {
+            "title": "As Aventuras de Poliana: Season 1",
+            "value": 23853.0
+          },
+          {
+            "title": "Chiquititas (2013)",
+            "value": 19907.0
+          },
+          {
+            "title": "Carinha de Anjo: Season 1",
+            "value": 14604.0
+          },
+          {
+            "title": "Pedro el escamoso: Season 1",
+            "value": 13805.0
+          },
+          {
+            "title": "Cúmplices de um Resgate: Season 1",
+            "value": 13152.0
+          }
+        ]
+      }
+    },
+    "release_date": {
+      "rows_considered": 16161,
+      "missing": 11092,
+      "missing_pct": 68.6344,
+      "placeholder_star": 0,
+      "unparsable": 0,
+      "min": "2010-04-01",
+      "max": "2024-06-28"
+    },
+    "available_globally": {
+      "No": {
+        "count": 11885,
+        "pct": 73.5412
+      },
+      "Yes": {
+        "count": 4276,
+        "pct": 26.4588
+      }
+    }
+  },
+  "per_sheet": [
+    {
+      "rows_data": 6801,
+      "rows_other": 0,
+      "rows_title_level": 6801,
+      "distinct_titles": 6801,
+      "rows_by_content_type": {
+        "series": 6801
+      },
+      "columns": {
+        "title": {
+          "column_present": true,
+          "non_null": 6801,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 6801,
+          "duplicate_values": 0,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "available_globally": {
+          "column_present": true,
+          "non_null": 6801,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 2,
+          "duplicate_values": 6799,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "release_date": {
+          "column_present": true,
+          "non_null": 3374,
+          "missing": 3427,
+          "missing_pct": 50.3896,
+          "distinct": 1626,
+          "duplicate_values": 1748,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "hours_viewed": {
+          "column_present": true,
+          "non_null": 6801,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 672,
+          "duplicate_values": 6129,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "runtime": {
+          "column_present": true,
+          "non_null": 6801,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 1275,
+          "duplicate_values": 5526,
+          "placeholder_star": 188,
+          "header_phrase_rows": 0
+        },
+        "views": {
+          "column_present": true,
+          "non_null": 6801,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 192,
+          "duplicate_values": 6609,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        }
+      },
+      "duplicate_full_rows": 0,
+      "rows_with_header_phrase": 0,
+      "hours": {
+        "total_incl_other": 68260000000.0,
+        "total_title_level": 68260000000.0,
+        "top10_hours": 4880100000.0,
+        "top10_share_of_total_incl_other": 0.07149282156460592,
+        "top10_share_of_title_level": 0.07149282156460592
+      },
+      "numeric": {
+        "hours_viewed": {
+          "count": 6801,
+          "min": 100000.0,
+          "p25": 800000.0,
+          "median": 2600000.0,
+          "mean": 10036759.300102927,
+          "p75": 8400000.0,
+          "p90": 26000000.0,
+          "p99": 101600000.0,
+          "max": 733800000.0
+        },
+        "runtime_minutes": {
+          "count": 6613,
+          "min": 6.0,
+          "p25": 211.0,
+          "median": 318.0,
+          "mean": 459.87146529562983,
+          "p75": 542.0,
+          "p90": 914.8000000000002,
+          "p99": 2581.040000000001,
+          "max": 23853.0
+        },
+        "views": {
+          "count": 6801,
+          "min": 100000.0,
+          "p25": 200000.0,
+          "median": 400000.0,
+          "mean": 1428554.624319953,
+          "p75": 1300000.0,
+          "p90": 3300000.0,
+          "p99": 14700000.0,
+          "max": 107500000.0
+        }
+      },
+      "outliers": {
+        "hours_viewed": {
+          "iqr_upper_fence": 19800000.0,
+          "count_above_fence": 876,
+          "top5": [
+            {
+              "title": "Bridgerton: Season 3",
+              "value": 733800000.0
+            },
+            {
+              "title": "Fool Me Once: Limited Series",
+              "value": 689500000.0
+            },
+            {
+              "title": "Queen of Tears: Limited Series // 눈물의 여왕: 리미티드 시리즈",
+              "value": 682600000.0
+            },
+            {
+              "title": "Avatar The Last Airbender: Season 1",
+              "value": 515300000.0
+            },
+            {
+              "title": "The Gentlemen: Season 1",
+              "value": 507300000.0
+            }
+          ]
+        },
+        "views": {
+          "iqr_upper_fence": 2950000.0,
+          "count_above_fence": 771,
+          "top5": [
+            {
+              "title": "Fool Me Once: Limited Series",
+              "value": 107500000.0
+            },
+            {
+              "title": "Bridgerton: Season 3",
+              "value": 91900000.0
+            },
+            {
+              "title": "Baby Reindeer: Limited Series",
+              "value": 87600000.0
+            },
+            {
+              "title": "The Gentlemen: Season 1",
+              "value": 75900000.0
+            },
+            {
+              "title": "Avatar The Last Airbender: Season 1",
+              "value": 71100000.0
+            }
+          ]
+        },
+        "runtime_minutes": {
+          "iqr_upper_fence": 1038.5,
+          "count_above_fence": 430,
+          "top5": [
+            {
+              "title": "As Aventuras de Poliana: Season 1",
+              "value": 23853.0
+            },
+            {
+              "title": "Chiquititas (2013)",
+              "value": 19907.0
+            },
+            {
+              "title": "Carinha de Anjo: Season 1",
+              "value": 14604.0
+            },
+            {
+              "title": "Pedro el escamoso: Season 1",
+              "value": 13805.0
+            },
+            {
+              "title": "Cúmplices de um Resgate: Season 1",
+              "value": 13152.0
+            }
+          ]
+        }
+      },
+      "release_date": {
+        "rows_considered": 6801,
+        "missing": 3427,
+        "missing_pct": 50.3896,
+        "placeholder_star": 0,
+        "unparsable": 0,
+        "min": "2010-04-01",
+        "max": "2024-06-28"
+      },
+      "available_globally": {
+        "No": {
+          "count": 4229,
+          "pct": 62.182
+        },
+        "Yes": {
+          "count": 2572,
+          "pct": 37.818
+        }
+      },
+      "sheet": "TV",
+      "content_type": "series",
+      "header_row_excel": 6,
+      "skipped_rows_above_header": [
+        "What We Watched: A Netflix Engagement Report",
+        "Views from January to June 2024"
+      ],
+      "header_columns": [
+        "Title",
+        "Available Globally?",
+        "Release Date",
+        "Hours Viewed",
+        "Runtime",
+        "Views"
+      ],
+      "rows_blank": 0,
+      "rows_footnote": 0,
+      "footnotes": []
+    },
+    {
+      "rows_data": 9360,
+      "rows_other": 0,
+      "rows_title_level": 9360,
+      "distinct_titles": 9359,
+      "rows_by_content_type": {
+        "film": 9360
+      },
+      "columns": {
+        "title": {
+          "column_present": true,
+          "non_null": 9360,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 9359,
+          "duplicate_values": 1,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "available_globally": {
+          "column_present": true,
+          "non_null": 9360,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 2,
+          "duplicate_values": 9358,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "release_date": {
+          "column_present": true,
+          "non_null": 1695,
+          "missing": 7665,
+          "missing_pct": 81.891,
+          "distinct": 973,
+          "duplicate_values": 722,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "hours_viewed": {
+          "column_present": true,
+          "non_null": 9360,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 374,
+          "duplicate_values": 8986,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "runtime": {
+          "column_present": true,
+          "non_null": 9360,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 192,
+          "duplicate_values": 9168,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "views": {
+          "column_present": true,
+          "non_null": 9360,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 252,
+          "duplicate_values": 9108,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        }
+      },
+      "duplicate_full_rows": 0,
+      "rows_with_header_phrase": 0,
+      "hours": {
+        "total_incl_other": 25743500000.0,
+        "total_title_level": 25743500000.0,
+        "top10_hours": 1638700000.0,
+        "top10_share_of_total_incl_other": 0.06365490317944335,
+        "top10_share_of_title_level": 0.06365490317944335
+      },
+      "numeric": {
+        "hours_viewed": {
+          "count": 9360,
+          "min": 100000.0,
+          "p25": 200000.0,
+          "median": 400000.0,
+          "mean": 2750373.9316239315,
+          "p75": 1800000.0,
+          "p90": 6300000.0,
+          "p99": 34500000.0,
+          "max": 263700000.0
+        },
+        "runtime_minutes": {
+          "count": 9360,
+          "min": 9.0,
+          "p25": 94.0,
+          "median": 103.0,
+          "mean": 105.64807692307693,
+          "p75": 115.0,
+          "p90": 131.0,
+          "p99": 168.40999999999985,
+          "max": 3892.0
+        },
+        "views": {
+          "count": 9360,
+          "min": 100000.0,
+          "p25": 100000.0,
+          "median": 300000.0,
+          "mean": 1547991.452991453,
+          "p75": 1100000.0,
+          "p90": 3600000.0,
+          "p99": 18940999.999999985,
+          "max": 143800000.0
+        }
+      },
+      "outliers": {
+        "hours_viewed": {
+          "iqr_upper_fence": 4200000.0,
+          "count_above_fence": 1306,
+          "top5": [
+            {
+              "title": "Damsel",
+              "value": 263700000.0
+            },
+            {
+              "title": "Society of the Snow // La sociedad de la nieve",
+              "value": 252500000.0
+            },
+            {
+              "title": "Lift",
+              "value": 230800000.0
+            },
+            {
+              "title": "Atlas",
+              "value": 154200000.0
+            },
+            {
+              "title": "Under Paris // Sous la Seine",
+              "value": 146800000.0
+            }
+          ]
+        },
+        "views": {
+          "iqr_upper_fence": 2600000.0,
+          "count_above_fence": 1207,
+          "top5": [
+            {
+              "title": "Damsel",
+              "value": 143800000.0
+            },
+            {
+              "title": "Lift",
+              "value": 129400000.0
+            },
+            {
+              "title": "Society of the Snow // La sociedad de la nieve",
+              "value": 103800000.0
+            },
+            {
+              "title": "Under Paris // Sous la Seine",
+              "value": 84700000.0
+            },
+            {
+              "title": "The Super Mario Bros. Movie",
+              "value": 80300000.0
+            }
+          ]
+        },
+        "runtime_minutes": {
+          "iqr_upper_fence": 146.5,
+          "count_above_fence": 347,
+          "top5": [
+            {
+              "title": "Nihontouitsu Series: Film Series // 日本統一シリーズ: 映画シリーズ",
+              "value": 3892.0
+            },
+            {
+              "title": "Free and Easy Series: Film Series // 釣りバカ日誌: 映画シリーズ",
+              "value": 2120.0
+            },
+            {
+              "title": "Navarasa: Limited Series",
+              "value": 312.0
+            },
+            {
+              "title": "A Lion in the House: Limited Series",
+              "value": 230.0
+            },
+            {
+              "title": "Once Upon a Time in America",
+              "value": 229.0
+            }
+          ]
+        }
+      },
+      "release_date": {
+        "rows_considered": 9360,
+        "missing": 7665,
+        "missing_pct": 81.891,
+        "placeholder_star": 0,
+        "unparsable": 0,
+        "min": "2013-12-12",
+        "max": "2024-06-28"
+      },
+      "available_globally": {
+        "No": {
+          "count": 7656,
+          "pct": 81.7949
+        },
+        "Yes": {
+          "count": 1704,
+          "pct": 18.2051
+        }
+      },
+      "sheet": "Film",
+      "content_type": "film",
+      "header_row_excel": 6,
+      "skipped_rows_above_header": [
+        "What We Watched: A Netflix Engagement Report",
+        "Views from January to June 2024"
+      ],
+      "header_columns": [
+        "Title",
+        "Available Globally?",
+        "Release Date",
+        "Hours Viewed",
+        "Runtime",
+        "Views"
+      ],
+      "rows_blank": 0,
+      "rows_footnote": 0,
+      "footnotes": []
+    }
+  ]
+}

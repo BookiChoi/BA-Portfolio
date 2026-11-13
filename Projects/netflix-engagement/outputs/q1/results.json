@@ -1,0 +1,106 @@
+{
+  "run_date": "2026-11-12",
+  "seed": 42,
+  "n_boot": 2000,
+  "labelling": {
+    "keys": 4398,
+    "matched": 4146,
+    "labelled": 4145,
+    "stage_counts": {
+      "stage1": 4007,
+      "none": 252,
+      "stage2_akas": 139
+    },
+    "tie_break_counts": {
+      "none": 3673,
+      "votes": 668,
+      "multi_segment": 57
+    },
+    "ambiguous_keys_candidates_gt1": 725
+  },
+  "coverage_rule_inconclusive": false,
+  "max_unlabelled_over_inscope_pct": 4.494082923138713,
+  "newcombe_matched_tagged_minus_untagged": {
+    "diff": -0.010185774639736134,
+    "lo": -0.02614660989578105,
+    "hi": 0.0043709279859385376
+  },
+  "newcombe_labelled_tagged_minus_untagged": {
+    "diff": -0.009852107639402474,
+    "lo": -0.02582421837852725,
+    "hi": 0.004718314989163757
+  },
+  "group_differs_from_first_genre": {
+    "keys_pct": 54.25814234016888,
+    "hours_pct": 57.013104093726405
+  },
+  "top10_cells_unlabelled": 1,
+  "eligible_genres": [
+    "Documentary & Reality",
+    "Kids & Family",
+    "Animation",
+    "Sci-Fi & Fantasy",
+    "Crime & Thriller",
+    "Action & Adventure",
+    "Comedy & Romance"
+  ],
+  "mean_share_pct": {
+    "Documentary & Reality": 6.205605655515638,
+    "Kids & Family": 5.777036913402178,
+    "Animation": 13.540778274614723,
+    "Sci-Fi & Fantasy": 9.558869613998892,
+    "Crime & Thriller": 30.93716313781986,
+    "Action & Adventure": 8.447709449606458,
+    "Comedy & Romance": 20.65168664111033,
+    "Drama": 4.88115031393192
+  },
+  "permutation_check1_only": {
+    "n_orderings": 5040,
+    "observed_M": 0.48522316158970646,
+    "p_value": 0.1380952380952381,
+    "any_pass_fraction": {
+      "1.5": 0.004761904761904762,
+      "2.0": 0.0,
+      "3.0": 0.0
+    },
+    "any_pass_count": {
+      "1.5": 24,
+      "2.0": 0,
+      "3.0": 0
+    }
+  },
+  "permutation_all_checks": {
+    "n_orderings": 720,
+    "observed_M": -0.5357811419115279,
+    "p_value": 0.03888888888888889,
+    "any_pass_fraction": {
+      "1.5": 0.0,
+      "2.0": 0.0,
+      "3.0": 0.0
+    },
+    "any_pass_count": {
+      "1.5": 0,
+      "2.0": 0,
+      "3.0": 0
+    }
+  },
+  "single_genre_reference_pct": 3.125,
+  "pass": {
+    "1.5": {
+      "passing_genres": [],
+      "n_passing": 0,
+      "findings_after_pair_rule": 0
+    },
+    "2.0": {
+      "passing_genres": [],
+      "n_passing": 0,
+      "findings_after_pair_rule": 0
+    },
+    "3.0": {
+      "passing_genres": [],
+      "n_passing": 0,
+      "findings_after_pair_rule": 0
+    }
+  },
+  "near_misses_theta_2": []
+}
