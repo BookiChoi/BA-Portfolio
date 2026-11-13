@@ -22,6 +22,13 @@ Highlights I noted. These are Netflix's own claims from the report page; I have 
 ## What I am initially curious about
 I do not have specific questions yet. I want to see what the research step finds about how Netflix uses this kind of data, and what the data can and cannot show, before I write my own questions in step 02.
 
+### Research requests for step 01
+- Netflix's business model and recent changes (ad tier, subscriber reporting, engagement report cadence).
+- What analysts at Netflix work on (summarize 2-3 recent job postings, with links).
+- How others have analysed the What We Watched data, and which angles look unexplored.
+- Definitions and limits of the report (views, hours viewed, 50,000-hour threshold, release date coverage).
+- Whether the weekly Top 10 data is usable (format, terms, how far back it goes).
+
 ## Constraints
 - As-of date: 2026-11-12. Data published after this date is used only to score predictions, not to form them.
 - Data: title-level and half-year level. The report only lists titles above 50,000 hours viewed. There is no user-level data (no churn or retention). The file has no genre or language columns.
