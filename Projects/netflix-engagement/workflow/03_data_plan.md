@@ -66,4 +66,12 @@ None found. If step 03/04 profiling shows that any of the seven files is unavail
 - Multiple testing: the analysis plan must estimate the chance of a spurious pass across all tested genres (for example by permutation). Any pass is reported as a lead to re-check, and genres that move as a pair count as one finding.
 - API keys stay outside the repository and are never pasted into files or chat.
 
+## Amendment to Gate 1 (2026-11-12)
+- Genre source changed from TMDB to the IMDb Non-Commercial Datasets (title.basics.tsv.gz and title.ratings.tsv.gz, optionally title.akas.tsv.gz if the plan justifies it). No API key or account is needed. The files stay outside the repository; the download date and sha256 go in data_manifest.json.
+- TMDB is not used. Earlier references to TMDB keys and endpoints no longer apply.
+- Use is personal and non-commercial; no raw IMDb data is published, only aggregates. Attribution follows the IMDb terms, which I have read.
+- Matching must be written down before the pilot and measured: title type, release year and a tie-break rule (for example most votes). Report the match rate and a hand check of the pilot titles.
+- The genre mapping is by IMDb genre names (up to three per title) with the priority table, as before.
+- Requests for the new analysis plan: keep the Gate 1 pilot (30 titles, 85%) and coverage (10%) rules; handle H1 2023, which has no movie/show split; cap the labelling scope (stop and ask if unique title keys exceed 3,000); report the pair rule (r <= -0.9) before and after; define the language rule for unmatched titles by the " // " tag.
+
 Approved: human
