@@ -94,7 +94,7 @@ Raw data is not in this repo (see `data_manifest.json` for names, row counts, ch
 
 - **Netflix What We Watched reports** (seven half-year files, H1 2023 to H1 2026). Source URLs are in `data_manifest.json`. Terms: "No license stated; raw files are not redistributed" (checked 2026-11-12, `workflow/03_data_plan.md`). Only aggregates are shared.
 - **IMDb Non-Commercial Datasets** (`title.basics`, `title.ratings`, `title.akas`), used only to label genres. Source URLs are in `data_manifest.json`. The manifest records the terms as personal, non-commercial use with only aggregates published.
-- **IMDb attribution notice:** TODO (human): add the exact attribution wording required by the IMDb terms.
+- **IMDb attribution notice:** Genre labels use data from the IMDb Non-Commercial Datasets (https://developer.imdb.com/non-commercial-datasets/), used here for personal, non-commercial purposes. Only aggregated results are published.
 - Raw data of both sources is not in this repo. Only aggregated results are (`outputs/q1/`, `outputs/profile/`).
 
 ## 9. Not done
@@ -109,13 +109,12 @@ Listed in `workflow/09_recommendations.md` and `workflow/07_insights.md`:
 
 ## Decisions I made
 
-TODO (human): write these in your own words. Where the decisions are recorded:
-
-- The decision rule, the metric and the 2 pp threshold: `workflow/02_questions.md`.
-- Gate 1 and its amendment (genre source): the "Human decisions at Gate 1" and "Amendment to Gate 1" blocks in `workflow/03_data_plan.md`.
-- Gate 2 and amendment 1 (labelling scope, matching rules, pilot): the "Human decisions at Gate 2" blocks in `workflow/04_analysis_plan.md`.
-- Interpretation: `workflow/07_insights.md`.
-- Recommendation and dated prediction: `workflow/09_recommendations.md`.
+- **Company and data:** I wanted a real company and recent, company-published data. I chose Netflix's What We Watched reports (seven half-years, H1 2023 to H1 2026).
+- **Decision and question:** I chose the decision (which genres a content planner should strengthen in the H2 slate) and the question (do genre shares of viewing hours alternate by half-year). I fixed the rule before the analysis: the same alternating direction in all six transitions, by at least 2 percentage points (a threshold Claude recommended and I accepted), for genres with at least 5% average share, in three checks (all titles, without the top 10 titles, new vs carried-over titles).
+- **Genre source:** I moved from TMDB to the IMDb non-commercial datasets because I did not want to create an API key. Local files pinned by checksum also made the labelling reproducible.
+- **Genre mapping:** I committed a priority-ordered mapping table (drafted by Claude, reviewed by me) before any genre share was computed.
+- **Scope:** after seeing the scope sizes (7,342 / 5,548 / 4,287 keys) and before any label or genre share existed, I raised the key cap from 3,000 to 4,500 on Claude's recommendation, so the 80% target could be used.
+- **Shortcuts I chose, knowing the cost:** I accepted an AI first pass for the pilot match check, did not reproduce the key numbers myself, and skipped step 10 because there was no validated effect to model.
 
 ## What AI did
 
@@ -132,9 +131,8 @@ Based on `git log` and the `Author:` line of each file:
 
 ## Where AI critique changed my view
 
-TODO (human): write this in your own words. Where it is recorded:
-
-- The critique itself: `workflow/08_critique.md`.
-- Your point-by-point answers (accepted, partly rejected, noted as limits): the "Answers to 08_critique" list in `workflow/09_recommendations.md`.
-- The revision of the insights after the critique (power, mean-based lead, wording): `workflow/07_insights.md` and commit `07-insights: revise after critique`.
-- Validation notes that qualified the result: `workflow/06_validation.md`, section 5.
+- The critic (08) agreed that the numbers were right but challenged how I read them. I accepted most points: the rule is strict, so "none found" is weak evidence; the genre groups are coarse; my claim in I2 about big titles rested on one example, so I reduced it to a single observation; and "recomputed independently" was too strong because the validator reused the analyst's matching code.
+- I added a weaker lead the critic pointed out to my insights: the mean aligned shift for Sci-Fi & Fantasy (1.85 pp, interval 0.33 to 3.46). It is not a pass under my pre-set rule.
+- I partly rejected one objection: the small "new" stratum does not decide the result, because check 1 alone already fails at all three thresholds.
+- I kept the baseline recommendation but marked it provisional and attached a dated prediction to it.
+- Full answers, point by point: `workflow/09_recommendations.md`. Critique: `workflow/08_critique.md`. Revised insights: `workflow/07_insights.md`.
