@@ -1,0 +1,51 @@
+ROWS 2023Jan-Jun.xlsx: n=18214 manifest=18214 missing_hours=0 nonpos=0 dup_full=0 dup_title_in_sheet=0 dup_title_across_sheets=0 sum_hours=93455200000
+ROWS 2023Jul-Dec.xlsx: n=15994 manifest=15994 missing_hours=0 nonpos=0 dup_full=0 dup_title_in_sheet=0 dup_title_across_sheets=0 sum_hours=90023100000
+ROWS 2024Jan-Jun.xlsx: n=16161 manifest=16161 missing_hours=0 nonpos=0 dup_full=0 dup_title_in_sheet=1 dup_title_across_sheets=1 sum_hours=94003500000
+ROWS 2024Jul-Dec.xlsx: n=15563 manifest=15563 missing_hours=0 nonpos=0 dup_full=0 dup_title_in_sheet=2 dup_title_across_sheets=2 sum_hours=94115100000
+ROWS 2025Jan-Jun.xlsx: n=16182 manifest=16182 missing_hours=0 nonpos=0 dup_full=1 dup_title_in_sheet=5 dup_title_across_sheets=5 sum_hours=95186500000
+ROWS 2025Jul-Dec.xlsx: n=16470 manifest=16470 missing_hours=0 nonpos=0 dup_full=1 dup_title_in_sheet=3 dup_title_across_sheets=3 sum_hours=96207800000
+ROWS 2026Jan-Jun.xlsx: n=17372 manifest=17372 missing_hours=0 nonpos=0 dup_full=0 dup_title_in_sheet=3 dup_title_across_sheets=3 sum_hours=97664500000
+TOTAL ROWS 115956
+.TOTAL H1 2023: mine=93455200000 analyst_all_listed=93455200000 diff=0
+TOTAL H2 2023: mine=90023100000 analyst_all_listed=90023100000 diff=0
+TOTAL H1 2024: mine=94003500000 analyst_all_listed=94003500000 diff=0
+TOTAL H2 2024: mine=94115100000 analyst_all_listed=94115100000 diff=0
+TOTAL H1 2025: mine=95186500000 analyst_all_listed=95186500000 diff=0
+TOTAL H2 2025: mine=96207800000 analyst_all_listed=96207800000 diff=0
+TOTAL H1 2026: mine=97664500000 analyst_all_listed=97664500000 diff=0
+.TITLEDUP 2024Jan-Jun.xlsx Film [{'_c0': None, 'Title': 'Monster', 'Available Globally?': 'Yes', 'Release Date': '2024-05-16', 'Hours Viewed': 9800000, 'Runtime': '1:25', 'Views': 6900000, '_c7': None}, {'_c0': None, 'Title': 'Monster', 'Available Globally?': 'Yes', 'Release Date': '2021-05-07', 'Hours Viewed': 1300000, 'Runtime': '1:39', 'Views': 800000, '_c7': None}]
+TITLEDUP 2024Jul-Dec.xlsx Film [{'_c0': None, 'Title': 'Maria', 'Available Globally?': 'No', 'Release Date': '2024-12-11', 'Hours Viewed': 4400000, 'Runtime': '2:03', 'Views': 2100000, '_c7': None}, {'_c0': None, 'Title': 'Monster', 'Available Globally?': 'Yes', 'Release Date': '2024-05-16', 'Hours Viewed': 3000000, 'Runtime': '1:25', 'Views': 2100000, '_c7': None}, {'_c0': None, 'Title': 'Maria', 'Available Globally?': 'No', 'Release Date': '2019-05-17', 'Hours Viewed': 1200000, 'Runtime': '1:30', 'Views': 800000, '_c7': None}, {'_c0': None, 'Title': 'Monster', 'Available Globally?': 'Yes', 'Release Date': '2021-05-07', 'Hours Viewed': 800000, 'Runtime': '1:39', 'Views': 500000, '_c7': None}]
+TITLEDUP 2025Jan-Jun.xlsx Shows [{'_c0': None, 'Title': 'You vs. Wild: Season 1', 'Available Globally?': 'No', 'Release Date': '2025-01-23', 'Hours Viewed': 1500000, 'Runtime': '2:12', 'Views': 700000, '_c7': None}, {'_c0': None, 'Title': 'You vs. Wild: Season 1', 'Available Globally?': 'No', 'Release Date': '2019-04-10', 'Hours Viewed': 500000, 'Runtime': '2:31', 'Views': 200000, '_c7': None}]
+TITLEDUP 2025Jan-Jun.xlsx Movies [{'_c0': None, 'Title': 'Maria', 'Available Globally?': 'No', 'Release Date': '2024-12-11', 'Hours Viewed': 2400000, 'Runtime': '2:03', 'Views': 1200000, '_c7': None}, {'_c0': None, 'Title': 'Monster', 'Available Globally?': 'Yes', 'Release Date': '2024-05-16', 'Hours Viewed': 1700000, 'Runtime': '1:25', 'Views': 1200000, '_c7': None}, {'_c0': None, 'Title': 'Maria', 'Available Globally?': 'No', 'Release Date': '2019-05-17', 'Hours Viewed': 1300000, 'Runtime': '1:30', 'Views': 900000, '_c7': None}, {'_c0': None, 'Title': 'Animals on the Loose: A You vs. Wild Movie', 'Available Globally?': 'No', 'Release Date': '2025-01-23', 'Hours Viewed': 600000, 'Runtime': '0:43', 'Views': 800000, '_c7': None}, {'_c0': None, 'Title': 'Monster', 'Available Globally?': 'Yes', 'Release Date': '2021-05-07', 'Hours Viewed': 1000000, 'Runtime': '1:39', 'Views': 600000, '_c7': None}, {'_c0': None, 'Title': 'You vs. Wild: Out Cold', 'Available Globally?': 'No', 'Release Date': '2021-09-14', 'Hours Viewed': 200000, 'Runtime': '0:25', 'Views': 500000, '_c7': None}, {'_c0': None, 'Title': 'Animals on the Loose: A You vs. Wild Movie', 'Available Globally?': 'No', 'Release Date': '2021-02-16', 'Hours Viewed': 300000, 'Runtime': '0:45', 'Views': 400000, '_c7': None}, {'_c0': None, 'Title': 'You vs. Wild: Out Cold', 'Available Globally?': 'No', 'Release Date': '2025-01-23', 'Hours Viewed': 200000, 'Runtime': '0:29', 'Views': 400000, '_c7': None}]
+TITLEDUP 2025Jul-Dec.xlsx Shows [{'_c0': None, 'Title': 'Solo Camping for Two (2025): Season 1 // ふたりソロキャンプ: シーズン1', 'Available Globally?': 'No', 'Release Date': nan, 'Hours Viewed': 800000.0, 'Runtime': '4:45', 'Views': 200000, '_c7': None}, {'_c0': None, 'Title': 'Solo Camping for Two (2025): Season 1 // ふたりソロキャンプ: シーズン1', 'Available Globally?': 'No', 'Release Date': nan, 'Hours Viewed': 300000.0, 'Runtime': '3:18', 'Views': 100000, '_c7': None}]
+TITLEDUP 2025Jul-Dec.xlsx Movies [{'_c0': None, 'Title': 'Monster', 'Available Globally?': 'Yes', 'Release Date': '2024-05-16', 'Hours Viewed': 1400000.0, 'Runtime': '1:25', 'Views': 1000000, '_c7': None}, {'_c0': None, 'Title': 'Maria', 'Available Globally?': 'No', 'Release Date': '2019-05-17', 'Hours Viewed': 1000000.0, 'Runtime': '1:30', 'Views': 700000, '_c7': None}, {'_c0': None, 'Title': 'Maria', 'Available Globally?': 'No', 'Release Date': '2024-12-11', 'Hours Viewed': 1000000.0, 'Runtime': '2:03', 'Views': 500000, '_c7': None}, {'_c0': None, 'Title': 'Monster', 'Available Globally?': 'Yes', 'Release Date': '2021-05-07', 'Hours Viewed': 500000.0, 'Runtime': '1:39', 'Views': 300000, '_c7': None}]
+TITLEDUP 2026Jan-Jun.xlsx Movies [{'_c0': None, 'Title': 'War Machine', 'Available Globally?': 'Yes', 'Release Date': '2026-03-06', 'Hours Viewed': 266800000.0, 'Runtime': '1:49', 'Views': 146900000, '_c7': None}, {'_c0': None, 'Title': 'Monster', 'Available Globally?': 'Yes', 'Release Date': '2024-05-16', 'Hours Viewed': 1100000.0, 'Runtime': '1:25', 'Views': 800000, '_c7': None}, {'_c0': None, 'Title': 'Maria', 'Available Globally?': 'No', 'Release Date': '2019-05-17', 'Hours Viewed': 900000.0, 'Runtime': '1:30', 'Views': 600000, '_c7': None}, {'_c0': None, 'Title': 'War Machine', 'Available Globally?': 'Yes', 'Release Date': '2017-05-26', 'Hours Viewed': 900000.0, 'Runtime': '2:03', 'Views': 400000, '_c7': None}, {'_c0': None, 'Title': 'Maria', 'Available Globally?': 'No', 'Release Date': '2024-12-11', 'Hours Viewed': 400000.0, 'Runtime': '2:03', 'Views': 200000, '_c7': None}, {'_c0': None, 'Title': 'Monster', 'Available Globally?': 'Yes', 'Release Date': '2021-05-07', 'Hours Viewed': 400000.0, 'Runtime': '1:39', 'Views': 200000, '_c7': None}]
+ROWS CHECKED 115960 FULL-ROW DUPLICATES (all columns): 0
+.SUM-OF-SHARES min/max 99.99999999999999 100.00000000000001 n cells 26
+.ELIGIBLE (mine) ['Action & Adventure', 'Animation', 'Comedy & Romance', 'Crime & Thriller', 'Documentary & Reality', 'Kids & Family', 'Sci-Fi & Fantasy']
+MEAN SHARES (mine) {'Action & Adventure': 8.45, 'Animation': 13.54, 'Comedy & Romance': 20.65, 'Crime & Thriller': 30.94, 'Documentary & Reality': 6.21, 'Drama': 4.88, 'Kids & Family': 5.78, 'Sci-Fi & Fantasy': 9.56}
+GENRE Documentary & Reality: dir mine=up analyst=up; margins mine=[-0.6156, -0.6338, 0.4043, -1.322] gm mine=-1.3220 analyst=-1.3220; max abs diff over 17 numbers=1.78e-15; pass2 mine=False analyst=False
+GENRE Kids & Family: dir mine=down analyst=down; margins mine=[-0.9788, -1.1251, -1.6557, -0.9894] gm mine=-1.6557 analyst=-1.6557; max abs diff over 17 numbers=2.22e-16; pass2 mine=False analyst=False
+GENRE Animation: dir mine=up analyst=up; margins mine=[-1.0208, -0.6741, -2.1558, -1.252] gm mine=-2.1558 analyst=-2.1558; max abs diff over 17 numbers=1.78e-15; pass2 mine=False analyst=False
+GENRE Sci-Fi & Fantasy: dir mine=up analyst=up; margins mine=[0.4852, -0.5358, -0.3811, -0.0546] gm mine=-0.5358 analyst=-0.5358; max abs diff over 17 numbers=1.78e-15; pass2 mine=False analyst=False
+GENRE Crime & Thriller: dir mine=up analyst=up; margins mine=[-2.7869, -1.7493, -3.0292, -3.4859] gm mine=-3.4859 analyst=-3.4859; max abs diff over 17 numbers=3.55e-15; pass2 mine=False analyst=False
+GENRE Action & Adventure: dir mine=down analyst=down; margins mine=[-0.5841, -0.7626, 1.5111, -1.3096] gm mine=-1.3096 analyst=-1.3096; max abs diff over 17 numbers=4.44e-16; pass2 mine=False analyst=False
+GENRE Comedy & Romance: dir mine=down analyst=down; margins mine=[-2.7623, -2.3059, -3.8692, -1.754] gm mine=-3.8692 analyst=-3.8692; max abs diff over 17 numbers=3.55e-15; pass2 mine=False analyst=False
+WORST DIFF 3.552713678800501e-15
+.PASSING GENRES theta=1.5: mine=0 analyst=0
+PASSING GENRES theta=2.0: mine=0 analyst=0
+PASSING GENRES theta=3.0: mine=0 analyst=0
+.PERM check1: n mine=5040 analyst=5040; observed M mine=0.4852 analyst=0.4852; p mine=0.1381 analyst=0.1381; any-pass counts mine={1.5: 24, 2.0: 0, 3.0: 0} analyst={'1.5': 24, '2.0': 0, '3.0': 0}
+PERM all: n mine=720 analyst=720; observed M mine=-0.5358 analyst=-0.5358; p mine=0.0389 analyst=0.0389; any-pass counts mine={1.5: 0, 2.0: 0, 3.0: 0} analyst={'1.5': 0, '2.0': 0, '3.0': 0}
+.NEWCOMBE matched: mine diff=-1.019 CI [-2.615, 0.437] pp; analyst -1.019 [-2.615, 0.437]
+NEWCOMBE labelled: mine diff=-0.985 CI [-2.582, 0.472] pp; analyst -0.985 [-2.582, 0.472]
+WILSON CIs in match_rate.csv agree with scipy for all 6 rows
+NEWCOMBE H1 2023: mine -4.1 [-6.7, -2.0] analyst -4.1 [-6.7, -2.0]
+NEWCOMBE H2 2023: mine -3.4 [-5.7, -1.6] analyst -3.4 [-5.7, -1.6]
+NEWCOMBE H1 2024: mine -2.9 [-5.0, -1.2] analyst -2.9 [-5.0, -1.2]
+NEWCOMBE H2 2024: mine -2.0 [-3.9, -0.4] analyst -2.0 [-3.9, -0.4]
+NEWCOMBE H1 2025: mine -2.2 [-3.9, -0.6] analyst -2.2 [-3.9, -0.6]
+NEWCOMBE H2 2025: mine -1.3 [-3.0, 0.1] analyst -1.3 [-3.0, 0.1]
+NEWCOMBE H1 2026: mine -0.9 [-2.5, 0.5] analyst -0.9 [-2.5, 0.5]
+.
+8 passed in 6.99s

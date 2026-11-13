@@ -1,0 +1,61 @@
+SCOPE union: mine=4398 analyst=4398 symmetric diff=0
+.GROUP MAPPING mismatches (priority rule re-implemented): 0 of 4398
+Genres in title.basics missing from mapping: []
+.SHARES rebuilt: max abs diff over 4 variants x 8 genres x 7 halves (pp): 3.552713678800501e-15
+VARIANT HOURS c1: max abs diff 0.0
+VARIANT HOURS c2: max abs diff 0.0
+VARIANT HOURS c3n: max abs diff 0.0
+VARIANT HOURS c3c: max abs diff 0.0
+COVERAGE H1 2023: unlabelled/in-scope mine=3.083 analyst=3.083; in-scope hours mine=77536200000
+COVERAGE H2 2023: unlabelled/in-scope mine=3.227 analyst=3.227; in-scope hours mine=76803400000
+COVERAGE H1 2024: unlabelled/in-scope mine=3.652 analyst=3.652; in-scope hours mine=81632700000
+COVERAGE H2 2024: unlabelled/in-scope mine=3.718 analyst=3.718; in-scope hours mine=83108400000
+COVERAGE H1 2025: unlabelled/in-scope mine=3.239 analyst=3.239; in-scope hours mine=84206400000
+COVERAGE H2 2025: unlabelled/in-scope mine=4.038 analyst=4.038; in-scope hours mine=84617000000
+COVERAGE H1 2026: unlabelled/in-scope mine=4.494 analyst=4.494; in-scope hours mine=85650400000
+TOP10 cells in unlabelled keys: 1
+.BOOT Documentary & Reality    mean_aligned  mine [  -0.94,   0.76] analyst [  -0.96,   0.84] | margin_c1 mine [  -2.39,  -0.02] analyst [  -2.33,   0.05] | margin_c2 mine [  -2.59,   0.08] analyst [  -2.52,   0.09] | genre_margin mine [  -5.33,  -0.80] analyst [  -5.02,  -0.67]
+BOOTPASS Documentary & Reality: theta2 mine=0.0000 analyst=0.0000; theta1.5 mine=0.0000 analyst=0.0000
+BOOT Kids & Family            mean_aligned  mine [  -0.76,   0.09] analyst [  -0.73,   0.08] | margin_c1 mine [  -1.79,  -0.42] analyst [  -1.82,  -0.42] | margin_c2 mine [  -2.68,  -0.58] analyst [  -2.72,  -0.58] | genre_margin mine [  -3.98,  -0.92] analyst [  -3.26,  -0.42]
+BOOTPASS Kids & Family: theta2 mine=0.0000 analyst=0.0000; theta1.5 mine=0.0000 analyst=0.0000
+BOOT Animation                mean_aligned  mine [  -0.84,   1.20] analyst [  -0.82,   1.19] | margin_c1 mine [  -2.99,   0.03] analyst [  -3.12,   0.07] | margin_c2 mine [  -2.21,  -0.04] analyst [  -2.22,  -0.01] | genre_margin mine [  -8.78,  -0.96] analyst [  -4.97,  -0.85]
+BOOTPASS Animation: theta2 mine=0.0000 analyst=0.0000; theta1.5 mine=0.0000 analyst=0.0000
+BOOT Sci-Fi & Fantasy         mean_aligned  mine [   0.35,   3.46] analyst [   0.33,   3.46] | margin_c1 mine [  -2.04,   1.22] analyst [  -2.04,   1.12] | margin_c2 mine [  -2.72,   0.16] analyst [  -2.80,   0.22] | genre_margin mine [  -8.22,  -0.32] analyst [  -7.43,  -0.29]
+BOOTPASS Sci-Fi & Fantasy: theta2 mine=0.0000 analyst=0.0000; theta1.5 mine=0.0000 analyst=0.0000
+BOOT Crime & Thriller         mean_aligned  mine [  -2.97,   1.35] analyst [  -2.93,   1.26] | margin_c1 mine [  -7.34,  -1.10] analyst [  -7.45,  -1.13] | margin_c2 mine [  -5.01,   0.19] analyst [  -5.01,   0.34] | genre_margin mine [ -16.90,  -2.69] analyst [ -12.88,  -2.50]
+BOOTPASS Crime & Thriller: theta2 mine=0.0000 analyst=0.0000; theta1.5 mine=0.0000 analyst=0.0000
+BOOT Action & Adventure       mean_aligned  mine [  -0.46,   1.74] analyst [  -0.44,   1.73] | margin_c1 mine [  -2.45,   0.62] analyst [  -2.51,   0.61] | margin_c2 mine [  -2.72,   0.55] analyst [  -2.79,   0.57] | genre_margin mine [  -6.08,  -0.49] analyst [  -5.37,  -0.53]
+BOOTPASS Action & Adventure: theta2 mine=0.0000 analyst=0.0000; theta1.5 mine=0.0000 analyst=0.0000
+BOOT Comedy & Romance         mean_aligned  mine [  -1.70,   2.62] analyst [  -1.64,   2.62] | margin_c1 mine [  -7.22,   0.38] analyst [  -7.21,   0.53] | margin_c2 mine [  -5.48,  -0.17] analyst [  -5.44,  -0.12] | genre_margin mine [ -12.68,  -1.78] analyst [ -10.55,  -1.85]
+BOOTPASS Comedy & Romance: theta2 mine=0.0000 analyst=0.0000; theta1.5 mine=0.0000 analyst=0.0000
+BOOT worst endpoint difference (pp): 4.021872781478903
+BOOT analyst point estimate inside my 95% CI: 28/28
+.DRAMA sign 1.0 margins c1,c2,c3n,c3c [-1.238, -0.744, -5.739, -1.46]
+DRAMA sign -1.0 margins c1,c2,c3n,c3c [-0.698, -0.327, -1.347, -1.4]
+DRAMA mean share 4.88115031393192 best genre margin -1.3995870564756583
+SCI-FI shares c1: [ 8.802  9.288  8.691  9.259  8.252 13.109  9.511]
+SCI-FI shift H1 2025->H2 2025: 4.857660520921485
+  SCIFI key stranger things [series] hours H1 2025 404100000.0 H2 2025 2494700000.0
+  SCIFI key wednesday [series] hours H1 2025 90400000.0 H2 2025 1284200000.0
+  SCIFI key bon appétit, your majesty [series] hours H1 2025 0.0 H2 2025 588300000.0
+  SCIFI key lost [series] hours H1 2025 458800000.0 H2 2025 114100000.0
+  SCIFI key genie, make a wish [series] hours H1 2025 0.0 H2 2025 290800000.0
+  SCIFI key the sandman [series] hours H1 2025 42200000.0 H2 2025 322000000.0
+DROP TOP-10 per half, check-1 best margins: {'Action & Adventure': -0.763, 'Animation': -0.588, 'Comedy & Romance': -2.306, 'Crime & Thriller': -1.749, 'Documentary & Reality': -0.38, 'Drama': -0.327, 'Kids & Family': 0.201, 'Sci-Fi & Fantasy': -0.536}
+DROP TOP-25 per half, check-1 best margins: {'Action & Adventure': -0.634, 'Animation': -0.81, 'Comedy & Romance': -1.82, 'Crime & Thriller': -1.915, 'Documentary & Reality': -0.261, 'Drama': -0.518, 'Kids & Family': 0.172, 'Sci-Fi & Fantasy': -0.308}
+.LABEL SPOT CHECK (stage-1 labelled keys in a random 400, simple exact-title/max-votes, no year filter): agree=351 disagree=7 not-comparable=9 agreement=98.0%
+  DISAGREE ('the killer [film]', 'Action & Adventure', 'Crime & Thriller', 1, 'The Killer')
+  DISAGREE ('life [film]', 'Crime & Thriller', 'Sci-Fi & Fantasy', 3, 'Life')
+  DISAGREE ('the wages of fear [film]', 'Action & Adventure', 'Crime & Thriller', 1, 'The Wages of Fear')
+  DISAGREE ('the circle [unknown]', 'Documentary & Reality', 'Sci-Fi & Fantasy', 4, 'The Circle')
+  DISAGREE ('the gift [unknown]', 'Sci-Fi & Fantasy', 'Crime & Thriller', 9, 'The Gift')
+  DISAGREE ('the hunt [film]', 'Crime & Thriller', 'Drama', 2, 'The Hunt')
+  DISAGREE ('jack [film]', 'Crime & Thriller', 'Sci-Fi & Fantasy', 1, 'Jack')
+.
+=============================== warnings summary ===============================
+tests/test_validation_rebuild.py::test_independent_bootstrap
+  /Users/booki/Desktop/BA-Portfolio/Projects/netflix-engagement/tests/test_validation_rebuild.py:210: RuntimeWarning: invalid value encountered in divide
+    return 100 * num / num.sum(axis=0)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+6 passed, 1 warning in 71.89s (0:01:11)

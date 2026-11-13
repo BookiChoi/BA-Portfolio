@@ -1,0 +1,10 @@
+POSTSTRAT Documentary & Reality    up mine=-0.6156 analyst=-0.6156; down mine=-0.2763 analyst=-0.2763
+POSTSTRAT Kids & Family            up mine=0.1330 analyst=0.1330; down mine=-0.9670 analyst=-0.9670
+POSTSTRAT Animation                up mine=-1.0194 analyst=-1.0194; down mine=-1.3972 analyst=-1.3972
+POSTSTRAT Sci-Fi & Fantasy         up mine=0.4980 analyst=0.4980; down mine=-4.8607 analyst=-4.8607
+POSTSTRAT Crime & Thriller         up mine=-2.7635 analyst=-2.7635; down mine=-2.6930 analyst=-2.6930
+POSTSTRAT Action & Adventure       up mine=-1.3169 analyst=-1.3169; down mine=-0.6032 analyst=-0.6032
+POSTSTRAT Comedy & Romance         up mine=-1.8669 analyst=-1.8669; down mine=-2.7602 analyst=-2.7602
+POSTSTRAT worst abs diff: 1.2434497875801753e-14
+.
+1 passed in 68.64s (0:01:08)
