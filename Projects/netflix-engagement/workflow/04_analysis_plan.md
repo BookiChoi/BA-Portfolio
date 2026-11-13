@@ -129,4 +129,12 @@ Shares reflect Netflix's own slate, not viewer demand. Only seven half-years. IM
 - The superseded plan under workflow/archive/run1/ is not used.
 - Everything else in this plan is approved as written.
 
+## Human decisions at Gate 2, amendment 1 (2026-11-12)
+- Scope cap: raised from 3,000 to 4,500 unique keys. The 3,000 cap was set when genre labels were to come from an API with call costs; with local IMDb files the cost is compute only. This is decided after seeing the scope sizes (7,342 / 5,548 / 4,287) but before any pilot, label or genre share exists. The 80% target is used. If the union exceeds 4,500 after any key-rule change, stop and ask.
+- Tagged titles (" // "): as implemented. For all segments, stage 1 (title.basics) is tried first; only keys with no stage 1 candidate from any segment go to stage 2 (title.akas). If segments give different stage 1 candidates, prefer a candidate that matches more than one segment, then apply the vote tie-break, and record it as an ambiguity.
+- Key: the key includes the media type (movie or show) wherever the file gives it. H1 2023 has no type: its type is taken from the H2 2023 file when the cleaned title appears there with exactly one type, otherwise "unknown" and matched as in P3. For the new / carried-over split in H2 2023, compare with the H1 2023 file by cleaned title only.
+- Before the pilot, report the movie/show key collisions: number of keys, share of hours, and the 20 largest by hours, before and after the type is added to the key. Include this in the status note.
+- title.akas has about 60 million rows: read it in chunks and keep only rows whose normalised title is in the in-scope key set. Do not load it whole.
+- Everything else in this plan, including the pilot stop and the hand check, stays as approved.
+
 Approved: human
