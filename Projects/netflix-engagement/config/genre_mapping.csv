@@ -1,0 +1,36 @@
+media_type,tmdb_genre_id,tmdb_genre_name,group,group_priority
+movie,99,Documentary,Documentary & Reality,1
+movie,10751,Family,Kids & Family,2
+movie,16,Animation,Animation,3
+movie,878,Science Fiction,Sci-Fi & Fantasy,4
+movie,14,Fantasy,Sci-Fi & Fantasy,4
+movie,80,Crime,Crime & Thriller,5
+movie,9648,Mystery,Crime & Thriller,5
+movie,53,Thriller,Crime & Thriller,5
+movie,27,Horror,Crime & Thriller,5
+movie,28,Action,Action & Adventure,6
+movie,12,Adventure,Action & Adventure,6
+movie,37,Western,Action & Adventure,6
+movie,35,Comedy,Comedy & Romance,7
+movie,10749,Romance,Comedy & Romance,7
+movie,18,Drama,Drama,8
+movie,36,History,Drama,8
+movie,10752,War,Drama,8
+movie,10402,Music,Drama,8
+movie,10770,TV Movie,Drama,8
+tv,99,Documentary,Documentary & Reality,1
+tv,10763,News,Documentary & Reality,1
+tv,10764,Reality,Documentary & Reality,1
+tv,10767,Talk,Documentary & Reality,1
+tv,10751,Family,Kids & Family,2
+tv,10762,Kids,Kids & Family,2
+tv,16,Animation,Animation,3
+tv,10765,Sci-Fi & Fantasy,Sci-Fi & Fantasy,4
+tv,80,Crime,Crime & Thriller,5
+tv,9648,Mystery,Crime & Thriller,5
+tv,10759,Action & Adventure,Action & Adventure,6
+tv,37,Western,Action & Adventure,6
+tv,35,Comedy,Comedy & Romance,7
+tv,18,Drama,Drama,8
+tv,10766,Soap,Drama,8
+tv,10768,War & Politics,Drama,8
