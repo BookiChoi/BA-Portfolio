@@ -116,3 +116,17 @@ Shares reflect Netflix's own slate, not viewer demand. Only seven half-years. IM
 3. The akas second stage is an addition I am proposing under your amendment; remove it if not wanted.
 4. Permutation null (exchange of half-year order) is my choice of "chance of a spurious pass"; alternatives such as label shuffling across titles are possible.
 5. The git status shows a modified file under workflow/archive/run1/; I did not touch it.
+
+## Human decisions at Gate 2 (2026-11-12, revised plan)
+- Check 3: both strata must pass, in the same direction as checks 1 and 2, as planned.
+- Labelling scope: cumulative targets 90%, 85%, 80% in that order, at most 3,000 unique keys; if even 80% exceeds 3,000, stop and ask.
+- The title.akas second stage is approved. IMDb files are in ~/Downloads/imdb-datasets/ (outside the repo). Record URL, download date, rows and sha256 for each in data_manifest.json before use.
+- Permutation null: exchange of half-year order, as planned, reported as supplementary. A pass with p < 0.05 is a stronger lead; a pass with p >= 0.05 is a weak lead. Neither is a confirmed seasonal law.
+- Mapping table: Projects/netflix-engagement/config/genre_mapping.csv with columns imdb_genre, group, group_priority, committed by me before the pilot. The analyst does not edit it. Before matching, list all distinct genre values in title.basics.tsv.gz and stop if any is not in the mapping. An empty group means "not mappable" (a title with only such genres is unlabelled).
+- Year hint: when a title carries a year tag, for example "Suits (2011)", use it as the release-year hint. Movies need |startYear - tag year| <= 1; series need |startYear - tag year| <= 1. If a release date exists, the date rule in P3 applies instead. This rule is fixed before the pilot.
+- Pilot stop: write the 30-row pilot table to outputs/q1/pilot_table.csv, add a short status note to 05_analysis.md, and stop before labelling the full scope. I will hand check the 30 rows and record my result in workflow/05_pilot_check.md. Continue only after that file exists.
+- Add to the limitations: the "new" stratum includes titles that first crossed the report's listing threshold, not only newly released ones; the hours are reported at coarse resolution with many ties.
+- The superseded plan under workflow/archive/run1/ is not used.
+- Everything else in this plan is approved as written.
+
+Approved: human
