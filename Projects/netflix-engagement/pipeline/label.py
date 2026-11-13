@@ -209,3 +209,30 @@ class ImdbIndex:
         return {"matched": False, "tconst": None, "imdb_title": None, "imdb_type": None, "imdb_year": np.nan,
                 "imdb_genres": None, "stage": None, "segments_matched": None, "candidates_after_filter": 0,
                 "tie_break": None, "type_rule": type_rule, "year_source": year_src}
+
+
+# --------------------------------------------------------------------------- full-scope labelling
+def label_keys(ki: pd.DataFrame, kids: list[str], idx: "ImdbIndex", mapping: pd.DataFrame) -> pd.DataFrame:
+    """Run the frozen P3 matching for every key in ``kids`` (same call as the pilot).
+
+    Also records the group of the FIRST listed IMDb genre (IMDb lists the main genre first) so the
+    coarseness of the priority table can be reported: ``group_differs_first`` is True when the
+    priority rule picked another group than the first-listed genre would have.
+    """
+    rows = []
+    for k in kids:
+        r = ki.loc[k]
+        rel = r["release_date"]
+        rel_year = int(rel.year) if pd.notna(rel) else None
+        tag_year = int(r["tag_year"]) if pd.notna(r["tag_year"]) else None
+        m = idx.match(list(r["segments"]), r["type_known"], bool(r["series_tag_stripped"]), rel_year, tag_year)
+        grp = genre_group(m["imdb_genres"], mapping) if m["matched"] else None
+        first = (genre_group(m["imdb_genres"].split(",")[0], mapping)
+                 if m["matched"] and isinstance(m["imdb_genres"], str) else None)
+        rows.append({"kid": k, "tagged": bool(r["tagged"]), "matched": m["matched"], "stage": m["stage"],
+                     "candidates": m["candidates_after_filter"], "tie_break": m["tie_break"],
+                     "imdb_genres": m["imdb_genres"], "group": grp, "group_first_genre": first,
+                     "group_differs_first": bool(grp is not None and first != grp)})
+    out = pd.DataFrame(rows)
+    out["labelled"] = out["group"].notna()
+    return out

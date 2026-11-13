@@ -1,0 +1,68 @@
+akas hits loaded: 18549
+LABELLING {"keys": 4398, "matched": 4146, "labelled": 4145, "stage_counts": {"stage1": 4007, "none": 252, "stage2_akas": 139}, "tie_break_counts": {"none": 3673, "votes": 668, "multi_segment": 57}, "ambiguous_keys_candidates_gt1": 725}
+      half  all_listed_hours  in_scope_hours  labelled_hours  unlabelled_in_scope_hours  labelled_over_all_pct  labelled_over_inscope_pct  unlabelled_over_inscope_pct  hours_not_in_scope_pct_of_listed  labelled_over_inscope_pct_tagged  labelled_over_inscope_pct_untagged  keys_labelled_rate_tagged  keys_labelled_rate_untagged  diff_tagged_minus_untagged  diff_ci_lo  diff_ci_hi  n_tagged  n_untagged
+0  H1 2023      9.345520e+10    7.753620e+10    7.514570e+10               2.390500e+09                 80.408                     96.917                        3.083                            17.034                            97.144                              96.851                      0.922                        0.963                      -0.041      -0.067      -0.020       591        1660
+1  H2 2023      9.002310e+10    7.680340e+10    7.432500e+10               2.478400e+09                 82.562                     96.773                        3.227                            14.685                            95.648                              97.110                      0.932                        0.967                      -0.034      -0.057      -0.016       708        1919
+2  H1 2024      9.400350e+10    8.163270e+10    7.865140e+10               2.981300e+09                 83.669                     96.348                        3.652                            13.160                            95.966                              96.465                      0.933                        0.963                      -0.029      -0.050      -0.012       809        2081
+3  H2 2024      9.411510e+10    8.310840e+10    8.001840e+10               3.090000e+09                 85.022                     96.282                        3.718                            11.695                            96.128                              96.330                      0.938                        0.958                      -0.020      -0.039      -0.004       936        2236
+4  H1 2025      9.518650e+10    8.420640e+10    8.147930e+10               2.727100e+09                 85.600                     96.761                        3.239                            11.535                            95.274                              97.302                      0.938                        0.960                      -0.022      -0.039      -0.006      1067        2344
+5  H2 2025      9.620780e+10    8.461700e+10    8.120020e+10               3.416800e+09                 84.401                     95.962                        4.038                            12.048                            95.631                              96.073                      0.943                        0.957                      -0.013      -0.030       0.001      1201        2517
+6  H1 2026      9.766450e+10    8.565040e+10    8.180120e+10               3.849200e+09                 83.757                     95.506                        4.494                            12.301                            94.466                              95.852                      0.941                        0.950                      -0.009      -0.025       0.005      1312        2626
+      group   outcome     x     n  rate_pct  ci_lo_pct  ci_hi_pct
+0       all   matched  4146  4398     94.27      93.54      94.92
+1       all  labelled  4145  4398     94.25      93.52      94.90
+2    tagged   matched  1311  1401     93.58      92.17      94.74
+3    tagged  labelled  1311  1401     93.58      92.17      94.74
+4  untagged   matched  2835  2997     94.59      93.73      95.35
+5  untagged  labelled  2834  2997     94.56      93.69      95.32
+newcombe {'diff': -0.010185774639736134, 'lo': np.float64(-0.02614660989578105), 'hi': np.float64(0.0043709279859385376)} {'diff': -0.009852107639402474, 'lo': np.float64(-0.02582421837852725), 'hi': np.float64(0.004718314989163757)}
+coarse group {'keys_pct': 54.25814234016888, 'hours_pct': 57.013104093726405}
+eligible ['Documentary & Reality', 'Kids & Family', 'Animation', 'Sci-Fi & Fantasy', 'Crime & Thriller', 'Action & Adventure', 'Comedy & Romance']
+                                                   0              1          2                 3                 4                   5                 6
+genre                          Documentary & Reality  Kids & Family  Animation  Sci-Fi & Fantasy  Crime & Thriller  Action & Adventure  Comedy & Romance
+mean_share_pct                                  6.21           5.78      13.54              9.56             30.94                8.45             20.65
+direction                                         up           down         up                up                up                down              down
+genre_margin_pp                                -1.32          -1.66      -2.16             -0.54             -3.49               -1.31             -3.87
+genre_margin_ci_lo                             -5.02          -3.26      -4.97             -7.43            -12.88               -5.37            -10.55
+genre_margin_ci_hi                             -0.67          -0.42      -0.85             -0.29              -2.5               -0.53             -1.85
+mean_aligned_shift_pp                          -0.07          -0.33       0.14              1.85              -0.8                0.67              0.36
+mean_aligned_ci_lo                             -0.96          -0.73      -0.82              0.33             -2.93               -0.44             -1.64
+mean_aligned_ci_hi                              0.84           0.08       1.19              3.46              1.26                1.73              2.62
+margin_c1                                      -0.62          -0.98      -1.02              0.49             -2.79               -0.58             -2.76
+margin_c1_ci_lo                                -2.33          -1.82      -3.12             -2.04             -7.45               -2.51             -7.21
+margin_c1_ci_hi                                 0.05          -0.42       0.07              1.12             -1.13                0.61              0.53
+margin_c2                                      -0.63          -1.13      -0.67             -0.54             -1.75               -0.76             -2.31
+margin_c2_ci_lo                                -2.52          -2.72      -2.22              -2.8             -5.01               -2.79             -5.44
+margin_c2_ci_hi                                 0.09          -0.58      -0.01              0.22              0.34                0.57             -0.12
+margin_c3n                                       0.4          -1.66      -2.16             -0.38             -3.03                1.51             -3.87
+margin_c3n_ci_lo                               -5.34          -4.02      -9.01              -8.4            -17.47               -6.14            -12.38
+margin_c3n_ci_hi                                2.79           0.02       1.03              3.92              3.11                4.09              2.65
+margin_c3c                                     -1.32          -0.99      -1.25             -0.05             -3.49               -1.31             -1.75
+margin_c3c_ci_lo                               -3.12          -1.89      -3.37             -2.04             -7.98               -3.17             -5.82
+margin_c3c_ci_hi                               -0.47          -0.58       -0.3              0.77              -1.1                -0.3              0.45
+mean_aligned_shift_c3n_5trans                   2.03           0.42       0.81              3.14              2.02                2.86              3.49
+mean_aligned_shift_c3c_5trans                  -0.68          -0.54      -0.48              1.81             -0.97               -0.19              0.36
+pass_theta_1.5                                 False          False      False             False             False               False             False
+boot_pass_frac_theta_1.5                         0.0            0.0        0.0               0.0               0.0                 0.0               0.0
+pass_theta_2.0                                 False          False      False             False             False               False             False
+boot_pass_frac_theta_2.0                         0.0            0.0        0.0               0.0               0.0                 0.0               0.0
+pass_theta_3.0                                 False          False      False             False             False               False             False
+boot_pass_frac_theta_3.0                         0.0            0.0        0.0               0.0               0.0                 0.0               0.0
+near_miss_theta_2                              False          False      False             False             False               False             False
+shift_1                                        -0.02           0.15        1.4              0.49             -2.79                -1.3              2.76
+shift_2                                        -0.12          -0.98      -0.29              -0.6              0.06                0.91              -0.2
+shift_3                                        -0.62           0.14      -1.02              0.57              2.69                -0.5              -1.7
+shift_4                                        -0.27          -0.38       0.16             -1.01              1.78               -0.58               1.0
+shift_5                                         0.04           0.18       0.18              4.86             -2.21               -0.75             -1.83
+shift_6                                         0.23          -0.13      -0.13              -3.6              0.67                1.11              0.62
+PERM check1 {"n_orderings": 5040, "observed_M": 0.48522316158970646, "p_value": 0.1380952380952381, "any_pass_fraction": {"1.5": 0.004761904761904762, "2.0": 0.0, "3.0": 0.0}, "any_pass_count": {"1.5": 24, "2.0": 0, "3.0": 0}}
+PERM all {"n_orderings": 720, "observed_M": -0.5357811419115279, "p_value": 0.03888888888888889, "any_pass_fraction": {"1.5": 0.0, "2.0": 0.0, "3.0": 0.0}, "any_pass_count": {"1.5": 0, "2.0": 0, "3.0": 0}}
+                   genre  check1_margin_up  check1_margin_down  check1_margin_unweighted_best  check1_pass_theta_1.5_poststrat  check1_pass_theta_1.5_plain  check1_pass_theta_2.0_poststrat  check1_pass_theta_2.0_plain  check1_pass_theta_3.0_poststrat  check1_pass_theta_3.0_plain
+0  Documentary & Reality             -0.62               -0.28                          -0.27                            False                        False                            False                        False                            False                        False
+1          Kids & Family              0.13               -0.97                           0.13                            False                        False                            False                        False                            False                        False
+2              Animation             -1.02               -1.40                          -1.02                            False                        False                            False                        False                            False                        False
+3       Sci-Fi & Fantasy              0.50               -4.86                           0.49                            False                        False                            False                        False                            False                        False
+4       Crime & Thriller             -2.76               -2.69                          -2.69                            False                        False                            False                        False                            False                        False
+5     Action & Adventure             -1.32               -0.60                          -0.58                            False                        False                            False                        False                            False                        False
+6       Comedy & Romance             -1.87               -2.76                          -1.83                            False                        False                            False                        False                            False                        False
+DONE; results.json written; passing at theta 2: {'passing_genres': [], 'n_passing': 0, 'findings_after_pair_rule': 0}

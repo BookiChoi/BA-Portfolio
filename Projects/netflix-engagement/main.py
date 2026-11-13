@@ -3,14 +3,16 @@
 Stages (run from the project folder, ``MPLBACKEND=Agg``):
     python main.py manifest   # record IMDb files in data_manifest.json (URL, date, rows, sha256)
     python main.py pilot      # clean, scope (P4), pilot match on 30 keys (P5), then STOP
-The full-scope labelling and the Q1 analysis are intentionally not wired up yet: Gate 2 requires
-the human's hand check of the pilot table (workflow/05_pilot_check.md) before they run.
+    python main.py full       # full-scope labelling + Q1 checks, bootstrap, permutation, charts
+``full`` refuses to run unless workflow/05_pilot_check.md exists (Gate 2: the human's pilot check).
+Set Q1_CACHE=<dir outside the repo> to cache the key-level label table between runs.
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -18,6 +20,7 @@ import numpy as np
 import pandas as pd
 
 from pipeline import clean, label, load
+from pipeline.q1_run import stage_full
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "outputs" / "q1"
@@ -116,9 +119,9 @@ def stage_pilot() -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("stage", choices=["manifest", "pilot"])
+    ap.add_argument("stage", choices=["manifest", "pilot", "full"])
     args = ap.parse_args()
-    {"manifest": stage_manifest, "pilot": stage_pilot}[args.stage]()
+    {"manifest": stage_manifest, "pilot": stage_pilot, "full": stage_full}[args.stage]()
 
 
 if __name__ == "__main__":
