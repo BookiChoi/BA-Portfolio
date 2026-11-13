@@ -5,7 +5,7 @@
     {
       "name": "2023Jan-Jun.xlsx",
       "file_path": "~/Downloads/netflix-reports/2023Jan-Jun.xlsx",
-      "source_url": "",
+      "source_url": "https://about.netflix.com/en/news/what-we-watched-a-netflix-engagement-report",
       "license": "",
       "downloaded_on": "2026-11-12",
       "row_count": 18214,
@@ -18,7 +18,7 @@
     {
       "name": "2023Jul-Dec.xlsx",
       "file_path": "~/Downloads/netflix-reports/2023Jul-Dec.xlsx",
-      "source_url": "",
+      "source_url": "https://about.netflix.com/en/news/what-we-watched-the-second-half-of-2023",
       "license": "",
       "downloaded_on": "2026-11-12",
       "row_count": 15994,
@@ -31,7 +31,7 @@
     {
       "name": "2024Jan-Jun.xlsx",
       "file_path": "~/Downloads/netflix-reports/2024Jan-Jun.xlsx",
-      "source_url": "",
+      "source_url": "https://about.netflix.com/en/news/what-we-watched-the-first-half-of-2024",
       "license": "",
       "downloaded_on": "2026-11-12",
       "row_count": 16161,
@@ -44,7 +44,7 @@
     {
       "name": "2024Jul-Dec.xlsx",
       "file_path": "~/Downloads/netflix-reports/2024Jul-Dec.xlsx",
-      "source_url": "",
+      "source_url": "https://about.netflix.com/en/news/what-we-watched-the-second-half-of-2024",
       "license": "",
       "downloaded_on": "2026-11-12",
       "row_count": 15563,
@@ -57,7 +57,7 @@
     {
       "name": "2025Jan-Jun.xlsx",
       "file_path": "~/Downloads/netflix-reports/2025Jan-Jun.xlsx",
-      "source_url": "",
+      "source_url": "https://about.netflix.com/en/news/what-we-watched-the-first-half-of-2025",
       "license": "",
       "downloaded_on": "2026-11-12",
       "row_count": 16182,
@@ -70,7 +70,7 @@
     {
       "name": "2025Jul-Dec.xlsx",
       "file_path": "~/Downloads/netflix-reports/2025Jul-Dec.xlsx",
-      "source_url": "",
+      "source_url": "https://about.netflix.com/en/news/what-we-watched-the-second-half-of-2025",
       "license": "",
       "downloaded_on": "2026-11-12",
       "row_count": 16470,
@@ -83,7 +83,7 @@
     {
       "name": "2026Jan-Jun.xlsx",
       "file_path": "~/Downloads/netflix-reports/2026Jan-Jun.xlsx",
-      "source_url": "",
+      "source_url": "https://about.netflix.com/en/news/what-we-watched-the-first-half-of-2026",
       "license": "",
       "downloaded_on": "2026-11-12",
       "row_count": 17372,
