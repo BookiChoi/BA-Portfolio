@@ -92,6 +92,45 @@
         "value": "bcfda87e87d09d923472a1e1b30d5c7c799457aacba41310a9d223e834fe2f5f"
       },
       "notes": "Stored outside the repo (read-only). row_count = non-empty data rows below the header on all sheets, including the 'Other Movies/Other Shows' rows, excluding blank and footnote rows. downloaded_on = file modification date."
+    },
+    {
+      "name": "title.basics.tsv.gz",
+      "file_path": "~/Downloads/imdb-datasets/title.basics.tsv.gz",
+      "source_url": "https://datasets.imdbws.com/title.basics.tsv.gz",
+      "license": "IMDb Non-Commercial Datasets (personal, non-commercial use; only aggregates published)",
+      "downloaded_on": "2026-11-12",
+      "row_count": 12953566,
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "0cc1480ce29cd313c18a83da6333757bc0e7c3aff7c3040d459213c0ad3f1ef6"
+      },
+      "notes": "Stored outside the repo (read-only). row_count = data rows excluding the header line. downloaded_on = file modification date."
+    },
+    {
+      "name": "title.ratings.tsv.gz",
+      "file_path": "~/Downloads/imdb-datasets/title.ratings.tsv.gz",
+      "source_url": "https://datasets.imdbws.com/title.ratings.tsv.gz",
+      "license": "IMDb Non-Commercial Datasets (personal, non-commercial use; only aggregates published)",
+      "downloaded_on": "2026-11-12",
+      "row_count": 1731454,
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "50b091b46e73946f5e5de9acba86bc16fc6552cee90e7ef7ff2743645a7513f5"
+      },
+      "notes": "Stored outside the repo (read-only). row_count = data rows excluding the header line. downloaded_on = file modification date."
+    },
+    {
+      "name": "title.akas.tsv.gz",
+      "file_path": "~/Downloads/imdb-datasets/title.akas.tsv.gz",
+      "source_url": "https://datasets.imdbws.com/title.akas.tsv.gz",
+      "license": "IMDb Non-Commercial Datasets (personal, non-commercial use; only aggregates published)",
+      "downloaded_on": "2026-11-12",
+      "row_count": 60353877,
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "72508408a4b45d16bd5c687d65fa80bb398e291d108f4fe108c6cfe3e17d7c77"
+      },
+      "notes": "Stored outside the repo (read-only). row_count = data rows excluding the header line. downloaded_on = file modification date."
     }
   ],
   "entry_template": {

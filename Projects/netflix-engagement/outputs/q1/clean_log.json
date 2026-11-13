@@ -1,0 +1,15 @@
+{
+  "rows_in": 115956,
+  "other_rows": 4,
+  "other_hours_by_half": {
+    "H2 2025": 757200000.0,
+    "H1 2026": 859900000.0
+  },
+  "dropped_missing_hours_or_title": 0,
+  "unknown_rows_trailing_number_resolved": 200,
+  "duplicate_full_rows": 0,
+  "merged_rows": 9502,
+  "rows_absorbed_by_merge": 21378,
+  "movie_series_collisions_within_half": 767,
+  "movie_series_collisions_across_halves": 411
+}
