@@ -1,0 +1,692 @@
+{
+  "file": "2023Jul-Dec.xlsx",
+  "sha256": "ea536b6e1f3771ba662e57a72ab847efd0200b3e4adb93a2f7d3e2b133f5b655",
+  "size_bytes": 881985,
+  "sheets": [
+    "TV",
+    "Film"
+  ],
+  "content_type_split_source": "sheet name",
+  "data_rows_all_sheets": 15994,
+  "file_total": {
+    "rows_data": 15994,
+    "rows_other": 0,
+    "rows_title_level": 15994,
+    "distinct_titles": 15994,
+    "rows_by_content_type": {
+      "film": 9395,
+      "series": 6599
+    },
+    "columns": {
+      "title": {
+        "column_present": true,
+        "non_null": 15994,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 15994,
+        "duplicate_values": 0,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "available_globally": {
+        "column_present": true,
+        "non_null": 15994,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 2,
+        "duplicate_values": 15992,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "release_date": {
+        "column_present": true,
+        "non_null": 4968,
+        "missing": 11026,
+        "missing_pct": 68.9384,
+        "distinct": 1732,
+        "duplicate_values": 3236,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "hours_viewed": {
+        "column_present": true,
+        "non_null": 15994,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 693,
+        "duplicate_values": 15301,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "runtime": {
+        "column_present": true,
+        "non_null": 15994,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 1269,
+        "duplicate_values": 14725,
+        "placeholder_star": 171,
+        "header_phrase_rows": 0
+      },
+      "views": {
+        "column_present": true,
+        "non_null": 15994,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 286,
+        "duplicate_values": 15708,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      }
+    },
+    "duplicate_full_rows": 0,
+    "rows_with_header_phrase": 0,
+    "hours": {
+      "total_incl_other": 90023100000.0,
+      "total_title_level": 90023100000.0,
+      "top10_hours": 3668100000.0,
+      "top10_share_of_total_incl_other": 0.04074620847315855,
+      "top10_share_of_title_level": 0.04074620847315855
+    },
+    "numeric": {
+      "hours_viewed": {
+        "count": 15994,
+        "min": 100000.0,
+        "p25": 200000.0,
+        "median": 1000000.0,
+        "mean": 5628554.457921721,
+        "p75": 4175000.0,
+        "p90": 13300000.0,
+        "p99": 71355999.99999976,
+        "max": 630200000.0
+      },
+      "runtime_minutes": {
+        "count": 15823,
+        "min": 6.0,
+        "p25": 98.0,
+        "median": 117.0,
+        "mean": 249.9611325285976,
+        "p75": 280.0,
+        "p90": 548.0,
+        "p99": 1498.340000000002,
+        "max": 23853.0
+      },
+      "views": {
+        "count": 15994,
+        "min": 100000.0,
+        "p25": 100000.0,
+        "median": 300000.0,
+        "mean": 1489539.8274352883,
+        "p75": 1200000.0,
+        "p90": 3400000.0,
+        "p99": 17200000.0,
+        "max": 121000000.0
+      }
+    },
+    "outliers": {
+      "hours_viewed": {
+        "iqr_upper_fence": 10137500.0,
+        "count_above_fence": 1998,
+        "top5": [
+          {
+            "title": "King the Land: Limited Series // 킹더랜드: 리미티드 시리즈",
+            "value": 630200000.0
+          },
+          {
+            "title": "ONE PIECE: Season 1",
+            "value": 541900000.0
+          },
+          {
+            "title": "Sex Education: Season 4",
+            "value": 374700000.0
+          },
+          {
+            "title": "The Witcher: Season 3",
+            "value": 363800000.0
+          },
+          {
+            "title": "Virgin River: Season 5",
+            "value": 331400000.0
+          }
+        ]
+      },
+      "views": {
+        "iqr_upper_fence": 2850000.0,
+        "count_above_fence": 1960,
+        "top5": [
+          {
+            "title": "Leave the World Behind",
+            "value": 121000000.0
+          },
+          {
+            "title": "Heart of Stone",
+            "value": 109600000.0
+          },
+          {
+            "title": "Leo",
+            "value": 96000000.0
+          },
+          {
+            "title": "Nowhere",
+            "value": 86200000.0
+          },
+          {
+            "title": "The Out-Laws",
+            "value": 83800000.0
+          }
+        ]
+      },
+      "runtime_minutes": {
+        "iqr_upper_fence": 553.0,
+        "count_above_fence": 1542,
+        "top5": [
+          {
+            "title": "As Aventuras de Poliana: Season 1",
+            "value": 23853.0
+          },
+          {
+            "title": "Chiquititas (2013)",
+            "value": 19907.0
+          },
+          {
+            "title": "Carinha de Anjo: Season 1",
+            "value": 14604.0
+          },
+          {
+            "title": "Pedro el escamoso: Season 1",
+            "value": 13805.0
+          },
+          {
+            "title": "Cúmplices de um Resgate: Season 1",
+            "value": 13152.0
+          }
+        ]
+      }
+    },
+    "release_date": {
+      "rows_considered": 15994,
+      "missing": 11026,
+      "missing_pct": 68.9384,
+      "placeholder_star": 0,
+      "unparsable": 0,
+      "min": "2010-04-01",
+      "max": "2023-12-31"
+    },
+    "available_globally": {
+      "No": {
+        "count": 11215,
+        "pct": 70.12
+      },
+      "Yes": {
+        "count": 4779,
+        "pct": 29.88
+      }
+    }
+  },
+  "per_sheet": [
+    {
+      "rows_data": 6599,
+      "rows_other": 0,
+      "rows_title_level": 6599,
+      "distinct_titles": 6599,
+      "rows_by_content_type": {
+        "series": 6599
+      },
+      "columns": {
+        "title": {
+          "column_present": true,
+          "non_null": 6599,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 6599,
+          "duplicate_values": 0,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "available_globally": {
+          "column_present": true,
+          "non_null": 6599,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 2,
+          "duplicate_values": 6597,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "release_date": {
+          "column_present": true,
+          "non_null": 3312,
+          "missing": 3287,
+          "missing_pct": 49.8106,
+          "distinct": 1554,
+          "duplicate_values": 1758,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "hours_viewed": {
+          "column_present": true,
+          "non_null": 6599,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 646,
+          "duplicate_values": 5953,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "runtime": {
+          "column_present": true,
+          "non_null": 6599,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 1260,
+          "duplicate_values": 5339,
+          "placeholder_star": 171,
+          "header_phrase_rows": 0
+        },
+        "views": {
+          "column_present": true,
+          "non_null": 6599,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 198,
+          "duplicate_values": 6401,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        }
+      },
+      "duplicate_full_rows": 0,
+      "rows_with_header_phrase": 0,
+      "hours": {
+        "total_incl_other": 64955400000.0,
+        "total_title_level": 64955400000.0,
+        "top10_hours": 3652400000.0,
+        "top10_share_of_total_incl_other": 0.05622935121637308,
+        "top10_share_of_title_level": 0.05622935121637308
+      },
+      "numeric": {
+        "hours_viewed": {
+          "count": 6599,
+          "min": 100000.0,
+          "p25": 800000.0,
+          "median": 2500000.0,
+          "mean": 9843218.669495378,
+          "p75": 8400000.0,
+          "p90": 24019999.99999998,
+          "p99": 115111999.99999972,
+          "max": 630200000.0
+        },
+        "runtime_minutes": {
+          "count": 6428,
+          "min": 6.0,
+          "p25": 203.0,
+          "median": 316.0,
+          "mean": 460.90836963285625,
+          "p75": 545.0,
+          "p90": 933.0,
+          "p99": 2579.8399999999965,
+          "max": 23853.0
+        },
+        "views": {
+          "count": 6599,
+          "min": 100000.0,
+          "p25": 200000.0,
+          "median": 500000.0,
+          "mean": 1445870.5864524927,
+          "p75": 1400000.0,
+          "p90": 3300000.0,
+          "p99": 15400000.0,
+          "max": 71600000.0
+        }
+      },
+      "outliers": {
+        "hours_viewed": {
+          "iqr_upper_fence": 19800000.0,
+          "count_above_fence": 802,
+          "top5": [
+            {
+              "title": "King the Land: Limited Series // 킹더랜드: 리미티드 시리즈",
+              "value": 630200000.0
+            },
+            {
+              "title": "ONE PIECE: Season 1",
+              "value": 541900000.0
+            },
+            {
+              "title": "Sex Education: Season 4",
+              "value": 374700000.0
+            },
+            {
+              "title": "The Witcher: Season 3",
+              "value": 363800000.0
+            },
+            {
+              "title": "Virgin River: Season 5",
+              "value": 331400000.0
+            }
+          ]
+        },
+        "views": {
+          "iqr_upper_fence": 3200000.0,
+          "count_above_fence": 673,
+          "top5": [
+            {
+              "title": "ONE PIECE: Season 1",
+              "value": 71600000.0
+            },
+            {
+              "title": "Dear Child: Limited Series // Liebes Kind: Miniserie",
+              "value": 52500000.0
+            },
+            {
+              "title": "Who is Erin Carter?: Limited Series",
+              "value": 50100000.0
+            },
+            {
+              "title": "Lupin: Part 3",
+              "value": 49700000.0
+            },
+            {
+              "title": "The Witcher: Season 3",
+              "value": 47900000.0
+            }
+          ]
+        },
+        "runtime_minutes": {
+          "iqr_upper_fence": 1058.0,
+          "count_above_fence": 414,
+          "top5": [
+            {
+              "title": "As Aventuras de Poliana: Season 1",
+              "value": 23853.0
+            },
+            {
+              "title": "Chiquititas (2013)",
+              "value": 19907.0
+            },
+            {
+              "title": "Carinha de Anjo: Season 1",
+              "value": 14604.0
+            },
+            {
+              "title": "Pedro el escamoso: Season 1",
+              "value": 13805.0
+            },
+            {
+              "title": "Cúmplices de um Resgate: Season 1",
+              "value": 13152.0
+            }
+          ]
+        }
+      },
+      "release_date": {
+        "rows_considered": 6599,
+        "missing": 3287,
+        "missing_pct": 49.8106,
+        "placeholder_star": 0,
+        "unparsable": 0,
+        "min": "2010-04-01",
+        "max": "2023-12-31"
+      },
+      "available_globally": {
+        "No": {
+          "count": 3462,
+          "pct": 52.4625
+        },
+        "Yes": {
+          "count": 3137,
+          "pct": 47.5375
+        }
+      },
+      "sheet": "TV",
+      "content_type": "series",
+      "header_row_excel": 6,
+      "skipped_rows_above_header": [
+        "What We Watched: A Netflix Engagement Report",
+        "Views from July to December 2023"
+      ],
+      "header_columns": [
+        "Title",
+        "Available Globally?",
+        "Release Date",
+        "Hours Viewed",
+        "Runtime",
+        "Views"
+      ],
+      "rows_blank": 1,
+      "rows_footnote": 0,
+      "footnotes": []
+    },
+    {
+      "rows_data": 9395,
+      "rows_other": 0,
+      "rows_title_level": 9395,
+      "distinct_titles": 9395,
+      "rows_by_content_type": {
+        "film": 9395
+      },
+      "columns": {
+        "title": {
+          "column_present": true,
+          "non_null": 9395,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 9395,
+          "duplicate_values": 0,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "available_globally": {
+          "column_present": true,
+          "non_null": 9395,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 2,
+          "duplicate_values": 9393,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "release_date": {
+          "column_present": true,
+          "non_null": 1656,
+          "missing": 7739,
+          "missing_pct": 82.3736,
+          "distinct": 928,
+          "duplicate_values": 728,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "hours_viewed": {
+          "column_present": true,
+          "non_null": 9395,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 355,
+          "duplicate_values": 9040,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "runtime": {
+          "column_present": true,
+          "non_null": 9395,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 197,
+          "duplicate_values": 9198,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "views": {
+          "column_present": true,
+          "non_null": 9395,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 248,
+          "duplicate_values": 9147,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        }
+      },
+      "duplicate_full_rows": 0,
+      "rows_with_header_phrase": 0,
+      "hours": {
+        "total_incl_other": 25067700000.0,
+        "total_title_level": 25067700000.0,
+        "top10_hours": 1648100000.0,
+        "top10_share_of_total_incl_other": 0.06574595994048117,
+        "top10_share_of_title_level": 0.06574595994048117
+      },
+      "numeric": {
+        "hours_viewed": {
+          "count": 9395,
+          "min": 100000.0,
+          "p25": 100000.0,
+          "median": 400000.0,
+          "mean": 2668195.8488557744,
+          "p75": 1800000.0,
+          "p90": 6200000.0,
+          "p99": 31600000.0,
+          "max": 286300000.0
+        },
+        "runtime_minutes": {
+          "count": 9395,
+          "min": 9.0,
+          "p25": 93.0,
+          "median": 103.0,
+          "mean": 105.63235763704098,
+          "p75": 115.0,
+          "p90": 131.0,
+          "p99": 168.0599999999995,
+          "max": 3892.0
+        },
+        "views": {
+          "count": 9395,
+          "min": 100000.0,
+          "p25": 100000.0,
+          "median": 200000.0,
+          "mean": 1520212.8791910592,
+          "p75": 1000000.0,
+          "p90": 3600000.0,
+          "p99": 18300000.0,
+          "max": 121000000.0
+        }
+      },
+      "outliers": {
+        "hours_viewed": {
+          "iqr_upper_fence": 4350000.0,
+          "count_above_fence": 1301,
+          "top5": [
+            {
+              "title": "Leave the World Behind",
+              "value": 286300000.0
+            },
+            {
+              "title": "Heart of Stone",
+              "value": 228400000.0
+            },
+            {
+              "title": "Leo",
+              "value": 171200000.0
+            },
+            {
+              "title": "Reptile",
+              "value": 165600000.0
+            },
+            {
+              "title": "Nowhere",
+              "value": 156600000.0
+            }
+          ]
+        },
+        "views": {
+          "iqr_upper_fence": 2350000.0,
+          "count_above_fence": 1383,
+          "top5": [
+            {
+              "title": "Leave the World Behind",
+              "value": 121000000.0
+            },
+            {
+              "title": "Heart of Stone",
+              "value": 109600000.0
+            },
+            {
+              "title": "Leo",
+              "value": 96000000.0
+            },
+            {
+              "title": "Nowhere",
+              "value": 86200000.0
+            },
+            {
+              "title": "The Out-Laws",
+              "value": 83800000.0
+            }
+          ]
+        },
+        "runtime_minutes": {
+          "iqr_upper_fence": 148.0,
+          "count_above_fence": 317,
+          "top5": [
+            {
+              "title": "Nihontouitsu Series: Film Series // 日本統一シリーズ: 映画シリーズ",
+              "value": 3892.0
+            },
+            {
+              "title": "Free and Easy Series: Film Series // 釣りバカ日誌: 映画シリーズ",
+              "value": 2120.0
+            },
+            {
+              "title": "Seiji Oda: Film Series // 織田同志会 織田征仁: 映画シリーズ",
+              "value": 710.0
+            },
+            {
+              "title": "Kingdom ~ The Man Who Became the Top ~: Film Series // キングダム～首領になった男～: 映画シリーズ",
+              "value": 427.0
+            },
+            {
+              "title": "Navarasa: Limited Series",
+              "value": 312.0
+            }
+          ]
+        }
+      },
+      "release_date": {
+        "rows_considered": 9395,
+        "missing": 7739,
+        "missing_pct": 82.3736,
+        "placeholder_star": 0,
+        "unparsable": 0,
+        "min": "2013-12-12",
+        "max": "2023-12-31"
+      },
+      "available_globally": {
+        "No": {
+          "count": 7753,
+          "pct": 82.5226
+        },
+        "Yes": {
+          "count": 1642,
+          "pct": 17.4774
+        }
+      },
+      "sheet": "Film",
+      "content_type": "film",
+      "header_row_excel": 6,
+      "skipped_rows_above_header": [
+        "What We Watched: A Netflix Engagement Report",
+        "Views from July to December 2023"
+      ],
+      "header_columns": [
+        "Title",
+        "Available Globally?",
+        "Release Date",
+        "Hours Viewed",
+        "Runtime",
+        "Views"
+      ],
+      "rows_blank": 1,
+      "rows_footnote": 0,
+      "footnotes": []
+    }
+  ]
+}

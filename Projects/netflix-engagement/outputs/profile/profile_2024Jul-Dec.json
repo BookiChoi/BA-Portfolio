@@ -1,0 +1,692 @@
+{
+  "file": "2024Jul-Dec.xlsx",
+  "sha256": "3030e3630fb0ff90d8d84b9cda3c22c83f4e9e356d4f1742bda729bfa2fc738c",
+  "size_bytes": 872691,
+  "sheets": [
+    "TV",
+    "Film"
+  ],
+  "content_type_split_source": "sheet name",
+  "data_rows_all_sheets": 15563,
+  "file_total": {
+    "rows_data": 15563,
+    "rows_other": 0,
+    "rows_title_level": 15563,
+    "distinct_titles": 15561,
+    "rows_by_content_type": {
+      "film": 8680,
+      "series": 6883
+    },
+    "columns": {
+      "title": {
+        "column_present": true,
+        "non_null": 15563,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 15561,
+        "duplicate_values": 2,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "available_globally": {
+        "column_present": true,
+        "non_null": 15563,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 2,
+        "duplicate_values": 15561,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "release_date": {
+        "column_present": true,
+        "non_null": 4984,
+        "missing": 10579,
+        "missing_pct": 67.9753,
+        "distinct": 1858,
+        "duplicate_values": 3126,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "hours_viewed": {
+        "column_present": true,
+        "non_null": 15563,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 723,
+        "duplicate_values": 14840,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "runtime": {
+        "column_present": true,
+        "non_null": 15563,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 1308,
+        "duplicate_values": 14255,
+        "placeholder_star": 172,
+        "header_phrase_rows": 0
+      },
+      "views": {
+        "column_present": true,
+        "non_null": 15563,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 302,
+        "duplicate_values": 15261,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      }
+    },
+    "duplicate_full_rows": 0,
+    "rows_with_header_phrase": 0,
+    "hours": {
+      "total_incl_other": 94115100000.0,
+      "total_title_level": 94115100000.0,
+      "top10_hours": 4155600000.0,
+      "top10_share_of_total_incl_other": 0.04415444492966591,
+      "top10_share_of_title_level": 0.04415444492966591
+    },
+    "numeric": {
+      "hours_viewed": {
+        "count": 15563,
+        "min": 100000.0,
+        "p25": 300000.0,
+        "median": 1000000.0,
+        "mean": 6047362.333740282,
+        "p75": 4300000.0,
+        "p90": 14400000.0,
+        "p99": 75713999.99999976,
+        "max": 619900000.0
+      },
+      "runtime_minutes": {
+        "count": 15388,
+        "min": 6.0,
+        "p25": 99.0,
+        "median": 120.0,
+        "mean": 265.6096958669093,
+        "p75": 298.0,
+        "p90": 573.0,
+        "p99": 1635.5199999999968,
+        "max": 23853.0
+      },
+      "views": {
+        "count": 15563,
+        "min": 100000.0,
+        "p25": 100000.0,
+        "median": 300000.0,
+        "mean": 1560785.1956563646,
+        "p75": 1200000.0,
+        "p90": 3500000.0,
+        "p99": 18800000.0,
+        "max": 137300000.0
+      }
+    },
+    "outliers": {
+      "hours_viewed": {
+        "iqr_upper_fence": 10300000.0,
+        "count_above_fence": 2063,
+        "top5": [
+          {
+            "title": "Squid Game: Season 2 // 오징어 게임: 시즌 2",
+            "value": 619900000.0
+          },
+          {
+            "title": "Monsters: The Lyle and Erik Menendez Story",
+            "value": 550400000.0
+          },
+          {
+            "title": "Prison Break: Season 1",
+            "value": 511300000.0
+          },
+          {
+            "title": "Love Next Door: Limited Series // 엄마친구아들: 리미티드 시리즈",
+            "value": 432200000.0
+          },
+          {
+            "title": "The Perfect Couple: Season 1",
+            "value": 383100000.0
+          }
+        ]
+      },
+      "views": {
+        "iqr_upper_fence": 2850000.0,
+        "count_above_fence": 1904,
+        "top5": [
+          {
+            "title": "Carry-On",
+            "value": 137300000.0
+          },
+          {
+            "title": "The Union",
+            "value": 131100000.0
+          },
+          {
+            "title": "Rebel Ridge",
+            "value": 129000000.0
+          },
+          {
+            "title": "Beverly Hills Cop: Axel F",
+            "value": 97100000.0
+          },
+          {
+            "title": "Squid Game: Season 2 // 오징어 게임: 시즌 2",
+            "value": 86500000.0
+          }
+        ]
+      },
+      "runtime_minutes": {
+        "iqr_upper_fence": 596.5,
+        "count_above_fence": 1383,
+        "top5": [
+          {
+            "title": "As Aventuras de Poliana: Season 1",
+            "value": 23853.0
+          },
+          {
+            "title": "Chiquititas (2013)",
+            "value": 19907.0
+          },
+          {
+            "title": "Carinha de Anjo: Season 1",
+            "value": 14604.0
+          },
+          {
+            "title": "Pedro el escamoso: Season 1",
+            "value": 13805.0
+          },
+          {
+            "title": "Cúmplices de um Resgate: Season 1",
+            "value": 13152.0
+          }
+        ]
+      }
+    },
+    "release_date": {
+      "rows_considered": 15563,
+      "missing": 10579,
+      "missing_pct": 67.9753,
+      "placeholder_star": 0,
+      "unparsable": 0,
+      "min": "2010-04-01",
+      "max": "2024-12-31"
+    },
+    "available_globally": {
+      "No": {
+        "count": 11282,
+        "pct": 72.4925
+      },
+      "Yes": {
+        "count": 4281,
+        "pct": 27.5075
+      }
+    }
+  },
+  "per_sheet": [
+    {
+      "rows_data": 6883,
+      "rows_other": 0,
+      "rows_title_level": 6883,
+      "distinct_titles": 6883,
+      "rows_by_content_type": {
+        "series": 6883
+      },
+      "columns": {
+        "title": {
+          "column_present": true,
+          "non_null": 6883,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 6883,
+          "duplicate_values": 0,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "available_globally": {
+          "column_present": true,
+          "non_null": 6883,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 2,
+          "duplicate_values": 6881,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "release_date": {
+          "column_present": true,
+          "non_null": 3342,
+          "missing": 3541,
+          "missing_pct": 51.4456,
+          "distinct": 1670,
+          "duplicate_values": 1672,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "hours_viewed": {
+          "column_present": true,
+          "non_null": 6883,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 661,
+          "duplicate_values": 6222,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "runtime": {
+          "column_present": true,
+          "non_null": 6883,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 1302,
+          "duplicate_values": 5581,
+          "placeholder_star": 172,
+          "header_phrase_rows": 0
+        },
+        "views": {
+          "column_present": true,
+          "non_null": 6883,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 194,
+          "duplicate_values": 6689,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        }
+      },
+      "duplicate_full_rows": 0,
+      "rows_with_header_phrase": 0,
+      "hours": {
+        "total_incl_other": 68209400000.0,
+        "total_title_level": 68209400000.0,
+        "top10_hours": 4155600000.0,
+        "top10_share_of_total_incl_other": 0.060924154148841655,
+        "top10_share_of_title_level": 0.060924154148841655
+      },
+      "numeric": {
+        "hours_viewed": {
+          "count": 6883,
+          "min": 100000.0,
+          "p25": 800000.0,
+          "median": 2500000.0,
+          "mean": 9909835.827400843,
+          "p75": 8300000.0,
+          "p90": 24400000.0,
+          "p99": 108454000.00000009,
+          "max": 619900000.0
+        },
+        "runtime_minutes": {
+          "count": 6708,
+          "min": 6.0,
+          "p25": 216.75,
+          "median": 327.0,
+          "mean": 471.0083482409064,
+          "p75": 554.0,
+          "p90": 931.0,
+          "p99": 2734.8600000000006,
+          "max": 23853.0
+        },
+        "views": {
+          "count": 6883,
+          "min": 100000.0,
+          "p25": 200000.0,
+          "median": 400000.0,
+          "mean": 1411492.0819410142,
+          "p75": 1300000.0,
+          "p90": 3180000.000000018,
+          "p99": 15000000.0,
+          "max": 86500000.0
+        }
+      },
+      "outliers": {
+        "hours_viewed": {
+          "iqr_upper_fence": 19550000.0,
+          "count_above_fence": 883,
+          "top5": [
+            {
+              "title": "Squid Game: Season 2 // 오징어 게임: 시즌 2",
+              "value": 619900000.0
+            },
+            {
+              "title": "Monsters: The Lyle and Erik Menendez Story",
+              "value": 550400000.0
+            },
+            {
+              "title": "Prison Break: Season 1",
+              "value": 511300000.0
+            },
+            {
+              "title": "Love Next Door: Limited Series // 엄마친구아들: 리미티드 시리즈",
+              "value": 432200000.0
+            },
+            {
+              "title": "The Perfect Couple: Season 1",
+              "value": 383100000.0
+            }
+          ]
+        },
+        "views": {
+          "iqr_upper_fence": 2950000.0,
+          "count_above_fence": 753,
+          "top5": [
+            {
+              "title": "Squid Game: Season 2 // 오징어 게임: 시즌 2",
+              "value": 86500000.0
+            },
+            {
+              "title": "The Perfect Couple: Season 1",
+              "value": 75100000.0
+            },
+            {
+              "title": "Monsters: The Lyle and Erik Menendez Story",
+              "value": 69700000.0
+            },
+            {
+              "title": "Emily in Paris: Season 4",
+              "value": 57800000.0
+            },
+            {
+              "title": "Nobody Wants This: Season 1",
+              "value": 56800000.0
+            }
+          ]
+        },
+        "runtime_minutes": {
+          "iqr_upper_fence": 1059.875,
+          "count_above_fence": 422,
+          "top5": [
+            {
+              "title": "As Aventuras de Poliana: Season 1",
+              "value": 23853.0
+            },
+            {
+              "title": "Chiquititas (2013)",
+              "value": 19907.0
+            },
+            {
+              "title": "Carinha de Anjo: Season 1",
+              "value": 14604.0
+            },
+            {
+              "title": "Pedro el escamoso: Season 1",
+              "value": 13805.0
+            },
+            {
+              "title": "Cúmplices de um Resgate: Season 1",
+              "value": 13152.0
+            }
+          ]
+        }
+      },
+      "release_date": {
+        "rows_considered": 6883,
+        "missing": 3541,
+        "missing_pct": 51.4456,
+        "placeholder_star": 0,
+        "unparsable": 0,
+        "min": "2010-04-01",
+        "max": "2024-12-31"
+      },
+      "available_globally": {
+        "No": {
+          "count": 4287,
+          "pct": 62.2839
+        },
+        "Yes": {
+          "count": 2596,
+          "pct": 37.7161
+        }
+      },
+      "sheet": "TV",
+      "content_type": "series",
+      "header_row_excel": 6,
+      "skipped_rows_above_header": [
+        "What We Watched: A Netflix Engagement Report",
+        "Views from July to December 2024"
+      ],
+      "header_columns": [
+        "Title",
+        "Available Globally?",
+        "Release Date",
+        "Hours Viewed",
+        "Runtime",
+        "Views"
+      ],
+      "rows_blank": 0,
+      "rows_footnote": 0,
+      "footnotes": []
+    },
+    {
+      "rows_data": 8680,
+      "rows_other": 0,
+      "rows_title_level": 8680,
+      "distinct_titles": 8678,
+      "rows_by_content_type": {
+        "film": 8680
+      },
+      "columns": {
+        "title": {
+          "column_present": true,
+          "non_null": 8680,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 8678,
+          "duplicate_values": 2,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "available_globally": {
+          "column_present": true,
+          "non_null": 8680,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 2,
+          "duplicate_values": 8678,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "release_date": {
+          "column_present": true,
+          "non_null": 1642,
+          "missing": 7038,
+          "missing_pct": 81.0829,
+          "distinct": 975,
+          "duplicate_values": 667,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "hours_viewed": {
+          "column_present": true,
+          "non_null": 8680,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 381,
+          "duplicate_values": 8299,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "runtime": {
+          "column_present": true,
+          "non_null": 8680,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 197,
+          "duplicate_values": 8483,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "views": {
+          "column_present": true,
+          "non_null": 8680,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 267,
+          "duplicate_values": 8413,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        }
+      },
+      "duplicate_full_rows": 0,
+      "rows_with_header_phrase": 0,
+      "hours": {
+        "total_incl_other": 25905700000.0,
+        "total_title_level": 25905700000.0,
+        "top10_hours": 1705800000.0,
+        "top10_share_of_total_incl_other": 0.06584651254357149,
+        "top10_share_of_title_level": 0.06584651254357149
+      },
+      "numeric": {
+        "hours_viewed": {
+          "count": 8680,
+          "min": 100000.0,
+          "p25": 200000.0,
+          "median": 500000.0,
+          "mean": 2984527.649769585,
+          "p75": 2000000.0,
+          "p90": 6900000.0,
+          "p99": 39583999.99999965,
+          "max": 283700000.0
+        },
+        "runtime_minutes": {
+          "count": 8680,
+          "min": 9.0,
+          "p25": 94.0,
+          "median": 104.0,
+          "mean": 106.87534562211981,
+          "p75": 116.0,
+          "p90": 132.0,
+          "p99": 171.0,
+          "max": 4155.0
+        },
+        "views": {
+          "count": 8680,
+          "min": 100000.0,
+          "p25": 100000.0,
+          "median": 300000.0,
+          "mean": 1679170.5069124424,
+          "p75": 1100000.0,
+          "p90": 3900000.0,
+          "p99": 22841999.999999825,
+          "max": 137300000.0
+        }
+      },
+      "outliers": {
+        "hours_viewed": {
+          "iqr_upper_fence": 4700000.0,
+          "count_above_fence": 1180,
+          "top5": [
+            {
+              "title": "Rebel Ridge",
+              "value": 283700000.0
+            },
+            {
+              "title": "Carry-On",
+              "value": 274500000.0
+            },
+            {
+              "title": "The Union",
+              "value": 238200000.0
+            },
+            {
+              "title": "Beverly Hills Cop: Axel F",
+              "value": 190900000.0
+            },
+            {
+              "title": "A Family Affair",
+              "value": 140900000.0
+            }
+          ]
+        },
+        "views": {
+          "iqr_upper_fence": 2600000.0,
+          "count_above_fence": 1189,
+          "top5": [
+            {
+              "title": "Carry-On",
+              "value": 137300000.0
+            },
+            {
+              "title": "The Union",
+              "value": 131100000.0
+            },
+            {
+              "title": "Rebel Ridge",
+              "value": 129000000.0
+            },
+            {
+              "title": "Beverly Hills Cop: Axel F",
+              "value": 97100000.0
+            },
+            {
+              "title": "Our Little Secret",
+              "value": 81300000.0
+            }
+          ]
+        },
+        "runtime_minutes": {
+          "iqr_upper_fence": 149.0,
+          "count_above_fence": 301,
+          "top5": [
+            {
+              "title": "Nihontouitsu Series: Film Series // 日本統一シリーズ: 映画シリーズ",
+              "value": 4155.0
+            },
+            {
+              "title": "Free and Easy Series: Film Series // 釣りバカ日誌: 映画シリーズ",
+              "value": 2120.0
+            },
+            {
+              "title": "Seiji Oda: Film Series // 織田同志会 織田征仁: 映画シリーズ",
+              "value": 781.0
+            },
+            {
+              "title": "CONNECT -Road to Conquest-: Season 1 // CONNECT -覇者への道-: 映画シリーズ",
+              "value": 437.0
+            },
+            {
+              "title": "We Are! Let's get the party STARTO!!: Season 1",
+              "value": 257.0
+            }
+          ]
+        }
+      },
+      "release_date": {
+        "rows_considered": 8680,
+        "missing": 7038,
+        "missing_pct": 81.0829,
+        "placeholder_star": 0,
+        "unparsable": 0,
+        "min": "2013-12-12",
+        "max": "2024-12-31"
+      },
+      "available_globally": {
+        "No": {
+          "count": 6995,
+          "pct": 80.5876
+        },
+        "Yes": {
+          "count": 1685,
+          "pct": 19.4124
+        }
+      },
+      "sheet": "Film",
+      "content_type": "film",
+      "header_row_excel": 6,
+      "skipped_rows_above_header": [
+        "What We Watched: A Netflix Engagement Report",
+        "Views from July to December 2024"
+      ],
+      "header_columns": [
+        "Title",
+        "Available Globally?",
+        "Release Date",
+        "Hours Viewed",
+        "Runtime",
+        "Views"
+      ],
+      "rows_blank": 0,
+      "rows_footnote": 0,
+      "footnotes": []
+    }
+  ]
+}

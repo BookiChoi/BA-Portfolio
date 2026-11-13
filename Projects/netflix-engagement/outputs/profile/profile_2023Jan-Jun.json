@@ -1,0 +1,332 @@
+{
+  "file": "2023Jan-Jun.xlsx",
+  "sha256": "c6fd33eb4c243e6e18d81a248ad71a28e8ccc3d0dd2b1fbc9f8538c649d28637",
+  "size_bytes": 695975,
+  "sheets": [
+    "Engagement"
+  ],
+  "content_type_split_source": "none (single sheet, no type column)",
+  "data_rows_all_sheets": 18214,
+  "file_total": {
+    "rows_data": 18214,
+    "rows_other": 0,
+    "rows_title_level": 18214,
+    "distinct_titles": 18214,
+    "rows_by_content_type": {
+      "unknown": 18214
+    },
+    "columns": {
+      "title": {
+        "column_present": true,
+        "non_null": 18214,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 18214,
+        "duplicate_values": 0,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "available_globally": {
+        "column_present": true,
+        "non_null": 18214,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 2,
+        "duplicate_values": 18212,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "release_date": {
+        "column_present": true,
+        "non_null": 4855,
+        "missing": 13359,
+        "missing_pct": 73.3447,
+        "distinct": 1665,
+        "duplicate_values": 3190,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "hours_viewed": {
+        "column_present": true,
+        "non_null": 18214,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "distinct": 712,
+        "duplicate_values": 17502,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "runtime": {
+        "column_present": false,
+        "non_null": 0,
+        "missing": 18214,
+        "missing_pct": 100.0,
+        "distinct": 0,
+        "duplicate_values": 0,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      },
+      "views": {
+        "column_present": false,
+        "non_null": 0,
+        "missing": 18214,
+        "missing_pct": 100.0,
+        "distinct": 0,
+        "duplicate_values": 0,
+        "placeholder_star": 0,
+        "header_phrase_rows": 0
+      }
+    },
+    "duplicate_full_rows": 0,
+    "rows_with_header_phrase": 0,
+    "hours": {
+      "total_incl_other": 93455200000.0,
+      "total_title_level": 93455200000.0,
+      "top10_hours": 4951700000.0,
+      "top10_share_of_total_incl_other": 0.052984745632131756,
+      "top10_share_of_title_level": 0.052984745632131756
+    },
+    "numeric": {
+      "hours_viewed": {
+        "count": 18214,
+        "min": 100000.0,
+        "p25": 200000.0,
+        "median": 700000.0,
+        "mean": 5130954.211046448,
+        "p75": 3400000.0,
+        "p90": 11500000.0,
+        "p99": 68060999.99999969,
+        "max": 812100000.0
+      },
+      "runtime_minutes": {
+        "count": 0
+      },
+      "views": {
+        "count": 0
+      }
+    },
+    "outliers": {
+      "hours_viewed": {
+        "iqr_upper_fence": 8200000.0,
+        "count_above_fence": 2416,
+        "top5": [
+          {
+            "title": "The Night Agent: Season 1",
+            "value": 812100000.0
+          },
+          {
+            "title": "Ginny & Georgia: Season 2",
+            "value": 665100000.0
+          },
+          {
+            "title": "The Glory: Season 1 // 더 글로리: 시즌 1",
+            "value": 622800000.0
+          },
+          {
+            "title": "Wednesday: Season 1",
+            "value": 507700000.0
+          },
+          {
+            "title": "Queen Charlotte: A Bridgerton Story",
+            "value": 503000000.0
+          }
+        ]
+      },
+      "views": {
+        "count_above_fence": 0
+      },
+      "runtime_minutes": {
+        "count_above_fence": 0
+      }
+    },
+    "release_date": {
+      "rows_considered": 18214,
+      "missing": 13359,
+      "missing_pct": 73.3447,
+      "placeholder_star": 0,
+      "unparsable": 0,
+      "min": "2010-04-01",
+      "max": "2023-06-30"
+    },
+    "available_globally": {
+      "No": {
+        "count": 13700,
+        "pct": 75.2169
+      },
+      "Yes": {
+        "count": 4514,
+        "pct": 24.7831
+      }
+    }
+  },
+  "per_sheet": [
+    {
+      "rows_data": 18214,
+      "rows_other": 0,
+      "rows_title_level": 18214,
+      "distinct_titles": 18214,
+      "rows_by_content_type": {
+        "unknown": 18214
+      },
+      "columns": {
+        "title": {
+          "column_present": true,
+          "non_null": 18214,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 18214,
+          "duplicate_values": 0,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "available_globally": {
+          "column_present": true,
+          "non_null": 18214,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 2,
+          "duplicate_values": 18212,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "release_date": {
+          "column_present": true,
+          "non_null": 4855,
+          "missing": 13359,
+          "missing_pct": 73.3447,
+          "distinct": 1665,
+          "duplicate_values": 3190,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "hours_viewed": {
+          "column_present": true,
+          "non_null": 18214,
+          "missing": 0,
+          "missing_pct": 0.0,
+          "distinct": 712,
+          "duplicate_values": 17502,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "runtime": {
+          "column_present": false,
+          "non_null": 0,
+          "missing": 18214,
+          "missing_pct": 100.0,
+          "distinct": 0,
+          "duplicate_values": 0,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        },
+        "views": {
+          "column_present": false,
+          "non_null": 0,
+          "missing": 18214,
+          "missing_pct": 100.0,
+          "distinct": 0,
+          "duplicate_values": 0,
+          "placeholder_star": 0,
+          "header_phrase_rows": 0
+        }
+      },
+      "duplicate_full_rows": 0,
+      "rows_with_header_phrase": 0,
+      "hours": {
+        "total_incl_other": 93455200000.0,
+        "total_title_level": 93455200000.0,
+        "top10_hours": 4951700000.0,
+        "top10_share_of_total_incl_other": 0.052984745632131756,
+        "top10_share_of_title_level": 0.052984745632131756
+      },
+      "numeric": {
+        "hours_viewed": {
+          "count": 18214,
+          "min": 100000.0,
+          "p25": 200000.0,
+          "median": 700000.0,
+          "mean": 5130954.211046448,
+          "p75": 3400000.0,
+          "p90": 11500000.0,
+          "p99": 68060999.99999969,
+          "max": 812100000.0
+        },
+        "runtime_minutes": {
+          "count": 0
+        },
+        "views": {
+          "count": 0
+        }
+      },
+      "outliers": {
+        "hours_viewed": {
+          "iqr_upper_fence": 8200000.0,
+          "count_above_fence": 2416,
+          "top5": [
+            {
+              "title": "The Night Agent: Season 1",
+              "value": 812100000.0
+            },
+            {
+              "title": "Ginny & Georgia: Season 2",
+              "value": 665100000.0
+            },
+            {
+              "title": "The Glory: Season 1 // 더 글로리: 시즌 1",
+              "value": 622800000.0
+            },
+            {
+              "title": "Wednesday: Season 1",
+              "value": 507700000.0
+            },
+            {
+              "title": "Queen Charlotte: A Bridgerton Story",
+              "value": 503000000.0
+            }
+          ]
+        },
+        "views": {
+          "count_above_fence": 0
+        },
+        "runtime_minutes": {
+          "count_above_fence": 0
+        }
+      },
+      "release_date": {
+        "rows_considered": 18214,
+        "missing": 13359,
+        "missing_pct": 73.3447,
+        "placeholder_star": 0,
+        "unparsable": 0,
+        "min": "2010-04-01",
+        "max": "2023-06-30"
+      },
+      "available_globally": {
+        "No": {
+          "count": 13700,
+          "pct": 75.2169
+        },
+        "Yes": {
+          "count": 4514,
+          "pct": 24.7831
+        }
+      },
+      "sheet": "Engagement",
+      "content_type": "unknown",
+      "header_row_excel": 6,
+      "skipped_rows_above_header": [
+        "What We Watched: A Netflix Engagement Report",
+        "Hours viewed from January to June 2023"
+      ],
+      "header_columns": [
+        "Title",
+        "Available Globally?",
+        "Release Date",
+        "Hours Viewed"
+      ],
+      "rows_blank": 1,
+      "rows_footnote": 0,
+      "footnotes": []
+    }
+  ]
+}
