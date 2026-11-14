@@ -360,3 +360,23 @@ Dropoff datetime is not used by Q1-Q4 metrics. It is checked because 02 lists it
 - HVFHV includes all licence holders in the file, not only Uber and Lyft by name.
 
 **Blockers.** None for the plan. All stop conditions are in step 1 and step 2.
+
+## Human decisions at Gate 2 (2026-11-13)
+Author of this block: human. The plan text above is unchanged.
+
+Decisions on section 8:
+1. Day-part hours are inclusive as written in the plan (overnight 00:00-05:59, morning 06:00-09:59, midday 10:00-15:59, evening 16:00-19:59, night 20:00-23:59).
+2. Q3 night = hours 22-04 (22:00-04:59). Hour 5 is not included; S2 covers it.
+3. Q3 night hours are assigned to the calendar date of pickup. S3 stays in the plan as a reported sensitivity next to the primary result.
+4. Q3 spread_m = the widest difference among Mon, Tue, Wed, Thu in the month.
+5. Federal holidays on Mon-Fri are excluded from the weekday group (list in Q3). S1 stays.
+6. Q4 membership = the 38 MTA IDs as given (E1-E3).
+7. Q2 comparison value = all-hours, whole-period top-5 pickup share.
+8. Q2 airport-service pairs with fewer than 1,000 valid trips get no decision.
+
+Open items:
+A. Zone lists. Airport zones: IDs 1, 132, 138 (as in 03). Congestion Relief Zone: the file data/MTA_Central_Business_District_Taxi_Zones_20261113.csv; the IDs are in the column "Taxi Zone". Stop if it does not contain 38 distinct IDs.
+B. Neighbouring zones (Q4), by geometry. Data: data/taxi_zones.shp (the TLC zone shapefile, with the files beside it). A neighbouring zone = a zone not in the 38-zone list that shares at least one boundary point with any of the 38 zones, using the shapefile geometry as given, with no tolerance. If a zone has no neighbour, report it; do not change the list. Report the change in pickup and dropoff share of the neighbouring zones (2024 to 2026) next to the supplementary table. I installed geopandas 1.2.0, shapely 2.2.0, pyogrio 0.13.0 and pyproj 3.8.0 in the project .venv; the analyst does not install anything.
+C. Terms of use: not found, recorded in the manifest (03).
+
+Approved: human
