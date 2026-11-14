@@ -81,3 +81,28 @@ Column names below come from my general knowledge of the TLC schemas and are UNV
 | Q3 | GO | Pickup time only; holidays and timestamps to settle in 04 |
 | Q4 | GO (conditional) | CRZ zone list, zone ID stability, and 36 files per service are unverified |
 | Overall | GO | Conditional on the schema check in step 1; nothing found that is missing, but field names and sizes were not directly verified |
+
+## Human decisions at Gate 1 (2026-11-13)
+Author of this block: human. The text above is unchanged.
+
+1. Data acquisition. I downloaded the files myself into data/ (not committed).
+   60 parquet files: yellow and fhvhv, Jan-Sep 2023, Jan-Sep 2024, Oct-Dec 2025,
+   Jan-Sep 2026, plus taxi_zone_lookup.csv. The analyst does not download anything.
+2. Schema check (done by me on the 2024-01 and 2026-01 files of each service).
+   Confirmed: pickup/dropoff datetime, PULocationID, DOLocationID in both services.
+   cbd_congestion_fee is present in the 2026 files and absent in the 2024 files.
+   HVFHV also has request_datetime and on_scene_datetime (not used by Q1-Q4).
+   Not yet checked: the other 56 files. The analyst checks the schema of all files
+   (metadata only) in the 04 plan.
+3. Size (sample months). Yellow: about 3.0-3.7 million rows, 48-61 MB per month.
+   HVFHV: about 19.7-20.9 million rows, 451-482 MB per month.
+4. Terms of use. not found, checked 2026-11-13
+5. Zone lists. Airport zones for Q1 and Q2: LocationID 1 (Newark Airport), 132 (JFK
+   Airport), 138 (LaGuardia Airport), from the "airport" search in taxi_zone_lookup.csv.
+   Congestion Relief Zone for Q4: the zone IDs in the MTA Central Business District Taxi
+   Zones file (38 rows). Both lists are saved as files in the project before any result
+   is computed. Edge-zone rules are set in the 04 plan.
+6. Analysis period: as in 02 (Q1-Q3: Oct 2025 - Sep 2026; Q4: Jan-Sep 2023, 2024, 2026).
+7. Verdict. I accept GO. The schema condition is met for the sample files (item 2).
+
+Approved: human
