@@ -17,7 +17,8 @@ Known limits (stated before any result):
 - Only completed trips are in the data. Unmatched or cancelled requests are invisible.
 - Zones differ in size, so raw counts favor large zones.
 - Trips with an unknown or outside-zone location ID are excluded and their number is reported.
-- Analysis period and months may be reduced after file sizes are known in 03.
+- Analysis period: Q1-Q3 use the most recent 12 full months, Oct 2025 - Sep 2026 (all after the congestion fee began on 2025-01-05). Q4 uses Jan-Sep of 2023, 2024 and 2026, as written in Q4.
+- File sizes are known (03 and the January 2024/2026 samples). Months are reduced only if processing fails, and any reduction is recorded before results are computed.
 
 ## Q1
 
