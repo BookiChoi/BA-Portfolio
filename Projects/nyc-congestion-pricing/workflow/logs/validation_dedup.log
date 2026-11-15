@@ -1,0 +1,13 @@
+yellow 2023 share raw 0.73833 dedup 0.73916  denom raw 27583219 dedup 27356097 (removed 0.823%)
+yellow 2024 share raw 0.73652 dedup 0.73750  denom raw 29706150 dedup 29337364 (removed 1.241%)
+yellow 2026 share raw 0.71665 dedup 0.71699  denom raw 33351811 dedup 32924452 (removed 1.281%)
+yellow raw  main -1.987 pp drift -0.182 pp margin 1.805 pp
+yellow dedup main -2.051 pp drift -0.166 pp margin 1.885 pp
+fhvhv 2023 share raw 0.36428 dedup 0.36428  denom raw 165499501 dedup 165499167 (removed 0.000%)
+fhvhv 2024 share raw 0.34736 dedup 0.34736  denom raw 171045361 dedup 171044935 (removed 0.000%)
+fhvhv 2026 share raw 0.30477 dedup 0.30477  denom raw 180655562 dedup 180655016 (removed 0.000%)
+fhvhv raw  main -4.259 pp drift -1.692 pp margin 2.567 pp
+fhvhv dedup main -4.259 pp drift -1.692 pp margin 2.567 pp
+yellow 2023-06 rows 3307234 key-duplicate rows 27732 full-row duplicate rows 0
+yellow 2024-06 rows 3539193 key-duplicate rows 42873 full-row duplicate rows 0
+yellow 2026-06 rows 3837248 key-duplicate rows 12783 full-row duplicate rows 0

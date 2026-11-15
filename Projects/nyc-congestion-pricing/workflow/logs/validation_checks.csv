@@ -1,0 +1,776 @@
+group,number,analyst,validator,method,tol,pass,note
+0 data,60 files: row_count vs data_manifest.json,60,60,DuckDB count(*) vs manifest,0.0,True,
+0 data,"60 files: analyst file_quality_counts.csv vs validator (total, null, in-month, invalid PU/DO)",0,0,DuckDB SQL vs pyarrow,0.0,True,[]
+0 data,HVFHV invalid-DO trips (all 60 files... 30 HVFHV),25822247,25822247,DuckDB,0.0,True,
+0 data,yellow invalid-DO trips,980546,980546,DuckDB,0.0,True,
+0 data,HVFHV invalid-PU trips,28319,28319,DuckDB,0.0,True,
+0 data,yellow invalid-PU trips,502214,502214,DuckDB,0.0,True,
+0 data,HVFHV total trips (30 files),604313696,604313696,DuckDB,0.0,True,
+0 data,yellow total trips (30 files),104587416,104587416,DuckDB,0.0,True,
+Q1,yellow in-month trips Oct25-Sep26,46494334,46494334,DuckDB,0.0,True,
+Q1,HVFHV in-month trips Oct25-Sep26,253409771,253409771,DuckDB,0.0,True,
+Q1,"yellow excluded invalid PU (79,145)",79145,79145,DuckDB,0.0,True,
+Q1,"HVFHV excluded invalid PU (12,835)",12835,12835,DuckDB,0.0,True,
+Q1,yellow all valid trips,46415189,46415189.0,numpy vs analyst,0.0,True,
+Q1,yellow all n50,17.0,17,sorted cumsum,0.0,True,
+Q1,yellow all n80,36.0,36,sorted cumsum,0.0,True,
+Q1,yellow all top5 share,0.1963811027463445,0.19638110274634452,sorted cumsum,1e-09,True,
+Q1,yellow all active zone share,0.988593155893536,0.9885931558935361,count>0 / 263,1e-09,True,
+Q1,yellow all top5 CI lo,0.194575721891979,0.19470298392864968,"own week bootstrap, seed 1001, B=2000",0.0015,True,abs tol 0.15pp
+Q1,yellow all top5 CI hi,0.1983532837552796,0.1983209227100381,own week bootstrap,0.0015,True,
+Q1,yellow all n80 CI lo,36.0,36.0,own week bootstrap,1.0,True,tol 1 zone (integer statistic)
+Q1,yellow all n80 CI hi,36.0,36.0,own week bootstrap,1.0,True,tol 1 zone
+Q1,yellow all n50 CI lo,17.0,17.0,own week bootstrap,1.0,True,tol 1 zone
+Q1,yellow all n50 CI hi,17.0,17.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,yellow overnight valid trips,4321868,4321868.0,numpy vs analyst,0.0,True,
+Q1 daypart,yellow overnight n50,15.0,15,sorted cumsum,0.0,True,
+Q1 daypart,yellow overnight n80,39.0,39,sorted cumsum,0.0,True,
+Q1 daypart,yellow overnight top5 share,0.2716966367320797,0.2716966367320797,sorted cumsum,1e-09,True,
+Q1 daypart,yellow overnight active zone share,0.9847908745247148,0.9847908745247148,count>0 / 263,1e-09,True,
+Q1 daypart,yellow overnight top5 CI lo,0.2644723996622803,0.26474083271700066,"own week bootstrap, seed 1001, B=2000",0.0015,True,abs tol 0.15pp
+Q1 daypart,yellow overnight top5 CI hi,0.2782815457030877,0.2785362375377947,own week bootstrap,0.0015,True,
+Q1 daypart,yellow overnight n80 CI lo,38.0,38.0,own week bootstrap,1.0,True,tol 1 zone (integer statistic)
+Q1 daypart,yellow overnight n80 CI hi,40.0,40.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,yellow overnight n50 CI lo,14.0,14.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,yellow overnight n50 CI hi,15.0,15.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,yellow morning valid trips,5914970,5914970.0,numpy vs analyst,0.0,True,
+Q1 daypart,yellow morning n50,18.0,18,sorted cumsum,0.0,True,
+Q1 daypart,yellow morning n80,41.0,41,sorted cumsum,0.0,True,
+Q1 daypart,yellow morning top5 share,0.193135383611413,0.19313538361141308,sorted cumsum,1e-09,True,
+Q1 daypart,yellow morning active zone share,0.988593155893536,0.9885931558935361,count>0 / 263,1e-09,True,
+Q1 daypart,yellow morning top5 CI lo,0.1911050858647903,0.19104012695841197,"own week bootstrap, seed 1001, B=2000",0.0015,True,abs tol 0.15pp
+Q1 daypart,yellow morning top5 CI hi,0.1952138494464501,0.1951313044780415,own week bootstrap,0.0015,True,
+Q1 daypart,yellow morning n80 CI lo,40.0,40.0,own week bootstrap,1.0,True,tol 1 zone (integer statistic)
+Q1 daypart,yellow morning n80 CI hi,43.0,42.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,yellow morning n50 CI lo,17.0,17.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,yellow morning n50 CI hi,18.0,18.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,yellow midday valid trips,14109014,14109014.0,numpy vs analyst,0.0,True,
+Q1 daypart,yellow midday n50,15.0,15,sorted cumsum,0.0,True,
+Q1 daypart,yellow midday n80,33.0,33,sorted cumsum,0.0,True,
+Q1 daypart,yellow midday top5 share,0.2237266899019308,0.2237266899019308,sorted cumsum,1e-09,True,
+Q1 daypart,yellow midday active zone share,0.988593155893536,0.9885931558935361,count>0 / 263,1e-09,True,
+Q1 daypart,yellow midday top5 CI lo,0.2218909253223297,0.22202297131621507,"own week bootstrap, seed 1001, B=2000",0.0015,True,abs tol 0.15pp
+Q1 daypart,yellow midday top5 CI hi,0.2254446722913447,0.22548997579596133,own week bootstrap,0.0015,True,
+Q1 daypart,yellow midday n80 CI lo,33.0,33.0,own week bootstrap,1.0,True,tol 1 zone (integer statistic)
+Q1 daypart,yellow midday n80 CI hi,34.0,34.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,yellow midday n50 CI lo,15.0,15.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,yellow midday n50 CI hi,15.0,15.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,yellow evening valid trips,12040797,12040797.0,numpy vs analyst,0.0,True,
+Q1 daypart,yellow evening n50,15.0,15,sorted cumsum,0.0,True,
+Q1 daypart,yellow evening n80,34.0,34,sorted cumsum,0.0,True,
+Q1 daypart,yellow evening top5 share,0.2232075667416367,0.22320756674163678,sorted cumsum,1e-09,True,
+Q1 daypart,yellow evening active zone share,0.988593155893536,0.9885931558935361,count>0 / 263,1e-09,True,
+Q1 daypart,yellow evening top5 CI lo,0.2201531040449788,0.22028811109387078,"own week bootstrap, seed 1001, B=2000",0.0015,True,abs tol 0.15pp
+Q1 daypart,yellow evening top5 CI hi,0.2262557333104065,0.2263371263164825,own week bootstrap,0.0015,True,
+Q1 daypart,yellow evening n80 CI lo,33.0,33.0,own week bootstrap,1.0,True,tol 1 zone (integer statistic)
+Q1 daypart,yellow evening n80 CI hi,34.0,34.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,yellow evening n50 CI lo,15.0,15.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,yellow evening n50 CI hi,16.0,16.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,yellow night valid trips,10028540,10028540.0,numpy vs analyst,0.0,True,
+Q1 daypart,yellow night n50,15.0,15,sorted cumsum,0.0,True,
+Q1 daypart,yellow night n80,32.0,32,sorted cumsum,0.0,True,
+Q1 daypart,yellow night top5 share,0.2098708286550185,0.20987082865501858,sorted cumsum,1e-09,True,
+Q1 daypart,yellow night active zone share,0.9847908745247148,0.9847908745247148,count>0 / 263,1e-09,True,
+Q1 daypart,yellow night top5 CI lo,0.2068134494172151,0.20683296673978702,"own week bootstrap, seed 1001, B=2000",0.0015,True,abs tol 0.15pp
+Q1 daypart,yellow night top5 CI hi,0.2132862273428238,0.21327157168447808,own week bootstrap,0.0015,True,
+Q1 daypart,yellow night n80 CI lo,32.0,32.0,own week bootstrap,1.0,True,tol 1 zone (integer statistic)
+Q1 daypart,yellow night n80 CI hi,33.0,33.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,yellow night n50 CI lo,15.0,15.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,yellow night n50 CI hi,15.0,15.0,own week bootstrap,1.0,True,tol 1 zone
+Q1,fhvhv all valid trips,253396936,253396936.0,numpy vs analyst,0.0,True,
+Q1,fhvhv all n50,60.0,60,sorted cumsum,0.0,True,
+Q1,fhvhv all n80,128.0,128,sorted cumsum,0.0,True,
+Q1,fhvhv all top5 share,0.071694418593917,0.07169441859391702,sorted cumsum,1e-09,True,
+Q1,fhvhv all active zone share,0.9923954372623576,0.9923954372623575,count>0 / 263,1e-09,True,
+Q1,fhvhv all top5 CI lo,0.0707909892628299,0.07081272627196161,"own week bootstrap, seed 1001, B=2000",0.0015,True,abs tol 0.15pp
+Q1,fhvhv all top5 CI hi,0.0726646501596624,0.07269776366058503,own week bootstrap,0.0015,True,
+Q1,fhvhv all n80 CI lo,127.0,127.0,own week bootstrap,1.0,True,tol 1 zone (integer statistic)
+Q1,fhvhv all n80 CI hi,129.0,129.0,own week bootstrap,1.0,True,tol 1 zone
+Q1,fhvhv all n50 CI lo,59.0,59.0,own week bootstrap,1.0,True,tol 1 zone
+Q1,fhvhv all n50 CI hi,60.0,60.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,fhvhv overnight valid trips,32476848,32476848.0,numpy vs analyst,0.0,True,
+Q1 daypart,fhvhv overnight n50,48.0,48,sorted cumsum,0.0,True,
+Q1 daypart,fhvhv overnight n80,115.0,115,sorted cumsum,0.0,True,
+Q1 daypart,fhvhv overnight top5 share,0.0987324262502321,0.09873242625023217,sorted cumsum,1e-09,True,
+Q1 daypart,fhvhv overnight active zone share,0.9923954372623576,0.9923954372623575,count>0 / 263,1e-09,True,
+Q1 daypart,fhvhv overnight top5 CI lo,0.0968572020807391,0.09704578700680608,"own week bootstrap, seed 1001, B=2000",0.0015,True,abs tol 0.15pp
+Q1 daypart,fhvhv overnight top5 CI hi,0.1004802551853099,0.10033400259516011,own week bootstrap,0.0015,True,
+Q1 daypart,fhvhv overnight n80 CI lo,114.0,114.0,own week bootstrap,1.0,True,tol 1 zone (integer statistic)
+Q1 daypart,fhvhv overnight n80 CI hi,116.0,116.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,fhvhv overnight n50 CI lo,47.0,47.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,fhvhv overnight n50 CI hi,49.0,48.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,fhvhv morning valid trips,42882571,42882571.0,numpy vs analyst,0.0,True,
+Q1 daypart,fhvhv morning n50,69.0,69,sorted cumsum,0.0,True,
+Q1 daypart,fhvhv morning n80,136.0,136,sorted cumsum,0.0,True,
+Q1 daypart,fhvhv morning top5 share,0.0586708758670276,0.058670875867027655,sorted cumsum,1e-09,True,
+Q1 daypart,fhvhv morning active zone share,0.9923954372623576,0.9923954372623575,count>0 / 263,1e-09,True,
+Q1 daypart,fhvhv morning top5 CI lo,0.0580309484796831,0.05806212120446949,"own week bootstrap, seed 1001, B=2000",0.0015,True,abs tol 0.15pp
+Q1 daypart,fhvhv morning top5 CI hi,0.0593704029796344,0.059363595564224395,own week bootstrap,0.0015,True,
+Q1 daypart,fhvhv morning n80 CI lo,136.0,136.0,own week bootstrap,1.0,True,tol 1 zone (integer statistic)
+Q1 daypart,fhvhv morning n80 CI hi,136.0,136.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,fhvhv morning n50 CI lo,68.0,68.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,fhvhv morning n50 CI hi,69.0,69.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,fhvhv midday valid trips,69708345,69708345.0,numpy vs analyst,0.0,True,
+Q1 daypart,fhvhv midday n50,64.0,64,sorted cumsum,0.0,True,
+Q1 daypart,fhvhv midday n80,133.0,133,sorted cumsum,0.0,True,
+Q1 daypart,fhvhv midday top5 share,0.0724556005453866,0.07245560054538663,sorted cumsum,1e-09,True,
+Q1 daypart,fhvhv midday active zone share,0.9923954372623576,0.9923954372623575,count>0 / 263,1e-09,True,
+Q1 daypart,fhvhv midday top5 CI lo,0.0713413155718043,0.07140014557995485,"own week bootstrap, seed 1001, B=2000",0.0015,True,abs tol 0.15pp
+Q1 daypart,fhvhv midday top5 CI hi,0.0735038114145883,0.07350493724142403,own week bootstrap,0.0015,True,
+Q1 daypart,fhvhv midday n80 CI lo,132.0,132.0,own week bootstrap,1.0,True,tol 1 zone (integer statistic)
+Q1 daypart,fhvhv midday n80 CI hi,133.0,133.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,fhvhv midday n50 CI lo,63.0,63.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,fhvhv midday n50 CI hi,64.0,64.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,fhvhv evening valid trips,56573180,56573180.0,numpy vs analyst,0.0,True,
+Q1 daypart,fhvhv evening n50,59.0,59,sorted cumsum,0.0,True,
+Q1 daypart,fhvhv evening n80,126.0,126,sorted cumsum,0.0,True,
+Q1 daypart,fhvhv evening top5 share,0.0768234347088143,0.07682343470881432,sorted cumsum,1e-09,True,
+Q1 daypart,fhvhv evening active zone share,0.9923954372623576,0.9923954372623575,count>0 / 263,1e-09,True,
+Q1 daypart,fhvhv evening top5 CI lo,0.0753411761570357,0.07542449109409921,"own week bootstrap, seed 1001, B=2000",0.0015,True,abs tol 0.15pp
+Q1 daypart,fhvhv evening top5 CI hi,0.0783075749441448,0.07821611913134437,own week bootstrap,0.0015,True,
+Q1 daypart,fhvhv evening n80 CI lo,125.0,125.0,own week bootstrap,1.0,True,tol 1 zone (integer statistic)
+Q1 daypart,fhvhv evening n80 CI hi,127.0,127.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,fhvhv evening n50 CI lo,58.0,58.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,fhvhv evening n50 CI hi,59.0,59.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,fhvhv night valid trips,51755992,51755992.0,numpy vs analyst,0.0,True,
+Q1 daypart,fhvhv night n50,49.0,49,sorted cumsum,0.0,True,
+Q1 daypart,fhvhv night n80,115.0,115,sorted cumsum,0.0,True,
+Q1 daypart,fhvhv night top5 share,0.094330391735125,0.09433039173512509,sorted cumsum,1e-09,True,
+Q1 daypart,fhvhv night active zone share,0.9923954372623576,0.9923954372623575,count>0 / 263,1e-09,True,
+Q1 daypart,fhvhv night top5 CI lo,0.0924303200278307,0.09262390809960183,"own week bootstrap, seed 1001, B=2000",0.0015,True,abs tol 0.15pp
+Q1 daypart,fhvhv night top5 CI hi,0.0960699124039735,0.09605649722785149,own week bootstrap,0.0015,True,
+Q1 daypart,fhvhv night n80 CI lo,114.0,114.0,own week bootstrap,1.0,True,tol 1 zone (integer statistic)
+Q1 daypart,fhvhv night n80 CI hi,116.0,116.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,fhvhv night n50 CI lo,48.0,48.0,own week bootstrap,1.0,True,tol 1 zone
+Q1 daypart,fhvhv night n50 CI hi,49.0,49.0,own week bootstrap,1.0,True,tol 1 zone
+Q1,H(b) d = n80 HVFHV - yellow,92.0,92,recomputed,0.0,True,
+Q1,H(b) ratio,3.5555555555555554,3.5555555555555554,recomputed,1e-09,True,
+Q1,H(b) d CI lo,91.0,91.0,own paired week bootstrap,1.0,True,
+Q1,H(b) d CI hi,93.0,93.0,own paired week bootstrap,1.0,True,
+Q1,H(b) one-sided p,0.0004997501249375312,0.0004997501249375312,own bootstrap (+1 rule),0.0005,True,both at floor 1/2001
+Q1 daypart,d n80 overnight,76.0,76,recomputed,0.0,True,
+Q1 daypart,d n80 morning,95.0,95,recomputed,0.0,True,
+Q1 daypart,d n80 midday,100.0,100,recomputed,0.0,True,
+Q1 daypart,d n80 evening,92.0,92,recomputed,0.0,True,
+Q1 daypart,d n80 night,83.0,83,recomputed,0.0,True,
+Q1 airports,yellow Newark Airport rank whole period,181,181,lexsort,0.0,True,
+Q1 airports,yellow Newark Airport months in monthly top-5,0,0,lexsort per month,0.0,True,
+Q1 airports,yellow Newark Airport trips,6333,6333.0,sum,0.0,True,
+Q1 airports,yellow JFK Airport rank whole period,3,3,lexsort,0.0,True,
+Q1 airports,yellow JFK Airport months in monthly top-5,12,12,lexsort per month,0.0,True,
+Q1 airports,yellow JFK Airport trips,1856613,1856613.0,sum,0.0,True,
+Q1 airports,yellow LaGuardia Airport rank whole period,14,14,lexsort,0.0,True,
+Q1 airports,yellow LaGuardia Airport months in monthly top-5,0,0,lexsort per month,0.0,True,
+Q1 airports,yellow LaGuardia Airport trips,1183403,1183403.0,sum,0.0,True,
+Q1 airports,fhvhv Newark Airport rank whole period,261,261,lexsort,0.0,True,
+Q1 airports,fhvhv Newark Airport months in monthly top-5,0,0,lexsort per month,0.0,True,
+Q1 airports,fhvhv Newark Airport trips,17,17.0,sum,0.0,True,
+Q1 airports,fhvhv JFK Airport rank whole period,2,2,lexsort,0.0,True,
+Q1 airports,fhvhv JFK Airport months in monthly top-5,12,12,lexsort per month,0.0,True,
+Q1 airports,fhvhv JFK Airport trips,4033346,4033346.0,sum,0.0,True,
+Q1 airports,fhvhv LaGuardia Airport rank whole period,1,1,lexsort,0.0,True,
+Q1 airports,fhvhv LaGuardia Airport months in monthly top-5,12,12,lexsort per month,0.0,True,
+Q1 airports,fhvhv LaGuardia Airport trips,4942417,4942417.0,sum,0.0,True,
+Q1 lists,yellow all list length (coverage 0.5),17,17,recomputed cover list,0.0,True,
+Q1 lists,yellow all coverage fraction used,0.5,0.5,recomputed,0.0,True,
+Q1 lists,yellow all standing zones,15,15,recomputed membership over 12 monthly lists,0.0,True,
+Q1 lists,yellow all list membership identical,True,True,set equality,,True,
+Q1 lists,yellow all Jaccard min,0.8888888888888888,0.8888888888888888,recomputed,1e-09,True,
+Q1 lists,yellow all Jaccard mean,0.9626906318082789,0.9626906318082789,recomputed,1e-09,True,
+Q1 lists daypart,yellow overnight list length (coverage 0.5),15,15,recomputed cover list,0.0,True,
+Q1 lists daypart,yellow overnight coverage fraction used,0.5,0.5,recomputed,0.0,True,
+Q1 lists daypart,yellow overnight standing zones,13,13,recomputed membership over 12 monthly lists,0.0,True,
+Q1 lists daypart,yellow overnight list membership identical,True,True,set equality,,True,
+Q1 lists daypart,yellow overnight Jaccard min,0.8235294117647058,0.8235294117647058,recomputed,1e-09,True,
+Q1 lists daypart,yellow overnight Jaccard mean,0.9268382352941176,0.9268382352941176,recomputed,1e-09,True,
+Q1 lists daypart,yellow morning list length (coverage 0.5),18,18,recomputed cover list,0.0,True,
+Q1 lists daypart,yellow morning coverage fraction used,0.5,0.5,recomputed,0.0,True,
+Q1 lists daypart,yellow morning standing zones,15,15,recomputed membership over 12 monthly lists,0.0,True,
+Q1 lists daypart,yellow morning list membership identical,True,True,set equality,,True,
+Q1 lists daypart,yellow morning Jaccard min,0.8421052631578947,0.8421052631578947,recomputed,1e-09,True,
+Q1 lists daypart,yellow morning Jaccard mean,0.8821637426900586,0.8821637426900586,recomputed,1e-09,True,
+Q1 lists daypart,yellow midday list length (coverage 0.5),15,15,recomputed cover list,0.0,True,
+Q1 lists daypart,yellow midday coverage fraction used,0.5,0.5,recomputed,0.0,True,
+Q1 lists daypart,yellow midday standing zones,13,13,recomputed membership over 12 monthly lists,0.0,True,
+Q1 lists daypart,yellow midday list membership identical,True,True,set equality,,True,
+Q1 lists daypart,yellow midday Jaccard min,0.8235294117647058,0.8235294117647058,recomputed,1e-09,True,
+Q1 lists daypart,yellow midday Jaccard mean,0.9384191176470589,0.9384191176470589,recomputed,1e-09,True,
+Q1 lists daypart,yellow evening list length (coverage 0.5),15,15,recomputed cover list,0.0,True,
+Q1 lists daypart,yellow evening coverage fraction used,0.5,0.5,recomputed,0.0,True,
+Q1 lists daypart,yellow evening standing zones,14,14,recomputed membership over 12 monthly lists,0.0,True,
+Q1 lists daypart,yellow evening list membership identical,True,True,set equality,,True,
+Q1 lists daypart,yellow evening Jaccard min,0.8235294117647058,0.8235294117647058,recomputed,1e-09,True,
+Q1 lists daypart,yellow evening Jaccard mean,0.9341299019607843,0.9341299019607843,recomputed,1e-09,True,
+Q1 lists daypart,yellow night list length (coverage 0.5),15,15,recomputed cover list,0.0,True,
+Q1 lists daypart,yellow night coverage fraction used,0.5,0.5,recomputed,0.0,True,
+Q1 lists daypart,yellow night standing zones,13,13,recomputed membership over 12 monthly lists,0.0,True,
+Q1 lists daypart,yellow night list membership identical,True,True,set equality,,True,
+Q1 lists daypart,yellow night Jaccard min,0.875,0.875,recomputed,1e-09,True,
+Q1 lists daypart,yellow night Jaccard mean,0.9111111111111111,0.9111111111111111,recomputed,1e-09,True,
+Q1 lists,fhvhv all list length (coverage 0.4),43,43,recomputed cover list,0.0,True,
+Q1 lists,fhvhv all coverage fraction used,0.4,0.4,recomputed,0.0,True,
+Q1 lists,fhvhv all standing zones,38,38,recomputed membership over 12 monthly lists,0.0,True,
+Q1 lists,fhvhv all list membership identical,True,True,set equality,,True,
+Q1 lists,fhvhv all Jaccard min,0.8888888888888888,0.8888888888888888,recomputed,1e-09,True,
+Q1 lists,fhvhv all Jaccard mean,0.9403198653198653,0.9403198653198656,recomputed,1e-09,True,
+Q1 lists daypart,fhvhv overnight list length (coverage 0.4),33,33,recomputed cover list,0.0,True,
+Q1 lists daypart,fhvhv overnight coverage fraction used,0.4,0.4,recomputed,0.0,True,
+Q1 lists daypart,fhvhv overnight standing zones,28,28,recomputed membership over 12 monthly lists,0.0,True,
+Q1 lists daypart,fhvhv overnight list membership identical,True,True,set equality,,True,
+Q1 lists daypart,fhvhv overnight Jaccard min,0.8571428571428571,0.8571428571428571,recomputed,1e-09,True,
+Q1 lists daypart,fhvhv overnight Jaccard mean,0.9394957983193278,0.9394957983193278,recomputed,1e-09,True,
+Q1 lists daypart,fhvhv morning list length (coverage 0.4),51,51,recomputed cover list,0.0,True,
+Q1 lists daypart,fhvhv morning coverage fraction used,0.4,0.4,recomputed,0.0,True,
+Q1 lists daypart,fhvhv morning standing zones,42,42,recomputed membership over 12 monthly lists,0.0,True,
+Q1 lists daypart,fhvhv morning list membership identical,True,True,set equality,,True,
+Q1 lists daypart,fhvhv morning Jaccard min,0.8214285714285714,0.8214285714285714,recomputed,1e-09,True,
+Q1 lists daypart,fhvhv morning Jaccard mean,0.9088298290342314,0.9088298290342315,recomputed,1e-09,True,
+Q1 lists daypart,fhvhv midday list length (coverage 0.4),47,47,recomputed cover list,0.0,True,
+Q1 lists daypart,fhvhv midday coverage fraction used,0.4,0.4,recomputed,0.0,True,
+Q1 lists daypart,fhvhv midday standing zones,40,40,recomputed membership over 12 monthly lists,0.0,True,
+Q1 lists daypart,fhvhv midday list membership identical,True,True,set equality,,True,
+Q1 lists daypart,fhvhv midday Jaccard min,0.84,0.84,recomputed,1e-09,True,
+Q1 lists daypart,fhvhv midday Jaccard mean,0.9106227420046035,0.9106227420046035,recomputed,1e-09,True,
+Q1 lists daypart,fhvhv evening list length (coverage 0.4),43,43,recomputed cover list,0.0,True,
+Q1 lists daypart,fhvhv evening coverage fraction used,0.4,0.4,recomputed,0.0,True,
+Q1 lists daypart,fhvhv evening standing zones,36,36,recomputed membership over 12 monthly lists,0.0,True,
+Q1 lists daypart,fhvhv evening list membership identical,True,True,set equality,,True,
+Q1 lists daypart,fhvhv evening Jaccard min,0.8478260869565217,0.8478260869565217,recomputed,1e-09,True,
+Q1 lists daypart,fhvhv evening Jaccard mean,0.9167618211096472,0.9167618211096472,recomputed,1e-09,True,
+Q1 lists daypart,fhvhv night list length (coverage 0.4),35,35,recomputed cover list,0.0,True,
+Q1 lists daypart,fhvhv night coverage fraction used,0.4,0.4,recomputed,0.0,True,
+Q1 lists daypart,fhvhv night standing zones,28,28,recomputed membership over 12 monthly lists,0.0,True,
+Q1 lists daypart,fhvhv night list membership identical,True,True,set equality,,True,
+Q1 lists daypart,fhvhv night Jaccard min,0.8205128205128205,0.8205128205128205,recomputed,1e-09,True,
+Q1 lists daypart,fhvhv night Jaccard mean,0.9250273625273625,0.9250273625273625,recomputed,1e-09,True,
+Q2,yellow Newark Airport all pickups,6333,6333,DuckDB,0.0,True,
+Q2,yellow Newark Airport valid dest trips,6109,6109.0,DuckDB,0.0,True,
+Q2,yellow Newark Airport excluded invalid dest,224,224.0,DuckDB,0.0,True,
+Q2,yellow Newark Airport same-airport dest,5969,5969,DuckDB,0.0,True,
+Q2,yellow Newark Airport top5_airport,0.982321165493534,0.9823211654935341,sorted cumsum,1e-09,True,
+Q2,yellow Newark Airport top5_overall,0.1963811027463445,0.19638110274634452,sorted cumsum,1e-09,True,
+Q2,yellow Newark Airport delta pp,78.59400627471895,78.59400627471895,recomputed,1e-07,True,
+Q2,yellow Newark Airport delta CI lo (pp),78.17933006610286,78.15509966512822,"own bootstrap, top-5 re-selected per replicate, seed 1002",0.15,True,tol 0.15 pp
+Q2,yellow Newark Airport delta CI hi (pp),79.1057633850035,79.13982325308606,own bootstrap,0.15,True,
+Q2,yellow Newark Airport ratio,5.002116556817325,5.002116556817325,recomputed,1e-09,True,
+Q2,yellow Newark Airport decision,name destinations in guidance,name destinations in guidance,decision rule on point estimate,,True,
+Q2,yellow JFK Airport all pickups,1856613,1856613,DuckDB,0.0,True,
+Q2,yellow JFK Airport valid dest trips,1767662,1767662.0,DuckDB,0.0,True,
+Q2,yellow JFK Airport excluded invalid dest,88951,88951.0,DuckDB,0.0,True,
+Q2,yellow JFK Airport same-airport dest,90980,90980,DuckDB,0.0,True,
+Q2,yellow JFK Airport top5_airport,0.1621786291723191,0.16217862917231915,sorted cumsum,1e-09,True,
+Q2,yellow JFK Airport top5_overall,0.1963811027463445,0.19638110274634452,sorted cumsum,1e-09,True,
+Q2,yellow JFK Airport delta pp,-3.4202473574025367,-3.4202473574025367,recomputed,1e-07,True,
+Q2,yellow JFK Airport delta CI lo (pp),-3.731193316544899,-3.7271884505759334,"own bootstrap, top-5 re-selected per replicate, seed 1002",0.15,True,tol 0.15 pp
+Q2,yellow JFK Airport delta CI hi (pp),-3.136559244739469,-3.1319997093628817,own bootstrap,0.15,True,
+Q2,yellow JFK Airport ratio,0.8258362281517333,0.8258362281517333,recomputed,1e-09,True,
+Q2,yellow JFK Airport decision,do not name destinations,do not name destinations,decision rule on point estimate,,True,
+Q2,yellow LaGuardia Airport all pickups,1183403,1183403,DuckDB,0.0,True,
+Q2,yellow LaGuardia Airport valid dest trips,1162965,1162965.0,DuckDB,0.0,True,
+Q2,yellow LaGuardia Airport excluded invalid dest,20438,20438.0,DuckDB,0.0,True,
+Q2,yellow LaGuardia Airport same-airport dest,23879,23879,DuckDB,0.0,True,
+Q2,yellow LaGuardia Airport top5_airport,0.1857691332069322,0.18576913320693228,sorted cumsum,1e-09,True,
+Q2,yellow LaGuardia Airport top5_overall,0.1963811027463445,0.19638110274634452,sorted cumsum,1e-09,True,
+Q2,yellow LaGuardia Airport delta pp,-1.0611969539412236,-1.0611969539412236,recomputed,1e-07,True,
+Q2,yellow LaGuardia Airport delta CI lo (pp),-1.7236205902074355,-1.761850423723841,"own bootstrap, top-5 re-selected per replicate, seed 1002",0.15,True,tol 0.15 pp
+Q2,yellow LaGuardia Airport delta CI hi (pp),-0.4406900521076219,-0.4343462740665477,own bootstrap,0.15,True,
+Q2,yellow LaGuardia Airport ratio,0.9459623691332502,0.9459623691332502,recomputed,1e-09,True,
+Q2,yellow LaGuardia Airport decision,do not name destinations,do not name destinations,decision rule on point estimate,,True,
+Q2,fhvhv Newark Airport all pickups,17,17,DuckDB,0.0,True,
+Q2,fhvhv Newark Airport valid dest trips,11,11.0,DuckDB,0.0,True,
+Q2,fhvhv Newark Airport excluded invalid dest,6,6.0,DuckDB,0.0,True,
+Q2,fhvhv Newark Airport same-airport dest,7,7,DuckDB,0.0,True,
+Q2,fhvhv Newark Airport too small (<1000) -> no decision,True,True,status/decision text,,True,too small (<1000 valid trips): descriptive only | no decision (too small)
+Q2,fhvhv JFK Airport all pickups,4033346,4033346,DuckDB,0.0,True,
+Q2,fhvhv JFK Airport valid dest trips,3220341,3220341.0,DuckDB,0.0,True,
+Q2,fhvhv JFK Airport excluded invalid dest,813005,813005.0,DuckDB,0.0,True,
+Q2,fhvhv JFK Airport same-airport dest,72235,72235,DuckDB,0.0,True,
+Q2,fhvhv JFK Airport top5_airport,0.1170981582385219,0.11709815823852195,sorted cumsum,1e-09,True,
+Q2,fhvhv JFK Airport top5_overall,0.071694418593917,0.07169441859391702,sorted cumsum,1e-09,True,
+Q2,fhvhv JFK Airport delta pp,4.540373964460493,4.540373964460493,recomputed,1e-07,True,
+Q2,fhvhv JFK Airport delta CI lo (pp),4.248706949927011,4.254701344984911,"own bootstrap, top-5 re-selected per replicate, seed 1002",0.15,True,tol 0.15 pp
+Q2,fhvhv JFK Airport delta CI hi (pp),4.8321086942974105,4.822414582145515,own bootstrap,0.15,True,
+Q2,fhvhv JFK Airport ratio,1.633295318311672,1.6332953183116719,recomputed,1e-09,True,
+Q2,fhvhv JFK Airport decision,name destinations in guidance,name destinations in guidance,decision rule on point estimate,,True,
+Q2,fhvhv LaGuardia Airport all pickups,4942417,4942417,DuckDB,0.0,True,
+Q2,fhvhv LaGuardia Airport valid dest trips,4282783,4282783.0,DuckDB,0.0,True,
+Q2,fhvhv LaGuardia Airport excluded invalid dest,659634,659634.0,DuckDB,0.0,True,
+Q2,fhvhv LaGuardia Airport same-airport dest,10909,10909,DuckDB,0.0,True,
+Q2,fhvhv LaGuardia Airport top5_airport,0.1571704660264131,0.15717046602641319,sorted cumsum,1e-09,True,
+Q2,fhvhv LaGuardia Airport top5_overall,0.071694418593917,0.07169441859391702,sorted cumsum,1e-09,True,
+Q2,fhvhv LaGuardia Airport delta pp,8.547604743249616,8.547604743249616,recomputed,1e-07,True,
+Q2,fhvhv LaGuardia Airport delta CI lo (pp),7.986184936681278,7.940337925800939,"own bootstrap, top-5 re-selected per replicate, seed 1002",0.15,True,tol 0.15 pp
+Q2,fhvhv LaGuardia Airport delta CI hi (pp),9.068036966807828,9.067063801964697,own bootstrap,0.15,True,
+Q2,fhvhv LaGuardia Airport ratio,2.1922273603561724,2.1922273603561724,recomputed,1e-09,True,
+Q2,fhvhv LaGuardia Airport decision,name destinations in guidance,name destinations in guidance,decision rule on point estimate,,True,
+Q2,"yellow Newark Airport Holm p (family of 6, too-small pair counted as p=1)",0.0029985007496251,0.0029985007496251873,own Holm over 6,0.0005,True,
+Q2,"yellow JFK Airport Holm p (family of 6, too-small pair counted as p=1)",1.0,1.0,own Holm over 6,0.0005,True,
+Q2,"yellow LaGuardia Airport Holm p (family of 6, too-small pair counted as p=1)",1.0,1.0,own Holm over 6,0.0005,True,
+Q2,"fhvhv JFK Airport Holm p (family of 6, too-small pair counted as p=1)",0.0029985007496251,0.0029985007496251873,own Holm over 6,0.0005,True,
+Q2,"fhvhv LaGuardia Airport Holm p (family of 6, too-small pair counted as p=1)",0.0029985007496251,0.0029985007496251873,own Holm over 6,0.0005,True,
+Q2,yellow Newark Airport top-5 destination IDs,"[np.int64(1), np.int64(231), np.int64(163), np.int64(230), np.int64(48)]","[np.int64(1), np.int64(231), np.int64(163), np.int64(230), np.int64(48)]",ranking recomputed,,True,set/order of IDs
+Q2,yellow JFK Airport top-5 destination IDs,"[np.int64(132), np.int64(230), np.int64(93), np.int64(164), np.int64(48)]","[np.int64(132), np.int64(230), np.int64(93), np.int64(164), np.int64(48)]",ranking recomputed,,True,set/order of IDs
+Q2,yellow LaGuardia Airport top-5 destination IDs,"[np.int64(230), np.int64(161), np.int64(164), np.int64(162), np.int64(163)]","[np.int64(230), np.int64(161), np.int64(164), np.int64(162), np.int64(163)]",ranking recomputed,,True,set/order of IDs
+Q2,fhvhv JFK Airport top-5 destination IDs,"[np.int64(230), np.int64(132), np.int64(216), np.int64(164), np.int64(10)]","[np.int64(230), np.int64(132), np.int64(216), np.int64(164), np.int64(10)]",ranking recomputed,,True,set/order of IDs
+Q2,fhvhv LaGuardia Airport top-5 destination IDs,"[np.int64(230), np.int64(164), np.int64(161), np.int64(162), np.int64(163)]","[np.int64(230), np.int64(164), np.int64(161), np.int64(162), np.int64(163)]",ranking recomputed,,True,set/order of IDs
+Q3,holiday list equals plan table (11 dates),True,True,set equality with plan section 5,,True,
+Q3,yellow days,365,365,recount,0.0,True,
+Q3,yellow weekday days,250,250,recount,0.0,True,
+Q3,yellow weekend days,104,104,recount,0.0,True,
+Q3,yellow holiday weekdays excluded,11,11,recount,0.0,True,
+Q3,yellow trips total,46494334,46494334,DuckDB sum,0.0,True,
+Q3 monthly,yellow 2025-10 gap_m pp,12.476312929247946,12.476312929247946,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,yellow 2025-10 spread_m pp,4.119601807970665,4.119601807970665,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,yellow 2025-10 weekday night share,0.145608182702464,0.145608182702464,recomputed,1e-09,True,
+Q3 monthly,yellow 2025-10 weekend night share,0.2703713119949434,0.27037131199494346,recomputed,1e-09,True,
+Q3 monthly,yellow 2025-10 Welch t,16.686911226205634,16.686911226205634,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,yellow 2025-10 Hedges g,4.699995775164906,4.699995775164906,own formula,1e-06,True,
+Q3 monthly,yellow 2025-10 margin CI lo pp,7.311580127203805,7.29689887756477,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,yellow 2025-10 margin CI hi pp,9.51221396107584,9.521781650597362,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,yellow 2025-10 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=1.71e-07
+Q3 monthly,yellow 2025-11 gap_m pp,12.258791198910227,12.258791198910227,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,yellow 2025-11 spread_m pp,3.6624693992872186,3.6624693992872186,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,yellow 2025-11 weekday night share,0.1402804667241159,0.1402804667241159,recomputed,1e-09,True,
+Q3 monthly,yellow 2025-11 weekend night share,0.2628683787132181,0.26286837871321816,recomputed,1e-09,True,
+Q3 monthly,yellow 2025-11 Welch t,9.112149451783475,9.112149451783477,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,yellow 2025-11 Hedges g,3.697048128795711,3.697048128795711,own formula,1e-06,True,
+Q3 monthly,yellow 2025-11 margin CI lo pp,6.48700283114737,6.477697340194179,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,yellow 2025-11 margin CI hi pp,10.571034775669451,10.475048068962964,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,yellow 2025-11 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=8.89e-06
+Q3 monthly,yellow 2025-12 gap_m pp,10.079689488007812,10.079689488007812,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,yellow 2025-12 spread_m pp,5.81143557264231,5.81143557264231,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,yellow 2025-12 weekday night share,0.1552609762006273,0.15526097620062732,recomputed,1e-09,True,
+Q3 monthly,yellow 2025-12 weekend night share,0.2560578710807054,0.25605787108070543,recomputed,1e-09,True,
+Q3 monthly,yellow 2025-12 Welch t,6.640434625651551,6.640434625651551,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,yellow 2025-12 Hedges g,2.7543587541866223,2.7543587541866223,own formula,1e-06,True,
+Q3 monthly,yellow 2025-12 margin CI lo pp,1.779103284315902,1.8172741527456575,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,yellow 2025-12 margin CI hi pp,6.092603698889651,6.130693494649038,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,yellow 2025-12 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=3.25e-06
+Q3 monthly,yellow 2026-01 gap_m pp,13.50250024571124,13.502500245711241,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,yellow 2026-01 spread_m pp,2.7795637994274145,2.7795637994274145,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,yellow 2026-01 weekday night share,0.13041625697823,0.13041625697823006,recomputed,1e-09,True,
+Q3 monthly,yellow 2026-01 weekend night share,0.2654412594353424,0.26544125943534247,recomputed,1e-09,True,
+Q3 monthly,yellow 2026-01 Welch t,5.411040182683602,5.411040182683602,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,yellow 2026-01 Hedges g,2.9287226165620517,2.9287226165620517,own formula,1e-06,True,
+Q3 monthly,yellow 2026-01 margin CI lo pp,8.068661563692975,8.14566885336164,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,yellow 2026-01 margin CI hi pp,13.246114300676648,13.077144685904246,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,yellow 2026-01 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=1.23e-05
+Q3 monthly,yellow 2026-02 gap_m pp,15.209595038867732,15.209595038867732,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,yellow 2026-02 spread_m pp,2.959262116388152,2.959262116388152,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,yellow 2026-02 weekday night share,0.1313777558096681,0.13137775580966818,recomputed,1e-09,True,
+Q3 monthly,yellow 2026-02 weekend night share,0.2834737061983455,0.2834737061983455,recomputed,1e-09,True,
+Q3 monthly,yellow 2026-02 Welch t,15.438533369761313,15.438533369761311,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,yellow 2026-02 Hedges g,5.377522072008163,5.377522072008163,own formula,1e-06,True,
+Q3 monthly,yellow 2026-02 margin CI lo pp,9.38176240358539,9.236966177317447,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,yellow 2026-02 margin CI hi pp,13.371754864893632,13.376111771246984,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,yellow 2026-02 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=4.50e-07
+Q3 monthly,yellow 2026-03 gap_m pp,16.01718101513144,16.01718101513144,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,yellow 2026-03 spread_m pp,4.531289100366334,4.531289100366334,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,yellow 2026-03 weekday night share,0.1330574912123825,0.13305749121238256,recomputed,1e-09,True,
+Q3 monthly,yellow 2026-03 weekend night share,0.2932293013636969,0.29322930136369696,recomputed,1e-09,True,
+Q3 monthly,yellow 2026-03 Welch t,17.726585717760543,17.726585717760543,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,yellow 2026-03 Hedges g,5.0927126929796565,5.0927126929796565,own formula,1e-06,True,
+Q3 monthly,yellow 2026-03 margin CI lo pp,9.602816863550212,9.592836040226544,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,yellow 2026-03 margin CI hi pp,13.158904059867607,13.265186039829945,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,yellow 2026-03 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=9.07e-06
+Q3 monthly,yellow 2026-04 gap_m pp,12.653247752998398,12.653247752998398,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,yellow 2026-04 spread_m pp,3.4926847956051374,3.4926847956051374,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,yellow 2026-04 weekday night share,0.1395525059088695,0.13955250590886958,recomputed,1e-09,True,
+Q3 monthly,yellow 2026-04 weekend night share,0.2660849834388535,0.26608498343885356,recomputed,1e-09,True,
+Q3 monthly,yellow 2026-04 Welch t,15.094595488115845,15.094595488115843,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,yellow 2026-04 Hedges g,4.854666035772882,4.854666035772882,own formula,1e-06,True,
+Q3 monthly,yellow 2026-04 margin CI lo pp,8.183652982962379,8.14916057987973,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,yellow 2026-04 margin CI hi pp,10.14452139366847,10.058921082055559,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,yellow 2026-04 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=1.71e-07
+Q3 monthly,yellow 2026-05 gap_m pp,11.507020488820158,11.507020488820158,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,yellow 2026-05 spread_m pp,4.040482638249503,4.040482638249503,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,yellow 2026-05 weekday night share,0.1459636917691721,0.14596369176917218,recomputed,1e-09,True,
+Q3 monthly,yellow 2026-05 weekend night share,0.2610338966573737,0.26103389665737375,recomputed,1e-09,True,
+Q3 monthly,yellow 2026-05 Welch t,12.122877882134862,12.122877882134862,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,yellow 2026-05 Hedges g,4.231809911880908,4.231809911880908,own formula,1e-06,True,
+Q3 monthly,yellow 2026-05 margin CI lo pp,6.0569910929027335,6.061123686102999,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,yellow 2026-05 margin CI hi pp,8.887861065455684,8.879649355233179,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,yellow 2026-05 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=6.00e-06
+Q3 monthly,yellow 2026-06 gap_m pp,12.43515849561165,12.43515849561165,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,yellow 2026-06 spread_m pp,4.801505796185493,4.801505796185493,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,yellow 2026-06 weekday night share,0.1589232614850651,0.1589232614850651,recomputed,1e-09,True,
+Q3 monthly,yellow 2026-06 weekend night share,0.2832748464411816,0.2832748464411816,recomputed,1e-09,True,
+Q3 monthly,yellow 2026-06 Welch t,10.732709295063191,10.732709295063191,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,yellow 2026-06 Hedges g,4.41607997921123,4.41607997921123,own formula,1e-06,True,
+Q3 monthly,yellow 2026-06 margin CI lo pp,5.167447710497599,5.188210960648263,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,yellow 2026-06 margin CI hi pp,10.008396602616088,9.976012587511192,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,yellow 2026-06 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=2.33e-07
+Q3 monthly,yellow 2026-07 gap_m pp,12.938057658180846,12.938057658180846,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,yellow 2026-07 spread_m pp,2.888858317077145,2.888858317077145,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,yellow 2026-07 weekday night share,0.1554975041141513,0.1554975041141513,recomputed,1e-09,True,
+Q3 monthly,yellow 2026-07 weekend night share,0.2848780806959597,0.28487808069595977,recomputed,1e-09,True,
+Q3 monthly,yellow 2026-07 Welch t,13.677704349076814,13.677704349076814,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,yellow 2026-07 Hedges g,4.494600809811186,4.494600809811186,own formula,1e-06,True,
+Q3 monthly,yellow 2026-07 margin CI lo pp,7.788163528058489,7.792265750934195,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,yellow 2026-07 margin CI hi pp,12.010257296574972,12.026721468681508,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,yellow 2026-07 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=1.71e-07
+Q3 monthly,yellow 2026-08 gap_m pp,13.840629194977383,13.840629194977383,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,yellow 2026-08 spread_m pp,3.0972932884711772,3.0972932884711772,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,yellow 2026-08 weekday night share,0.1498392291571607,0.14983922915716075,recomputed,1e-09,True,
+Q3 monthly,yellow 2026-08 weekend night share,0.2882455211069346,0.2882455211069346,recomputed,1e-09,True,
+Q3 monthly,yellow 2026-08 Welch t,20.026409390482325,20.026409390482325,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,yellow 2026-08 Hedges g,5.6730730274064,5.6730730274064,own formula,1e-06,True,
+Q3 monthly,yellow 2026-08 margin CI lo pp,9.39349590561366,9.296211544777556,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,yellow 2026-08 margin CI hi pp,12.07768544988532,12.019088489271788,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,yellow 2026-08 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=5.03e-06
+Q3 monthly,yellow 2026-09 gap_m pp,12.698378636562856,12.698378636562857,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,yellow 2026-09 spread_m pp,3.7808193619671018,3.7808193619671013,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,yellow 2026-09 weekday night share,0.1570083028040222,0.15700830280402228,recomputed,1e-09,True,
+Q3 monthly,yellow 2026-09 weekend night share,0.2839920891696508,0.28399208916965085,recomputed,1e-09,True,
+Q3 monthly,yellow 2026-09 Welch t,14.511651102256184,14.511651102256184,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,yellow 2026-09 Hedges g,4.465824318899274,4.465824318899274,own formula,1e-06,True,
+Q3 monthly,yellow 2026-09 margin CI lo pp,7.474874393629562,7.417183774486798,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,yellow 2026-09 margin CI hi pp,10.197305029203068,10.117445044970575,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,yellow 2026-09 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=2.33e-07
+Q3,fhvhv days,365,365,recount,0.0,True,
+Q3,fhvhv weekday days,250,250,recount,0.0,True,
+Q3,fhvhv weekend days,104,104,recount,0.0,True,
+Q3,fhvhv holiday weekdays excluded,11,11,recount,0.0,True,
+Q3,fhvhv trips total,253409771,253409771,DuckDB sum,0.0,True,
+Q3 monthly,fhvhv 2025-10 gap_m pp,9.998279292554512,9.998279292554512,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,fhvhv 2025-10 spread_m pp,1.998505511053733,1.998505511053733,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,fhvhv 2025-10 weekday night share,0.1759401477701228,0.17594014777012285,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2025-10 weekend night share,0.275922940695668,0.275922940695668,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2025-10 Welch t,18.99963292166241,18.99963292166241,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,fhvhv 2025-10 Hedges g,5.052324892193541,5.052324892193541,own formula,1e-06,True,
+Q3 monthly,fhvhv 2025-10 margin CI lo pp,7.213998064153218,7.198476616974574,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,fhvhv 2025-10 margin CI hi pp,8.809396578059825,8.793068261962214,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,fhvhv 2025-10 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=1.71e-07
+Q3 monthly,fhvhv 2025-11 gap_m pp,11.095159590119986,11.095159590119986,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,fhvhv 2025-11 spread_m pp,1.378036275171407,1.378036275171407,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,fhvhv 2025-11 weekday night share,0.1741886624678264,0.17418866246782644,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2025-11 weekend night share,0.2851402583690263,0.2851402583690263,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2025-11 Welch t,9.33368602473277,9.33368602473277,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,fhvhv 2025-11 Hedges g,3.676019745011129,3.676019745011129,own formula,1e-06,True,
+Q3 monthly,fhvhv 2025-11 margin CI lo pp,7.8410856711701875,7.770118682036799,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,fhvhv 2025-11 margin CI hi pp,11.70346230739577,11.626112998425416,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,fhvhv 2025-11 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=1.36e-05
+Q3 monthly,fhvhv 2025-12 gap_m pp,9.14876512915449,9.14876512915449,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,fhvhv 2025-12 spread_m pp,2.5773583747595947,2.5773583747595947,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,fhvhv 2025-12 weekday night share,0.1777122976131197,0.17771229761311974,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2025-12 weekend night share,0.2691999489046646,0.26919994890466464,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2025-12 Welch t,9.56093153577447,9.56093153577447,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,fhvhv 2025-12 Hedges g,3.8995867053617457,3.8995867053617452,own formula,1e-06,True,
+Q3 monthly,fhvhv 2025-12 margin CI lo pp,3.419850409931944,3.5794135439006447,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,fhvhv 2025-12 margin CI hi pp,7.874842247891381,7.813212233553745,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,fhvhv 2025-12 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=6.83e-07
+Q3 monthly,fhvhv 2026-01 gap_m pp,10.28249102298594,10.28249102298594,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,fhvhv 2026-01 spread_m pp,1.961382320671748,1.9613823206717478,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,fhvhv 2026-01 weekday night share,0.1617838110375795,0.1617838110375795,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2026-01 weekend night share,0.2646087212674389,0.2646087212674389,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2026-01 Welch t,5.33474039683483,5.33474039683483,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,fhvhv 2026-01 Hedges g,2.925817362366061,2.925817362366061,own formula,1e-06,True,
+Q3 monthly,fhvhv 2026-01 margin CI lo pp,6.9854462492058955,6.995439031203101,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,fhvhv 2026-01 margin CI hi pp,10.41835784168522,10.482348019318728,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,fhvhv 2026-01 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=1.23e-05
+Q3 monthly,fhvhv 2026-02 gap_m pp,9.843573264883265,9.843573264883265,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,fhvhv 2026-02 spread_m pp,2.3711959242329135,2.3711959242329135,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,fhvhv 2026-02 weekday night share,0.1645334357815554,0.16453343578155544,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2026-02 weekend night share,0.2629691684303881,0.2629691684303881,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2026-02 Welch t,13.474527005086967,13.474527005086967,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,fhvhv 2026-02 Hedges g,4.379510362067976,4.379510362067976,own formula,1e-06,True,
+Q3 monthly,fhvhv 2026-02 margin CI lo pp,1.9666232732756423,1.4812188337527767,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,fhvhv 2026-02 margin CI hi pp,8.793241737066044,8.74077335791711,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,fhvhv 2026-02 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=4.50e-07
+Q3 monthly,fhvhv 2026-03 gap_m pp,10.524707362567732,10.524707362567733,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,fhvhv 2026-03 spread_m pp,1.5906202421990452,1.5906202421990452,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,fhvhv 2026-03 weekday night share,0.168178311121237,0.16817831112123707,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2026-03 weekend night share,0.2734253847469144,0.2734253847469144,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2026-03 Welch t,19.867118590544553,19.867118590544553,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,fhvhv 2026-03 Hedges g,5.927539602876617,5.927539602876617,own formula,1e-06,True,
+Q3 monthly,fhvhv 2026-03 margin CI lo pp,7.617915554096512,7.610888962399962,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,fhvhv 2026-03 margin CI hi pp,9.70116986286708,9.693375177788933,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,fhvhv 2026-03 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=9.07e-06
+Q3 monthly,fhvhv 2026-04 gap_m pp,9.119599163584764,9.119599163584763,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,fhvhv 2026-04 spread_m pp,1.8712126762795545,1.8712126762795545,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,fhvhv 2026-04 weekday night share,0.1771209600848858,0.17712096008488587,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2026-04 weekend night share,0.2683169517207335,0.2683169517207335,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2026-04 Welch t,17.40626565128502,17.40626565128502,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,fhvhv 2026-04 Hedges g,5.307685739571638,5.307685739571638,own formula,1e-06,True,
+Q3 monthly,fhvhv 2026-04 margin CI lo pp,6.301715111780068,6.303679418466633,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,fhvhv 2026-04 margin CI hi pp,8.042592609315744,8.052930608227621,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,fhvhv 2026-04 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=1.71e-07
+Q3 monthly,fhvhv 2026-05 gap_m pp,9.182170167282736,9.182170167282736,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,fhvhv 2026-05 spread_m pp,1.303975259237486,1.303975259237486,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,fhvhv 2026-05 weekday night share,0.1802844812227265,0.18028448122272653,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2026-05 weekend night share,0.2721061828955539,0.2721061828955539,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2026-05 Welch t,15.938408626031531,15.938408626031533,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,fhvhv 2026-05 Hedges g,5.353411387785221,5.353411387785221,own formula,1e-06,True,
+Q3 monthly,fhvhv 2026-05 margin CI lo pp,7.017768362623139,7.0695865372211255,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,fhvhv 2026-05 margin CI hi pp,8.606184466127667,8.598737310225548,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,fhvhv 2026-05 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=6.00e-06
+Q3 monthly,fhvhv 2026-06 gap_m pp,9.786624097934997,9.786624097934995,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,fhvhv 2026-06 spread_m pp,2.71922826384485,2.71922826384485,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,fhvhv 2026-06 weekday night share,0.1850651032939474,0.1850651032939474,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2026-06 weekend night share,0.2829313442732973,0.28293134427329736,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2026-06 Welch t,11.839457811434627,11.839457811434627,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,fhvhv 2026-06 Hedges g,5.52175200053546,5.52175200053546,own formula,1e-06,True,
+Q3 monthly,fhvhv 2026-06 margin CI lo pp,5.747839648345036,5.682081230693137,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,fhvhv 2026-06 margin CI hi pp,8.330039972670706,8.339601791244093,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,fhvhv 2026-06 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=2.33e-07
+Q3 monthly,fhvhv 2026-07 gap_m pp,10.21689759109458,10.216897591094579,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,fhvhv 2026-07 spread_m pp,1.7457860389022777,1.7457860389022777,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,fhvhv 2026-07 weekday night share,0.1831789172664725,0.18317891726647254,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2026-07 weekend night share,0.2853478931774183,0.2853478931774183,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2026-07 Welch t,17.58420160418879,17.58420160418879,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,fhvhv 2026-07 Hedges g,6.068502511072399,6.068502511072399,own formula,1e-06,True,
+Q3 monthly,fhvhv 2026-07 margin CI lo pp,7.186231410726088,7.249622012092714,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,fhvhv 2026-07 margin CI hi pp,9.23476786040584,9.269919756991488,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,fhvhv 2026-07 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=1.71e-07
+Q3 monthly,fhvhv 2026-08 gap_m pp,10.376233598018612,10.376233598018613,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,fhvhv 2026-08 spread_m pp,1.0834120114506962,1.0834120114506962,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,fhvhv 2026-08 weekday night share,0.1772696591859783,0.17726965918597837,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2026-08 weekend night share,0.2810319951661645,0.2810319951661645,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2026-08 Welch t,28.461530628845154,28.461530628845154,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,fhvhv 2026-08 Hedges g,7.875614727228133,7.875614727228133,own formula,1e-06,True,
+Q3 monthly,fhvhv 2026-08 margin CI lo pp,8.435923073553852,8.460767809248335,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,fhvhv 2026-08 margin CI hi pp,9.92593763769397,9.917891867752845,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,fhvhv 2026-08 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=5.03e-06
+Q3 monthly,fhvhv 2026-09 gap_m pp,9.766595597828506,9.766595597828506,recomputed (pooled night/total),1e-07,True,
+Q3 monthly,fhvhv 2026-09 spread_m pp,1.8039803907605485,1.8039803907605485,recomputed (Mon-Thu pooled),1e-07,True,
+Q3 monthly,fhvhv 2026-09 weekday night share,0.1740192650140155,0.17401926501401552,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2026-09 weekend night share,0.2716852209923006,0.2716852209923006,recomputed,1e-09,True,
+Q3 monthly,fhvhv 2026-09 Welch t,16.84527028883426,16.84527028883426,scipy ttest_ind(equal_var=False),1e-06,True,
+Q3 monthly,fhvhv 2026-09 Hedges g,5.289189598768872,5.289189598768872,own formula,1e-06,True,
+Q3 monthly,fhvhv 2026-09 margin CI lo pp,7.041613786089735,7.01225601572171,"own DOW-cell day bootstrap, seed 1003",0.8,True,tol 0.8 pp (few days per cell)
+Q3 monthly,fhvhv 2026-09 margin CI hi pp,8.669428478700604,8.64957472120041,own DOW-cell day bootstrap,0.8,True,tol 0.8 pp
+Q3 monthly,fhvhv 2026-09 Mann-Whitney one-sided p < 0.05 (non-parametric cross-check),True,True,scipy mannwhitneyu,,True,p=2.33e-07
+Q3,largest Holm-adjusted p over 24 tests,0.0004548505620321,0.0004548505620321318,own Holm,1e-06,True,analyst reports 0.00045
+Q3,yellow months passing gap>0 and gap>spread,12,12,recount,0.0,True,
+Q3,yellow smallest margin pp,4.268253915365502,4.268253915365502,recomputed,1e-07,True,month 2025-12
+Q3,yellow pooled weekend effect pp,13.115837296654233,13.115837296654231,statsmodels formula API OLS + HC3,1e-06,True,
+Q3,yellow pooled CI lo,12.361851516941442,12.361851516941442,same,1e-06,True,
+Q3,yellow pooled CI hi,13.86982307636702,13.86982307636702,same,1e-06,True,
+Q3,yellow gap range min pp,10.079689488007812,10.079689488007812,recomputed,1e-07,True,
+Q3,yellow gap range max pp,16.01718101513144,16.01718101513144,recomputed,1e-07,True,
+Q3,yellow spread range min pp,2.7795637994274145,2.7795637994274145,recomputed,1e-07,True,
+Q3,yellow spread range max pp,5.81143557264231,5.81143557264231,recomputed,1e-07,True,
+Q3,fhvhv months passing gap>0 and gap>spread,12,12,recount,0.0,True,
+Q3,fhvhv smallest margin pp,6.5714067543948955,6.5714067543948955,recomputed,1e-07,True,month 2025-12
+Q3,fhvhv pooled weekend effect pp,10.161071186717844,10.161071186717844,statsmodels formula API OLS + HC3,1e-06,True,
+Q3,fhvhv pooled CI lo,9.629124314035392,9.629124314035392,same,1e-06,True,
+Q3,fhvhv pooled CI hi,10.693018059400297,10.693018059400297,same,1e-06,True,
+Q3,fhvhv gap range min pp,9.119599163584764,9.119599163584763,recomputed,1e-07,True,
+Q3,fhvhv gap range max pp,11.095159590119986,11.095159590119986,recomputed,1e-07,True,
+Q3,fhvhv spread range min pp,1.0834120114506962,1.0834120114506962,recomputed,1e-07,True,
+Q3,fhvhv spread range max pp,2.71922826384485,2.71922826384485,recomputed,1e-07,True,
+Q3 sens,yellow S1_holidays_as_ordinary months gap>spread,12,12,recomputed (own S3 re-assignment),0.0,True,
+Q3 sens,yellow S1_holidays_as_ordinary months gap>0,12,12,recomputed,0.0,True,
+Q3 sens,yellow S1_holidays_as_ordinary mean gap pp,12.776961462117091,12.776961462117091,recomputed,1e-06,True,
+Q3 sens,yellow S1_holidays_as_ordinary pooled effect pp,12.867947521453493,12.867947521453493,statsmodels formula OLS HC3,1e-06,True,n_days a=365 v=365
+Q3 sens,yellow S2_hour5_in_night months gap>spread,12,12,recomputed (own S3 re-assignment),0.0,True,
+Q3 sens,yellow S2_hour5_in_night months gap>0,12,12,recomputed,0.0,True,
+Q3 sens,yellow S2_hour5_in_night mean gap pp,12.90034479646347,12.90034479646347,recomputed,1e-06,True,
+Q3 sens,yellow S2_hour5_in_night pooled effect pp,13.061030452392377,13.061030452392375,statsmodels formula OLS HC3,1e-06,True,n_days a=354 v=354
+Q3 sens,yellow S3_literal_prev_day_Mon-Fri_vs_Sat-Sun months gap>spread,4,4,recomputed (own S3 re-assignment),0.0,True,
+Q3 sens,yellow S3_literal_prev_day_Mon-Fri_vs_Sat-Sun months gap>0,12,12,recomputed,0.0,True,
+Q3 sens,yellow S3_literal_prev_day_Mon-Fri_vs_Sat-Sun mean gap pp,5.565833930586044,5.565833930586044,recomputed,1e-06,True,
+Q3 sens,yellow S3_literal_prev_day_Mon-Fri_vs_Sat-Sun pooled effect pp,4.568999949952595,4.568999949952595,statsmodels formula OLS HC3,1e-06,True,n_days a=353 v=353
+Q3 sens,yellow S3_intent_Fri-Sat_nights_weekend months gap>spread,12,12,recomputed (own S3 re-assignment),0.0,True,
+Q3 sens,yellow S3_intent_Fri-Sat_nights_weekend months gap>0,12,12,recomputed,0.0,True,
+Q3 sens,yellow S3_intent_Fri-Sat_nights_weekend mean gap pp,13.226711392175021,13.226711392175021,recomputed,1e-06,True,
+Q3 sens,yellow S3_intent_Fri-Sat_nights_weekend pooled effect pp,13.311790810498112,13.311790810498113,statsmodels formula OLS HC3,1e-06,True,n_days a=355 v=355
+Q3 sens,fhvhv S1_holidays_as_ordinary months gap>spread,12,12,recomputed (own S3 re-assignment),0.0,True,
+Q3 sens,fhvhv S1_holidays_as_ordinary months gap>0,12,12,recomputed,0.0,True,
+Q3 sens,fhvhv S1_holidays_as_ordinary mean gap pp,9.678702092707036,9.678702092707036,recomputed,1e-06,True,
+Q3 sens,fhvhv S1_holidays_as_ordinary pooled effect pp,9.882730476741832,9.882730476741832,statsmodels formula OLS HC3,1e-06,True,n_days a=365 v=365
+Q3 sens,fhvhv S2_hour5_in_night months gap>spread,12,12,recomputed (own S3 re-assignment),0.0,True,
+Q3 sens,fhvhv S2_hour5_in_night months gap>0,12,12,recomputed,0.0,True,
+Q3 sens,fhvhv S2_hour5_in_night mean gap pp,9.738130205578633,9.738130205578635,recomputed,1e-06,True,
+Q3 sens,fhvhv S2_hour5_in_night pooled effect pp,9.973231203233478,9.973231203233478,statsmodels formula OLS HC3,1e-06,True,n_days a=354 v=354
+Q3 sens,fhvhv S3_literal_prev_day_Mon-Fri_vs_Sat-Sun months gap>spread,9,9,recomputed (own S3 re-assignment),0.0,True,
+Q3 sens,fhvhv S3_literal_prev_day_Mon-Fri_vs_Sat-Sun months gap>0,12,12,recomputed,0.0,True,
+Q3 sens,fhvhv S3_literal_prev_day_Mon-Fri_vs_Sat-Sun mean gap pp,4.412086627292663,4.412086627292663,recomputed,1e-06,True,
+Q3 sens,fhvhv S3_literal_prev_day_Mon-Fri_vs_Sat-Sun pooled effect pp,3.9663738972132,3.9663738972131997,statsmodels formula OLS HC3,1e-06,True,n_days a=353 v=353
+Q3 sens,fhvhv S3_intent_Fri-Sat_nights_weekend months gap>spread,11,11,recomputed (own S3 re-assignment),0.0,True,
+Q3 sens,fhvhv S3_intent_Fri-Sat_nights_weekend months gap>0,12,12,recomputed,0.0,True,
+Q3 sens,fhvhv S3_intent_Fri-Sat_nights_weekend mean gap pp,9.623818378330396,9.623818378330396,recomputed,1e-06,True,
+Q3 sens,fhvhv S3_intent_Fri-Sat_nights_weekend pooled effect pp,9.651525467050206,9.651525467050206,statsmodels formula OLS HC3,1e-06,True,n_days a=355 v=355
+Q3 hourly,yellow weekday hour 3 mean trips/day,503.696,503.696,recomputed,0.000503696,True,
+Q3 hourly,yellow weekday hour 8 mean trips/day,6129.772,6129.772,recomputed,0.0061297719999999995,True,
+Q3 hourly,yellow weekday hour 18 mean trips/day,9471.68,9471.68,recomputed,0.00947168,True,
+Q3 hourly,yellow weekend hour 3 mean trips/day,3029.0576923076924,3029.0576923076924,recomputed,0.0030290576923076924,True,
+Q3 hourly,yellow weekend hour 8 mean trips/day,2573.894230769231,2573.894230769231,recomputed,0.0025738942307692307,True,
+Q3 hourly,yellow weekend hour 18 mean trips/day,7870.067307692308,7870.067307692308,recomputed,0.007870067307692307,True,
+Q3 hourly,fhvhv weekday hour 3 mean trips/day,6449.396,6449.396,recomputed,0.006449396,True,
+Q3 hourly,fhvhv weekday hour 8 mean trips/day,41517.904,41517.904,recomputed,0.041517904,True,
+Q3 hourly,fhvhv weekday hour 18 mean trips/day,40416.74,40416.74,recomputed,0.04041673999999999,True,
+Q3 hourly,fhvhv weekend hour 3 mean trips/day,18954.93269230769,18954.93269230769,recomputed,0.01895493269230769,True,
+Q3 hourly,fhvhv weekend hour 8 mean trips/day,22436.875,22436.875,recomputed,0.022436875,True,
+Q3 hourly,fhvhv weekend hour 18 mean trips/day,41147.480769230766,41147.480769230766,recomputed,0.04114748076923076,True,
+Q4,yellow 2023 share,0.7383316646255101,0.7383316646255101,DuckDB flags; numerator/denominator,1e-09,True,
+Q4,yellow 2023 in-zone trips,20365564.0,20365564,DuckDB,0.0,True,
+Q4,yellow 2023 valid denominator,27583219.0,27583219,DuckDB,0.0,True,
+Q4,yellow 2023 excluded share,0.0173786479568135,0.017378647956813542,DuckDB,1e-09,True,
+Q4,yellow 2023 share CI lo,0.7346932959007422,0.7348262842459548,own week bootstrap seed 1004,0.0012,True,tol 0.12 pp
+Q4,yellow 2023 share CI hi,0.7419880988539482,0.7418599830752095,own week bootstrap,0.0012,True,
+Q4,yellow 2023 weeks,40.0,40,recount,0.0,True,
+Q4,yellow 2024 share,0.7365162432694914,0.7365162432694914,DuckDB flags; numerator/denominator,1e-09,True,
+Q4,yellow 2024 in-zone trips,21879062.0,21879062,DuckDB,0.0,True,
+Q4,yellow 2024 valid denominator,29706150.0,29706150,DuckDB,0.0,True,
+Q4,yellow 2024 excluded share,0.0104847910521574,0.010484791052157494,DuckDB,1e-09,True,
+Q4,yellow 2024 share CI lo,0.7330592757184701,0.7328519358244633,own week bootstrap seed 1004,0.0012,True,tol 0.12 pp
+Q4,yellow 2024 share CI hi,0.7400693456636325,0.7400680586963007,own week bootstrap,0.0012,True,
+Q4,yellow 2024 weeks,40.0,40,recount,0.0,True,
+Q4,yellow 2026 share,0.7166475607576452,0.7166475607576452,DuckDB flags; numerator/denominator,1e-09,True,
+Q4,yellow 2026 in-zone trips,23901494.0,23901494,DuckDB,0.0,True,
+Q4,yellow 2026 valid denominator,33351811.0,33351811,DuckDB,0.0,True,
+Q4,yellow 2026 excluded share,0.00677263871826,0.00677263871826006,DuckDB,1e-09,True,
+Q4,yellow 2026 share CI lo,0.7097471012677615,0.7100940825704493,own week bootstrap seed 1004,0.0012,True,tol 0.12 pp
+Q4,yellow 2026 share CI hi,0.7236004496824578,0.7235274087038425,own week bootstrap,0.0012,True,
+Q4,yellow 2026 weeks,40.0,40,recount,0.0,True,
+Q4,yellow Delta_main pp,-1.9868682511846099,-1.9868682511846147,recomputed,1e-07,True,
+Q4,yellow Delta_main CI lo pp,-2.7719358883966,-2.7569248290465307,own bootstrap,0.12,True,tol 0.12 pp
+Q4,yellow Delta_main CI hi pp,-1.22876847686628,-1.2302602920252093,own bootstrap,0.12,True,
+Q4,yellow Delta_drift pp,-0.18154213560187,-0.18154213560187538,recomputed,1e-07,True,
+Q4,yellow Delta_drift CI lo pp,-0.69946744660722,-0.6906353254748582,own bootstrap,0.12,True,tol 0.12 pp
+Q4,yellow Delta_drift CI hi pp,0.33254912770482,0.29656524004167645,own bootstrap,0.12,True,
+Q4,yellow |main|-|drift| pp,1.80532611558273,1.8053261155827394,recomputed,1e-07,True,
+Q4,yellow margin CI lo pp,0.73592561190884,0.7522482177554161,own bootstrap,0.15,True,tol 0.15 pp
+Q4,yellow margin CI hi pp,2.60191651393073,2.6444862585542634,own bootstrap,0.15,True,
+Q4,yellow relative change main,-0.026976570704872,-0.02697657070487201,recomputed,1e-09,True,
+Q4,yellow one-sided raw p (main<0),0.0004997501249375,0.0004997501249375312,own bootstrap +1 rule,0.0005,True,both at floor
+Q4,yellow decision (|main|>|drift|),real shift,real shift,decision rule,,True,
+Q4 S4,yellow S4 share 2023,0.7289981182040319,0.7289981182040319,recomputed,1e-09,True,
+Q4 S4,yellow S4 share 2024,0.7321464873503347,0.7321464873503347,recomputed,1e-09,True,
+Q4 S4,yellow S4 share 2026,0.7139953562367167,0.7139953562367167,recomputed,1e-09,True,
+Q4 S4,yellow S4 margin pp,1.50027619673152,1.5002761967315204,recomputed,1e-07,True,
+Q4 monthly,yellow 2023-01 share,0.7222755715104829,0.7222755715104829,recomputed,1e-09,True,
+Q4 monthly,yellow 2023-02 share,0.7367621404874024,0.7367621404874024,recomputed,1e-09,True,
+Q4 monthly,yellow 2023-03 share,0.7388875921071563,0.7388875921071563,recomputed,1e-09,True,
+Q4 monthly,yellow 2023-04 share,0.7348480514030152,0.7348480514030152,recomputed,1e-09,True,
+Q4 monthly,yellow 2023-05 share,0.7311678726483357,0.7311678726483357,recomputed,1e-09,True,
+Q4 monthly,yellow 2023-06 share,0.7397998382189189,0.7397998382189189,recomputed,1e-09,True,
+Q4 monthly,yellow 2023-07 share,0.7555577743328341,0.7555577743328341,recomputed,1e-09,True,
+Q4 monthly,yellow 2023-08 share,0.7523579031072594,0.7523579031072594,recomputed,1e-09,True,
+Q4 monthly,yellow 2023-09 share,0.736219670117276,0.736219670117276,recomputed,1e-09,True,
+Q4 monthly,yellow 2024-01 share,0.7188568202320972,0.7188568202320972,recomputed,1e-09,True,
+Q4 monthly,yellow 2024-02 share,0.734861197003362,0.734861197003362,recomputed,1e-09,True,
+Q4 monthly,yellow 2024-03 share,0.7427762668966301,0.7427762668966301,recomputed,1e-09,True,
+Q4 monthly,yellow 2024-04 share,0.7326849543239785,0.7326849543239785,recomputed,1e-09,True,
+Q4 monthly,yellow 2024-05 share,0.728832927416674,0.728832927416674,recomputed,1e-09,True,
+Q4 monthly,yellow 2024-06 share,0.7435213822879361,0.7435213822879361,recomputed,1e-09,True,
+Q4 monthly,yellow 2024-07 share,0.7501964962821916,0.7501964962821916,recomputed,1e-09,True,
+Q4 monthly,yellow 2024-08 share,0.7444968059553795,0.7444968059553795,recomputed,1e-09,True,
+Q4 monthly,yellow 2024-09 share,0.7327748503656463,0.7327748503656463,recomputed,1e-09,True,
+Q4 monthly,yellow 2026-01 share,0.6929427864872002,0.6929427864872002,recomputed,1e-09,True,
+Q4 monthly,yellow 2026-02 share,0.6940111540594139,0.6940111540594139,recomputed,1e-09,True,
+Q4 monthly,yellow 2026-03 share,0.7036777023275917,0.7036777023275917,recomputed,1e-09,True,
+Q4 monthly,yellow 2026-04 share,0.7062502544250258,0.7062502544250258,recomputed,1e-09,True,
+Q4 monthly,yellow 2026-05 share,0.7020789002654737,0.7020789002654737,recomputed,1e-09,True,
+Q4 monthly,yellow 2026-06 share,0.7268924864805991,0.7268924864805991,recomputed,1e-09,True,
+Q4 monthly,yellow 2026-07 share,0.74912769216185,0.74912769216185,recomputed,1e-09,True,
+Q4 monthly,yellow 2026-08 share,0.7474153516330264,0.7474153516330264,recomputed,1e-09,True,
+Q4 monthly,yellow 2026-09 share,0.7320520103073103,0.7320520103073103,recomputed,1e-09,True,
+Q4,fhvhv 2023 share,0.364275557543826,0.36427555754382607,DuckDB flags; numerator/denominator,1e-09,True,
+Q4,fhvhv 2023 in-zone trips,60287423.0,60287423,DuckDB,0.0,True,
+Q4,fhvhv 2023 valid denominator,165499501.0,165499501,DuckDB,0.0,True,
+Q4,fhvhv 2023 excluded share,0.0406835007492516,0.040683500749251644,DuckDB,1e-09,True,
+Q4,fhvhv 2023 share CI lo,0.3607302684081631,0.36046143403885555,own week bootstrap seed 1004,0.0012,True,tol 0.12 pp
+Q4,fhvhv 2023 share CI hi,0.3677860070664454,0.3678465188828855,own week bootstrap,0.0012,True,
+Q4,fhvhv 2023 weeks,40.0,40,recount,0.0,True,
+Q4,fhvhv 2024 share,0.3473567809886408,0.3473567809886408,DuckDB flags; numerator/denominator,1e-09,True,
+Q4,fhvhv 2024 in-zone trips,59413766.0,59413766,DuckDB,0.0,True,
+Q4,fhvhv 2024 valid denominator,171045361.0,171045361,DuckDB,0.0,True,
+Q4,fhvhv 2024 excluded share,0.0411491370988299,0.041149137098829947,DuckDB,1e-09,True,
+Q4,fhvhv 2024 share CI lo,0.34373707340716,0.3436824360172944,own week bootstrap seed 1004,0.0012,True,tol 0.12 pp
+Q4,fhvhv 2024 share CI hi,0.3505755685829343,0.3505469102058097,own week bootstrap,0.0012,True,
+Q4,fhvhv 2024 weeks,40.0,40,recount,0.0,True,
+Q4,fhvhv 2026 share,0.3047652914223587,0.30476529142235875,DuckDB flags; numerator/denominator,1e-09,True,
+Q4,fhvhv 2026 in-zone trips,55057545.0,55057545,DuckDB,0.0,True,
+Q4,fhvhv 2026 valid denominator,180655562.0,180655562,DuckDB,0.0,True,
+Q4,fhvhv 2026 excluded share,0.0450316235191071,0.04503162351910717,DuckDB,1e-09,True,
+Q4,fhvhv 2026 share CI lo,0.3007371153495117,0.30035913798232705,own week bootstrap seed 1004,0.0012,True,tol 0.12 pp
+Q4,fhvhv 2026 share CI hi,0.3086706750750583,0.3085809282495408,own week bootstrap,0.0012,True,
+Q4,fhvhv 2026 weeks,40.0,40,recount,0.0,True,
+Q4,fhvhv Delta_main pp,-4.2591489566281995,-4.259148956628206,recomputed,1e-07,True,
+Q4,fhvhv Delta_main CI lo pp,-4.79558801043078,-4.79154113818145,own bootstrap,0.12,True,tol 0.12 pp
+Q4,fhvhv Delta_main CI hi pp,-3.7539572007817803,-3.7002010246177166,own bootstrap,0.12,True,
+Q4,fhvhv Delta_drift pp,-1.69187765551852,-1.6918776555185255,recomputed,1e-07,True,
+Q4,fhvhv Delta_drift CI lo pp,-2.1824979800189,-2.2094352238332506,own bootstrap,0.12,True,tol 0.12 pp
+Q4,fhvhv Delta_drift CI hi pp,-1.18712177984066,-1.185242924217463,own bootstrap,0.12,True,
+Q4,fhvhv |main|-|drift| pp,2.56727130110968,2.56727130110968,recomputed,1e-07,True,
+Q4,fhvhv margin CI lo pp,1.7280835550282698,1.6498368683916682,own bootstrap,0.15,True,tol 0.15 pp
+Q4,fhvhv margin CI hi pp,3.45737352315255,3.424387248660162,own bootstrap,0.15,True,
+Q4,fhvhv relative change main,-0.1226159726752963,-0.1226159726752963,recomputed,1e-09,True,
+Q4,fhvhv one-sided raw p (main<0),0.0004997501249375,0.0004997501249375312,own bootstrap +1 rule,0.0005,True,both at floor
+Q4,fhvhv decision (|main|>|drift|),real shift,real shift,decision rule,,True,
+Q4 S4,fhvhv S4 share 2023,0.3641154136466679,0.3641154136466679,recomputed,1e-09,True,
+Q4 S4,fhvhv S4 share 2024,0.3471334839903328,0.34713348399033284,recomputed,1e-09,True,
+Q4 S4,fhvhv S4 share 2026,0.3069000639367721,0.30690006393677216,recomputed,1e-09,True,
+Q4 S4,fhvhv S4 margin pp,2.32514903972256,2.3251490397225627,recomputed,1e-07,True,
+Q4 monthly,fhvhv 2023-01 share,0.3664704154236219,0.36647041542362196,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2023-02 share,0.3743542173691269,0.37435421736912694,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2023-03 share,0.3628814217330247,0.3628814217330247,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2023-04 share,0.3699208416548309,0.3699208416548309,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2023-05 share,0.3603045494581122,0.3603045494581122,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2023-06 share,0.3623037911438447,0.3623037911438447,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2023-07 share,0.362266639123481,0.362266639123481,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2023-08 share,0.3498430761853668,0.3498430761853668,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2023-09 share,0.370195666145535,0.370195666145535,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2024-01 share,0.3521669991676465,0.35216699916764654,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2024-02 share,0.3541877047687702,0.35418770476877026,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2024-03 share,0.3441822011175561,0.34418220111755615,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2024-04 share,0.3492962593864575,0.34929625938645753,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2024-05 share,0.3479370733095369,0.3479370733095369,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2024-06 share,0.3446659563948196,0.3446659563948196,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2024-07 share,0.3455112186607529,0.34551121866075296,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2024-08 share,0.3374435028433645,0.3374435028433645,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2024-09 share,0.3509460775575937,0.3509460775575937,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2026-01 share,0.2989657169131096,0.29896571691310964,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2026-02 share,0.2976465576767517,0.2976465576767517,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2026-03 share,0.3001646427161139,0.3001646427161139,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2026-04 share,0.3137601163546818,0.3137601163546818,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2026-05 share,0.309918027501304,0.30991802750130404,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2026-06 share,0.2985943971973858,0.2985943971973858,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2026-07 share,0.310339875305692,0.310339875305692,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2026-08 share,0.2964799054397737,0.2964799054397737,recomputed,1e-09,True,
+Q4 monthly,fhvhv 2026-09 share,0.3164137856755086,0.3164137856755086,recomputed,1e-09,True,
+Q4,yellow Holm p (2 tests),0.000999500249875,0.000999500249875,own Holm,0.0005,True,
+Q4,fhvhv Holm p (2 tests),0.000999500249875,0.000999500249875,own Holm,0.0005,True,
+Q4 fee,yellow fee>0 trips,33517577,33517577,DuckDB,0.0,True,
+Q4 fee,yellow in-zone trips,33141762,33141762,DuckDB,0.0,True,
+Q4 fee,yellow fee null trips,0,0,DuckDB,0.0,True,
+Q4 fee,yellow (i) share of fee trips with in-zone end,0.959828420771585,0.959828420771585,recomputed,1e-09,True,
+Q4 fee,yellow (ii) share of in-zone trips with fee,0.9707125106987372,0.9707125106987371,recomputed,1e-09,True,
+Q4 fee,yellow (i) CI lo,0.95933527527329,0.9593363539046474,own bootstrap,0.002,True,
+Q4 fee,yellow (i) CI hi,0.960333802639729,0.960320397202836,own bootstrap,0.002,True,
+Q4 fee,yellow (ii) CI lo,0.9634844016281592,0.963831544515867,own bootstrap,0.003,True,
+Q4 fee,yellow (ii) CI hi,0.9767037162011886,0.9768366387809366,own bootstrap,0.003,True,
+Q4 fee,yellow CRZ-list zones with fee share <50%,0,0,recomputed,0.0,True,
+Q4 fee,yellow outside-list zones with fee share >50%,9,9,recomputed,0.0,True,"[43, 66, 105, 138, 141, 142, 143, 199, 237]"
+Q4 fee,fhvhv fee>0 trips,82792577,82792577,DuckDB,0.0,True,
+Q4 fee,fhvhv in-zone trips,78855652,78855652,DuckDB,0.0,True,
+Q4 fee,fhvhv fee null trips,0,0,DuckDB,0.0,True,
+Q4 fee,fhvhv (i) share of fee trips with in-zone end,0.943515515889788,0.943515515889788,recomputed,1e-09,True,
+Q4 fee,fhvhv (ii) share of in-zone trips with fee,0.9906212049327802,0.9906212049327802,recomputed,1e-09,True,
+Q4 fee,fhvhv (i) CI lo,0.942661151392768,0.9427168960871188,own bootstrap,0.002,True,
+Q4 fee,fhvhv (i) CI hi,0.9442723742586846,0.9442479238185478,own bootstrap,0.002,True,
+Q4 fee,fhvhv (ii) CI lo,0.9897066166425028,0.989691362767107,own bootstrap,0.003,True,
+Q4 fee,fhvhv (ii) CI hi,0.9913985896834124,0.9914103283847879,own bootstrap,0.003,True,
+Q4 fee,fhvhv CRZ-list zones with fee share <50%,0,0,recomputed,0.0,True,
+Q4 fee,fhvhv outside-list zones with fee share >50%,7,7,recomputed,0.0,True,"[43, 105, 140, 141, 142, 143, 237]"
+Q4 neighbours,"neighbour zone IDs (geometry, no tolerance)","[43, 140, 141, 142, 143, 237]","[43, 140, 141, 142, 143, 237]",geopandas union.intersects (analyst: pairwise intersects),,True,
+Q4 neighbours,yellow pickup neighbour combined share 2024,0.1462618198048648,0.1462618198048651,recomputed,1e-09,True,
+Q4 neighbours,yellow pickup neighbour combined share 2026,0.1391190628809083,0.13911906288090864,recomputed,1e-09,True,
+Q4 neighbours,yellow pickup neighbour change pp,-0.7142756923956428,-0.7142756923956467,recomputed,1e-07,True,
+Q4 neighbours,yellow 38-zone combined pickup share change pp,-2.53,-2.5299816644914097,recomputed,0.006,True,analyst rounded to 2 dp
+Q4 supplementary,yellow pickup top-15 gain zone set,"[7, 37, 41, 42, 61, 74, 75, 80, 112, 116, 145, 166, 244, 255, 256]","[7, 37, 41, 42, 61, 74, 75, 80, 112, 116, 145, 166, 244, 255, 256]",recomputed,,True,
+Q4 neighbours,yellow dropoff neighbour combined share 2024,0.14120149392790468,0.14120149392790496,recomputed,1e-09,True,
+Q4 neighbours,yellow dropoff neighbour combined share 2026,0.1336699641058865,0.13366996410588677,recomputed,1e-09,True,
+Q4 neighbours,yellow dropoff neighbour change pp,-0.7531529822018195,-0.7531529822018185,recomputed,1e-07,True,
+Q4 supplementary,yellow dropoff top-15 gain zone set,"[7, 36, 37, 42, 61, 80, 93, 112, 116, 166, 225, 243, 244, 255, 256]","[7, 36, 37, 42, 61, 80, 93, 112, 116, 166, 225, 243, 244, 255, 256]",recomputed,,True,
+Q4 neighbours,fhvhv pickup neighbour combined share 2024,0.033728913686246996,0.03372891368624738,recomputed,1e-09,True,
+Q4 neighbours,fhvhv pickup neighbour combined share 2026,0.030719065373469,0.030719065373469242,recomputed,1e-09,True,
+Q4 neighbours,fhvhv pickup neighbour change pp,-0.30098483127781334,-0.30098483127781356,recomputed,1e-07,True,
+Q4 neighbours,fhvhv 38-zone combined pickup share change pp,-2.98,-2.9768573976819033,recomputed,0.006,True,analyst rounded to 2 dp
+Q4 supplementary,fhvhv pickup top-15 gain zone set,"[14, 22, 76, 82, 92, 95, 129, 130, 145, 168, 173, 213, 228, 247, 254]","[14, 22, 76, 82, 92, 95, 129, 130, 145, 168, 173, 213, 228, 247, 254]",recomputed,,True,
+Q4 neighbours,fhvhv dropoff neighbour combined share 2024,0.0327910066551281,0.03279100665512852,recomputed,1e-09,True,
+Q4 neighbours,fhvhv dropoff neighbour combined share 2026,0.030404146094244102,0.030404146094244407,recomputed,1e-09,True,
+Q4 neighbours,fhvhv dropoff neighbour change pp,-0.23868605608841104,-0.2386860560884111,recomputed,1e-07,True,
+Q4 supplementary,fhvhv dropoff top-15 gain zone set,"[14, 22, 39, 76, 82, 92, 95, 129, 130, 145, 168, 213, 216, 228, 247]","[14, 22, 39, 76, 82, 92, 95, 129, 130, 145, 168, 213, 216, 228, 247]",recomputed,,True,
