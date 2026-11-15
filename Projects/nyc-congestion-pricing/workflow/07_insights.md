@@ -67,3 +67,32 @@ The two services behave differently. The yellow drop is concentrated in January-
 - Key-number reproduction: I recomputed the Q1 yellow valid trip count with DuckDB on the 12 monthly files. A first query that merged the files and then applied the date range gave 46,415,358 (169 more). Counting each file's own month only gave 46,415,189, equal to 05. The difference came from rows whose pickup date is in a neighbouring month. n50 = 17 and n80 = 36 matched. I did not reproduce the HVFHV or Q2-Q4 numbers myself.
 - Not verified (also not by the validator): that timestamps are New York local time, that zone IDs keep the same meaning across 2023-2026, and the PNG charts.
 - Yellow rows with the same pickup time, dropoff time and zones are 1.14% of yellow trips. They were kept; removing them changes the Q4 yellow margin from +1.81 to +1.89 pp.
+
+
+## Amendment (2026-11-14, after 08_critique)
+
+The text above is kept as written. After reading `08_critique.md` I add the following corrections. I accept points 1 and 3-8 of the critique and part of point 2 (see I3).
+
+### I1
+- "month-to-month overlap" is a wrong label. The Jaccard value compares each month's list with the full-period list, which contains that month (05_analysis.md, section 3). It is an in-sample number and is biased upward. A time-split test (build the list on early months, test on later months) was not done.
+- "Workable" was never measured. Read I1 as "a short list covers half of yellow pickups, while HVFHV pickups are spread over many more zones", not as a statement about driver benefit.
+- The two lists use different coverage targets (50% for yellow, 40% for HVFHV), so their sizes (17 vs 43 zones) are not a direct "works vs does not work" comparison.
+
+### I2
+- The benchmark compares the top-5 destination share of airport trips with the top-5 pickup share of all trips of the same service. HVFHV has a very low baseline (7.17%), so the contrast "only HVFHV" may be partly an artifact of that baseline. The yellow LaGuardia result (18.58% vs 19.64%) is close to the line.
+- Trips that end at the same airport are kept, and 13-20% of HVFHV airport trips with an unknown destination (IDs 264/265) are excluded. Neither was tested for its effect on the verdict.
+- Read I2 as a result of the pre-set rule, not as a measure of how useful a destination guide would be.
+
+### I3
+- The Claim uses the primary definition (night assigned by pickup date, as in the approved plan). Under it the gap exceeds the spread in 12 of 12 months for both services, and the pooled weekend effect is 13.12 pp (yellow) and 10.16 pp (HVFHV). This does not depend on the S3 reading I chose.
+- S3 is a sensitivity check. The weekend share is larger than the weekday share (gap > 0) in all 12 months under every variant. Under the reading I chose, the gap exceeds the spread in 12 of 12 months for yellow and 11 of 12 for HVFHV (December 2025: gap 7.25 pp, spread 8.30 pp). Under the literal reading, the pooled effect is 4.57 pp (yellow) and 3.97 pp (HVFHV). I chose the reading after seeing both results (see `05a_human_review.md`).
+- The statistic is a share. A larger weekend night share can also come from fewer daytime trips; night trip counts per day were not computed.
+- Not verified: that timestamps are New York local time. The bootstrap resamples month x day-of-week cells, not month x day type as in the plan.
+
+### I4
+- The yellow files for 2026-06 to 2026-09 add a `request_source` column, and the yellow share rises back in the same months. A data change as a cause was not ruled out.
+- 2025 is not in the comparison, so the timing of the change relative to the policy start cannot be examined. The baseline is a single year pair, and the HVFHV baseline is not flat (-1.69 pp).
+- "No obvious new hotspot" rests on the top-15 single-zone changes, with no noise reference, and on only six neighbouring zones. The largest yellow changes outside the list are losses (JFK -0.94 pp, LaGuardia -0.69 pp), so the shift is not a simple move from inside to outside. The claim is weaker than the Claim sentence sounds.
+
+### Reproduction
+I reproduced only the Q1 yellow numbers myself. The HVFHV, Q2, Q3 and Q4 numbers rely on the validation in 06.
