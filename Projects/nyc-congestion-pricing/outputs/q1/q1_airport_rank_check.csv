@@ -1,0 +1,7 @@
+service,airport_id,airport,rank_whole_period,in_top5_whole_period,months_in_monthly_top5,n_months,trips
+yellow,1,Newark Airport,181,False,0,12,6333
+yellow,132,JFK Airport,3,True,12,12,1856613
+yellow,138,LaGuardia Airport,14,False,0,12,1183403
+fhvhv,1,Newark Airport,261,False,0,12,17
+fhvhv,132,JFK Airport,2,True,12,12,4033346
+fhvhv,138,LaGuardia Airport,1,True,12,12,4942417
