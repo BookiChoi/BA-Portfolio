@@ -88,3 +88,24 @@ A written go or no-go on zone entry, made with a rule fixed before the follow-up
 - The 2025 data may show that the change began before the fee, which would weaken the fee story and the case for entry.
 - Trip counts may show that trips inside the zone did not fall at all, and the share changed only because outside trips grew.
 - Zone ID meaning across years and the time zone are still unverified.
+
+
+## Amendment (2026-11-15, after 10_impact)
+
+The text above is kept as written. `10_impact.md` showed two inconsistencies in the values I set in this file. I record them here and do not change the 10 file, which was written by the AI.
+
+### R1
+- The pilot as written (50 drivers per group and a success rule of +3%) cannot test that rule. With my assumptions, the expected effect for the whole pilot group is 1.5% (50% follow x 3%), below the +3% line. The chance of meeting the rule is about 6%, and the smallest effect that 50 drivers per group can detect is about 10%. A "no difference" result would not show that the list does not work.
+- Change: the 50-driver pilot is a feasibility study, not a test of the effect. It reports the actual share of drivers who follow the list (against the assumed 30/50/70%), the share of driver-weeks with usable data, and the pickups per driver in the list zones (an oversupply signal). Pass or fail thresholds for these are fixed before the pilot starts.
+- The test of the effect is a second stage. The success rule above (at least +3% with the 95% interval above 0) belongs to that stage. According to 10, it needs about 407 drivers per group for 12 weeks or 581 for 8 weeks. These sizes depend on noise levels that are unsourced placeholders in 10, so they are replaced with the fleet's own driver-level numbers from the feasibility stage before stage two is sized.
+
+### R2
+- The 0, 2 and 5 percentage points apply to drivers who use the guide. With a use share of 40, 60 and 80%, the shift for the whole new-driver group is 0, 1.2 and 4.0 pp (10, section 3). The KPI line "at least 2 pp" was written for the whole cohort, so the base case (1.2 pp) falls below it. I do not move the line to fit the base case. Any change to the line is decided before the first cohort is measured, not after.
+- One quarter of new drivers at the base size can detect a shift of about 2.6 pp with a random split, or about 1.8 pp against the previous cohort (not causal). So the base shift of 1.2 pp cannot be seen in one quarter; it needs roughly 700 drivers per arm, or several quarters pooled.
+- The first step in R2 (night trip counts per day) stays. 10 gives a threshold from the monthly share ranges: the weekend-night share gap would be only a denominator effect if weekend daily volume were below about 53% of weekday volume for yellow (about 63% for HVFHV). This is arithmetic on ranges and has not been checked against the data.
+
+### R3
+- 10 shows that if the 2023-2024 decline in the HVFHV share continued at the same yearly pace until 2026, the change left after removing that trend is -0.88 pp, with an interval that includes 0 (it is -2.57 pp in 05). This does not show that the fee had no effect, but it supports waiting for the follow-up. The follow-up should compare changes over equal lengths of time, because the approved test in 05 compares a two-year change with a one-year change.
+
+### Unsourced values
+Five values in 10 are marked `modeler_placeholder` (two noise levels in R1, the spread across drivers of weekend-night hours in R2, and the test settings). They are not data, and the sample sizes above depend on them.
