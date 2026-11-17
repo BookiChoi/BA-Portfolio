@@ -1,0 +1,73 @@
+
+======== R1 scenarios (nuisance at base: sigma_b=0.20, sigma_w=0.40)
+low {'itt': 0.0, 'se': 0.0577, 'mde_itt': np.float64(0.1617), 'mde_followers': np.float64(0.5392), 'p_success': np.float64(0.025), 'p_detect_itt': 0.025, 'n': 20, 'follow': 0.3, 'eff': 0.0, 'weeks': 8, 'resid_sd': 0.1826, 'rho': 0.6667}
+base {'itt': 0.015, 'se': 0.0365, 'mde_itt': np.float64(0.1023), 'mde_followers': np.float64(0.2046), 'p_success': np.float64(0.0607), 'p_detect_itt': np.float64(0.0607), 'n': 50, 'follow': 0.5, 'eff': 0.03, 'weeks': 8, 'resid_sd': 0.1826, 'rho': 0.6667}
+high {'itt': 0.056, 'se': 0.0216, 'mde_itt': np.float64(0.0605), 'mde_followers': np.float64(0.0865), 'p_success': np.float64(0.7364), 'p_detect_itt': np.float64(0.7364), 'n': 100, 'follow': 0.7, 'eff': 0.08, 'weeks': 12, 'resid_sd': 0.1528, 'rho': 0.75}
+
+======== R1 required sample size per group (alpha .05 two-sided, power .80, ANCOVA, base nuisance)
+weeks=8 detectable ITT delta=0.030: n per group = 581
+weeks=8 detectable ITT delta=0.015: n per group = 2326
+weeks=8 detectable ITT delta=0.056: n per group = 167
+weeks=12 detectable ITT delta=0.030: n per group = 407
+weeks=12 detectable ITT delta=0.015: n per group = 1628
+weeks=12 detectable ITT delta=0.056: n per group = 117
+MDE (ITT) at human's group sizes, 8 weeks: {20: np.float64(0.1617), 50: np.float64(0.1023), 100: np.float64(0.0723)}
+MDE (ITT) at human's group sizes, 12 weeks: {20: np.float64(0.1353), 50: np.float64(0.0856), 100: np.float64(0.0605)}
+
+======== R1 simulation cross-check of the formula (base scenario, 4000 reps)
+low: formula p_success=0.025 sim=0.030; formula SE=0.0577 sim SD=0.0584
+base: formula p_success=0.061 sim=0.062; formula SE=0.0365 sim SD=0.0373
+high: formula p_success=0.736 sim=0.737; formula SE=0.0216 sim SD=0.0214
+
+======== R1 sensitivity (one at a time, others at base): ITT effect and P(success)
+effect among followers              low=0.0 high=0.08  P(success) low=0.025 high=0.194 swing=0.169
+follow share                        low=0.3 high=0.7  P(success) low=0.043 high=0.083 swing=0.040
+drivers per group                   low=20 high=100  P(success) low=0.045 high=0.084 swing=0.039
+weekly SD (placeholder)             low=0.3 high=0.5  P(success) low=0.076 high=0.053 swing=0.024
+pilot weeks                         low=8 high=12  P(success) low=0.061 high=0.071 swing=0.010
+between-driver SD (placeholder)     low=0.15 high=0.3  P(success) low=0.063 high=0.059 swing=0.004
+Base P(success) with all at base: 0.0607
+Compliance needed for ITT=3% at effect among followers 3/8%:  {0.03: 1.0, 0.08: 0.375}
+
+======== R2 scenarios
+low {'N': 100, 'use': 0.4, 'pp': 0.0, 'users': 40.0, 'group_shift_A': 0.0, 'group_shift_B': 0.0, 'meets_2pp_A': False, 'meets_2pp_B': False}
+base {'N': 300, 'use': 0.6, 'pp': 2.0, 'users': 180.0, 'group_shift_A': 1.2, 'group_shift_B': 2.0, 'meets_2pp_A': False, 'meets_2pp_B': True}
+high {'N': 600, 'use': 0.8, 'pp': 5.0, 'users': 480.0, 'group_shift_A': 4.0, 'group_shift_B': 5.0, 'meets_2pp_A': True, 'meets_2pp_B': True}
+MDE (pp) cohort_vs_previous_N100: 3.17  (SD=8.0 pp)
+MDE (pp) randomised_split_N100: 4.48  (SD=8.0 pp)
+MDE (pp) cohort_vs_previous_N300: 1.83  (SD=8.0 pp)
+MDE (pp) randomised_split_N300: 2.59  (SD=8.0 pp)
+MDE (pp) cohort_vs_previous_N600: 1.29  (SD=8.0 pp)
+MDE (pp) randomised_split_N600: 1.83  (SD=8.0 pp)
+SD=5.0 pp, detect 2.0 pp: n per arm = 98
+SD=5.0 pp, detect 1.2 pp: n per arm = 273
+SD=5.0 pp, detect 5.0 pp: n per arm = 16
+SD=8.0 pp, detect 2.0 pp: n per arm = 251
+SD=8.0 pp, detect 1.2 pp: n per arm = 698
+SD=8.0 pp, detect 5.0 pp: n per arm = 40
+SD=12.0 pp, detect 2.0 pp: n per arm = 565
+SD=12.0 pp, detect 1.2 pp: n per arm = 1570
+SD=12.0 pp, detect 5.0 pp: n per arm = 90
+
+======== R2 sensitivity of group-level shift (reading A), others at base
+{'param': 'use share', 'low': 0.4, 'high': 0.8, 'group_pp_low': 0.8, 'group_pp_high': 1.6, 'driver_equiv_low': 2.4, 'driver_equiv_high': 4.8}
+{'param': 'shift among users (pp)', 'low': 0.0, 'high': 5.0, 'group_pp_low': 0.0, 'group_pp_high': 3.0, 'driver_equiv_low': 0.0, 'driver_equiv_high': 9.0}
+{'param': 'new drivers per quarter', 'low': 100, 'high': 600, 'group_pp_low': 1.2, 'group_pp_high': 1.2, 'driver_equiv_low': 1.2, 'driver_equiv_high': 7.2}
+
+======== R2 share vs count break-even (weekend daily volume as a fraction of weekday daily volume)
+yellow {'best': 0.444, 'mid': 0.526, 'worst': 0.621}
+hvfhv {'best': 0.568, 'mid': 0.633, 'worst': 0.703}
+
+======== R3 effort and delay
+{'days': (5, 10, 20), 'delay': (2, 4, 8)}
+
+======== R3 what the follow-up could show: Q4 margin if the 2023-2024 drift continues for 2 years
+yellow k= 1.0 {'resid': -1.81, 'lo': np.float64(-2.74), 'hi': np.float64(-0.88)}
+yellow k= 1.5 {'resid': -1.72, 'lo': np.float64(-2.81), 'hi': np.float64(-0.63)}
+yellow k= 2.0 {'resid': -1.63, 'lo': np.float64(-2.92), 'hi': np.float64(-0.34)}
+hvfhv k= 1.0 {'resid': -2.57, 'lo': np.float64(-3.29), 'hi': np.float64(-1.85)}
+hvfhv k= 1.5 {'resid': -1.72, 'lo': np.float64(-2.63), 'hi': np.float64(-0.82)}
+hvfhv k= 2.0 {'resid': -0.88, 'lo': np.float64(-2.0), 'hi': np.float64(0.24)}
+Note: yellow Jun-Sep margin about 0 (06 F3: 2026 vs 2024 -0.40 pp, drift -0.34 pp).
+
+wrote /Users/booki/Desktop/BA-Portfolio/Projects/nyc-congestion-pricing/outputs/impact_results.json

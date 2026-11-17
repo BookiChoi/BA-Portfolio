@@ -1,0 +1,308 @@
+== zone-ID check across years (IDs not in lookup; null = -1) ==
+service  year field     trips  distinct_ids ids_not_in_lookup  trips_with_such_ids  share_of_trips  null_id_trips
+ yellow  2023    PU  28071056           262                []                    0             0.0              0
+ yellow  2023    DO  28071056           262                []                    0             0.0              0
+ yellow  2024    PU  30020913           262                []                    0             0.0              0
+ yellow  2024    DO  30020913           262                []                    0             0.0              0
+ yellow  2026    PU  33579231           262                []                    0             0.0              0
+ yellow  2026    DO  33579231           262                []                    0             0.0              0
+  fhvhv  2023    PU 172518143           262                []                    0             0.0              0
+  fhvhv  2023    DO 172518143           262                []                    0             0.0              0
+  fhvhv  2024    PU 178385782           262                []                    0             0.0              0
+  fhvhv  2024    DO 178385782           263                []                    0             0.0              0
+  fhvhv  2026    PU 189174392           262                []                    0             0.0              0
+  fhvhv  2026    DO 189174392           264                []                    0             0.0              0
+
+== Q4 results: shares are fractions; delta/margin rows are fractions (x100 = pp) ==
+service        row_type               period    share  share_lo  share_hi  trips_in_month_files  valid_denominator  in_zone_trips  excluded_invalid_id_trips  excluded_share  weeks  p_one_sided_raw                    decision  p_holm
+ yellow          period                 2023  0.73833   0.73469   0.74199            28071056.0         27583219.0     20365564.0                   487837.0         0.01738   40.0              NaN                         NaN     NaN
+ yellow          period                 2024  0.73652   0.73306   0.74007            30020913.0         29706150.0     21879062.0                   314763.0         0.01048   40.0              NaN                         NaN     NaN
+ yellow          period                 2026  0.71665   0.70975   0.72360            33579231.0         33351811.0     23901494.0                   227420.0         0.00677   40.0              NaN                         NaN     NaN
+ yellow           delta                 main -0.01987  -0.02772  -0.01229                   NaN                NaN            NaN                        NaN             NaN    NaN           0.0005                         NaN   0.001
+ yellow           delta                drift -0.00182  -0.00699   0.00333                   NaN                NaN            NaN                        NaN             NaN    NaN              NaN                         NaN     NaN
+ yellow          margin abs(main)-abs(drift)  0.01805   0.00736   0.02602                   NaN                NaN            NaN                        NaN             NaN    NaN              NaN real shift: review guidance     NaN
+ yellow relative_change       main/share2024 -0.02698  -0.03759  -0.01672                   NaN                NaN            NaN                        NaN             NaN    NaN              NaN                         NaN     NaN
+  fhvhv          period                 2023  0.36428   0.36073   0.36779           172518143.0        165499501.0     60287423.0                  7018642.0         0.04068   40.0              NaN                         NaN     NaN
+  fhvhv          period                 2024  0.34736   0.34374   0.35058           178385782.0        171045361.0     59413766.0                  7340421.0         0.04115   40.0              NaN                         NaN     NaN
+  fhvhv          period                 2026  0.30477   0.30074   0.30867           189174392.0        180655562.0     55057545.0                  8518830.0         0.04503   40.0              NaN                         NaN     NaN
+  fhvhv           delta                 main -0.04259  -0.04796  -0.03754                   NaN                NaN            NaN                        NaN             NaN    NaN           0.0005                         NaN   0.001
+  fhvhv           delta                drift -0.01692  -0.02182  -0.01187                   NaN                NaN            NaN                        NaN             NaN    NaN              NaN                         NaN     NaN
+  fhvhv          margin abs(main)-abs(drift)  0.02567   0.01728   0.03457                   NaN                NaN            NaN                        NaN             NaN    NaN              NaN real shift: review guidance     NaN
+  fhvhv relative_change       main/share2024 -0.12262  -0.13709  -0.10861                   NaN                NaN            NaN                        NaN             NaN    NaN              NaN                         NaN     NaN
+
+== monthly shares ==
+service  year  month   share  valid_denominator  in_zone_trips  excluded_share
+ yellow  2023      1 0.72228            3008475        2172948         0.01899
+ yellow  2023      2 0.73676            2860470        2107486         0.01834
+ yellow  2023      3 0.73889            3350174        2475402         0.01569
+ yellow  2023      4 0.73485            3233429        2376079         0.01664
+ yellow  2023      5 0.73117            3455000        2526185         0.01668
+ yellow  2023      6 0.73980            3250071        2404402         0.01727
+ yellow  2023      7 0.75556            2854425        2156683         0.01810
+ yellow  2023      8 0.75236            2774181        2087177         0.01770
+ yellow  2023      9 0.73622            2796994        2059202         0.01746
+ yellow  2024      1 0.71886            2933082        2108466         0.01063
+ yellow  2024      2 0.73486            2978538        2188812         0.00963
+ yellow  2024      3 0.74278            3547231        2634799         0.00987
+ yellow  2024      4 0.73268            3478521        2548660         0.01018
+ yellow  2024      5 0.72883            3685075        2685804         0.01040
+ yellow  2024      6 0.74352            3500631        2602794         0.01088
+ yellow  2024      7 0.75020            3040770        2281175         0.01173
+ yellow  2024      8 0.74450            2944699        2192319         0.01156
+ yellow  2024      9 0.73277            3597603        2636233         0.00974
+ yellow  2026      1 0.69294            3699633        2563634         0.00678
+ yellow  2026      2 0.69401            3377963        2344344         0.00644
+ yellow  2026      3 0.70368            3928567        2764445         0.00604
+ yellow  2026      4 0.70625            3807605        2689122         0.00617
+ yellow  2026      5 0.70208            4065563        2854346         0.00617
+ yellow  2026      6 0.72689            3810265        2769653         0.00703
+ yellow  2026      7 0.74913            3502204        2623598         0.00789
+ yellow  2026      8 0.74742            3309928        2473891         0.00802
+ yellow  2026      9 0.73205            3850083        2818461         0.00669
+  fhvhv  2023      1 0.36647           17754792        6506606         0.03919
+  fhvhv  2023      2 0.37435           17277679        6467972         0.03804
+  fhvhv  2023      3 0.36288           19612346        7116956         0.03925
+  fhvhv  2023      4 0.36992           18364583        6793442         0.04076
+  fhvhv  2023      5 0.36030           19005780        6847869         0.04242
+  fhvhv  2023      6 0.36230           18549494        6720552         0.04219
+  fhvhv  2023      7 0.36227           18337264        6642979         0.04155
+  fhvhv  2023      8 0.34984           17551192        6140163         0.04208
+  fhvhv  2023      9 0.37020           19046371        7050884         0.04054
+  fhvhv  2024      1 0.35217           18922250        6663792         0.03772
+  fhvhv  2024      2 0.35419           18605132        6589709         0.03895
+  fhvhv  2024      3 0.34418           20447295        7037595         0.03917
+  fhvhv  2024      4 0.34930           18927002        6611131         0.04085
+  fhvhv  2024      5 0.34794           19831267        6900033         0.04218
+  fhvhv  2024      6 0.34467           19258354        6637699         0.04298
+  fhvhv  2024      7 0.34551           18374564        6348618         0.04214
+  fhvhv  2024      8 0.33744           18317736        6181201         0.04238
+  fhvhv  2024      9 0.35095           18361761        6443988         0.04415
+  fhvhv  2026      1 0.29897           20091598        6006699         0.04053
+  fhvhv  2026      2 0.29765           19052772        5670992         0.04140
+  fhvhv  2026      3 0.30016           21105094        6335003         0.04322
+  fhvhv  2026      4 0.31376           20064169        6295336         0.04438
+  fhvhv  2026      5 0.30992           21105981        6541124         0.04609
+  fhvhv  2026      6 0.29859           19787240        5908359         0.04759
+  fhvhv  2026      7 0.31034           19942049        6188813         0.04680
+  fhvhv  2026      8 0.29648           19526180        5789120         0.04720
+  fhvhv  2026      9 0.31641           19980479        6322099         0.04799
+
+== S4 sensitivity (all trips as denominator) ==
+service  share2023_S4  share2024_S4  share2026_S4  delta_main_S4  delta_drift_S4  margin_S4  margin_S4_lo  margin_S4_hi decision_S4
+ yellow       0.72900       0.73215        0.7140       -0.01815         0.00315    0.01500       0.00699       0.02204  real shift
+  fhvhv       0.36412       0.34713        0.3069       -0.04023        -0.01698    0.02325       0.01467       0.03232  real shift
+
+== fee cross-check ==
+                                             0          1
+service                                 yellow      fhvhv
+trips                                 46494334  253409771
+fee_positive                          33517577   82792577
+fee_zero_or_neg                       12976757  170617194
+fee_null                                     0          0
+in_zone_trips                         33141762   78855652
+fee_pos_and_in_zone                   32171123   78116081
+i_share_of_fee_trips_with_inzone_end   0.95983    0.94352
+i_lo                                   0.95934    0.94266
+i_hi                                   0.96033    0.94427
+ii_share_of_inzone_trips_with_fee      0.97071    0.99062
+ii_lo                                  0.96348    0.98971
+ii_hi                                   0.9767     0.9914
+flag_i_below_80pct                       False      False
+
+yellow: CRZ-list zones with fee share of pickups < 50%: 0
+Empty DataFrame
+Columns: [pu, zone, pickups, fee_share]
+Index: []
+yellow: zones outside the list with fee share > 50%: 9
+ pu                                          zone   borough  pickups  fee_share
+ 43                                  Central Park Manhattan   404495     0.5988
+ 66                            DUMBO/Vinegar Hill  Brooklyn    44563     0.5224
+105 Governor's Island/Ellis Island/Liberty Island Manhattan        9     0.8889
+138                             LaGuardia Airport    Queens   840574     0.5021
+141                               Lenox Hill West Manhattan   750104     0.5071
+142                           Lincoln Square East Manhattan   959153     0.5904
+143                           Lincoln Square West Manhattan   395089     0.5410
+199                                 Rikers Island     Bronx       22     0.6364
+237                         Upper East Side South Manhattan  1479906     0.5225
+
+fhvhv: CRZ-list zones with fee share of pickups < 50%: 0
+Empty DataFrame
+Columns: [pu, zone, pickups, fee_share]
+Index: []
+fhvhv: zones outside the list with fee share > 50%: 7
+ pu                                          zone   borough  pickups  fee_share
+ 43                                  Central Park Manhattan   266670     0.6275
+105 Governor's Island/Ellis Island/Liberty Island Manhattan       29     0.8276
+140                               Lenox Hill East Manhattan  1016955     0.5344
+141                               Lenox Hill West Manhattan  1112200     0.5810
+142                           Lincoln Square East Manhattan  1143580     0.6842
+143                           Lincoln Square West Manhattan   830287     0.6332
+237                         Upper East Side South Manhattan  1441262     0.6437
+
+== supplementary: 15 largest gains / losses outside the list ==
+service    kind direction  zone_id                                          zone       borough  share2024  share2026  delta_pp
+  fhvhv dropoff      gain       76                                 East New York      Brooklyn     0.0112     0.0124    0.1182
+  fhvhv dropoff      gain       82                                      Elmhurst        Queens     0.0068     0.0080    0.1123
+  fhvhv dropoff      gain      130                                       Jamaica        Queens     0.0079     0.0088    0.0886
+  fhvhv dropoff      gain      168                        Mott Haven/Port Morris         Bronx     0.0063     0.0072    0.0874
+  fhvhv dropoff      gain       95                                  Forest Hills        Queens     0.0071     0.0079    0.0761
+  fhvhv dropoff      gain      145                Long Island City/Hunters Point        Queens     0.0085     0.0092    0.0732
+  fhvhv dropoff      gain      216                              South Ozone Park        Queens     0.0056     0.0063    0.0723
+  fhvhv dropoff      gain      129                               Jackson Heights        Queens     0.0072     0.0079    0.0655
+  fhvhv dropoff      gain      228                              Sunset Park West      Brooklyn     0.0052     0.0059    0.0624
+  fhvhv dropoff      gain       92                                      Flushing        Queens     0.0052     0.0058    0.0622
+  fhvhv dropoff      gain      247                                West Concourse         Bronx     0.0049     0.0055    0.0602
+  fhvhv dropoff      gain       14                                     Bay Ridge      Brooklyn     0.0056     0.0062    0.0601
+  fhvhv dropoff      gain       22                              Bensonhurst West      Brooklyn     0.0033     0.0039    0.0588
+  fhvhv dropoff      gain       39                                      Canarsie      Brooklyn     0.0073     0.0078    0.0537
+  fhvhv dropoff      gain      213                         Soundview/Castle Hill         Bronx     0.0048     0.0053    0.0523
+  fhvhv dropoff      loss      132                                   JFK Airport        Queens     0.0226     0.0200   -0.2640
+  fhvhv dropoff      loss      138                             LaGuardia Airport        Queens     0.0224     0.0214   -0.1051
+  fhvhv dropoff      loss      236                         Upper East Side North     Manhattan     0.0073     0.0065   -0.0783
+  fhvhv dropoff      loss      142                           Lincoln Square East     Manhattan     0.0067     0.0059   -0.0745
+  fhvhv dropoff      loss      239                         Upper West Side South     Manhattan     0.0059     0.0053   -0.0628
+  fhvhv dropoff      loss      141                               Lenox Hill West     Manhattan     0.0058     0.0053   -0.0454
+  fhvhv dropoff      loss      143                           Lincoln Square West     Manhattan     0.0040     0.0036   -0.0439
+  fhvhv dropoff      loss      263                                Yorkville West     Manhattan     0.0051     0.0047   -0.0419
+  fhvhv dropoff      loss       75                             East Harlem South     Manhattan     0.0069     0.0065   -0.0410
+  fhvhv dropoff      loss      255                     Williamsburg (North Side)      Brooklyn     0.0098     0.0094   -0.0401
+  fhvhv dropoff      loss      244                      Washington Heights South     Manhattan     0.0079     0.0076   -0.0376
+  fhvhv dropoff      loss      238                         Upper West Side North     Manhattan     0.0048     0.0045   -0.0362
+  fhvhv dropoff      loss       80                             East Williamsburg      Brooklyn     0.0082     0.0078   -0.0325
+  fhvhv dropoff      loss      140                               Lenox Hill East     Manhattan     0.0063     0.0060   -0.0309
+  fhvhv dropoff      loss       17                                       Bedford      Brooklyn     0.0089     0.0086   -0.0291
+  fhvhv  pickup      gain       76                                 East New York      Brooklyn     0.0108     0.0119    0.1164
+  fhvhv  pickup      gain       82                                      Elmhurst        Queens     0.0068     0.0078    0.1063
+  fhvhv  pickup      gain      130                                       Jamaica        Queens     0.0074     0.0084    0.1053
+  fhvhv  pickup      gain      145                Long Island City/Hunters Point        Queens     0.0083     0.0091    0.0832
+  fhvhv  pickup      gain      168                        Mott Haven/Port Morris         Bronx     0.0061     0.0069    0.0816
+  fhvhv  pickup      gain       95                                  Forest Hills        Queens     0.0066     0.0074    0.0764
+  fhvhv  pickup      gain       92                                      Flushing        Queens     0.0050     0.0057    0.0672
+  fhvhv  pickup      gain      228                              Sunset Park West      Brooklyn     0.0048     0.0054    0.0610
+  fhvhv  pickup      gain      129                               Jackson Heights        Queens     0.0076     0.0082    0.0605
+  fhvhv  pickup      gain       22                              Bensonhurst West      Brooklyn     0.0032     0.0038    0.0586
+  fhvhv  pickup      gain       14                                     Bay Ridge      Brooklyn     0.0052     0.0058    0.0580
+  fhvhv  pickup      gain      247                                West Concourse         Bronx     0.0050     0.0056    0.0561
+  fhvhv  pickup      gain      254                      Williamsbridge/Olinville         Bronx     0.0048     0.0053    0.0528
+  fhvhv  pickup      gain      213                         Soundview/Castle Hill         Bronx     0.0047     0.0052    0.0523
+  fhvhv  pickup      gain      173                                  North Corona        Queens     0.0023     0.0028    0.0517
+  fhvhv  pickup      loss      132                                   JFK Airport        Queens     0.0185     0.0164   -0.2138
+  fhvhv  pickup      loss      142                           Lincoln Square East     Manhattan     0.0069     0.0060   -0.0851
+  fhvhv  pickup      loss      239                         Upper West Side South     Manhattan     0.0063     0.0055   -0.0793
+  fhvhv  pickup      loss      236                         Upper East Side North     Manhattan     0.0071     0.0063   -0.0789
+  fhvhv  pickup      loss      143                           Lincoln Square West     Manhattan     0.0050     0.0044   -0.0659
+  fhvhv  pickup      loss      141                               Lenox Hill West     Manhattan     0.0065     0.0059   -0.0628
+  fhvhv  pickup      loss      140                               Lenox Hill East     Manhattan     0.0059     0.0054   -0.0519
+  fhvhv  pickup      loss      238                         Upper West Side North     Manhattan     0.0052     0.0047   -0.0510
+  fhvhv  pickup      loss      263                                Yorkville West     Manhattan     0.0054     0.0049   -0.0506
+  fhvhv  pickup      loss      255                     Williamsburg (North Side)      Brooklyn     0.0103     0.0098   -0.0504
+  fhvhv  pickup      loss      262                                Yorkville East     Manhattan     0.0036     0.0032   -0.0416
+  fhvhv  pickup      loss       75                             East Harlem South     Manhattan     0.0065     0.0061   -0.0407
+  fhvhv  pickup      loss       80                             East Williamsburg      Brooklyn     0.0082     0.0078   -0.0335
+  fhvhv  pickup      loss       17                                       Bedford      Brooklyn     0.0083     0.0080   -0.0329
+  fhvhv  pickup      loss      151                              Manhattan Valley     Manhattan     0.0030     0.0027   -0.0329
+ yellow dropoff      gain      244                      Washington Heights South     Manhattan     0.0034     0.0051    0.1778
+ yellow dropoff      gain       37                                Bushwick South      Brooklyn     0.0011     0.0024    0.1313
+ yellow dropoff      gain       42                          Central Harlem North     Manhattan     0.0043     0.0055    0.1266
+ yellow dropoff      gain      112                                    Greenpoint      Brooklyn     0.0021     0.0034    0.1257
+ yellow dropoff      gain      116                              Hamilton Heights     Manhattan     0.0025     0.0036    0.1086
+ yellow dropoff      gain       61                           Crown Heights North      Brooklyn     0.0016     0.0026    0.1016
+ yellow dropoff      gain      243                      Washington Heights North     Manhattan     0.0020     0.0030    0.0966
+ yellow dropoff      gain       93                  Flushing Meadows-Corona Park        Queens     0.0005     0.0014    0.0902
+ yellow dropoff      gain        7                                       Astoria        Queens     0.0024     0.0033    0.0878
+ yellow dropoff      gain      225                            Stuyvesant Heights      Brooklyn     0.0009     0.0017    0.0811
+ yellow dropoff      gain      255                     Williamsburg (North Side)      Brooklyn     0.0024     0.0032    0.0805
+ yellow dropoff      gain       36                                Bushwick North      Brooklyn     0.0007     0.0015    0.0795
+ yellow dropoff      gain      256                     Williamsburg (South Side)      Brooklyn     0.0021     0.0029    0.0793
+ yellow dropoff      gain      166                           Morningside Heights     Manhattan     0.0071     0.0078    0.0751
+ yellow dropoff      gain       80                             East Williamsburg      Brooklyn     0.0013     0.0020    0.0728
+ yellow dropoff      loss      132                                   JFK Airport        Queens     0.0117     0.0086   -0.3110
+ yellow dropoff      loss      236                         Upper East Side North     Manhattan     0.0432     0.0406   -0.2640
+ yellow dropoff      loss      138                             LaGuardia Airport        Queens     0.0119     0.0093   -0.2541
+ yellow dropoff      loss       43                                  Central Park     Manhattan     0.0112     0.0089   -0.2342
+ yellow dropoff      loss      142                           Lincoln Square East     Manhattan     0.0277     0.0256   -0.2111
+ yellow dropoff      loss      239                         Upper West Side South     Manhattan     0.0276     0.0257   -0.1845
+ yellow dropoff      loss      237                         Upper East Side South     Manhattan     0.0413     0.0399   -0.1478
+ yellow dropoff      loss      141                               Lenox Hill West     Manhattan     0.0260     0.0248   -0.1199
+ yellow dropoff      loss      238                         Upper West Side North     Manhattan     0.0219     0.0208   -0.1075
+ yellow dropoff      loss        1                                Newark Airport           EWR     0.0027     0.0019   -0.0822
+ yellow dropoff      loss      143                           Lincoln Square West     Manhattan     0.0147     0.0143   -0.0456
+ yellow dropoff      loss      263                                Yorkville West     Manhattan     0.0204     0.0202   -0.0236
+ yellow dropoff      loss      151                              Manhattan Valley     Manhattan     0.0089     0.0087   -0.0192
+ yellow dropoff      loss       70                                 East Elmhurst        Queens     0.0006     0.0005   -0.0053
+ yellow dropoff      loss       10                                  Baisley Park        Queens     0.0010     0.0010   -0.0023
+ yellow  pickup      gain       42                          Central Harlem North     Manhattan     0.0015     0.0036    0.2147
+ yellow  pickup      gain       41                                Central Harlem     Manhattan     0.0029     0.0050    0.2102
+ yellow  pickup      gain      244                      Washington Heights South     Manhattan     0.0008     0.0026    0.1784
+ yellow  pickup      gain      255                     Williamsburg (North Side)      Brooklyn     0.0008     0.0025    0.1761
+ yellow  pickup      gain       75                             East Harlem South     Manhattan     0.0065     0.0082    0.1696
+ yellow  pickup      gain       74                             East Harlem North     Manhattan     0.0027     0.0044    0.1677
+ yellow  pickup      gain      166                           Morningside Heights     Manhattan     0.0049     0.0065    0.1605
+ yellow  pickup      gain        7                                       Astoria        Queens     0.0007     0.0022    0.1534
+ yellow  pickup      gain      116                              Hamilton Heights     Manhattan     0.0010     0.0023    0.1396
+ yellow  pickup      gain       37                                Bushwick South      Brooklyn     0.0003     0.0016    0.1308
+ yellow  pickup      gain      112                                    Greenpoint      Brooklyn     0.0004     0.0017    0.1294
+ yellow  pickup      gain      145                Long Island City/Hunters Point        Queens     0.0011     0.0024    0.1266
+ yellow  pickup      gain      256                     Williamsburg (South Side)      Brooklyn     0.0005     0.0018    0.1242
+ yellow  pickup      gain       80                             East Williamsburg      Brooklyn     0.0005     0.0015    0.1024
+ yellow  pickup      gain       61                           Crown Heights North      Brooklyn     0.0006     0.0016    0.0961
+ yellow  pickup      loss      132                                   JFK Airport        Queens     0.0492     0.0398   -0.9386
+ yellow  pickup      loss      138                             LaGuardia Airport        Queens     0.0320     0.0251   -0.6882
+ yellow  pickup      loss       43                                  Central Park     Manhattan     0.0157     0.0121   -0.3612
+ yellow  pickup      loss      142                           Lincoln Square East     Manhattan     0.0315     0.0286   -0.2911
+ yellow  pickup      loss      236                         Upper East Side North     Manhattan     0.0415     0.0395   -0.1973
+ yellow  pickup      loss      239                         Upper West Side South     Manhattan     0.0277     0.0257   -0.1948
+ yellow  pickup      loss       70                                 East Elmhurst        Queens     0.0040     0.0021   -0.1877
+ yellow  pickup      loss      237                         Upper East Side South     Manhattan     0.0455     0.0441   -0.1364
+ yellow  pickup      loss      238                         Upper West Side North     Manhattan     0.0192     0.0190   -0.0248
+ yellow  pickup      loss      141                               Lenox Hill West     Manhattan     0.0226     0.0224   -0.0233
+ yellow  pickup      loss        1                                Newark Airport           EWR     0.0001     0.0001   -0.0008
+ yellow  pickup      loss      154               Marine Park/Floyd Bennett Field      Brooklyn     0.0000     0.0000   -0.0005
+ yellow  pickup      loss      103 Governor's Island/Ellis Island/Liberty Island     Manhattan     0.0000     0.0000    0.0000
+ yellow  pickup      loss      104 Governor's Island/Ellis Island/Liberty Island     Manhattan     0.0000     0.0000    0.0000
+ yellow  pickup      loss      110                              Great Kills Park Staten Island     0.0000     0.0000    0.0000
+
+== neighbouring zones (geometry-based, plan open item B) ==
+service    kind  zone_id                  zone  share2024  share2026  delta_pp  relative_change
+ yellow  pickup       43          Central Park    0.01568    0.01207  -0.36123         -0.23041
+ yellow  pickup      140       Lenox Hill East    0.01972    0.02014   0.04228          0.02144
+ yellow  pickup      141       Lenox Hill West    0.02261    0.02237  -0.02327         -0.01029
+ yellow  pickup      142   Lincoln Square East    0.03152    0.02861  -0.29106         -0.09234
+ yellow  pickup      143   Lincoln Square West    0.01123    0.01179   0.05535          0.04928
+ yellow  pickup      237 Upper East Side South    0.04551    0.04414  -0.13635         -0.02996
+ yellow dropoff       43          Central Park    0.01121    0.00887  -0.23422         -0.20888
+ yellow dropoff      140       Lenox Hill East    0.02022    0.02028   0.00541          0.00267
+ yellow dropoff      141       Lenox Hill West    0.02601    0.02481  -0.11986         -0.04608
+ yellow dropoff      142   Lincoln Square East    0.02769    0.02558  -0.21110         -0.07624
+ yellow dropoff      143   Lincoln Square West    0.01472    0.01427  -0.04559         -0.03096
+ yellow dropoff      237 Upper East Side South    0.04134    0.03986  -0.14780         -0.03575
+  fhvhv  pickup       43          Central Park    0.00150    0.00141  -0.00904         -0.06024
+  fhvhv  pickup      140       Lenox Hill East    0.00590    0.00538  -0.05193         -0.08809
+  fhvhv  pickup      141       Lenox Hill West    0.00651    0.00588  -0.06285         -0.09657
+  fhvhv  pickup      142   Lincoln Square East    0.00690    0.00605  -0.08514         -0.12345
+  fhvhv  pickup      143   Lincoln Square West    0.00505    0.00439  -0.06587         -0.13050
+  fhvhv  pickup      237 Upper East Side South    0.00788    0.00762  -0.02615         -0.03318
+  fhvhv dropoff       43          Central Park    0.00217    0.00194  -0.02333         -0.10735
+  fhvhv dropoff      140       Lenox Hill East    0.00629    0.00599  -0.03085         -0.04902
+  fhvhv dropoff      141       Lenox Hill West    0.00579    0.00533  -0.04538         -0.07841
+  fhvhv dropoff      142   Lincoln Square East    0.00667    0.00593  -0.07447         -0.11160
+  fhvhv dropoff      143   Lincoln Square West    0.00401    0.00357  -0.04387         -0.10945
+  fhvhv dropoff      237 Upper East Side South    0.00785    0.00765  -0.02078         -0.02645
+
+neighbour zones combined share (pickup / dropoff):
+                 share2024  share2026  delta_pp
+service kind                                   
+fhvhv   dropoff    0.03279    0.03040  -0.23869
+        pickup     0.03373    0.03072  -0.30098
+yellow  dropoff    0.14120    0.13367  -0.75315
+        pickup     0.14626    0.13912  -0.71428
+
+CRZ-list zones combined share (pickup / dropoff, among valid IDs):
+                 share2024  share2026  delta_pp
+service kind                                   
+fhvhv   dropoff    0.24592    0.21434  -3.15871
+        pickup     0.26424    0.23447  -2.97686
+yellow  dropoff    0.56929    0.54622  -2.30684
+        pickup     0.58833    0.56303  -2.52998
+
+figures written to /Users/booki/Desktop/BA-Portfolio/Projects/nyc-congestion-pricing/outputs/q4

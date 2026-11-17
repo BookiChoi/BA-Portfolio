@@ -1,0 +1,348 @@
+service,daypart,coverage_frac,list_len,zone_id,zone,months_in_list,n_months,status
+yellow,all,0.5,17,237,Upper East Side South,12,12,standing
+yellow,all,0.5,17,161,Midtown Center,12,12,standing
+yellow,all,0.5,17,132,JFK Airport,12,12,standing
+yellow,all,0.5,17,236,Upper East Side North,12,12,standing
+yellow,all,0.5,17,186,Penn Station/Madison Sq West,12,12,standing
+yellow,all,0.5,17,162,Midtown East,12,12,standing
+yellow,all,0.5,17,142,Lincoln Square East,12,12,standing
+yellow,all,0.5,17,230,Times Sq/Theatre District,12,12,standing
+yellow,all,0.5,17,79,East Village,12,12,standing
+yellow,all,0.5,17,170,Murray Hill,12,12,standing
+yellow,all,0.5,17,234,Union Sq,12,12,standing
+yellow,all,0.5,17,239,Upper West Side South,12,12,standing
+yellow,all,0.5,17,68,East Chelsea,12,12,standing
+yellow,all,0.5,17,138,LaGuardia Airport,12,12,standing
+yellow,all,0.5,17,163,Midtown North,12,12,standing
+yellow,all,0.5,17,48,Clinton East,11,12,seasonal
+yellow,all,0.5,17,141,Lenox Hill West,9,12,seasonal
+yellow,overnight,0.5,15,79,East Village,12,12,standing
+yellow,overnight,0.5,15,249,West Village,12,12,standing
+yellow,overnight,0.5,15,148,Lower East Side,12,12,standing
+yellow,overnight,0.5,15,114,Greenwich Village South,12,12,standing
+yellow,overnight,0.5,15,132,JFK Airport,12,12,standing
+yellow,overnight,0.5,15,48,Clinton East,12,12,standing
+yellow,overnight,0.5,15,144,Little Italy/NoLiTa,12,12,standing
+yellow,overnight,0.5,15,230,Times Sq/Theatre District,12,12,standing
+yellow,overnight,0.5,15,186,Penn Station/Madison Sq West,12,12,standing
+yellow,overnight,0.5,15,68,East Chelsea,12,12,standing
+yellow,overnight,0.5,15,164,Midtown South,12,12,standing
+yellow,overnight,0.5,15,234,Union Sq,12,12,standing
+yellow,overnight,0.5,15,90,Flatiron,12,12,standing
+yellow,overnight,0.5,15,107,Gramercy,8,12,seasonal
+yellow,overnight,0.5,15,158,Meatpacking/West Village West,7,12,seasonal
+yellow,morning,0.5,18,236,Upper East Side North,12,12,standing
+yellow,morning,0.5,18,237,Upper East Side South,12,12,standing
+yellow,morning,0.5,18,186,Penn Station/Madison Sq West,12,12,standing
+yellow,morning,0.5,18,132,JFK Airport,12,12,standing
+yellow,morning,0.5,18,239,Upper West Side South,12,12,standing
+yellow,morning,0.5,18,262,Yorkville East,12,12,standing
+yellow,morning,0.5,18,162,Midtown East,12,12,standing
+yellow,morning,0.5,18,141,Lenox Hill West,12,12,standing
+yellow,morning,0.5,18,238,Upper West Side North,12,12,standing
+yellow,morning,0.5,18,140,Lenox Hill East,12,12,standing
+yellow,morning,0.5,18,263,Yorkville West,12,12,standing
+yellow,morning,0.5,18,142,Lincoln Square East,12,12,standing
+yellow,morning,0.5,18,170,Murray Hill,12,12,standing
+yellow,morning,0.5,18,161,Midtown Center,12,12,standing
+yellow,morning,0.5,18,48,Clinton East,12,12,standing
+yellow,morning,0.5,18,229,Sutton Place/Turtle Bay North,9,12,seasonal
+yellow,morning,0.5,18,230,Times Sq/Theatre District,6,12,seasonal
+yellow,morning,0.5,18,143,Lincoln Square West,6,12,seasonal
+yellow,midday,0.5,15,237,Upper East Side South,12,12,standing
+yellow,midday,0.5,15,236,Upper East Side North,12,12,standing
+yellow,midday,0.5,15,161,Midtown Center,12,12,standing
+yellow,midday,0.5,15,132,JFK Airport,12,12,standing
+yellow,midday,0.5,15,186,Penn Station/Madison Sq West,12,12,standing
+yellow,midday,0.5,15,239,Upper West Side South,12,12,standing
+yellow,midday,0.5,15,162,Midtown East,12,12,standing
+yellow,midday,0.5,15,138,LaGuardia Airport,12,12,standing
+yellow,midday,0.5,15,142,Lincoln Square East,12,12,standing
+yellow,midday,0.5,15,170,Murray Hill,12,12,standing
+yellow,midday,0.5,15,163,Midtown North,12,12,standing
+yellow,midday,0.5,15,141,Lenox Hill West,12,12,standing
+yellow,midday,0.5,15,140,Lenox Hill East,11,12,seasonal
+yellow,midday,0.5,15,68,East Chelsea,12,12,standing
+yellow,midday,0.5,15,230,Times Sq/Theatre District,8,12,seasonal
+yellow,evening,0.5,15,161,Midtown Center,12,12,standing
+yellow,evening,0.5,15,237,Upper East Side South,12,12,standing
+yellow,evening,0.5,15,236,Upper East Side North,12,12,standing
+yellow,evening,0.5,15,132,JFK Airport,12,12,standing
+yellow,evening,0.5,15,162,Midtown East,12,12,standing
+yellow,evening,0.5,15,142,Lincoln Square East,12,12,standing
+yellow,evening,0.5,15,163,Midtown North,12,12,standing
+yellow,evening,0.5,15,234,Union Sq,12,12,standing
+yellow,evening,0.5,15,230,Times Sq/Theatre District,12,12,standing
+yellow,evening,0.5,15,170,Murray Hill,12,12,standing
+yellow,evening,0.5,15,186,Penn Station/Madison Sq West,12,12,standing
+yellow,evening,0.5,15,68,East Chelsea,12,12,standing
+yellow,evening,0.5,15,239,Upper West Side South,12,12,standing
+yellow,evening,0.5,15,138,LaGuardia Airport,12,12,standing
+yellow,evening,0.5,15,246,West Chelsea/Hudson Yards,8,12,seasonal
+yellow,night,0.5,15,132,JFK Airport,12,12,standing
+yellow,night,0.5,15,161,Midtown Center,12,12,standing
+yellow,night,0.5,15,230,Times Sq/Theatre District,12,12,standing
+yellow,night,0.5,15,142,Lincoln Square East,12,12,standing
+yellow,night,0.5,15,237,Upper East Side South,12,12,standing
+yellow,night,0.5,15,79,East Village,12,12,standing
+yellow,night,0.5,15,249,West Village,12,12,standing
+yellow,night,0.5,15,234,Union Sq,12,12,standing
+yellow,night,0.5,15,186,Penn Station/Madison Sq West,12,12,standing
+yellow,night,0.5,15,162,Midtown East,12,12,standing
+yellow,night,0.5,15,48,Clinton East,12,12,standing
+yellow,night,0.5,15,68,East Chelsea,12,12,standing
+yellow,night,0.5,15,138,LaGuardia Airport,12,12,standing
+yellow,night,0.5,15,163,Midtown North,10,12,seasonal
+yellow,night,0.5,15,170,Murray Hill,6,12,seasonal
+fhvhv,all,0.4,43,138,LaGuardia Airport,12,12,standing
+fhvhv,all,0.4,43,132,JFK Airport,12,12,standing
+fhvhv,all,0.4,43,61,Crown Heights North,12,12,standing
+fhvhv,all,0.4,43,76,East New York,12,12,standing
+fhvhv,all,0.4,43,230,Times Sq/Theatre District,12,12,standing
+fhvhv,all,0.4,43,79,East Village,12,12,standing
+fhvhv,all,0.4,43,161,Midtown Center,12,12,standing
+fhvhv,all,0.4,43,37,Bushwick South,12,12,standing
+fhvhv,all,0.4,43,231,TriBeCa/Civic Center,12,12,standing
+fhvhv,all,0.4,43,246,West Chelsea/Hudson Yards,12,12,standing
+fhvhv,all,0.4,43,112,Greenpoint,12,12,standing
+fhvhv,all,0.4,43,68,East Chelsea,12,12,standing
+fhvhv,all,0.4,43,234,Union Sq,12,12,standing
+fhvhv,all,0.4,43,255,Williamsburg (North Side),12,12,standing
+fhvhv,all,0.4,43,7,Astoria,12,12,standing
+fhvhv,all,0.4,43,148,Lower East Side,12,12,standing
+fhvhv,all,0.4,43,181,Park Slope,12,12,standing
+fhvhv,all,0.4,43,164,Midtown South,12,12,standing
+fhvhv,all,0.4,43,145,Long Island City/Hunters Point,12,12,standing
+fhvhv,all,0.4,43,42,Central Harlem North,12,12,standing
+fhvhv,all,0.4,43,48,Clinton East,12,12,standing
+fhvhv,all,0.4,43,256,Williamsburg (South Side),12,12,standing
+fhvhv,all,0.4,43,130,Jamaica,12,12,standing
+fhvhv,all,0.4,43,249,West Village,12,12,standing
+fhvhv,all,0.4,43,170,Murray Hill,12,12,standing
+fhvhv,all,0.4,43,129,Jackson Heights,12,12,standing
+fhvhv,all,0.4,43,89,Flatbush/Ditmas Park,12,12,standing
+fhvhv,all,0.4,43,36,Bushwick North,12,12,standing
+fhvhv,all,0.4,43,17,Bedford,12,12,standing
+fhvhv,all,0.4,43,225,Stuyvesant Heights,12,12,standing
+fhvhv,all,0.4,43,237,Upper East Side South,11,12,seasonal
+fhvhv,all,0.4,43,82,Elmhurst,12,12,standing
+fhvhv,all,0.4,43,80,East Williamsburg,12,12,standing
+fhvhv,all,0.4,43,39,Canarsie,12,12,standing
+fhvhv,all,0.4,43,163,Midtown North,12,12,standing
+fhvhv,all,0.4,43,188,Prospect-Lefferts Gardens,12,12,standing
+fhvhv,all,0.4,43,162,Midtown East,12,12,standing
+fhvhv,all,0.4,43,244,Washington Heights South,12,12,standing
+fhvhv,all,0.4,43,95,Forest Hills,12,12,standing
+fhvhv,all,0.4,43,74,East Harlem North,10,12,seasonal
+fhvhv,all,0.4,43,97,Fort Greene,10,12,seasonal
+fhvhv,all,0.4,43,168,Mott Haven/Port Morris,8,12,seasonal
+fhvhv,all,0.4,43,107,Gramercy,7,12,seasonal
+fhvhv,overnight,0.4,33,79,East Village,12,12,standing
+fhvhv,overnight,0.4,33,148,Lower East Side,12,12,standing
+fhvhv,overnight,0.4,33,37,Bushwick South,12,12,standing
+fhvhv,overnight,0.4,33,36,Bushwick North,12,12,standing
+fhvhv,overnight,0.4,33,132,JFK Airport,12,12,standing
+fhvhv,overnight,0.4,33,255,Williamsburg (North Side),12,12,standing
+fhvhv,overnight,0.4,33,80,East Williamsburg,12,12,standing
+fhvhv,overnight,0.4,33,61,Crown Heights North,12,12,standing
+fhvhv,overnight,0.4,33,230,Times Sq/Theatre District,12,12,standing
+fhvhv,overnight,0.4,33,249,West Village,12,12,standing
+fhvhv,overnight,0.4,33,48,Clinton East,12,12,standing
+fhvhv,overnight,0.4,33,164,Midtown South,12,12,standing
+fhvhv,overnight,0.4,33,7,Astoria,12,12,standing
+fhvhv,overnight,0.4,33,256,Williamsburg (South Side),12,12,standing
+fhvhv,overnight,0.4,33,138,LaGuardia Airport,12,12,standing
+fhvhv,overnight,0.4,33,129,Jackson Heights,12,12,standing
+fhvhv,overnight,0.4,33,76,East New York,12,12,standing
+fhvhv,overnight,0.4,33,112,Greenpoint,12,12,standing
+fhvhv,overnight,0.4,33,234,Union Sq,12,12,standing
+fhvhv,overnight,0.4,33,225,Stuyvesant Heights,12,12,standing
+fhvhv,overnight,0.4,33,114,Greenwich Village South,12,12,standing
+fhvhv,overnight,0.4,33,198,Ridgewood,12,12,standing
+fhvhv,overnight,0.4,33,68,East Chelsea,12,12,standing
+fhvhv,overnight,0.4,33,42,Central Harlem North,12,12,standing
+fhvhv,overnight,0.4,33,145,Long Island City/Hunters Point,12,12,standing
+fhvhv,overnight,0.4,33,161,Midtown Center,12,12,standing
+fhvhv,overnight,0.4,33,82,Elmhurst,12,12,standing
+fhvhv,overnight,0.4,33,130,Jamaica,10,12,seasonal
+fhvhv,overnight,0.4,33,231,TriBeCa/Civic Center,11,12,seasonal
+fhvhv,overnight,0.4,33,144,Little Italy/NoLiTa,11,12,seasonal
+fhvhv,overnight,0.4,33,17,Bedford,12,12,standing
+fhvhv,overnight,0.4,33,216,South Ozone Park,10,12,seasonal
+fhvhv,overnight,0.4,33,181,Park Slope,8,12,seasonal
+fhvhv,morning,0.4,51,76,East New York,12,12,standing
+fhvhv,morning,0.4,51,132,JFK Airport,12,12,standing
+fhvhv,morning,0.4,51,61,Crown Heights North,12,12,standing
+fhvhv,morning,0.4,51,42,Central Harlem North,12,12,standing
+fhvhv,morning,0.4,51,7,Astoria,12,12,standing
+fhvhv,morning,0.4,51,39,Canarsie,12,12,standing
+fhvhv,morning,0.4,51,129,Jackson Heights,12,12,standing
+fhvhv,morning,0.4,51,138,LaGuardia Airport,12,12,standing
+fhvhv,morning,0.4,51,112,Greenpoint,12,12,standing
+fhvhv,morning,0.4,51,89,Flatbush/Ditmas Park,12,12,standing
+fhvhv,morning,0.4,51,37,Bushwick South,12,12,standing
+fhvhv,morning,0.4,51,244,Washington Heights South,12,12,standing
+fhvhv,morning,0.4,51,230,Times Sq/Theatre District,12,12,standing
+fhvhv,morning,0.4,51,216,South Ozone Park,12,12,standing
+fhvhv,morning,0.4,51,168,Mott Haven/Port Morris,12,12,standing
+fhvhv,morning,0.4,51,231,TriBeCa/Civic Center,12,12,standing
+fhvhv,morning,0.4,51,95,Forest Hills,12,12,standing
+fhvhv,morning,0.4,51,145,Long Island City/Hunters Point,12,12,standing
+fhvhv,morning,0.4,51,48,Clinton East,12,12,standing
+fhvhv,morning,0.4,51,74,East Harlem North,12,12,standing
+fhvhv,morning,0.4,51,188,Prospect-Lefferts Gardens,12,12,standing
+fhvhv,morning,0.4,51,181,Park Slope,12,12,standing
+fhvhv,morning,0.4,51,68,East Chelsea,12,12,standing
+fhvhv,morning,0.4,51,130,Jamaica,12,12,standing
+fhvhv,morning,0.4,51,170,Murray Hill,12,12,standing
+fhvhv,morning,0.4,51,82,Elmhurst,12,12,standing
+fhvhv,morning,0.4,51,225,Stuyvesant Heights,12,12,standing
+fhvhv,morning,0.4,51,14,Bay Ridge,12,12,standing
+fhvhv,morning,0.4,51,75,East Harlem South,12,12,standing
+fhvhv,morning,0.4,51,236,Upper East Side North,11,12,seasonal
+fhvhv,morning,0.4,51,141,Lenox Hill West,12,12,standing
+fhvhv,morning,0.4,51,226,Sunnyside,12,12,standing
+fhvhv,morning,0.4,51,164,Midtown South,12,12,standing
+fhvhv,morning,0.4,51,35,Brownsville,12,12,standing
+fhvhv,morning,0.4,51,79,East Village,12,12,standing
+fhvhv,morning,0.4,51,91,Flatlands,12,12,standing
+fhvhv,morning,0.4,51,69,East Concourse/Concourse Village,12,12,standing
+fhvhv,morning,0.4,51,254,Williamsbridge/Olinville,12,12,standing
+fhvhv,morning,0.4,51,213,Soundview/Castle Hill,12,12,standing
+fhvhv,morning,0.4,51,243,Washington Heights North,12,12,standing
+fhvhv,morning,0.4,51,246,West Chelsea/Hudson Yards,10,12,seasonal
+fhvhv,morning,0.4,51,237,Upper East Side South,10,12,seasonal
+fhvhv,morning,0.4,51,17,Bedford,12,12,standing
+fhvhv,morning,0.4,51,72,East Flatbush/Remsen Village,11,12,seasonal
+fhvhv,morning,0.4,51,41,Central Harlem,12,12,standing
+fhvhv,morning,0.4,51,197,Richmond Hill,9,12,seasonal
+fhvhv,morning,0.4,51,143,Lincoln Square West,9,12,seasonal
+fhvhv,morning,0.4,51,140,Lenox Hill East,12,12,standing
+fhvhv,morning,0.4,51,18,Bedford Park,8,12,seasonal
+fhvhv,morning,0.4,51,107,Gramercy,6,12,seasonal
+fhvhv,morning,0.4,51,239,Upper West Side South,6,12,seasonal
+fhvhv,midday,0.4,47,138,LaGuardia Airport,12,12,standing
+fhvhv,midday,0.4,47,132,JFK Airport,12,12,standing
+fhvhv,midday,0.4,47,61,Crown Heights North,12,12,standing
+fhvhv,midday,0.4,47,76,East New York,12,12,standing
+fhvhv,midday,0.4,47,161,Midtown Center,12,12,standing
+fhvhv,midday,0.4,47,230,Times Sq/Theatre District,12,12,standing
+fhvhv,midday,0.4,47,231,TriBeCa/Civic Center,12,12,standing
+fhvhv,midday,0.4,47,246,West Chelsea/Hudson Yards,12,12,standing
+fhvhv,midday,0.4,47,68,East Chelsea,12,12,standing
+fhvhv,midday,0.4,47,181,Park Slope,12,12,standing
+fhvhv,midday,0.4,47,112,Greenpoint,12,12,standing
+fhvhv,midday,0.4,47,237,Upper East Side South,12,12,standing
+fhvhv,midday,0.4,47,7,Astoria,12,12,standing
+fhvhv,midday,0.4,47,37,Bushwick South,12,12,standing
+fhvhv,midday,0.4,47,234,Union Sq,12,12,standing
+fhvhv,midday,0.4,47,42,Central Harlem North,12,12,standing
+fhvhv,midday,0.4,47,170,Murray Hill,12,12,standing
+fhvhv,midday,0.4,47,145,Long Island City/Hunters Point,12,12,standing
+fhvhv,midday,0.4,47,164,Midtown South,12,12,standing
+fhvhv,midday,0.4,47,89,Flatbush/Ditmas Park,12,12,standing
+fhvhv,midday,0.4,47,130,Jamaica,12,12,standing
+fhvhv,midday,0.4,47,95,Forest Hills,12,12,standing
+fhvhv,midday,0.4,47,39,Canarsie,12,12,standing
+fhvhv,midday,0.4,47,17,Bedford,12,12,standing
+fhvhv,midday,0.4,47,129,Jackson Heights,12,12,standing
+fhvhv,midday,0.4,47,163,Midtown North,12,12,standing
+fhvhv,midday,0.4,47,236,Upper East Side North,12,12,standing
+fhvhv,midday,0.4,47,188,Prospect-Lefferts Gardens,12,12,standing
+fhvhv,midday,0.4,47,244,Washington Heights South,12,12,standing
+fhvhv,midday,0.4,47,255,Williamsburg (North Side),12,12,standing
+fhvhv,midday,0.4,47,82,Elmhurst,12,12,standing
+fhvhv,midday,0.4,47,48,Clinton East,12,12,standing
+fhvhv,midday,0.4,47,79,East Village,12,12,standing
+fhvhv,midday,0.4,47,225,Stuyvesant Heights,12,12,standing
+fhvhv,midday,0.4,47,162,Midtown East,12,12,standing
+fhvhv,midday,0.4,47,226,Sunnyside,12,12,standing
+fhvhv,midday,0.4,47,41,Central Harlem,12,12,standing
+fhvhv,midday,0.4,47,256,Williamsburg (South Side),12,12,standing
+fhvhv,midday,0.4,47,74,East Harlem North,12,12,standing
+fhvhv,midday,0.4,47,75,East Harlem South,12,12,standing
+fhvhv,midday,0.4,47,26,Borough Park,8,12,seasonal
+fhvhv,midday,0.4,47,168,Mott Haven/Port Morris,9,12,seasonal
+fhvhv,midday,0.4,47,216,South Ozone Park,10,12,seasonal
+fhvhv,midday,0.4,47,35,Brownsville,6,12,seasonal
+fhvhv,midday,0.4,47,142,Lincoln Square East,7,12,seasonal
+fhvhv,midday,0.4,47,14,Bay Ridge,7,12,seasonal
+fhvhv,midday,0.4,47,239,Upper West Side South,8,12,seasonal
+fhvhv,evening,0.4,43,138,LaGuardia Airport,12,12,standing
+fhvhv,evening,0.4,43,132,JFK Airport,12,12,standing
+fhvhv,evening,0.4,43,161,Midtown Center,12,12,standing
+fhvhv,evening,0.4,43,61,Crown Heights North,12,12,standing
+fhvhv,evening,0.4,43,246,West Chelsea/Hudson Yards,12,12,standing
+fhvhv,evening,0.4,43,76,East New York,12,12,standing
+fhvhv,evening,0.4,43,231,TriBeCa/Civic Center,12,12,standing
+fhvhv,evening,0.4,43,234,Union Sq,12,12,standing
+fhvhv,evening,0.4,43,112,Greenpoint,12,12,standing
+fhvhv,evening,0.4,43,68,East Chelsea,12,12,standing
+fhvhv,evening,0.4,43,181,Park Slope,12,12,standing
+fhvhv,evening,0.4,43,230,Times Sq/Theatre District,12,12,standing
+fhvhv,evening,0.4,43,255,Williamsburg (North Side),12,12,standing
+fhvhv,evening,0.4,43,145,Long Island City/Hunters Point,12,12,standing
+fhvhv,evening,0.4,43,37,Bushwick South,12,12,standing
+fhvhv,evening,0.4,43,79,East Village,12,12,standing
+fhvhv,evening,0.4,43,237,Upper East Side South,12,12,standing
+fhvhv,evening,0.4,43,7,Astoria,12,12,standing
+fhvhv,evening,0.4,43,164,Midtown South,12,12,standing
+fhvhv,evening,0.4,43,170,Murray Hill,12,12,standing
+fhvhv,evening,0.4,43,130,Jamaica,12,12,standing
+fhvhv,evening,0.4,43,163,Midtown North,12,12,standing
+fhvhv,evening,0.4,43,162,Midtown East,12,12,standing
+fhvhv,evening,0.4,43,17,Bedford,12,12,standing
+fhvhv,evening,0.4,43,42,Central Harlem North,12,12,standing
+fhvhv,evening,0.4,43,256,Williamsburg (South Side),12,12,standing
+fhvhv,evening,0.4,43,89,Flatbush/Ditmas Park,12,12,standing
+fhvhv,evening,0.4,43,82,Elmhurst,12,12,standing
+fhvhv,evening,0.4,43,95,Forest Hills,12,12,standing
+fhvhv,evening,0.4,43,188,Prospect-Lefferts Gardens,12,12,standing
+fhvhv,evening,0.4,43,236,Upper East Side North,10,12,seasonal
+fhvhv,evening,0.4,43,225,Stuyvesant Heights,12,12,standing
+fhvhv,evening,0.4,43,148,Lower East Side,12,12,standing
+fhvhv,evening,0.4,43,48,Clinton East,12,12,standing
+fhvhv,evening,0.4,43,144,Little Italy/NoLiTa,12,12,standing
+fhvhv,evening,0.4,43,244,Washington Heights South,12,12,standing
+fhvhv,evening,0.4,43,249,West Village,11,12,seasonal
+fhvhv,evening,0.4,43,39,Canarsie,10,12,seasonal
+fhvhv,evening,0.4,43,97,Fort Greene,12,12,standing
+fhvhv,evening,0.4,43,80,East Williamsburg,8,12,seasonal
+fhvhv,evening,0.4,43,129,Jackson Heights,8,12,seasonal
+fhvhv,evening,0.4,43,41,Central Harlem,9,12,seasonal
+fhvhv,evening,0.4,43,74,East Harlem North,4,12,seasonal
+fhvhv,night,0.4,35,138,LaGuardia Airport,12,12,standing
+fhvhv,night,0.4,35,132,JFK Airport,12,12,standing
+fhvhv,night,0.4,35,161,Midtown Center,12,12,standing
+fhvhv,night,0.4,35,79,East Village,12,12,standing
+fhvhv,night,0.4,35,230,Times Sq/Theatre District,12,12,standing
+fhvhv,night,0.4,35,61,Crown Heights North,12,12,standing
+fhvhv,night,0.4,35,234,Union Sq,12,12,standing
+fhvhv,night,0.4,35,255,Williamsburg (North Side),12,12,standing
+fhvhv,night,0.4,35,148,Lower East Side,12,12,standing
+fhvhv,night,0.4,35,231,TriBeCa/Civic Center,12,12,standing
+fhvhv,night,0.4,35,249,West Village,12,12,standing
+fhvhv,night,0.4,35,246,West Chelsea/Hudson Yards,12,12,standing
+fhvhv,night,0.4,35,37,Bushwick South,12,12,standing
+fhvhv,night,0.4,35,68,East Chelsea,12,12,standing
+fhvhv,night,0.4,35,164,Midtown South,12,12,standing
+fhvhv,night,0.4,35,112,Greenpoint,12,12,standing
+fhvhv,night,0.4,35,181,Park Slope,12,12,standing
+fhvhv,night,0.4,35,256,Williamsburg (South Side),12,12,standing
+fhvhv,night,0.4,35,162,Midtown East,12,12,standing
+fhvhv,night,0.4,35,76,East New York,11,12,seasonal
+fhvhv,night,0.4,35,36,Bushwick North,12,12,standing
+fhvhv,night,0.4,35,48,Clinton East,12,12,standing
+fhvhv,night,0.4,35,145,Long Island City/Hunters Point,12,12,standing
+fhvhv,night,0.4,35,163,Midtown North,12,12,standing
+fhvhv,night,0.4,35,7,Astoria,12,12,standing
+fhvhv,night,0.4,35,80,East Williamsburg,12,12,standing
+fhvhv,night,0.4,35,17,Bedford,12,12,standing
+fhvhv,night,0.4,35,97,Fort Greene,12,12,standing
+fhvhv,night,0.4,35,114,Greenwich Village South,11,12,seasonal
+fhvhv,night,0.4,35,170,Murray Hill,12,12,standing
+fhvhv,night,0.4,35,144,Little Italy/NoLiTa,11,12,seasonal
+fhvhv,night,0.4,35,225,Stuyvesant Heights,10,12,seasonal
+fhvhv,night,0.4,35,237,Upper East Side South,9,12,seasonal
+fhvhv,night,0.4,35,130,Jamaica,7,12,seasonal
+fhvhv,night,0.4,35,107,Gramercy,6,12,seasonal

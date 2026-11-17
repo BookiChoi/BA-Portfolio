@@ -1,0 +1,86 @@
+{
+  "all": {
+    "d_point": 92.0,
+    "d_ci": [
+      91.0,
+      93.0
+    ],
+    "ratio_point": 3.5555555555555554,
+    "ratio_ci": [
+      3.5277777777777777,
+      3.5833333333333335
+    ],
+    "p_one_sided": 0.0004997501249375312,
+    "role": "confirmatory (alpha 0.05, single test, no correction)"
+  },
+  "overnight": {
+    "d_point": 76.0,
+    "d_ci": [
+      75.0,
+      77.0
+    ],
+    "ratio_point": 2.948717948717949,
+    "ratio_ci": [
+      2.9,
+      3.026315789473684
+    ],
+    "p_one_sided": null,
+    "role": "descriptive"
+  },
+  "morning": {
+    "d_point": 95.0,
+    "d_ci": [
+      93.0,
+      96.0
+    ],
+    "ratio_point": 3.317073170731707,
+    "ratio_ci": [
+      3.1627906976744184,
+      3.4
+    ],
+    "p_one_sided": null,
+    "role": "descriptive"
+  },
+  "midday": {
+    "d_point": 100.0,
+    "d_ci": [
+      99.0,
+      100.0
+    ],
+    "ratio_point": 4.03030303030303,
+    "ratio_ci": [
+      3.911764705882353,
+      4.03030303030303
+    ],
+    "p_one_sided": null,
+    "role": "descriptive"
+  },
+  "evening": {
+    "d_point": 92.0,
+    "d_ci": [
+      91.0,
+      93.0
+    ],
+    "ratio_point": 3.7058823529411766,
+    "ratio_ci": [
+      3.676470588235294,
+      3.8181818181818183
+    ],
+    "p_one_sided": null,
+    "role": "descriptive"
+  },
+  "night": {
+    "d_point": 83.0,
+    "d_ci": [
+      81.0,
+      83.0
+    ],
+    "ratio_point": 3.59375,
+    "ratio_ci": [
+      3.4545454545454546,
+      3.59375
+    ],
+    "p_one_sided": null,
+    "role": "descriptive"
+  }
+}

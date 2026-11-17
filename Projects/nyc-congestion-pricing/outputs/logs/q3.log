@@ -1,0 +1,161 @@
+yellow: days 365 (2025-10-01 .. 2026-09-30), trips 46494334, zero-trip days 0
+  day types: {'weekday': 250, 'weekend': 104, 'holiday': 11}
+fhvhv: days 365 (2025-10-01 .. 2026-09-30), trips 253409771, zero-trip days 0
+  day types: {'weekday': 250, 'weekend': 104, 'holiday': 11}
+
+== PRIMARY: monthly decision table (pp = percentage points) ==
+service   month  n_weekday_days  n_weekend_days  night_share_weekday  night_share_weekend  gap_pp  gap_ci_lo_pp  gap_ci_hi_pp  spread_pp  margin_pp  margin_ci_lo_pp  margin_ci_hi_pp  dayavg_diff_pp  dayavg_ci_lo_pp  dayavg_ci_hi_pp  hedges_g  p_raw  p_holm  gap_gt0  gap_gt_spread
+ yellow 2025-10              22               8                0.146                0.270  12.476        11.696        13.234      4.120      8.357            7.312            9.512          12.656           11.100           14.211     4.700    0.0     0.0     True           True
+ yellow 2025-11              18              10                0.140                0.263  12.259        10.248        14.146      3.662      8.596            6.487           10.571          11.906            9.133           14.678     3.697    0.0     0.0     True           True
+ yellow 2025-12              22               8                0.155                0.256  10.080         7.734        11.839      5.811      4.268            1.779            6.093           9.710            6.517           12.902     2.754    0.0     0.0     True           True
+ yellow 2026-01              20               9                0.130                0.265  13.503        11.267        16.176      2.780     10.723            8.069           13.246          15.021            8.724           21.319     2.929    0.0     0.0     True           True
+ yellow 2026-02              19               8                0.131                0.283  15.210        14.017        16.541      2.959     12.250            9.382           13.372          15.452           13.361           17.543     5.378    0.0     0.0     True           True
+ yellow 2026-03              22               9                0.133                0.293  16.017        15.044        17.012      4.531     11.486            9.603           13.159          16.174           14.307           18.041     5.093    0.0     0.0     True           True
+ yellow 2026-04              22               8                0.140                0.266  12.653        11.836        13.441      3.493      9.161            8.184           10.145          12.617           10.877           14.357     4.855    0.0     0.0     True           True
+ yellow 2026-05              20              10                0.146                0.261  11.507        10.376        12.538      4.040      7.467            6.057            8.888          11.439            9.483           13.394     4.232    0.0     0.0     True           True
+ yellow 2026-06              21               8                0.159                0.283  12.435        10.663        14.319      4.802      7.634            5.167           10.008          12.709           10.135           15.283     4.416    0.0     0.0     True           True
+ yellow 2026-07              22               8                0.155                0.285  12.938        11.710        13.954      2.889     10.049            7.788           12.010          12.817           10.860           14.774     4.495    0.0     0.0     True           True
+ yellow 2026-08              21              10                0.150                0.288  13.841        13.179        14.498      3.097     10.743            9.393           12.078          13.974           12.545           15.403     5.673    0.0     0.0     True           True
+ yellow 2026-09              21               8                0.157                0.284  12.698        11.899        13.707      3.781      8.918            7.475           10.197          12.832           11.007           14.657     4.466    0.0     0.0     True           True
+  fhvhv 2025-10              22               8                0.176                0.276   9.998         9.548        10.434      1.999      8.000            7.214            8.809          10.225            9.122           11.328     5.052    0.0     0.0     True           True
+  fhvhv 2025-11              18              10                0.174                0.285  11.095         9.378        13.098      1.378      9.717            7.841           11.703          10.988            8.507           13.470     3.676    0.0     0.0     True           True
+  fhvhv 2025-12              22               8                0.178                0.269   9.149         7.650        10.293      2.577      6.571            3.420            7.875           9.021            6.967           11.074     3.900    0.0     0.0     True           True
+  fhvhv 2026-01              20               9                0.162                0.265  10.282         9.024        12.364      1.961      8.321            6.985           10.418          11.594            6.652           16.536     2.926    0.0     0.0     True           True
+  fhvhv 2026-02              19               8                0.165                0.263   9.844         8.808        10.726      2.371      7.472            1.967            8.793           9.831            8.321           11.341     4.380    0.0     0.0     True           True
+  fhvhv 2026-03              22               9                0.168                0.273  10.525         9.945        11.051      1.591      8.934            7.618            9.701          10.676            9.574           11.778     5.928    0.0     0.0     True           True
+  fhvhv 2026-04              22               8                0.177                0.268   9.120         8.400         9.752      1.871      7.248            6.302            8.043           9.287            8.185           10.389     5.308    0.0     0.0     True           True
+  fhvhv 2026-05              20              10                0.180                0.272   9.182         8.505         9.853      1.304      7.878            7.018            8.606           9.355            8.145           10.566     5.353    0.0     0.0     True           True
+  fhvhv 2026-06              21               8                0.185                0.283   9.787         8.667        10.868      2.719      7.067            5.748            8.330           9.973            8.096           11.851     5.522    0.0     0.0     True           True
+  fhvhv 2026-07              22               8                0.183                0.285  10.217         9.688        10.768      1.746      8.471            7.186            9.235          10.391            9.146           11.635     6.069    0.0     0.0     True           True
+  fhvhv 2026-08              21              10                0.177                0.281  10.376        10.112        10.620      1.083      9.293            8.436            9.926          10.504            9.747           11.261     7.876    0.0     0.0     True           True
+  fhvhv 2026-09              21               8                0.174                0.272   9.767         9.040        10.454      1.804      7.963            7.042            8.669           9.917            8.699           11.135     5.289    0.0     0.0     True           True
+
+== Decision rule (gap_m > 0 and gap_m > spread_m in all 12 months) per service ==
+fhvhv months passing: 12 of 12 -> SEPARATE night-hour guidance
+   months where margin CI includes 0: []
+yellow months passing: 12 of 12 -> SEPARATE night-hour guidance
+   months where margin CI includes 0: []
+
+== pooled regression (weekend coefficient, pp, HC3) ==
+ coef_pp  ci_lo_pp  ci_hi_pp  p_two_sided  n_days service                                variant
+ 13.1158   12.3619   13.8698          0.0     354  yellow                                primary
+ 12.8679   12.0834   13.6525          0.0     365  yellow                S1_holidays_as_ordinary
+ 13.0610   12.2953   13.8268          0.0     354  yellow                      S2_hour5_in_night
+  4.5690    2.7558    6.3822          0.0     353  yellow S3_literal_prev_day_Mon-Fri_vs_Sat-Sun
+ 13.3118   12.5917   14.0318          0.0     355  yellow       S3_intent_Fri-Sat_nights_weekend
+ 10.1611    9.6291   10.6930          0.0     354   fhvhv                                primary
+  9.8827    9.2982   10.4673          0.0     365   fhvhv                S1_holidays_as_ordinary
+  9.9732    9.4086   10.5378          0.0     354   fhvhv                      S2_hour5_in_night
+  3.9664    2.7257    5.2070          0.0     353   fhvhv S3_literal_prev_day_Mon-Fri_vs_Sat-Sun
+  9.6515    9.1487   10.1543          0.0     355   fhvhv       S3_intent_Fri-Sat_nights_weekend
+
+== sensitivities: months passing the decision rule ==
+fhvhv   S1_holidays_as_ordinary                    months gap>0: 12/12  gap>spread: 12/12  mean gap pp 9.679  rule passes all months: True
+fhvhv   S2_hour5_in_night                          months gap>0: 12/12  gap>spread: 12/12  mean gap pp 9.738  rule passes all months: True
+fhvhv   S3_intent_Fri-Sat_nights_weekend           months gap>0: 12/12  gap>spread: 11/12  mean gap pp 9.624  rule passes all months: False
+fhvhv   S3_literal_prev_day_Mon-Fri_vs_Sat-Sun     months gap>0: 12/12  gap>spread:  9/12  mean gap pp 4.412  rule passes all months: False
+yellow  S1_holidays_as_ordinary                    months gap>0: 12/12  gap>spread: 12/12  mean gap pp 12.777  rule passes all months: True
+yellow  S2_hour5_in_night                          months gap>0: 12/12  gap>spread: 12/12  mean gap pp 12.900  rule passes all months: True
+yellow  S3_intent_Fri-Sat_nights_weekend           months gap>0: 12/12  gap>spread: 12/12  mean gap pp 13.227  rule passes all months: True
+yellow  S3_literal_prev_day_Mon-Fri_vs_Sat-Sun     months gap>0: 12/12  gap>spread:  4/12  mean gap pp 5.566  rule passes all months: False
+
+== sensitivity monthly detail ==
+service                                variant   month  gap_pp  spread_pp  margin_pp  gap_gt0  gap_gt_spread
+ yellow                S1_holidays_as_ordinary 2025-10  12.532      3.616      8.916     True           True
+ yellow                S1_holidays_as_ordinary 2025-11  12.066      4.739      7.328     True           True
+ yellow                S1_holidays_as_ordinary 2025-12   9.993      6.018      3.975     True           True
+ yellow                S1_holidays_as_ordinary 2026-01  12.326      7.174      5.151     True           True
+ yellow                S1_holidays_as_ordinary 2026-02  15.108      2.959     12.148     True           True
+ yellow                S1_holidays_as_ordinary 2026-03  16.017      4.531     11.486     True           True
+ yellow                S1_holidays_as_ordinary 2026-04  12.653      3.493      9.161     True           True
+ yellow                S1_holidays_as_ordinary 2026-05  11.359      2.789      8.570     True           True
+ yellow                S1_holidays_as_ordinary 2026-06  12.049      4.802      7.248     True           True
+ yellow                S1_holidays_as_ordinary 2026-07  12.861      2.889      9.972     True           True
+ yellow                S1_holidays_as_ordinary 2026-08  13.841      3.097     10.743     True           True
+ yellow                S1_holidays_as_ordinary 2026-09  12.519      3.164      9.355     True           True
+ yellow                      S2_hour5_in_night 2025-10  12.413      3.899      8.514     True           True
+ yellow                      S2_hour5_in_night 2025-11  12.318      3.456      8.862     True           True
+ yellow                      S2_hour5_in_night 2025-12  10.040      5.627      4.413     True           True
+ yellow                      S2_hour5_in_night 2026-01  13.296      2.708     10.588     True           True
+ yellow                      S2_hour5_in_night 2026-02  15.111      3.080     12.030     True           True
+ yellow                      S2_hour5_in_night 2026-03  16.083      4.256     11.828     True           True
+ yellow                      S2_hour5_in_night 2026-04  12.438      3.301      9.137     True           True
+ yellow                      S2_hour5_in_night 2026-05  11.310      3.857      7.453     True           True
+ yellow                      S2_hour5_in_night 2026-06  12.428      4.567      7.860     True           True
+ yellow                      S2_hour5_in_night 2026-07  12.891      2.911      9.980     True           True
+ yellow                      S2_hour5_in_night 2026-08  13.816      2.690     11.126     True           True
+ yellow                      S2_hour5_in_night 2026-09  12.662      3.419      9.243     True           True
+ yellow S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2025-10   4.638      6.896     -2.258     True          False
+ yellow S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2025-11   4.702      6.445     -1.743     True          False
+ yellow S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2025-12   2.833      9.192     -6.359     True          False
+ yellow S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2026-01   7.179      4.705      2.473     True           True
+ yellow S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2026-02   7.428      5.837      1.591     True           True
+ yellow S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2026-03   7.302      7.539     -0.236     True          False
+ yellow S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2026-04   5.410      5.840     -0.430     True          False
+ yellow S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2026-05   4.108      5.772     -1.664     True          False
+ yellow S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2026-06   5.096      6.212     -1.116     True          False
+ yellow S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2026-07   6.267      5.919      0.347     True           True
+ yellow S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2026-08   6.349      5.667      0.682     True           True
+ yellow S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2026-09   5.479      6.784     -1.305     True          False
+ yellow       S3_intent_Fri-Sat_nights_weekend 2025-10  13.615      6.896      6.719     True           True
+ yellow       S3_intent_Fri-Sat_nights_weekend 2025-11  13.351      6.445      6.906     True           True
+ yellow       S3_intent_Fri-Sat_nights_weekend 2025-12   9.776      9.192      0.584     True           True
+ yellow       S3_intent_Fri-Sat_nights_weekend 2026-01  12.544      4.705      7.839     True           True
+ yellow       S3_intent_Fri-Sat_nights_weekend 2026-02  14.747      5.837      8.910     True           True
+ yellow       S3_intent_Fri-Sat_nights_weekend 2026-03  16.142      7.539      8.604     True           True
+ yellow       S3_intent_Fri-Sat_nights_weekend 2026-04  13.968      5.840      8.129     True           True
+ yellow       S3_intent_Fri-Sat_nights_weekend 2026-05  12.271      5.772      6.499     True           True
+ yellow       S3_intent_Fri-Sat_nights_weekend 2026-06  11.724      6.212      5.512     True           True
+ yellow       S3_intent_Fri-Sat_nights_weekend 2026-07  13.050      5.919      7.130     True           True
+ yellow       S3_intent_Fri-Sat_nights_weekend 2026-08  14.255      5.667      8.588     True           True
+ yellow       S3_intent_Fri-Sat_nights_weekend 2026-09  13.277      6.784      6.493     True           True
+  fhvhv                S1_holidays_as_ordinary 2025-10  10.009      1.999      8.011     True           True
+  fhvhv                S1_holidays_as_ordinary 2025-11  10.765      3.271      7.493     True           True
+  fhvhv                S1_holidays_as_ordinary 2025-12   8.813      4.370      4.444     True           True
+  fhvhv                S1_holidays_as_ordinary 2026-01   8.828      7.526      1.302     True           True
+  fhvhv                S1_holidays_as_ordinary 2026-02   9.714      2.923      6.791     True           True
+  fhvhv                S1_holidays_as_ordinary 2026-03  10.525      1.591      8.934     True           True
+  fhvhv                S1_holidays_as_ordinary 2026-04   9.120      1.871      7.248     True           True
+  fhvhv                S1_holidays_as_ordinary 2026-05   8.943      1.892      7.051     True           True
+  fhvhv                S1_holidays_as_ordinary 2026-06   9.436      2.719      6.717     True           True
+  fhvhv                S1_holidays_as_ordinary 2026-07  10.138      1.746      8.393     True           True
+  fhvhv                S1_holidays_as_ordinary 2026-08  10.376      1.083      9.293     True           True
+  fhvhv                S1_holidays_as_ordinary 2026-09   9.478      2.771      6.707     True           True
+  fhvhv                      S2_hour5_in_night 2025-10   9.799      1.919      7.879     True           True
+  fhvhv                      S2_hour5_in_night 2025-11  10.953      1.239      9.714     True           True
+  fhvhv                      S2_hour5_in_night 2025-12   8.989      2.517      6.472     True           True
+  fhvhv                      S2_hour5_in_night 2026-01  10.038      1.931      8.107     True           True
+  fhvhv                      S2_hour5_in_night 2026-02   9.612      2.345      7.267     True           True
+  fhvhv                      S2_hour5_in_night 2026-03  10.420      1.440      8.980     True           True
+  fhvhv                      S2_hour5_in_night 2026-04   8.780      1.855      6.925     True           True
+  fhvhv                      S2_hour5_in_night 2026-05   8.923      1.279      7.643     True           True
+  fhvhv                      S2_hour5_in_night 2026-06   9.637      2.699      6.938     True           True
+  fhvhv                      S2_hour5_in_night 2026-07  10.069      1.911      8.158     True           True
+  fhvhv                      S2_hour5_in_night 2026-08  10.169      0.919      9.250     True           True
+  fhvhv                      S2_hour5_in_night 2026-09   9.470      1.706      7.765     True           True
+  fhvhv S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2025-10   3.581      4.558     -0.976     True          False
+  fhvhv S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2025-11   4.768      4.244      0.524     True           True
+  fhvhv S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2025-12   3.299      8.296     -4.997     True          False
+  fhvhv S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2026-01   5.114      3.338      1.775     True           True
+  fhvhv S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2026-02   4.003      3.085      0.918     True           True
+  fhvhv S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2026-03   4.745      3.926      0.819     True           True
+  fhvhv S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2026-04   3.674      3.924     -0.250     True          False
+  fhvhv S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2026-05   3.722      3.542      0.180     True           True
+  fhvhv S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2026-06   4.651      3.964      0.687     True           True
+  fhvhv S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2026-07   5.412      3.700      1.712     True           True
+  fhvhv S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2026-08   5.290      3.458      1.832     True           True
+  fhvhv S3_literal_prev_day_Mon-Fri_vs_Sat-Sun 2026-09   4.686      4.380      0.306     True           True
+  fhvhv       S3_intent_Fri-Sat_nights_weekend 2025-10  11.104      4.558      6.546     True           True
+  fhvhv       S3_intent_Fri-Sat_nights_weekend 2025-11  11.200      4.244      6.957     True           True
+  fhvhv       S3_intent_Fri-Sat_nights_weekend 2025-12   7.250      8.296     -1.046     True          False
+  fhvhv       S3_intent_Fri-Sat_nights_weekend 2026-01   9.283      3.338      5.945     True           True
+  fhvhv       S3_intent_Fri-Sat_nights_weekend 2026-02   9.624      3.085      6.539     True           True
+  fhvhv       S3_intent_Fri-Sat_nights_weekend 2026-03  10.159      3.926      6.233     True           True
+  fhvhv       S3_intent_Fri-Sat_nights_weekend 2026-04   9.830      3.924      5.905     True           True
+  fhvhv       S3_intent_Fri-Sat_nights_weekend 2026-05   9.078      3.542      5.535     True           True
+  fhvhv       S3_intent_Fri-Sat_nights_weekend 2026-06   8.818      3.964      4.855     True           True
+  fhvhv       S3_intent_Fri-Sat_nights_weekend 2026-07   9.139      3.700      5.439     True           True
+  fhvhv       S3_intent_Fri-Sat_nights_weekend 2026-08  10.034      3.458      6.576     True           True
+  fhvhv       S3_intent_Fri-Sat_nights_weekend 2026-09   9.967      4.380      5.587     True           True
+
+figures written to /Users/booki/Desktop/BA-Portfolio/Projects/nyc-congestion-pricing/outputs/q3

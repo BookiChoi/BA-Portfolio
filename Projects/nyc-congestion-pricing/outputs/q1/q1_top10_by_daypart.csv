@@ -1,0 +1,121 @@
+service,daypart,rank,zone_id,zone,borough,trips,share,is_airport
+yellow,all,1,237,Upper East Side South,Manhattan,2076254,0.044732210397764406,False
+yellow,all,2,161,Midtown Center,Manhattan,1905641,0.041056409357721244,False
+yellow,all,3,132,JFK Airport,Queens,1856613,0.040000117203013004,True
+yellow,all,4,236,Upper East Side North,Manhattan,1850907,0.039877183307386724,False
+yellow,all,5,186,Penn Station/Madison Sq West,Manhattan,1425651,0.030715182480459145,False
+yellow,all,6,162,Midtown East,Manhattan,1410122,0.030380615276606973,False
+yellow,all,7,142,Lincoln Square East,Manhattan,1350866,0.029103964221711992,False
+yellow,all,8,230,Times Sq/Theatre District,Manhattan,1336859,0.028802188007895434,False
+yellow,all,9,79,East Village,Manhattan,1217260,0.02622546684017596,False
+yellow,all,10,170,Murray Hill,Manhattan,1205595,0.025974148247031807,False
+yellow,overnight,1,79,East Village,Manhattan,345561,0.07995639848324845,False
+yellow,overnight,2,249,West Village,Manhattan,234368,0.05422840308866444,False
+yellow,overnight,3,148,Lower East Side,Manhattan,228669,0.05290976031660384,False
+yellow,overnight,4,114,Greenwich Village South,Manhattan,183061,0.04235691603723205,False
+yellow,overnight,5,132,JFK Airport,Queens,182578,0.042245158806330965,True
+yellow,overnight,6,48,Clinton East,Manhattan,155722,0.03603117911051425,False
+yellow,overnight,7,144,Little Italy/NoLiTa,Manhattan,109471,0.025329556571371453,False
+yellow,overnight,8,230,Times Sq/Theatre District,Manhattan,106688,0.024685622050465216,False
+yellow,overnight,9,186,Penn Station/Madison Sq West,Manhattan,104393,0.024154601667612245,False
+yellow,overnight,10,68,East Chelsea,Manhattan,104034,0.024071535734085353,False
+yellow,morning,1,236,Upper East Side North,Manhattan,315533,0.05334481831691454,False
+yellow,morning,2,237,Upper East Side South,Manhattan,238598,0.04033798987991486,False
+yellow,morning,3,186,Penn Station/Madison Sq West,Manhattan,223108,0.03771921074832163,False
+yellow,morning,4,132,JFK Airport,Queens,190988,0.03228892116105407,True
+yellow,morning,5,239,Upper West Side South,Manhattan,174163,0.029444443505207973,False
+yellow,morning,6,262,Yorkville East,Manhattan,171913,0.02906405273399527,False
+yellow,morning,7,162,Midtown East,Manhattan,170118,0.028760585429850025,False
+yellow,morning,8,141,Lenox Hill West,Manhattan,165757,0.028023303583957316,False
+yellow,morning,9,238,Upper West Side North,Manhattan,164596,0.02782702194601156,False
+yellow,morning,10,140,Lenox Hill East,Manhattan,160167,0.027078243845699977,False
+yellow,midday,1,237,Upper East Side South,Manhattan,823537,0.05836956430832091,False
+yellow,midday,2,236,Upper East Side North,Manhattan,773895,0.054851104407437686,False
+yellow,midday,3,161,Midtown Center,Manhattan,605339,0.042904415574327164,False
+yellow,midday,4,132,JFK Airport,Queens,491446,0.034832058427328796,True
+yellow,midday,5,186,Penn Station/Madison Sq West,Manhattan,462346,0.032769547184516225,False
+yellow,midday,6,239,Upper West Side South,Manhattan,449775,0.03187855650295619,False
+yellow,midday,7,162,Midtown East,Manhattan,446329,0.03163431548086918,False
+yellow,midday,8,138,LaGuardia Airport,Queens,439758,0.0311685848493736,True
+yellow,midday,9,142,Lincoln Square East,Manhattan,428199,0.03034932136292444,False
+yellow,midday,10,170,Murray Hill,Manhattan,403309,0.028585200921907087,False
+yellow,evening,1,161,Midtown Center,Manhattan,614636,0.051046122611318835,False
+yellow,evening,2,237,Upper East Side South,Manhattan,603034,0.050082565132524036,False
+yellow,evening,3,236,Upper East Side North,Manhattan,522729,0.043413156122472624,False
+yellow,evening,4,132,JFK Airport,Queens,503405,0.0418082789702376,True
+yellow,evening,5,162,Midtown East,Manhattan,443793,0.03685744390508369,False
+yellow,evening,6,142,Lincoln Square East,Manhattan,359060,0.029820285152220405,False
+yellow,evening,7,163,Midtown North,Manhattan,352490,0.02927464020861742,False
+yellow,evening,8,234,Union Sq,Manhattan,351800,0.029217335031891993,False
+yellow,evening,9,230,Times Sq/Theatre District,Manhattan,346530,0.028779656363278942,False
+yellow,evening,10,170,Murray Hill,Manhattan,344753,0.028632074770465775,False
+yellow,night,1,132,JFK Airport,Queens,488196,0.048680665381002616,True
+yellow,night,2,161,Midtown Center,Manhattan,483227,0.048185179497713525,False
+yellow,night,3,230,Times Sq/Theatre District,Manhattan,411019,0.040984929012598044,False
+yellow,night,4,142,Lincoln Square East,Manhattan,361748,0.03607185093742459,False
+yellow,night,5,237,Upper East Side South,Manhattan,360508,0.0359482038262798,False
+yellow,night,6,79,East Village,Manhattan,354115,0.03531072319599862,False
+yellow,night,7,249,West Village,Manhattan,337605,0.033664421740353036,False
+yellow,night,8,234,Union Sq,Manhattan,326427,0.03254980286263005,False
+yellow,night,9,186,Penn Station/Madison Sq West,Manhattan,298959,0.029810819919948467,False
+yellow,night,10,162,Midtown East,Manhattan,297286,0.02964399603531521,False
+fhvhv,all,1,138,LaGuardia Airport,Queens,4942417,0.01950464389198455,True
+fhvhv,all,2,132,JFK Airport,Queens,4033346,0.01591710643257344,True
+fhvhv,all,3,61,Crown Heights North,Brooklyn,3308500,0.013056590392237418,False
+fhvhv,all,4,76,East New York,Brooklyn,2987398,0.011789400642160882,False
+fhvhv,all,5,230,Times Sq/Theatre District,Manhattan,2895485,0.011426677234960726,False
+fhvhv,all,6,79,East Village,Manhattan,2875244,0.011346798605331202,False
+fhvhv,all,7,161,Midtown Center,Manhattan,2865288,0.011307508469636744,False
+fhvhv,all,8,37,Bushwick South,Brooklyn,2834734,0.011186930847498487,False
+fhvhv,all,9,231,TriBeCa/Civic Center,Manhattan,2629277,0.01037611993856153,False
+fhvhv,all,10,246,West Chelsea/Hudson Yards,Manhattan,2579594,0.010180052058719448,False
+fhvhv,overnight,1,79,East Village,Manhattan,731103,0.022511513432584344,False
+fhvhv,overnight,2,148,Lower East Side,Manhattan,690143,0.02125030729583117,False
+fhvhv,overnight,3,37,Bushwick South,Brooklyn,666584,0.02052489822903996,False
+fhvhv,overnight,4,36,Bushwick North,Brooklyn,561970,0.01730371124685499,False
+fhvhv,overnight,5,132,JFK Airport,Queens,556718,0.017141996045921697,True
+fhvhv,overnight,6,255,Williamsburg (North Side),Brooklyn,489577,0.01507464640657246,False
+fhvhv,overnight,7,80,East Williamsburg,Brooklyn,489407,0.015069411908446288,False
+fhvhv,overnight,8,61,Crown Heights North,Brooklyn,474675,0.01461579645906524,False
+fhvhv,overnight,9,230,Times Sq/Theatre District,Manhattan,450811,0.013880996086812366,False
+fhvhv,overnight,10,249,West Village,Manhattan,432840,0.013327648052545,False
+fhvhv,morning,1,76,East New York,Brooklyn,615471,0.014352474342081775,False
+fhvhv,morning,2,132,JFK Airport,Queens,500345,0.01166779389230184,True
+fhvhv,morning,3,61,Crown Heights North,Brooklyn,500030,0.011660448250642434,False
+fhvhv,morning,4,42,Central Harlem North,Manhattan,456208,0.010638541238583852,False
+fhvhv,morning,5,7,Astoria,Queens,443904,0.010351618143417753,False
+fhvhv,morning,6,39,Canarsie,Brooklyn,429762,0.01002183381215646,False
+fhvhv,morning,7,129,Jackson Heights,Queens,425846,0.00993051466060652,False
+fhvhv,morning,8,138,LaGuardia Airport,Queens,417376,0.009732998518209182,True
+fhvhv,morning,9,112,Greenpoint,Brooklyn,398477,0.009292283338142202,False
+fhvhv,morning,10,89,Flatbush/Ditmas Park,Brooklyn,394498,0.009199495058260383,False
+fhvhv,midday,1,138,LaGuardia Airport,Queens,1655938,0.02375523332249532,True
+fhvhv,midday,2,132,JFK Airport,Queens,965331,0.013848141137190963,True
+fhvhv,midday,3,61,Crown Heights North,Brooklyn,849565,0.012187421749863665,False
+fhvhv,midday,4,76,East New York,Brooklyn,847532,0.01215825737937115,False
+fhvhv,midday,5,161,Midtown Center,Manhattan,732394,0.010506546956465542,False
+fhvhv,midday,6,230,Times Sq/Theatre District,Manhattan,708584,0.01016498096461765,False
+fhvhv,midday,7,231,TriBeCa/Civic Center,Manhattan,699280,0.010031510574523035,False
+fhvhv,midday,8,246,West Chelsea/Hudson Yards,Manhattan,686794,0.00985239285196055,False
+fhvhv,midday,9,68,East Chelsea,Manhattan,685744,0.009837330092975239,False
+fhvhv,midday,10,181,Park Slope,Brooklyn,663241,0.009514513649692875,False
+fhvhv,evening,1,138,LaGuardia Airport,Queens,1212985,0.02144099023600936,True
+fhvhv,evening,2,132,JFK Airport,Queens,904248,0.015983686969691293,True
+fhvhv,evening,3,161,Midtown Center,Manhattan,753363,0.013316610450393632,False
+fhvhv,evening,4,61,Crown Heights North,Brooklyn,751234,0.013278977777102153,False
+fhvhv,evening,5,246,West Chelsea/Hudson Yards,Manhattan,724316,0.01280316927561788,False
+fhvhv,evening,6,76,East New York,Brooklyn,659326,0.011654391709994029,False
+fhvhv,evening,7,231,TriBeCa/Civic Center,Manhattan,636982,0.011259434240748002,False
+fhvhv,evening,8,234,Union Sq,Manhattan,618775,0.010937603295413127,False
+fhvhv,evening,9,112,Greenpoint,Brooklyn,598530,0.010579748212845734,False
+fhvhv,evening,10,68,East Chelsea,Manhattan,597904,0.010568682898857727,False
+fhvhv,night,1,138,LaGuardia Airport,Queens,1281248,0.024755549077293312,True
+fhvhv,night,2,132,JFK Airport,Queens,1106704,0.021383108645661744,True
+fhvhv,night,3,161,Midtown Center,Manhattan,888345,0.01716409956937933,False
+fhvhv,night,4,79,East Village,Manhattan,804850,0.015550856410983293,False
+fhvhv,night,5,230,Times Sq/Theatre District,Manhattan,801016,0.01547677803180741,False
+fhvhv,night,6,61,Crown Heights North,Brooklyn,732996,0.014162534069485134,False
+fhvhv,night,7,234,Union Sq,Manhattan,701102,0.013546296243341254,False
+fhvhv,night,8,255,Williamsburg (North Side),Brooklyn,689081,0.01331403328140247,False
+fhvhv,night,9,148,Lower East Side,Manhattan,674266,0.013027786231978705,False
+fhvhv,night,10,231,TriBeCa/Civic Center,Manhattan,656504,0.012684598915619277,False

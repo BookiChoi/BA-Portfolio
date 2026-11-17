@@ -1,0 +1,525 @@
+pu,pickups,pickups_with_fee,fee_share,service,zone,borough,in_crz_list
+1,4432,86,0.0194043321299639,yellow,Newark Airport,EWR,False
+2,71,20,0.28169014084507044,yellow,Jamaica Bay,Queens,False
+3,2743,101,0.03682099890630696,yellow,Allerton/Pelham Gardens,Bronx,False
+4,148445,141954,0.956273367240392,yellow,Alphabet City,Manhattan,True
+5,28,1,0.03571428571428571,yellow,Arden Heights,Staten Island,False
+6,687,74,0.10771470160116449,yellow,Arrochar/Fort Wadsworth,Staten Island,False
+7,74985,29024,0.38706407948256316,yellow,Astoria,Queens,False
+8,453,94,0.20750551876379691,yellow,Astoria Park,Queens,False
+9,1212,62,0.05115511551155116,yellow,Auburndale,Queens,False
+10,14555,3325,0.22844383373411198,yellow,Baisley Park,Queens,False
+11,1911,102,0.05337519623233909,yellow,Bath Beach,Brooklyn,False
+12,9809,9454,0.9638087470690182,yellow,Battery Park,Manhattan,True
+13,213087,203389,0.9544880729467307,yellow,Battery Park City,Manhattan,True
+14,11865,1703,0.1435313948588285,yellow,Bay Ridge,Brooklyn,False
+15,1192,73,0.061241610738255035,yellow,Bay Terrace/Fort Totten,Queens,False
+16,2226,100,0.044923629829290206,yellow,Bayside,Queens,False
+17,32519,8625,0.2652295581044928,yellow,Bedford,Brooklyn,False
+18,6424,368,0.057285180572851806,yellow,Bedford Park,Bronx,False
+19,2683,104,0.03876257920238539,yellow,Bellerose,Queens,False
+20,3342,276,0.08258527827648116,yellow,Belmont,Bronx,False
+21,3678,117,0.03181076672104405,yellow,Bensonhurst East,Brooklyn,False
+22,4831,197,0.04077830676878493,yellow,Bensonhurst West,Brooklyn,False
+23,289,30,0.10380622837370242,yellow,Bloomfield/Emerson Hill,Staten Island,False
+24,107218,32293,0.3011900986774609,yellow,Bloomingdale,Manhattan,False
+25,39204,13038,0.332568105295378,yellow,Boerum Hill,Brooklyn,False
+26,7000,349,0.04985714285714286,yellow,Borough Park,Brooklyn,False
+27,244,28,0.11475409836065574,yellow,Breezy Point/Fort Tilden/Riis Beach,Queens,False
+28,7854,865,0.11013496307613954,yellow,Briarwood/Jamaica Hills,Queens,False
+29,3900,82,0.021025641025641025,yellow,Brighton Beach,Brooklyn,False
+30,166,5,0.030120481927710843,yellow,Broad Channel,Queens,False
+31,830,135,0.16265060240963855,yellow,Bronx Park,Bronx,False
+32,3951,187,0.04732978992660086,yellow,Bronxdale,Bronx,False
+33,44983,19571,0.4350754729564502,yellow,Brooklyn Heights,Brooklyn,False
+34,6283,2626,0.41795320706668787,yellow,Brooklyn Navy Yard,Brooklyn,False
+35,19341,443,0.022904710201127138,yellow,Brownsville,Brooklyn,False
+36,32025,8234,0.25711163153786104,yellow,Bushwick North,Brooklyn,False
+37,54416,15895,0.2921015877683034,yellow,Bushwick South,Brooklyn,False
+38,2693,116,0.043074637950241364,yellow,Cambria Heights,Queens,False
+39,22390,364,0.01625725770433229,yellow,Canarsie,Brooklyn,False
+40,13640,5874,0.4306451612903226,yellow,Carroll Gardens,Brooklyn,False
+41,167850,43957,0.26188263330354483,yellow,Central Harlem,Manhattan,False
+42,121279,34369,0.283387890731289,yellow,Central Harlem North,Manhattan,False
+43,404495,242197,0.5987638907773891,yellow,Central Park,Manhattan,False
+44,34,1,0.029411764705882353,yellow,Charleston/Tottenville,Staten Island,False
+45,83926,79145,0.9430331482496485,yellow,Chinatown,Manhattan,True
+46,585,27,0.046153846153846156,yellow,City Island,Bronx,False
+47,5699,293,0.05141252851377435,yellow,Claremont/Bathgate,Bronx,False
+48,768695,753439,0.98015337682696,yellow,Clinton East,Manhattan,True
+49,31816,10847,0.3409290922806135,yellow,Clinton Hill,Brooklyn,False
+50,247175,235208,0.9515849094770912,yellow,Clinton West,Manhattan,True
+51,9363,254,0.027128057246608994,yellow,Co-Op City,Bronx,False
+52,12573,5497,0.437206712797264,yellow,Cobble Hill,Brooklyn,False
+53,2623,256,0.09759817003431186,yellow,College Point,Queens,False
+54,3618,1645,0.4546710889994472,yellow,Columbia Street,Brooklyn,False
+55,9524,185,0.019424611507769845,yellow,Coney Island,Brooklyn,False
+56,8112,1294,0.15951676528599606,yellow,Corona,Queens,False
+57,658,107,0.16261398176291794,yellow,Corona,Queens,False
+58,497,32,0.06438631790744467,yellow,Country Club,Bronx,False
+59,277,23,0.08303249097472924,yellow,Crotona Park,Bronx,False
+60,4424,297,0.06713381555153707,yellow,Crotona Park East,Bronx,False
+61,52927,9472,0.17896347799799725,yellow,Crown Heights North,Brooklyn,False
+62,14727,2247,0.1525768995722143,yellow,Crown Heights South,Brooklyn,False
+63,9438,506,0.053613053613053616,yellow,Cypress Hills,Brooklyn,False
+64,1250,61,0.0488,yellow,Douglaston,Queens,False
+65,43110,18182,0.4217582927395036,yellow,Downtown Brooklyn/MetroTech,Brooklyn,False
+66,44563,23280,0.5224064807126989,yellow,DUMBO/Vinegar Hill,Brooklyn,False
+67,2840,418,0.1471830985915493,yellow,Dyker Heights,Brooklyn,False
+68,862401,844924,0.9797344854655781,yellow,East Chelsea,Manhattan,True
+69,12175,1006,0.08262833675564682,yellow,East Concourse/Concourse Village,Bronx,False
+70,71580,34266,0.47870913663034365,yellow,East Elmhurst,Queens,False
+71,15400,1110,0.07207792207792207,yellow,East Flatbush/Farragut,Brooklyn,False
+72,17333,741,0.042750822131194834,yellow,East Flatbush/Remsen Village,Brooklyn,False
+73,1014,34,0.03353057199211045,yellow,East Flushing,Queens,False
+74,145955,39371,0.269747524922065,yellow,East Harlem North,Manhattan,False
+75,273715,78976,0.28853369380560073,yellow,East Harlem South,Manhattan,False
+76,34361,752,0.02188527691277902,yellow,East New York,Brooklyn,False
+77,8993,291,0.032358501056377185,yellow,East New York/Pennsylvania Avenue,Brooklyn,False
+78,7231,422,0.05835983957958789,yellow,East Tremont,Bronx,False
+79,893313,876103,0.9807346361241804,yellow,East Village,Manhattan,True
+80,50051,18652,0.37265988691534635,yellow,East Williamsburg,Brooklyn,False
+81,4757,146,0.030691612360731552,yellow,Eastchester,Bronx,False
+82,18719,2170,0.11592499599337572,yellow,Elmhurst,Queens,False
+83,7495,1139,0.15196797865243494,yellow,Elmhurst/Maspeth,Queens,False
+84,32,4,0.125,yellow,Eltingville/Annadale/Prince's Bay,Staten Island,False
+85,11104,1499,0.13499639769452448,yellow,Erasmus,Brooklyn,False
+86,6493,41,0.006314492530417373,yellow,Far Rockaway,Queens,False
+87,248524,238853,0.9610862532391238,yellow,Financial District North,Manhattan,True
+88,127017,119012,0.936976940094633,yellow,Financial District South,Manhattan,True
+89,27262,4606,0.1689531215611474,yellow,Flatbush/Ditmas Park,Brooklyn,False
+90,511062,500118,0.9785857684586214,yellow,Flatiron,Manhattan,True
+91,15440,437,0.028303108808290154,yellow,Flatlands,Brooklyn,False
+92,10322,832,0.08060453400503778,yellow,Flushing,Queens,False
+93,20275,7093,0.34983970406905057,yellow,Flushing Meadows-Corona Park,Queens,False
+94,2969,158,0.05321657123610643,yellow,Fordham South,Bronx,False
+95,17914,1927,0.10756949871608798,yellow,Forest Hills,Queens,False
+96,588,63,0.10714285714285714,yellow,Forest Park/Highland Park,Queens,False
+97,48178,16705,0.34673502428494335,yellow,Fort Greene,Brooklyn,False
+98,1749,80,0.045740423098913664,yellow,Fresh Meadows,Queens,False
+99,8,0,0.0,yellow,Freshkills Park,Staten Island,False
+100,437750,427243,0.9759977155910908,yellow,Garment District,Manhattan,True
+101,2023,57,0.028175976272862086,yellow,Glen Oaks,Queens,False
+102,4590,393,0.08562091503267974,yellow,Glendale,Queens,False
+105,9,8,0.8888888888888888,yellow,Governor's Island/Ellis Island/Liberty Island,Manhattan,False
+106,9750,2958,0.30338461538461536,yellow,Gowanus,Brooklyn,False
+107,623088,608706,0.9769181881211001,yellow,Gramercy,Manhattan,True
+108,3145,69,0.021939586645468998,yellow,Gravesend,Brooklyn,False
+109,106,16,0.1509433962264151,yellow,Great Kills,Staten Island,False
+111,101,23,0.22772277227722773,yellow,Green-Wood Cemetery,Brooklyn,False
+112,56476,23133,0.4096076209363269,yellow,Greenpoint,Brooklyn,False
+113,462065,453441,0.9813359592265157,yellow,Greenwich Village North,Manhattan,True
+114,477993,468978,0.9811398911699544,yellow,Greenwich Village South,Manhattan,True
+115,252,35,0.1388888888888889,yellow,Grymes Hill/Clifton,Staten Island,False
+116,78655,27562,0.35041637530989767,yellow,Hamilton Heights,Manhattan,False
+117,6260,42,0.00670926517571885,yellow,Hammels/Arverne,Queens,False
+118,197,37,0.18781725888324874,yellow,Heartland Village/Todt Hill,Staten Island,False
+119,7770,1297,0.16692406692406692,yellow,Highbridge,Bronx,False
+120,818,217,0.265281173594132,yellow,Highbridge Park,Manhattan,False
+121,4966,251,0.05054369714055578,yellow,Hillcrest/Pomonok,Queens,False
+122,3079,76,0.024683338746346217,yellow,Hollis,Queens,False
+123,4829,152,0.03147649616897909,yellow,Homecrest,Brooklyn,False
+124,4701,197,0.04190597745160604,yellow,Howard Beach,Queens,False
+125,165022,160708,0.9738580310504054,yellow,Hudson Sq,Manhattan,True
+126,5434,515,0.09477364740522636,yellow,Hunts Point,Bronx,False
+127,16292,4455,0.2734470905966118,yellow,Inwood,Manhattan,False
+128,1616,415,0.2568069306930693,yellow,Inwood Hill Park,Manhattan,False
+129,34524,5546,0.16064187232070443,yellow,Jackson Heights,Queens,False
+130,26384,1867,0.07076258338386901,yellow,Jamaica,Queens,False
+131,4667,297,0.06363831154917506,yellow,Jamaica Estates,Queens,False
+132,1333214,474746,0.3560913701776309,yellow,JFK Airport,Queens,False
+133,7000,2037,0.291,yellow,Kensington,Brooklyn,False
+134,7328,396,0.05403930131004367,yellow,Kew Gardens,Queens,False
+135,3807,211,0.05542421854478592,yellow,Kew Gardens Hills,Queens,False
+136,4600,387,0.08413043478260869,yellow,Kingsbridge Heights,Bronx,False
+137,409195,391292,0.9562482435024866,yellow,Kips Bay,Manhattan,True
+138,840574,422065,0.5021152212654686,yellow,LaGuardia Airport,Queens,False
+139,3362,59,0.01754907792980369,yellow,Laurelton,Queens,False
+140,675119,319579,0.47336691753601956,yellow,Lenox Hill East,Manhattan,False
+141,750104,380383,0.5071070144939902,yellow,Lenox Hill West,Manhattan,False
+142,959153,566305,0.590421966047127,yellow,Lincoln Square East,Manhattan,False
+143,395089,213751,0.5410198714719975,yellow,Lincoln Square West,Manhattan,False
+144,371012,362916,0.9781786033874915,yellow,Little Italy/NoLiTa,Manhattan,True
+145,78809,26173,0.33210673907802407,yellow,Long Island City/Hunters Point,Queens,False
+146,36880,17363,0.47079718004338394,yellow,Long Island City/Queens Plaza,Queens,False
+147,4000,378,0.0945,yellow,Longwood,Bronx,False
+148,455580,444681,0.9760766495456341,yellow,Lower East Side,Manhattan,True
+149,3532,71,0.020101925254813136,yellow,Madison,Brooklyn,False
+150,2100,41,0.019523809523809523,yellow,Manhattan Beach,Brooklyn,False
+151,278603,72183,0.2590890981073427,yellow,Manhattan Valley,Manhattan,False
+152,51029,17628,0.3454506261145623,yellow,Manhattanville,Manhattan,False
+153,1647,122,0.07407407407407407,yellow,Marble Hill,Manhattan,False
+154,459,25,0.054466230936819175,yellow,Marine Park/Floyd Bennett Field,Brooklyn,False
+155,7183,129,0.017959070026451345,yellow,Marine Park/Mill Basin,Brooklyn,False
+156,95,16,0.16842105263157894,yellow,Mariners Harbor,Staten Island,False
+157,13994,3720,0.2658282120908961,yellow,Maspeth,Queens,False
+158,333794,323632,0.9695560735064142,yellow,Meatpacking/West Village West,Manhattan,True
+159,11411,970,0.08500569625799667,yellow,Melrose South,Bronx,False
+160,4851,606,0.12492269635126778,yellow,Middle Village,Queens,False
+161,1368039,1344887,0.9830765058598475,yellow,Midtown Center,Manhattan,True
+162,1013142,998497,0.9855449680301478,yellow,Midtown East,Manhattan,True
+163,814297,801240,0.9839653099544761,yellow,Midtown North,Manhattan,True
+164,662452,649139,0.9799034496084245,yellow,Midtown South,Manhattan,True
+165,6624,332,0.050120772946859904,yellow,Midwood,Brooklyn,False
+166,217237,63844,0.29389100383452177,yellow,Morningside Heights,Manhattan,False
+167,8211,574,0.06990622335890878,yellow,Morrisania/Melrose,Bronx,False
+168,23142,4008,0.17319159968887737,yellow,Mott Haven/Port Morris,Bronx,False
+169,7185,525,0.07306889352818371,yellow,Mount Hope,Bronx,False
+170,875188,855687,0.9777179303189715,yellow,Murray Hill,Manhattan,True
+171,2282,109,0.047765118317265556,yellow,Murray Hill-Queens,Queens,False
+172,221,21,0.09502262443438914,yellow,New Dorp/Midland Beach,Staten Island,False
+173,4818,361,0.07492735574927356,yellow,North Corona,Queens,False
+174,5618,298,0.0530437878248487,yellow,Norwood,Bronx,False
+175,1447,68,0.046993780234968904,yellow,Oakland Gardens,Queens,False
+176,102,20,0.19607843137254902,yellow,Oakwood,Staten Island,False
+177,19104,1922,0.100607202680067,yellow,Ocean Hill,Brooklyn,False
+178,1763,127,0.07203630175836642,yellow,Ocean Parkway South,Brooklyn,False
+179,28483,11140,0.3911104869571323,yellow,Old Astoria,Queens,False
+180,3623,196,0.05409881313828319,yellow,Ozone Park,Queens,False
+181,37349,10795,0.28903049613108783,yellow,Park Slope,Brooklyn,False
+182,7990,573,0.07171464330413016,yellow,Parkchester,Bronx,False
+183,1978,123,0.0621840242669363,yellow,Pelham Bay,Bronx,False
+184,383,31,0.08093994778067885,yellow,Pelham Bay Park,Bronx,False
+185,4004,217,0.05419580419580419,yellow,Pelham Parkway,Bronx,False
+186,1023707,1009529,0.9861503340311242,yellow,Penn Station/Madison Sq West,Manhattan,True
+187,67,11,0.16417910447761194,yellow,Port Richmond,Staten Island,False
+188,29877,4122,0.1379656592027312,yellow,Prospect-Lefferts Gardens,Brooklyn,False
+189,15647,4763,0.304403400012782,yellow,Prospect Heights,Brooklyn,False
+190,2672,594,0.22230538922155688,yellow,Prospect Park,Brooklyn,False
+191,6984,160,0.022909507445589918,yellow,Queens Village,Queens,False
+192,2145,162,0.07552447552447553,yellow,Queensboro Hill,Queens,False
+193,26532,7086,0.2670737222976029,yellow,Queensbridge/Ravenswood,Queens,False
+194,1881,366,0.19457735247208932,yellow,Randalls Island,Manhattan,False
+195,12288,4355,0.3544108072916667,yellow,Red Hook,Brooklyn,False
+196,7775,1085,0.1395498392282958,yellow,Rego Park,Queens,False
+197,15360,554,0.03606770833333333,yellow,Richmond Hill,Queens,False
+198,15296,2531,0.16546809623430964,yellow,Ridgewood,Queens,False
+199,22,14,0.6363636363636364,yellow,Rikers Island,Bronx,False
+200,3810,543,0.14251968503937007,yellow,Riverdale/North Riverdale/Fieldston,Bronx,False
+201,1890,30,0.015873015873015872,yellow,Rockaway Park,Queens,False
+202,5144,1558,0.30287713841368585,yellow,Roosevelt Island,Manhattan,False
+203,3240,125,0.038580246913580245,yellow,Rosedale,Queens,False
+204,16,4,0.25,yellow,Rossville/Woodrow,Staten Island,False
+205,8570,137,0.015985997666277712,yellow,Saint Albans,Queens,False
+206,165,22,0.13333333333333333,yellow,Saint George/New Brighton,Staten Island,False
+207,3994,389,0.09739609414121182,yellow,Saint Michaels Cemetery/Woodside,Queens,False
+208,4503,361,0.08016877637130802,yellow,Schuylerville/Edgewater Park,Bronx,False
+209,76271,71714,0.9402525206172726,yellow,Seaport,Manhattan,True
+210,6074,99,0.016298979255844583,yellow,Sheepshead Bay,Brooklyn,False
+211,278377,273190,0.9813669951181312,yellow,SoHo,Manhattan,True
+212,5744,588,0.10236768802228412,yellow,Soundview/Bruckner,Bronx,False
+213,10649,665,0.06244717813879237,yellow,Soundview/Castle Hill,Bronx,False
+214,408,71,0.17401960784313725,yellow,South Beach/Dongan Hills,Staten Island,False
+215,10253,1175,0.1146006047010631,yellow,South Jamaica,Queens,False
+216,23218,731,0.03148419329830304,yellow,South Ozone Park,Queens,False
+217,5737,1344,0.23426878159316716,yellow,South Williamsburg,Brooklyn,False
+218,6346,108,0.017018594390167036,yellow,Springfield Gardens North,Queens,False
+219,6785,889,0.13102431834929992,yellow,Springfield Gardens South,Queens,False
+220,6459,836,0.12943180058832637,yellow,Spuyten Duyvil/Kingsbridge,Bronx,False
+221,437,65,0.14874141876430205,yellow,Stapleton,Staten Island,False
+222,6703,63,0.009398776667163957,yellow,Starrett City,Brooklyn,False
+223,26025,6085,0.23381364073006725,yellow,Steinway,Queens,False
+224,90107,86976,0.965252422120368,yellow,Stuy Town/Peter Cooper Village,Manhattan,True
+225,36051,8442,0.23416826162935842,yellow,Stuyvesant Heights,Brooklyn,False
+226,60305,18702,0.3101235386783849,yellow,Sunnyside,Queens,False
+227,5087,695,0.1366227639080008,yellow,Sunset Park East,Brooklyn,False
+228,15986,4005,0.2505317152508445,yellow,Sunset Park West,Brooklyn,False
+229,533923,525809,0.9848030521254938,yellow,Sutton Place/Turtle Bay North,Manhattan,True
+230,956949,936711,0.9788515375427531,yellow,Times Sq/Theatre District,Manhattan,True
+231,466005,448443,0.9623137090803747,yellow,TriBeCa/Civic Center,Manhattan,True
+232,111893,102222,0.9135692134449876,yellow,Two Bridges/Seward Park,Manhattan,True
+233,361025,351565,0.9737968284744823,yellow,UN/Turtle Bay South,Manhattan,True
+234,864689,848997,0.9818524348060401,yellow,Union Sq,Manhattan,True
+235,8481,665,0.07841056479188775,yellow,University Heights/Morris Heights,Bronx,False
+236,1323611,455515,0.34414567421999365,yellow,Upper East Side North,Manhattan,False
+237,1479906,773238,0.52249129336593,yellow,Upper East Side South,Manhattan,False
+238,636316,174780,0.2746748470885535,yellow,Upper West Side North,Manhattan,False
+239,863087,311991,0.3614826778760426,yellow,Upper West Side South,Manhattan,False
+240,1048,75,0.0715648854961832,yellow,Van Cortlandt Park,Bronx,False
+241,6017,450,0.0747881003822503,yellow,Van Cortlandt Village,Bronx,False
+242,5242,212,0.04044257916825639,yellow,Van Nest/Morris Park,Bronx,False
+243,38001,13307,0.350174995394858,yellow,Washington Heights North,Manhattan,False
+244,88144,30836,0.3498366309675077,yellow,Washington Heights South,Manhattan,False
+245,90,20,0.2222222222222222,yellow,West Brighton,Staten Island,False
+246,637299,612520,0.9611187213537131,yellow,West Chelsea/Hudson Yards,Manhattan,True
+247,15222,2789,0.18322165287084483,yellow,West Concourse,Bronx,False
+248,5595,702,0.12546916890080428,yellow,West Farms/Bronx River,Bronx,False
+249,738873,724806,0.9809615454888729,yellow,West Village,Manhattan,True
+250,5169,430,0.08318823757012962,yellow,Westchester Village/Unionport,Bronx,False
+251,152,21,0.13815789473684212,yellow,Westerleigh,Staten Island,False
+252,2180,134,0.061467889908256884,yellow,Whitestone,Queens,False
+253,301,50,0.16611295681063123,yellow,Willets Point,Queens,False
+254,8663,359,0.04144060948862981,yellow,Williamsbridge/Olinville,Bronx,False
+255,85012,36675,0.43140968333882274,yellow,Williamsburg (North Side),Brooklyn,False
+256,59953,29139,0.48603072406718595,yellow,Williamsburg (South Side),Brooklyn,False
+257,4925,1722,0.34964467005076144,yellow,Windsor Terrace,Brooklyn,False
+258,7424,513,0.06910021551724138,yellow,Woodhaven,Queens,False
+259,5216,262,0.05023006134969325,yellow,Woodlawn/Wakefield,Bronx,False
+260,20483,4640,0.22652931699458087,yellow,Woodside,Queens,False
+261,153950,145585,0.9456641766807405,yellow,World Trade Center,Manhattan,True
+262,488043,198584,0.40689857246185274,yellow,Yorkville East,Manhattan,False
+263,638902,234989,0.36780132164244284,yellow,Yorkville West,Manhattan,False
+264,38633,21418,0.5543965004012114,yellow,,Unknown,False
+265,16321,733,0.04491146375834814,yellow,Outside of NYC,,False
+1,12,1,0.08333333333333333,fhvhv,Newark Airport,EWR,False
+2,525,14,0.02666666666666667,fhvhv,Jamaica Bay,Queens,False
+3,459600,7741,0.01684290687554395,fhvhv,Allerton/Pelham Gardens,Bronx,False
+4,491790,485453,0.987114418755973,fhvhv,Alphabet City,Manhattan,True
+5,58288,1337,0.022937825967609113,fhvhv,Arden Heights,Staten Island,False
+6,115575,3822,0.03306943543153796,fhvhv,Arrochar/Fort Wadsworth,Staten Island,False
+7,1858516,221808,0.11934683371033664,fhvhv,Astoria,Queens,False
+8,9317,571,0.06128582161640013,fhvhv,Astoria Park,Queens,False
+9,180439,5298,0.029361723352490314,fhvhv,Auburndale,Queens,False
+10,653369,11727,0.017948509953793337,fhvhv,Baisley Park,Queens,False
+11,240512,8526,0.035449374667376264,fhvhv,Bath Beach,Brooklyn,False
+12,20789,20745,0.9978834960796575,fhvhv,Battery Park,Manhattan,True
+13,761462,733378,0.9631183171320433,fhvhv,Battery Park City,Manhattan,True
+14,1091692,68015,0.06230237099841347,fhvhv,Bay Ridge,Brooklyn,False
+15,147000,5304,0.036081632653061226,fhvhv,Bay Terrace/Fort Totten,Queens,False
+16,412328,10739,0.026044799286005317,fhvhv,Bayside,Queens,False
+17,1516480,132616,0.08744988394175987,fhvhv,Bedford,Brooklyn,False
+18,933209,20627,0.022103301618394165,fhvhv,Bedford Park,Bronx,False
+19,182554,3133,0.017162045203063202,fhvhv,Bellerose,Queens,False
+20,581885,18904,0.032487519011488525,fhvhv,Belmont,Bronx,False
+21,543365,16444,0.030263266864814627,fhvhv,Bensonhurst East,Brooklyn,False
+22,724536,25121,0.03467184515331191,fhvhv,Bensonhurst West,Brooklyn,False
+23,309213,5958,0.01926827138574381,fhvhv,Bloomfield/Emerson Hill,Staten Island,False
+24,248238,49508,0.19943763646178264,fhvhv,Bloomingdale,Manhattan,False
+25,1075038,180605,0.1679987126036475,fhvhv,Boerum Hill,Brooklyn,False
+26,968652,22967,0.023710269529201404,fhvhv,Borough Park,Brooklyn,False
+27,18328,1017,0.05548886948930598,fhvhv,Breezy Point/Fort Tilden/Riis Beach,Queens,False
+28,498634,14386,0.028850820441446032,fhvhv,Briarwood/Jamaica Hills,Queens,False
+29,434114,10604,0.024426763476874738,fhvhv,Brighton Beach,Brooklyn,False
+30,13267,267,0.02012512248435969,fhvhv,Broad Channel,Queens,False
+31,76163,5191,0.06815645392119533,fhvhv,Bronx Park,Bronx,False
+32,485865,11911,0.024515040186059912,fhvhv,Bronxdale,Bronx,False
+33,881680,234660,0.2661509844841666,fhvhv,Brooklyn Heights,Brooklyn,False
+34,162349,38931,0.2397982124928395,fhvhv,Brooklyn Navy Yard,Brooklyn,False
+35,1181062,20155,0.017065149839720524,fhvhv,Brownsville,Brooklyn,False
+36,1534687,122661,0.07992574381616577,fhvhv,Bushwick North,Brooklyn,False
+37,2122119,202920,0.09562140483168004,fhvhv,Bushwick South,Brooklyn,False
+38,246622,4910,0.019909010550559155,fhvhv,Cambria Heights,Queens,False
+39,1474098,17557,0.011910334319699232,fhvhv,Canarsie,Brooklyn,False
+40,462288,82522,0.17850777004810853,fhvhv,Carroll Gardens,Brooklyn,False
+41,1225265,129812,0.10594606064810469,fhvhv,Central Harlem,Manhattan,False
+42,1686881,148571,0.08807438106185321,fhvhv,Central Harlem North,Manhattan,False
+43,266670,167348,0.6275471556605542,fhvhv,Central Park,Manhattan,False
+44,91961,1471,0.015995911310229337,fhvhv,Charleston/Tottenville,Staten Island,False
+45,462727,460613,0.9954314314920029,fhvhv,Chinatown,Manhattan,True
+46,43738,1572,0.03594128675293795,fhvhv,City Island,Bronx,False
+47,660098,16024,0.024275183381861482,fhvhv,Claremont/Bathgate,Bronx,False
+48,1623357,1617325,0.9962842430839304,fhvhv,Clinton East,Manhattan,True
+49,1132496,165554,0.14618506378830476,fhvhv,Clinton Hill,Brooklyn,False
+50,913244,894553,0.9795333996171889,fhvhv,Clinton West,Manhattan,True
+51,798567,12787,0.01601243226930239,fhvhv,Co-Op City,Bronx,False
+52,294966,58873,0.1995924954062502,fhvhv,Cobble Hill,Brooklyn,False
+53,312523,9931,0.031776861223013986,fhvhv,College Point,Queens,False
+54,108967,23072,0.21173382767259813,fhvhv,Columbia Street,Brooklyn,False
+55,582686,19225,0.032993756500070366,fhvhv,Coney Island,Brooklyn,False
+56,638606,30022,0.04701177251701362,fhvhv,Corona,Queens,False
+57,53964,2180,0.04039730190497368,fhvhv,Corona,Queens,False
+58,71951,2413,0.033536712484885545,fhvhv,Country Club,Bronx,False
+59,24455,807,0.032999386628501326,fhvhv,Crotona Park,Bronx,False
+60,454402,12569,0.027660529663161695,fhvhv,Crotona Park East,Bronx,False
+61,2475488,139028,0.056161855763388877,fhvhv,Crown Heights North,Brooklyn,False
+62,691599,36253,0.05241910413404299,fhvhv,Crown Heights South,Brooklyn,False
+63,638427,14706,0.023034740072083417,fhvhv,Cypress Hills,Brooklyn,False
+64,137617,4604,0.033455169056148586,fhvhv,Douglaston,Queens,False
+65,882626,194893,0.2208103998749187,fhvhv,Downtown Brooklyn/MetroTech,Brooklyn,False
+66,702563,244035,0.34734963270197833,fhvhv,DUMBO/Vinegar Hill,Brooklyn,False
+67,371602,22549,0.06068051302199665,fhvhv,Dyker Heights,Brooklyn,False
+68,1875933,1868462,0.9960174483843506,fhvhv,East Chelsea,Manhattan,True
+69,1001451,38378,0.03832239420600708,fhvhv,East Concourse/Concourse Village,Bronx,False
+70,475446,27375,0.05757751668959251,fhvhv,East Elmhurst,Queens,False
+71,833942,21188,0.02540704269601483,fhvhv,East Flatbush/Farragut,Brooklyn,False
+72,979416,16574,0.01692232922476251,fhvhv,East Flatbush/Remsen Village,Brooklyn,False
+73,207978,5885,0.028296262104645684,fhvhv,East Flushing,Queens,False
+74,1327410,133473,0.10055144981580671,fhvhv,East Harlem North,Manhattan,False
+75,1161891,211810,0.18229765098447273,fhvhv,East Harlem South,Manhattan,False
+76,2256179,27195,0.012053564898884353,fhvhv,East New York,Brooklyn,False
+77,551574,9633,0.017464565044762806,fhvhv,East New York/Pennsylvania Avenue,Brooklyn,False
+78,887324,22988,0.025907109466215272,fhvhv,East Tremont,Bronx,False
+79,2120842,2113522,0.9965485406267888,fhvhv,East Village,Manhattan,True
+80,1483293,229040,0.15441318741475893,fhvhv,East Williamsburg,Brooklyn,False
+81,588631,8634,0.01466793288155058,fhvhv,Eastchester,Bronx,False
+82,1484234,59464,0.04006376353054842,fhvhv,Elmhurst,Queens,False
+83,491663,33829,0.06880525888667645,fhvhv,Elmhurst/Maspeth,Queens,False
+84,94428,2122,0.022472148091667726,fhvhv,Eltingville/Annadale/Prince's Bay,Staten Island,False
+85,622188,24630,0.03958610580724797,fhvhv,Erasmus,Brooklyn,False
+86,440732,3967,0.009000934808455026,fhvhv,Far Rockaway,Queens,False
+87,1085454,1079640,0.9946437159013648,fhvhv,Financial District North,Manhattan,True
+88,483685,466914,0.9653266071926977,fhvhv,Financial District South,Manhattan,True
+89,1518867,79458,0.0523139945762203,fhvhv,Flatbush/Ditmas Park,Brooklyn,False
+90,1136726,1131493,0.9953964279870435,fhvhv,Flatiron,Manhattan,True
+91,962613,18441,0.019157231410753855,fhvhv,Flatlands,Brooklyn,False
+92,1081920,52478,0.04850451049985211,fhvhv,Flushing,Queens,False
+93,178004,32695,0.18367564773825307,fhvhv,Flushing Meadows-Corona Park,Queens,False
+94,420537,10852,0.02580510157251324,fhvhv,Fordham South,Bronx,False
+95,1396687,70455,0.05044437300554813,fhvhv,Forest Hills,Queens,False
+96,30258,1526,0.050432943353823784,fhvhv,Forest Park/Highland Park,Queens,False
+97,1282046,216749,0.16906491654745617,fhvhv,Fort Greene,Brooklyn,False
+98,189590,4974,0.02623556094730735,fhvhv,Fresh Meadows,Queens,False
+99,6560,95,0.014481707317073171,fhvhv,Freshkills Park,Staten Island,False
+100,964486,961101,0.9964903585951481,fhvhv,Garment District,Manhattan,True
+101,194334,3871,0.019919314170448815,fhvhv,Glen Oaks,Queens,False
+102,492971,16577,0.03362672449292149,fhvhv,Glendale,Queens,False
+105,29,24,0.8275862068965517,fhvhv,Governor's Island/Ellis Island/Liberty Island,Manhattan,False
+106,445713,48281,0.10832306888064741,fhvhv,Gowanus,Brooklyn,False
+107,1237653,1232693,0.9959924146751957,fhvhv,Gramercy,Manhattan,True
+108,300446,7358,0.024490257816712487,fhvhv,Gravesend,Brooklyn,False
+109,143371,2588,0.01805107030013043,fhvhv,Great Kills,Staten Island,False
+110,441,42,0.09523809523809523,fhvhv,Great Kills Park,Staten Island,False
+111,7956,516,0.06485671191553545,fhvhv,Green-Wood Cemetery,Brooklyn,False
+112,1899665,399259,0.21017337267360298,fhvhv,Greenpoint,Brooklyn,False
+113,977637,973959,0.996237867429322,fhvhv,Greenwich Village North,Manhattan,True
+114,1028586,1024806,0.9963250520617625,fhvhv,Greenwich Village South,Manhattan,True
+115,164278,3157,0.019217424122524016,fhvhv,Grymes Hill/Clifton,Staten Island,False
+116,842594,90730,0.10767938057949618,fhvhv,Hamilton Heights,Manhattan,False
+117,336180,4478,0.01332024510678803,fhvhv,Hammels/Arverne,Queens,False
+118,204431,5854,0.028635578752733197,fhvhv,Heartland Village/Todt Hill,Staten Island,False
+119,659726,33276,0.050439121695976814,fhvhv,Highbridge,Bronx,False
+120,18646,1347,0.07224069505523972,fhvhv,Highbridge Park,Manhattan,False
+121,442835,13009,0.029376630121828673,fhvhv,Hillcrest/Pomonok,Queens,False
+122,256608,3292,0.012828906347424866,fhvhv,Hollis,Queens,False
+123,594159,15169,0.02553020319476773,fhvhv,Homecrest,Brooklyn,False
+124,313646,6911,0.02203439546495093,fhvhv,Howard Beach,Queens,False
+125,630801,628005,0.9955675403177864,fhvhv,Hudson Sq,Manhattan,True
+126,619064,17089,0.027604577232725535,fhvhv,Hunts Point,Bronx,False
+127,746091,53920,0.07227000459729443,fhvhv,Inwood,Manhattan,False
+128,57337,4721,0.08233775746899907,fhvhv,Inwood Hill Park,Manhattan,False
+129,1558733,78937,0.050641771233431256,fhvhv,Jackson Heights,Queens,False
+130,1593413,27623,0.017335744091456516,fhvhv,Jamaica,Queens,False
+131,318032,7628,0.02398500779795744,fhvhv,Jamaica Estates,Queens,False
+132,3102993,864061,0.27846050571174347,fhvhv,JFK Airport,Queens,False
+133,362424,24954,0.06885305608900073,fhvhv,Kensington,Brooklyn,False
+134,459687,12126,0.02637881863093801,fhvhv,Kew Gardens,Queens,False
+135,354888,12486,0.035182930952864004,fhvhv,Kew Gardens Hills,Queens,False
+136,494454,17228,0.03484247270726903,fhvhv,Kingsbridge Heights,Bronx,False
+137,923958,917261,0.9927518350401209,fhvhv,Kips Bay,Manhattan,True
+138,3680665,1477932,0.4015393957341948,fhvhv,LaGuardia Airport,Queens,False
+139,410799,3824,0.009308688677431055,fhvhv,Laurelton,Queens,False
+140,1016955,543505,0.5344435102831492,fhvhv,Lenox Hill East,Manhattan,False
+141,1112200,646140,0.5809566624707786,fhvhv,Lenox Hill West,Manhattan,False
+142,1143580,782403,0.6841698875461271,fhvhv,Lincoln Square East,Manhattan,False
+143,830287,525699,0.6331533554060222,fhvhv,Lincoln Square West,Manhattan,False
+144,1222239,1217920,0.9964663212350449,fhvhv,Little Italy/NoLiTa,Manhattan,True
+145,1723594,367993,0.21350329601982834,fhvhv,Long Island City/Hunters Point,Queens,False
+146,498387,107237,0.21516813239510663,fhvhv,Long Island City/Queens Plaza,Queens,False
+147,405732,14541,0.035838928159474724,fhvhv,Longwood,Bronx,False
+148,1801843,1795499,0.9964791605039951,fhvhv,Lower East Side,Manhattan,True
+149,494982,10341,0.020891668787955925,fhvhv,Madison,Brooklyn,False
+150,212153,5225,0.024628452107677008,fhvhv,Manhattan Beach,Brooklyn,False
+151,505192,111795,0.2212921028044783,fhvhv,Manhattan Valley,Manhattan,False
+152,416173,54468,0.13087826456786,fhvhv,Manhattanville,Manhattan,False
+153,183828,4997,0.027183018908980134,fhvhv,Marble Hill,Manhattan,False
+154,16754,686,0.040945445863674344,fhvhv,Marine Park/Floyd Bennett Field,Brooklyn,False
+155,542560,10292,0.018969330580949573,fhvhv,Marine Park/Mill Basin,Brooklyn,False
+156,281584,3115,0.011062418319222684,fhvhv,Mariners Harbor,Staten Island,False
+157,642846,63495,0.09877171204300875,fhvhv,Maspeth,Queens,False
+158,990799,982154,0.9912747186866357,fhvhv,Meatpacking/West Village West,Manhattan,True
+159,904589,31465,0.03478375262135622,fhvhv,Melrose South,Bronx,False
+160,451374,27483,0.06088742373286898,fhvhv,Middle Village,Queens,False
+161,2115785,2108208,0.9964188232736313,fhvhv,Midtown Center,Manhattan,True
+162,1410011,1405068,0.9964943535901493,fhvhv,Midtown East,Manhattan,True
+163,1411827,1407037,0.9966072330391755,fhvhv,Midtown North,Manhattan,True
+164,1743317,1737281,0.9965376348650303,fhvhv,Midtown South,Manhattan,True
+165,597255,20321,0.034023993101773946,fhvhv,Midwood,Brooklyn,False
+166,760672,140988,0.18534664086491945,fhvhv,Morningside Heights,Manhattan,False
+167,737484,24616,0.03337835125914596,fhvhv,Morrisania/Melrose,Bronx,False
+168,1304262,78295,0.060030116648342124,fhvhv,Mott Haven/Port Morris,Bronx,False
+169,932792,25818,0.027678196210945204,fhvhv,Mount Hope,Bronx,False
+170,1547520,1541359,0.996018791356493,fhvhv,Murray Hill,Manhattan,True
+171,411975,11650,0.028278414952363613,fhvhv,Murray Hill-Queens,Queens,False
+172,129559,2712,0.020932548105496336,fhvhv,New Dorp/Midland Beach,Staten Island,False
+173,536332,14845,0.027678751221258475,fhvhv,North Corona,Queens,False
+174,868367,19811,0.02281408667072793,fhvhv,Norwood,Bronx,False
+175,158743,4879,0.030735213521226133,fhvhv,Oakland Gardens,Queens,False
+176,68743,2018,0.029355716218378597,fhvhv,Oakwood,Staten Island,False
+177,838815,24848,0.029622741605717588,fhvhv,Ocean Hill,Brooklyn,False
+178,197003,7533,0.03823799637568971,fhvhv,Ocean Parkway South,Brooklyn,False
+179,697553,79644,0.11417627047693867,fhvhv,Old Astoria,Queens,False
+180,352972,6712,0.01901567263125687,fhvhv,Ozone Park,Queens,False
+181,1790485,201696,0.11264880744602719,fhvhv,Park Slope,Brooklyn,False
+182,518903,17487,0.03369994006586973,fhvhv,Parkchester,Bronx,False
+183,274819,7539,0.027432601093810835,fhvhv,Pelham Bay,Bronx,False
+184,53851,1834,0.03405693487586117,fhvhv,Pelham Bay Park,Bronx,False
+185,627066,16837,0.026850443175040584,fhvhv,Pelham Parkway,Bronx,False
+186,1059523,1055652,0.9963464691186505,fhvhv,Penn Station/Madison Sq West,Manhattan,True
+187,154558,1828,0.011827275197660424,fhvhv,Port Richmond,Staten Island,False
+188,1446875,67190,0.046438012958963285,fhvhv,Prospect-Lefferts Gardens,Brooklyn,False
+189,685880,77314,0.11272234210065901,fhvhv,Prospect Heights,Brooklyn,False
+190,112272,8484,0.07556648140230868,fhvhv,Prospect Park,Brooklyn,False
+191,601769,7607,0.012641063265139946,fhvhv,Queens Village,Queens,False
+192,271655,9344,0.03439656917781745,fhvhv,Queensboro Hill,Queens,False
+193,348981,47422,0.1358870540229984,fhvhv,Queensbridge/Ravenswood,Queens,False
+194,37567,8245,0.21947453882396784,fhvhv,Randalls Island,Manhattan,False
+195,383417,67408,0.17580858438723374,fhvhv,Red Hook,Brooklyn,False
+196,524285,28503,0.054365469162764524,fhvhv,Rego Park,Queens,False
+197,885171,15194,0.017165044946117754,fhvhv,Richmond Hill,Queens,False
+198,1246532,85327,0.06845151187454473,fhvhv,Ridgewood,Queens,False
+199,63,5,0.07936507936507936,fhvhv,Rikers Island,Bronx,False
+200,408234,33784,0.0827564583057756,fhvhv,Riverdale/North Riverdale/Fieldston,Bronx,False
+201,149038,4525,0.030361384344932164,fhvhv,Rockaway Park,Queens,False
+202,114495,23093,0.2016943971352461,fhvhv,Roosevelt Island,Manhattan,False
+203,385833,2927,0.007586183659769901,fhvhv,Rosedale,Queens,False
+204,55207,1393,0.02523230749723767,fhvhv,Rossville/Woodrow,Staten Island,False
+205,839587,7996,0.009523730119689799,fhvhv,Saint Albans,Queens,False
+206,429282,4913,0.011444691368377896,fhvhv,Saint George/New Brighton,Staten Island,False
+207,34903,388,0.011116522934991262,fhvhv,Saint Michaels Cemetery/Woodside,Queens,False
+208,668703,20082,0.030031269487350888,fhvhv,Schuylerville/Edgewater Park,Bronx,False
+209,382354,379506,0.9925514052422624,fhvhv,Seaport,Manhattan,True
+210,662401,11762,0.01775661570559223,fhvhv,Sheepshead Bay,Brooklyn,False
+211,980859,977497,0.9965723921583021,fhvhv,SoHo,Manhattan,True
+212,556590,16204,0.02911299160962288,fhvhv,Soundview/Bruckner,Bronx,False
+213,983876,24402,0.024801905931235237,fhvhv,Soundview/Castle Hill,Bronx,False
+214,173817,3955,0.022753815794772664,fhvhv,South Beach/Dongan Hills,Staten Island,False
+215,618473,6195,0.01001660541365589,fhvhv,South Jamaica,Queens,False
+216,1258393,19260,0.015305234533249947,fhvhv,South Ozone Park,Queens,False
+217,316485,20619,0.06515000710934167,fhvhv,South Williamsburg,Brooklyn,False
+218,423882,4479,0.010566619955553668,fhvhv,Springfield Gardens North,Queens,False
+219,357341,3708,0.010376643038442272,fhvhv,Springfield Gardens South,Queens,False
+220,725629,34560,0.047627644429867055,fhvhv,Spuyten Duyvil/Kingsbridge,Bronx,False
+221,287297,5163,0.017970949922902085,fhvhv,Stapleton,Staten Island,False
+222,250275,3394,0.0135610828089102,fhvhv,Starrett City,Brooklyn,False
+223,970392,74567,0.07684214214461785,fhvhv,Steinway,Queens,False
+224,341980,339806,0.9936429030937481,fhvhv,Stuy Town/Peter Cooper Village,Manhattan,True
+225,1496174,118236,0.07902556788181053,fhvhv,Stuyvesant Heights,Brooklyn,False
+226,1214736,167149,0.13760109192450046,fhvhv,Sunnyside,Queens,False
+227,505243,24661,0.048810176489332856,fhvhv,Sunset Park East,Brooklyn,False
+228,1022615,83781,0.08192819389506314,fhvhv,Sunset Park West,Brooklyn,False
+229,955367,951550,0.9960046767367933,fhvhv,Sutton Place/Turtle Bay North,Manhattan,True
+230,2140094,2133660,0.9969935900011868,fhvhv,Times Sq/Theatre District,Manhattan,True
+231,1922339,1908158,0.9926230493164837,fhvhv,TriBeCa/Civic Center,Manhattan,True
+232,752248,744702,0.9899687337154768,fhvhv,Two Bridges/Seward Park,Manhattan,True
+233,908233,899925,0.990852567568014,fhvhv,UN/Turtle Bay South,Manhattan,True
+234,1826536,1819345,0.9960630395458945,fhvhv,Union Sq,Manhattan,True
+235,841617,34327,0.04078696128999296,fhvhv,University Heights/Morris Heights,Bronx,False
+236,1200706,484261,0.40331355052777285,fhvhv,Upper East Side North,Manhattan,False
+237,1441262,927746,0.6437039205918147,fhvhv,Upper East Side South,Manhattan,False
+238,879794,250049,0.28421312261733994,fhvhv,Upper West Side North,Manhattan,False
+239,1049577,430500,0.41016523799587834,fhvhv,Upper West Side South,Manhattan,False
+240,144960,4096,0.0282560706401766,fhvhv,Van Cortlandt Park,Bronx,False
+241,728512,24491,0.03361784020029869,fhvhv,Van Cortlandt Village,Bronx,False
+242,784715,14266,0.01817984873489101,fhvhv,Van Nest/Morris Park,Bronx,False
+243,1020261,101449,0.09943436042346027,fhvhv,Washington Heights North,Manhattan,False
+244,1424518,146346,0.10273369659070647,fhvhv,Washington Heights South,Manhattan,False
+245,160969,3314,0.020587815045132914,fhvhv,West Brighton,Staten Island,False
+246,1909323,1879132,0.9841875890040606,fhvhv,West Chelsea/Hudson Yards,Manhattan,True
+247,1050665,53618,0.051032441358568145,fhvhv,West Concourse,Bronx,False
+248,498156,15724,0.03156440954239234,fhvhv,West Farms/Bronx River,Bronx,False
+249,1555043,1549240,0.9962682703950951,fhvhv,West Village,Manhattan,True
+250,510130,13199,0.025873796875306294,fhvhv,Westchester Village/Unionport,Bronx,False
+251,166703,3929,0.0235688619880866,fhvhv,Westerleigh,Staten Island,False
+252,267246,7948,0.02974038900488688,fhvhv,Whitestone,Queens,False
+253,9862,794,0.08051105252484284,fhvhv,Willets Point,Queens,False
+254,999032,16324,0.01633981694280063,fhvhv,Williamsbridge/Olinville,Bronx,False
+255,1858629,387646,0.20856556095918014,fhvhv,Williamsburg (North Side),Brooklyn,False
+256,1583645,373349,0.23575296231162918,fhvhv,Williamsburg (South Side),Brooklyn,False
+257,293808,32605,0.11097383325164734,fhvhv,Windsor Terrace,Brooklyn,False
+258,637833,17100,0.026809525377332312,fhvhv,Woodhaven,Queens,False
+259,700071,12782,0.01825814810212107,fhvhv,Woodlawn/Wakefield,Bronx,False
+260,896007,67498,0.0753320007544584,fhvhv,Woodside,Queens,False
+261,636468,622077,0.9773892795867192,fhvhv,World Trade Center,Manhattan,True
+262,606744,244426,0.4028486478646678,fhvhv,Yorkville East,Manhattan,False
+263,926599,356510,0.3847511167182352,fhvhv,Yorkville West,Manhattan,False
+265,9978,288,0.028863499699338546,fhvhv,Outside of NYC,,False

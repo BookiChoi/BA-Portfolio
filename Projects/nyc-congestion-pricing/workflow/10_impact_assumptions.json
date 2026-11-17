@@ -1,0 +1,64 @@
+{
+  "project": "nyc-congestion-pricing",
+  "stage": "10_impact",
+  "script": "pipeline/impact_model.py",
+  "log": "outputs/impact_model.log",
+  "note": "type is human | data | benchmark. type 'modeler_placeholder' marks four values that no input file supplies; they are unsourced and must be replaced by the human before any decision. No benchmark is used. Results are conditional on these assumptions; they are not guarantees.",
+  "assumptions": [
+    {"id": "R1.n", "recommendation": "R1", "name": "Drivers per group (pilot and comparison each)", "low": 20, "base": 50, "high": 100, "unit": "drivers", "source": "09_recommendations.md R1 table", "type": "human"},
+    {"id": "R1.follow", "recommendation": "R1", "name": "Share of pilot drivers who follow the list", "low": 30, "base": 50, "high": 70, "unit": "%", "source": "09_recommendations.md R1 table", "type": "human"},
+    {"id": "R1.effect", "recommendation": "R1", "name": "Change in trips per driver-hour for drivers who follow the list", "low": 0, "base": 3, "high": 8, "unit": "%", "source": "09_recommendations.md R1 table", "type": "human"},
+    {"id": "R1.weeks", "recommendation": "R1", "name": "Pilot length", "low": 8, "base": 8, "high": 12, "unit": "weeks", "source": "09_recommendations.md R1 table", "type": "human"},
+    {"id": "R1.list_coverage", "recommendation": "R1", "name": "Share of yellow pickups covered by the 17-zone list (by construction)", "low": 50, "base": 50, "high": 50, "unit": "% of pickups", "source": "05_analysis.md section 3; 06_validation.md Q1 (guidance list sizes 17 / 50%, PASS)", "type": "data"},
+    {"id": "R1.sigma_b", "recommendation": "R1", "name": "Between-driver SD of mean trips per driver-hour, as a fraction of the mean", "low": 0.15, "base": 0.20, "high": 0.30, "unit": "fraction of mean", "source": "Modeler placeholder. No driver-level data in the project and no cited benchmark. Replace with the fleet's own number.", "type": "modeler_placeholder"},
+    {"id": "R1.sigma_w", "recommendation": "R1", "name": "Week-to-week SD within a driver, as a fraction of the mean", "low": 0.30, "base": 0.40, "high": 0.50, "unit": "fraction of mean", "source": "Modeler placeholder. Same reason as above.", "type": "modeler_placeholder"},
+    {"id": "R1.alpha_power", "recommendation": "R1", "name": "Test settings", "low": 0.05, "base": 0.05, "high": 0.05, "unit": "two-sided alpha; power fixed at 0.80", "source": "Standard convention chosen by the modeler; the human's rule (95% interval above 0) is one-sided in effect", "type": "modeler_placeholder"},
+    {"id": "R2.N", "recommendation": "R2", "name": "New drivers receiving the guide per quarter", "low": 100, "base": 300, "high": 600, "unit": "drivers", "source": "09_recommendations.md R2 table", "type": "human"},
+    {"id": "R2.use", "recommendation": "R2", "name": "Share of new drivers who use the guide in planning shifts", "low": 40, "base": 60, "high": 80, "unit": "%", "source": "09_recommendations.md R2 table", "type": "human"},
+    {"id": "R2.pp", "recommendation": "R2", "name": "Increase in share of working hours on weekend nights", "low": 0, "base": 2, "high": 5, "unit": "percentage points", "source": "09_recommendations.md R2 table (unclear whether it applies to users only or to the whole cohort; both readings are modeled)", "type": "human"},
+    {"id": "R2.night_share_weekday_yellow", "recommendation": "R2", "name": "Yellow weekday night share of trips (monthly range)", "low": 13.0, "base": 14.45, "high": 15.9, "unit": "% of day's trips", "source": "05_analysis.md section 5; 06_validation.md Q3 (PASS). base = midpoint of range", "type": "data"},
+    {"id": "R2.night_share_weekend_yellow", "recommendation": "R2", "name": "Yellow weekend night share of trips (monthly range)", "low": 25.6, "base": 27.45, "high": 29.3, "unit": "% of day's trips", "source": "05_analysis.md section 5; 06_validation.md Q3 (PASS). base = midpoint of range", "type": "data"},
+    {"id": "R2.night_share_weekday_hvfhv", "recommendation": "R2", "name": "HVFHV weekday night share of trips (monthly range)", "low": 16.2, "base": 17.35, "high": 18.5, "unit": "% of day's trips", "source": "05_analysis.md section 5; 06_validation.md Q3 (PASS). base = midpoint of range", "type": "data"},
+    {"id": "R2.night_share_weekend_hvfhv", "recommendation": "R2", "name": "HVFHV weekend night share of trips (monthly range)", "low": 26.3, "base": 27.4, "high": 28.5, "unit": "% of day's trips", "source": "05_analysis.md section 5; 06_validation.md Q3 (PASS). base = midpoint of range", "type": "data"},
+    {"id": "R2.sd_share", "recommendation": "R2", "name": "SD across new drivers of the share of hours on weekend nights", "low": 5, "base": 8, "high": 12, "unit": "percentage points", "source": "Modeler placeholder. No driver-level data; no cited benchmark. Replace with the company's own number.", "type": "modeler_placeholder"},
+    {"id": "R3.days", "recommendation": "R3", "name": "Analyst effort for the follow-up", "low": 5, "base": 10, "high": 20, "unit": "person-days", "source": "09_recommendations.md R3 table", "type": "human"},
+    {"id": "R3.delay", "recommendation": "R3", "name": "Delay of the entry decision while the follow-up runs", "low": 2, "base": 4, "high": 8, "unit": "weeks", "source": "09_recommendations.md R3 table", "type": "human"},
+    {"id": "R3.k", "recommendation": "R3", "name": "Years of the 2023-2024 drift assumed to continue between 2024 and 2026 (scenario: high = 1 as in 05, low = 2 linear trend)", "low": 2.0, "base": 1.5, "high": 1.0, "unit": "drift-years", "source": "Modeler scenario applied to Delta_main and Delta_drift from 05_analysis.md section 6 (PASS in 06 Q4). The 2024 to 2026 gap spans two years, the drift spans one.", "type": "data"},
+    {"id": "R3.q4_main_yellow", "recommendation": "R3", "name": "Yellow Delta_main (2026 minus 2024 share of trips touching the zone list)", "low": -2.77, "base": -1.99, "high": -1.23, "unit": "percentage points (95% CI ends)", "source": "05_analysis.md section 6; 06_validation.md Q4 (PASS)", "type": "data"},
+    {"id": "R3.q4_drift_yellow", "recommendation": "R3", "name": "Yellow Delta_drift (2024 minus 2023)", "low": -0.70, "base": -0.18, "high": 0.33, "unit": "percentage points (95% CI ends)", "source": "05_analysis.md section 6; 06_validation.md Q4 (PASS)", "type": "data"},
+    {"id": "R3.q4_main_hvfhv", "recommendation": "R3", "name": "HVFHV Delta_main", "low": -4.80, "base": -4.26, "high": -3.75, "unit": "percentage points (95% CI ends)", "source": "05_analysis.md section 6; 06_validation.md Q4 (PASS)", "type": "data"},
+    {"id": "R3.q4_drift_hvfhv", "recommendation": "R3", "name": "HVFHV Delta_drift", "low": -2.18, "base": -1.69, "high": -1.19, "unit": "percentage points (95% CI ends)", "source": "05_analysis.md section 6; 06_validation.md Q4 (PASS)", "type": "data"}
+  ],
+  "formulas": {
+    "R1_itt_effect": "follow * effect  (relative change in trips per driver-hour, pilot group minus comparison group)",
+    "R1_resid_sd": "sqrt((sigma_b^2 + sigma_w^2/weeks) * (1 - rho^2)), rho = sigma_b^2 / (sigma_b^2 + sigma_w^2/weeks)",
+    "R1_se": "resid_sd * sqrt(2 / n)",
+    "R1_mde": "(1.96 + 0.8416) * se",
+    "R1_n_per_group": "2 * ((1.96 + 0.8416) * resid_sd / delta)^2",
+    "R1_p_success": "1 - Phi((max(0.03, 1.96*se) - itt) / se)",
+    "R2_group_shift_reading_A": "use * pp  (pp applies to users only)",
+    "R2_group_shift_reading_B": "pp  (pp is the cohort average)",
+    "R2_mde_randomised": "2.8016 * sd_share * sqrt(2 / (N/2))",
+    "R2_mde_vs_previous_cohort": "2.8016 * sd_share * sqrt(2 / N)",
+    "R2_breakeven_volume_ratio": "weekday night share / weekend night share (weekend daily volume as a fraction of weekday daily volume below which weekend nights hold fewer trips)",
+    "R3_residual_margin": "Delta_main - k * Delta_drift; SE from the two 95% CIs, assuming independence"
+  },
+  "scenario_results": {
+    "R1": {
+      "low":  {"itt_effect_pct": 0.0, "se_pct": 5.77, "mde_itt_pct": 16.2, "p_success": 0.025},
+      "base": {"itt_effect_pct": 1.5, "se_pct": 3.65, "mde_itt_pct": 10.2, "p_success": 0.061},
+      "high": {"itt_effect_pct": 5.6, "se_pct": 2.16, "mde_itt_pct": 6.1, "p_success": 0.736}
+    },
+    "R2": {
+      "low":  {"users": 40, "group_shift_pp_reading_A": 0.0, "group_shift_pp_reading_B": 0.0},
+      "base": {"users": 180, "group_shift_pp_reading_A": 1.2, "group_shift_pp_reading_B": 2.0},
+      "high": {"users": 480, "group_shift_pp_reading_A": 4.0, "group_shift_pp_reading_B": 5.0}
+    },
+    "R3": {
+      "effort_person_days": {"low": 5, "base": 10, "high": 20},
+      "delay_weeks": {"low": 2, "base": 4, "high": 8},
+      "hvfhv_residual_margin_pp": {"k1": -2.57, "k1.5": -1.72, "k2": -0.88, "k2_ci": [-2.00, 0.24]},
+      "yellow_residual_margin_pp": {"k1": -1.81, "k1.5": -1.72, "k2": -1.63, "k2_ci": [-2.92, -0.34]}
+    }
+  }
+}

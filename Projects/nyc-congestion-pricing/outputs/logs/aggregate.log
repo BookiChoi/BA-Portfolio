@@ -1,0 +1,128 @@
+valid zone IDs: 263 invalid: [264, 265] CRZ IDs: 38
+yellow_2023-01: 0.5s {'rows_total': 3066766, 'null_pickup': 0, 'out_of_month': 48, 'rows_in_month': 3066718, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 41761, 'invalid_do': 33544}
+yellow_2023-02: 0.3s {'rows_total': 2913955, 'null_pickup': 0, 'out_of_month': 55, 'rows_in_month': 2913900, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 37554, 'invalid_do': 36363}
+yellow_2023-03: 0.4s {'rows_total': 3403766, 'null_pickup': 0, 'out_of_month': 189, 'rows_in_month': 3403577, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 34456, 'invalid_do': 48099}
+yellow_2023-04: 0.4s {'rows_total': 3288250, 'null_pickup': 0, 'out_of_month': 95, 'rows_in_month': 3288155, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 36145, 'invalid_do': 51610}
+yellow_2023-05: 0.4s {'rows_total': 3513649, 'null_pickup': 0, 'out_of_month': 50, 'rows_in_month': 3513599, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 38493, 'invalid_do': 55323}
+yellow_2023-06: 0.4s {'rows_total': 3307234, 'null_pickup': 0, 'out_of_month': 41, 'rows_in_month': 3307193, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 35344, 'invalid_do': 53077}
+yellow_2023-07: 0.3s {'rows_total': 2907108, 'null_pickup': 0, 'out_of_month': 59, 'rows_in_month': 2907049, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 31111, 'invalid_do': 49155}
+yellow_2023-08: 0.3s {'rows_total': 2824209, 'null_pickup': 0, 'out_of_month': 34, 'rows_in_month': 2824175, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 28338, 'invalid_do': 46698}
+yellow_2023-09: 0.3s {'rows_total': 2846722, 'null_pickup': 0, 'out_of_month': 32, 'rows_in_month': 2846690, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 29029, 'invalid_do': 45839}
+yellow_2024-01: 0.3s {'rows_total': 2964624, 'null_pickup': 0, 'out_of_month': 18, 'rows_in_month': 2964606, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 12018, 'invalid_do': 28080}
+yellow_2024-02: 0.3s {'rows_total': 3007526, 'null_pickup': 0, 'out_of_month': 15, 'rows_in_month': 3007511, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 11093, 'invalid_do': 25910}
+yellow_2024-03: 0.4s {'rows_total': 3582628, 'null_pickup': 0, 'out_of_month': 23, 'rows_in_month': 3582605, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 13648, 'invalid_do': 30885}
+yellow_2024-04: 0.4s {'rows_total': 3514289, 'null_pickup': 0, 'out_of_month': 9, 'rows_in_month': 3514280, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 12848, 'invalid_do': 30774}
+yellow_2024-05: 0.4s {'rows_total': 3723833, 'null_pickup': 0, 'out_of_month': 33, 'rows_in_month': 3723800, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 13863, 'invalid_do': 33261}
+yellow_2024-06: 0.4s {'rows_total': 3539193, 'null_pickup': 0, 'out_of_month': 51, 'rows_in_month': 3539142, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 13514, 'invalid_do': 33247}
+yellow_2024-07: 0.3s {'rows_total': 3076903, 'null_pickup': 0, 'out_of_month': 47, 'rows_in_month': 3076856, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 11728, 'invalid_do': 31345}
+yellow_2024-08: 0.3s {'rows_total': 2979183, 'null_pickup': 0, 'out_of_month': 51, 'rows_in_month': 2979132, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 10398, 'invalid_do': 30032}
+yellow_2024-09: 0.4s {'rows_total': 3633030, 'null_pickup': 0, 'out_of_month': 49, 'rows_in_month': 3632981, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 11728, 'invalid_do': 30562}
+yellow_2025-10: 0.5s {'rows_total': 4428699, 'null_pickup': 0, 'out_of_month': 13, 'rows_in_month': 4428686, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 8542, 'invalid_do': 29228}
+yellow_2025-11: 0.5s {'rows_total': 4181444, 'null_pickup': 0, 'out_of_month': 24, 'rows_in_month': 4181420, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 8035, 'invalid_do': 27223}
+yellow_2025-12: 0.5s {'rows_total': 4305006, 'null_pickup': 0, 'out_of_month': 9, 'rows_in_month': 4304997, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 7614, 'invalid_do': 28678}
+yellow_2026-01: 0.4s {'rows_total': 3724889, 'null_pickup': 0, 'out_of_month': 7, 'rows_in_month': 3724882, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 5930, 'invalid_do': 22300}
+yellow_2026-02: 0.4s {'rows_total': 3399866, 'null_pickup': 0, 'out_of_month': 16, 'rows_in_month': 3399850, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 5021, 'invalid_do': 19346}
+yellow_2026-03: 0.5s {'rows_total': 3952451, 'null_pickup': 0, 'out_of_month': 19, 'rows_in_month': 3952432, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 6249, 'invalid_do': 20880}
+yellow_2026-04: 0.5s {'rows_total': 3831240, 'null_pickup': 0, 'out_of_month': 12, 'rows_in_month': 3831228, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 6032, 'invalid_do': 20470}
+yellow_2026-05: 0.5s {'rows_total': 4090836, 'null_pickup': 0, 'out_of_month': 14, 'rows_in_month': 4090822, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 6485, 'invalid_do': 21725}
+yellow_2026-06: 0.5s {'rows_total': 3837248, 'null_pickup': 0, 'out_of_month': 17, 'rows_in_month': 3837231, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 6569, 'invalid_do': 23804}
+yellow_2026-07: 0.4s {'rows_total': 3530109, 'null_pickup': 0, 'out_of_month': 46, 'rows_in_month': 3530063, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 6200, 'invalid_do': 25095}
+yellow_2026-08: 0.4s {'rows_total': 3336716, 'null_pickup': 0, 'out_of_month': 15, 'rows_in_month': 3336701, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 7188, 'invalid_do': 24511}
+yellow_2026-09: 0.5s {'rows_total': 3876044, 'null_pickup': 0, 'out_of_month': 22, 'rows_in_month': 3876022, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 5280, 'invalid_do': 23482}
+fhvhv_2023-01: 2.0s {'rows_total': 18479031, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 18479031, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 992, 'invalid_do': 723563}
+fhvhv_2023-02: 1.6s {'rows_total': 17960971, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 17960971, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 890, 'invalid_do': 682678}
+fhvhv_2023-03: 1.9s {'rows_total': 20413539, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 20413539, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 1052, 'invalid_do': 800500}
+fhvhv_2023-04: 1.7s {'rows_total': 19144903, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 19144903, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 991, 'invalid_do': 779662}
+fhvhv_2023-05: 1.8s {'rows_total': 19847676, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 19847676, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 981, 'invalid_do': 841225}
+fhvhv_2023-06: 1.7s {'rows_total': 19366619, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 19366619, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 928, 'invalid_do': 816515}
+fhvhv_2023-07: 1.8s {'rows_total': 19132131, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 19132131, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 849, 'invalid_do': 794288}
+fhvhv_2023-08: 1.5s {'rows_total': 18322150, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 18322150, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 798, 'invalid_do': 770415}
+fhvhv_2023-09: 1.6s {'rows_total': 19851123, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 19851123, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 898, 'invalid_do': 804142}
+fhvhv_2024-01: 1.6s {'rows_total': 19663930, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 19663930, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 765, 'invalid_do': 741161}
+fhvhv_2024-02: 1.6s {'rows_total': 19359148, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 19359148, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 737, 'invalid_do': 753506}
+fhvhv_2024-03: 2.1s {'rows_total': 21280788, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 21280788, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 796, 'invalid_do': 832957}
+fhvhv_2024-04: 1.8s {'rows_total': 19733038, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 19733038, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 769, 'invalid_do': 805538}
+fhvhv_2024-05: 1.7s {'rows_total': 20704538, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 20704538, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 841, 'invalid_do': 872697}
+fhvhv_2024-06: 1.6s {'rows_total': 20123226, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 20123226, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 859, 'invalid_do': 864317}
+fhvhv_2024-07: 1.5s {'rows_total': 19182934, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 19182934, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 805, 'invalid_do': 807868}
+fhvhv_2024-08: 1.5s {'rows_total': 19128392, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 19128392, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 790, 'invalid_do': 810146}
+fhvhv_2024-09: 1.5s {'rows_total': 19209788, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 19209788, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 743, 'invalid_do': 847552}
+fhvhv_2025-10: 2.0s {'rows_total': 21308701, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 21308701, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 833, 'invalid_do': 990154}
+fhvhv_2025-11: 1.9s {'rows_total': 20818240, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 20818240, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 961, 'invalid_do': 966218}
+fhvhv_2025-12: 2.0s {'rows_total': 22108438, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 22108438, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 1063, 'invalid_do': 1005120}
+fhvhv_2026-01: 1.8s {'rows_total': 20940373, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 20940373, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 1030, 'invalid_do': 848098}
+fhvhv_2026-02: 1.8s {'rows_total': 19875686, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 19875686, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 1000, 'invalid_do': 822234}
+fhvhv_2026-03: 2.0s {'rows_total': 22058358, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 22058358, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 1091, 'invalid_do': 952496}
+fhvhv_2026-04: 1.9s {'rows_total': 20995953, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 20995953, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 1020, 'invalid_do': 931102}
+fhvhv_2026-05: 2.0s {'rows_total': 22125744, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 22125744, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 1182, 'invalid_do': 1018965}
+fhvhv_2026-06: 1.9s {'rows_total': 20775868, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 20775868, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 1241, 'invalid_do': 987775}
+fhvhv_2026-07: 1.9s {'rows_total': 20921249, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 20921249, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 1245, 'invalid_do': 978358}
+fhvhv_2026-08: 1.8s {'rows_total': 20493480, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 20493480, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 1124, 'invalid_do': 966510}
+fhvhv_2026-09: 1.9s {'rows_total': 20987681, 'null_pickup': 0, 'out_of_month': 0, 'rows_in_month': 20987681, 'null_pu': 0, 'null_do': 0, 'invalid_pu': 1045, 'invalid_do': 1006487}
+service  year  month  rows_total  null_pickup  out_of_month  rows_in_month  null_pu  null_do  invalid_pu  invalid_do
+ yellow  2023      1     3066766            0            48        3066718        0        0       41761       33544
+ yellow  2023      2     2913955            0            55        2913900        0        0       37554       36363
+ yellow  2023      3     3403766            0           189        3403577        0        0       34456       48099
+ yellow  2023      4     3288250            0            95        3288155        0        0       36145       51610
+ yellow  2023      5     3513649            0            50        3513599        0        0       38493       55323
+ yellow  2023      6     3307234            0            41        3307193        0        0       35344       53077
+ yellow  2023      7     2907108            0            59        2907049        0        0       31111       49155
+ yellow  2023      8     2824209            0            34        2824175        0        0       28338       46698
+ yellow  2023      9     2846722            0            32        2846690        0        0       29029       45839
+ yellow  2024      1     2964624            0            18        2964606        0        0       12018       28080
+ yellow  2024      2     3007526            0            15        3007511        0        0       11093       25910
+ yellow  2024      3     3582628            0            23        3582605        0        0       13648       30885
+ yellow  2024      4     3514289            0             9        3514280        0        0       12848       30774
+ yellow  2024      5     3723833            0            33        3723800        0        0       13863       33261
+ yellow  2024      6     3539193            0            51        3539142        0        0       13514       33247
+ yellow  2024      7     3076903            0            47        3076856        0        0       11728       31345
+ yellow  2024      8     2979183            0            51        2979132        0        0       10398       30032
+ yellow  2024      9     3633030            0            49        3632981        0        0       11728       30562
+ yellow  2025     10     4428699            0            13        4428686        0        0        8542       29228
+ yellow  2025     11     4181444            0            24        4181420        0        0        8035       27223
+ yellow  2025     12     4305006            0             9        4304997        0        0        7614       28678
+ yellow  2026      1     3724889            0             7        3724882        0        0        5930       22300
+ yellow  2026      2     3399866            0            16        3399850        0        0        5021       19346
+ yellow  2026      3     3952451            0            19        3952432        0        0        6249       20880
+ yellow  2026      4     3831240            0            12        3831228        0        0        6032       20470
+ yellow  2026      5     4090836            0            14        4090822        0        0        6485       21725
+ yellow  2026      6     3837248            0            17        3837231        0        0        6569       23804
+ yellow  2026      7     3530109            0            46        3530063        0        0        6200       25095
+ yellow  2026      8     3336716            0            15        3336701        0        0        7188       24511
+ yellow  2026      9     3876044            0            22        3876022        0        0        5280       23482
+  fhvhv  2023      1    18479031            0             0       18479031        0        0         992      723563
+  fhvhv  2023      2    17960971            0             0       17960971        0        0         890      682678
+  fhvhv  2023      3    20413539            0             0       20413539        0        0        1052      800500
+  fhvhv  2023      4    19144903            0             0       19144903        0        0         991      779662
+  fhvhv  2023      5    19847676            0             0       19847676        0        0         981      841225
+  fhvhv  2023      6    19366619            0             0       19366619        0        0         928      816515
+  fhvhv  2023      7    19132131            0             0       19132131        0        0         849      794288
+  fhvhv  2023      8    18322150            0             0       18322150        0        0         798      770415
+  fhvhv  2023      9    19851123            0             0       19851123        0        0         898      804142
+  fhvhv  2024      1    19663930            0             0       19663930        0        0         765      741161
+  fhvhv  2024      2    19359148            0             0       19359148        0        0         737      753506
+  fhvhv  2024      3    21280788            0             0       21280788        0        0         796      832957
+  fhvhv  2024      4    19733038            0             0       19733038        0        0         769      805538
+  fhvhv  2024      5    20704538            0             0       20704538        0        0         841      872697
+  fhvhv  2024      6    20123226            0             0       20123226        0        0         859      864317
+  fhvhv  2024      7    19182934            0             0       19182934        0        0         805      807868
+  fhvhv  2024      8    19128392            0             0       19128392        0        0         790      810146
+  fhvhv  2024      9    19209788            0             0       19209788        0        0         743      847552
+  fhvhv  2025     10    21308701            0             0       21308701        0        0         833      990154
+  fhvhv  2025     11    20818240            0             0       20818240        0        0         961      966218
+  fhvhv  2025     12    22108438            0             0       22108438        0        0        1063     1005120
+  fhvhv  2026      1    20940373            0             0       20940373        0        0        1030      848098
+  fhvhv  2026      2    19875686            0             0       19875686        0        0        1000      822234
+  fhvhv  2026      3    22058358            0             0       22058358        0        0        1091      952496
+  fhvhv  2026      4    20995953            0             0       20995953        0        0        1020      931102
+  fhvhv  2026      5    22125744            0             0       22125744        0        0        1182     1018965
+  fhvhv  2026      6    20775868            0             0       20775868        0        0        1241      987775
+  fhvhv  2026      7    20921249            0             0       20921249        0        0        1245      978358
+  fhvhv  2026      8    20493480            0             0       20493480        0        0        1124      966510
+  fhvhv  2026      9    20987681            0             0       20987681        0        0        1045     1006487
+
+totals per service:
+         rows_total  null_pickup  out_of_month  rows_in_month  invalid_pu  invalid_do
+service                                                                              
+fhvhv     604313696            0             0      604313696       28319    25822247
+yellow    104587416            0          1113      104586303      502214      980546
