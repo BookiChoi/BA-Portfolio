@@ -198,19 +198,16 @@ Reference: `2026Jan-Jun.xlsx:Shows`.
 | 2025Jul-Dec.xlsx | 2026Jan-Jun.xlsx | normalized | 16,463 | 17,365 | 13,886 | 84.35 | 79.97 |
 | 2025Jul-Dec.xlsx | 2026Jan-Jun.xlsx | normalized_first_segment | 16,426 | 17,327 | 13,883 | 84.52 | 80.12 |
 
-### Spelling variants (10 examples, matched after normalisation but not identical)
-| earlier | later | match_level | title_earlier | title_later | hours_earlier | hours_later |
-|---|---|---|---|---|---|---|
-| 2023Jan-Jun.xlsx | 2023Jul-Dec.xlsx | normalized_first_segment | The Master's Sun: Season 1 // 주군의 태양: 시즌 1 | The Master's Sun: Season 1 // 주군의 태양 | 2,800,000 | 5,200,000 |
-| 2023Jul-Dec.xlsx | 2024Jan-Jun.xlsx | normalized_first_segment | Berlin: Season 1 // Berlín: Season 1 | Berlin: Season 1 // Berlín: Temporada 1 | 74,300,000 | 318,400,000 |
-| 2024Jan-Jun.xlsx | 2024Jul-Dec.xlsx | normalized_first_segment | Miss Adrenaline: A Tale of Twins: Season 1 // Romina poderosa: Season 1 | Miss Adrenaline: A Tale of Twins: Season 1 // Romina poderosa: Temporada 1 | 70,300,000 | 58,500,000 |
-| 2024Jul-Dec.xlsx | 2025Jan-Jun.xlsx | normalized_first_segment | Pokémon The Series: Indigo League: Season 1 // ポケットモンスター | Pokémon The Series: Indigo League: Season 1 // ポケットモンスター (1997): シーズン1 | 33,000,000 | 31,100,000 |
-| 2025Jan-Jun.xlsx | 2025Jul-Dec.xlsx | normalized | ONE PIECE: Dressrosa // ワンピース: ドレスローザ編 | One Piece: Dressrosa // ワンピース: ドレスローザ編 | 76,000,000 | 39,600,000 |
-| 2025Jul-Dec.xlsx | 2026Jan-Jun.xlsx | normalized | Avatar The Last Airbender: Season 1 | Avatar: The Last Airbender: Season 1 | 28,000,000 | 65,900,000 |
-| 2023Jan-Jun.xlsx | 2023Jul-Dec.xlsx | normalized_first_segment | Totoy Kids - Hungry Hungry José // Totoy Kids - José Comilão 1 | Totoy Kids - Hungry Hungry José // José Comilão 1 | 5,500,000 | 4,000,000 |
-| 2023Jul-Dec.xlsx | 2024Jan-Jun.xlsx | normalized_first_segment | Alpha Males: Season 1 // Machos alfa: Season 1 | Alpha Males: Season 1 // Machos alfa: Temporada 1 | 6,300,000 | 29,500,000 |
-| 2024Jan-Jun.xlsx | 2024Jul-Dec.xlsx | normalized_first_segment | Justice // Justiça | Justice // Napad | 100,000 | 55,800,000 |
-| 2024Jul-Dec.xlsx | 2025Jan-Jun.xlsx | normalized_first_segment | You are My Destiny: Season 1 // 운명처럼 널 사랑해: Season 1 | You are My Destiny: Season 1 // 운명처럼 널 사랑해: 시즌 1 | 5,200,000 | 19,800,000 |
+### Spelling variants (aggregate; title-level examples kept local, not published)
+Columns of the local example table: earlier, later, match_level, title_earlier, title_later, hours_earlier, hours_later. 10 example pairs.
+| earlier → later | match_level | examples |
+|---|---|---|
+| 2023Jan-Jun → 2023Jul-Dec | normalized_first_segment | 2 |
+| 2023Jul-Dec → 2024Jan-Jun | normalized_first_segment | 2 |
+| 2024Jan-Jun → 2024Jul-Dec | normalized_first_segment | 2 |
+| 2024Jul-Dec → 2025Jan-Jun | normalized_first_segment | 2 |
+| 2025Jan-Jun → 2025Jul-Dec | normalized | 1 |
+| 2025Jul-Dec → 2026Jan-Jun | normalized | 1 |
 
 ## 10. Season notation
 Counts of series-or-unknown title rows by notation pattern.
@@ -280,117 +277,11 @@ Counts of series-or-unknown title rows by notation pattern.
 | 2026Jan-Jun.xlsx | contains ' // ' (second-language segment) | 3,030 |
 | 2026Jan-Jun.xlsx | all series-or-unknown title rows | 8,193 |
 
-### Examples across half-years (8 highest-hours series bases, top 2 titles per file)
-| base | file | full_title | notation | pattern | hours_viewed |
-|---|---|---|---|---|---|
-| Stranger Things | 2023Jan-Jun.xlsx | Stranger Things 4 | 4 | trailing number | 133,600,000 |
-| Stranger Things | 2023Jan-Jun.xlsx | Stranger Things |  | none | 77,800,000 |
-| Stranger Things | 2023Jul-Dec.xlsx | Stranger Things 4 | 4 | trailing number | 97,100,000 |
-| Stranger Things | 2023Jul-Dec.xlsx | Stranger Things |  | none | 62,300,000 |
-| Stranger Things | 2024Jan-Jun.xlsx | Stranger Things 4 | 4 | trailing number | 110,100,000 |
-| Stranger Things | 2024Jan-Jun.xlsx | Stranger Things |  | none | 72,900,000 |
-| Stranger Things | 2024Jul-Dec.xlsx | Stranger Things 4 | 4 | trailing number | 109,900,000 |
-| Stranger Things | 2024Jul-Dec.xlsx | Stranger Things |  | none | 75,300,000 |
-| Stranger Things | 2025Jan-Jun.xlsx | Stranger Things 4 | 4 | trailing number | 135,500,000 |
-| Stranger Things | 2025Jan-Jun.xlsx | Stranger Things |  | none | 97,700,000 |
-| Stranger Things | 2025Jul-Dec.xlsx | Stranger Things 5 | 5 | trailing number | 879,700,000 |
-| Stranger Things | 2025Jul-Dec.xlsx | Stranger Things 4 | 4 | trailing number | 562,200,000 |
-| Stranger Things | 2026Jan-Jun.xlsx | Stranger Things 5 | 5 | trailing number | 578,400,000 |
-| Stranger Things | 2026Jan-Jun.xlsx | Stranger Things 4 | 4 | trailing number | 303,300,000 |
-| Suits (2011) | 2023Jan-Jun.xlsx | Suits (2011): Season 1 | Season 1 | Season N | 129,100,000 |
-| Suits (2011) | 2023Jan-Jun.xlsx | Suits (2011): Season 2 | Season 2 | Season N | 106,600,000 |
-| Suits (2011) | 2023Jul-Dec.xlsx | Suits (2011): Season 2 | Season 2 | Season N | 249,400,000 |
-| Suits (2011) | 2023Jul-Dec.xlsx | Suits (2011): Season 1 | Season 1 | Season N | 247,700,000 |
-| Suits (2011) | 2024Jan-Jun.xlsx | Suits (2011): Season 1 | Season 1 | Season N | 149,500,000 |
-| Suits (2011) | 2024Jan-Jun.xlsx | Suits (2011): Season 2 | Season 2 | Season N | 141,800,000 |
-| Suits (2011) | 2024Jul-Dec.xlsx | Suits (2011): Season 1 | Season 1 | Season N | 111,800,000 |
-| Suits (2011) | 2024Jul-Dec.xlsx | Suits (2011): Season 2 | Season 2 | Season N | 108,800,000 |
-| Suits (2011) | 2025Jan-Jun.xlsx | Suits (2011): Season 1 | Season 1 | Season N | 86,000,000 |
-| Suits (2011) | 2025Jan-Jun.xlsx | Suits (2011): Season 2 | Season 2 | Season N | 82,900,000 |
-| Suits (2011) | 2025Jul-Dec.xlsx | Suits (2011): Season 1 | Season 1 | Season N | 80,900,000 |
-| Suits (2011) | 2025Jul-Dec.xlsx | Suits (2011): Season 2 | Season 2 | Season N | 76,600,000 |
-| Suits (2011) | 2026Jan-Jun.xlsx | Suits (2011): Season 1 | Season 1 | Season N | 83,200,000 |
-| Suits (2011) | 2026Jan-Jun.xlsx | Suits (2011): Season 2 | Season 2 | Season N | 76,100,000 |
-| Gilmore Girls | 2023Jan-Jun.xlsx | Gilmore Girls: Season 1 | Season 1 | Season N | 82,100,000 |
-| Gilmore Girls | 2023Jan-Jun.xlsx | Gilmore Girls: Season 2 | Season 2 | Season N | 75,200,000 |
-| Gilmore Girls | 2023Jul-Dec.xlsx | Gilmore Girls: Season 1 | Season 1 | Season N | 137,500,000 |
-| Gilmore Girls | 2023Jul-Dec.xlsx | Gilmore Girls: Season 2 | Season 2 | Season N | 119,400,000 |
-| Gilmore Girls | 2024Jan-Jun.xlsx | Gilmore Girls: Season 1 | Season 1 | Season N | 88,600,000 |
-| Gilmore Girls | 2024Jan-Jun.xlsx | Gilmore Girls: Season 2 | Season 2 | Season N | 81,200,000 |
-| Gilmore Girls | 2024Jul-Dec.xlsx | Gilmore Girls: Season 1 | Season 1 | Season N | 141,500,000 |
-| Gilmore Girls | 2024Jul-Dec.xlsx | Gilmore Girls: Season 2 | Season 2 | Season N | 123,400,000 |
-| Gilmore Girls | 2025Jan-Jun.xlsx | Gilmore Girls: Season 1 | Season 1 | Season N | 75,800,000 |
-| Gilmore Girls | 2025Jan-Jun.xlsx | Gilmore Girls: Season 2 | Season 2 | Season N | 71,900,000 |
-| Gilmore Girls | 2025Jul-Dec.xlsx | Gilmore Girls: Season 1 | Season 1 | Season N | 126,700,000 |
-| Gilmore Girls | 2025Jul-Dec.xlsx | Gilmore Girls: Season 2 | Season 2 | Season N | 109,500,000 |
-| Gilmore Girls | 2026Jan-Jun.xlsx | Gilmore Girls: Season 1 | Season 1 | Season N | 62,300,000 |
-| Gilmore Girls | 2026Jan-Jun.xlsx | Gilmore Girls: Season 2 | Season 2 | Season N | 60,200,000 |
-| Grey's Anatomy | 2023Jan-Jun.xlsx | Grey's Anatomy: Season 2 | Season 2 | Season N | 51,200,000 |
-| Grey's Anatomy | 2023Jan-Jun.xlsx | Grey's Anatomy: Season 3 | Season 3 | Season N | 44,300,000 |
-| Grey's Anatomy | 2023Jul-Dec.xlsx | Grey's Anatomy: Season 2 | Season 2 | Season N | 78,600,000 |
-| Grey's Anatomy | 2023Jul-Dec.xlsx | Grey's Anatomy: Season 3 | Season 3 | Season N | 67,500,000 |
-| Grey's Anatomy | 2024Jan-Jun.xlsx | Grey's Anatomy: Season 2 | Season 2 | Season N | 60,600,000 |
-| Grey's Anatomy | 2024Jan-Jun.xlsx | Grey's Anatomy: Season 3 | Season 3 | Season N | 53,700,000 |
-| Grey's Anatomy | 2024Jul-Dec.xlsx | Grey's Anatomy: Season 2 | Season 2 | Season N | 48,700,000 |
-| Grey's Anatomy | 2024Jul-Dec.xlsx | Grey's Anatomy: Season 3 | Season 3 | Season N | 41,700,000 |
-| Grey's Anatomy | 2025Jan-Jun.xlsx | Grey's Anatomy: Season 2 | Season 2 | Season N | 51,100,000 |
-| Grey's Anatomy | 2025Jan-Jun.xlsx | Grey's Anatomy: Season 3 | Season 3 | Season N | 43,600,000 |
-| Grey's Anatomy | 2025Jul-Dec.xlsx | Grey's Anatomy: Season 2 | Season 2 | Season N | 42,800,000 |
-| Grey's Anatomy | 2025Jul-Dec.xlsx | Grey's Anatomy: Season 3 | Season 3 | Season N | 36,500,000 |
-| Grey's Anatomy | 2026Jan-Jun.xlsx | Grey's Anatomy: Season 2 | Season 2 | Season N | 41,500,000 |
-| Grey's Anatomy | 2026Jan-Jun.xlsx | Grey's Anatomy: Season 3 | Season 3 | Season N | 35,500,000 |
-| Squid Game | 2023Jan-Jun.xlsx | Squid Game: Season 1 // 오징어 게임: 시즌 1 | Season 1 | Season N | 87,200,000 |
-| Squid Game | 2023Jul-Dec.xlsx | Squid Game: The Challenge: Season 1 | The Challenge: Season 1 | other | 270,600,000 |
-| Squid Game | 2023Jul-Dec.xlsx | Squid Game: Season 1 // 오징어 게임: 시즌 1 | Season 1 | Season N | 117,100,000 |
-| Squid Game | 2024Jan-Jun.xlsx | Squid Game: Season 1 // 오징어 게임: 시즌 1 | Season 1 | Season N | 46,900,000 |
-| Squid Game | 2024Jan-Jun.xlsx | Squid Game: The Challenge: Season 1 | The Challenge: Season 1 | other | 27,300,000 |
-| Squid Game | 2024Jul-Dec.xlsx | Squid Game: Season 2 // 오징어 게임: 시즌 2 | Season 2 | Season N | 619,900,000 |
-| Squid Game | 2024Jul-Dec.xlsx | Squid Game: Season 1 // 오징어 게임: 시즌 1 | Season 1 | Season N | 186,500,000 |
-| Squid Game | 2025Jan-Jun.xlsx | Squid Game: Season 2 // 오징어 게임: 시즌 2 | Season 2 | Season N | 840,300,000 |
-| Squid Game | 2025Jan-Jun.xlsx | Squid Game: Season 3 // 오징어 게임: 시즌 3 | Season 3 | Season N | 438,600,000 |
-| Squid Game | 2025Jul-Dec.xlsx | Squid Game: Season 3 // 오징어 게임: 시즌 3 | Season 3 | Season N | 484,300,000 |
-| Squid Game | 2025Jul-Dec.xlsx | Squid Game: Season 2 // 오징어 게임: 시즌 2 | Season 2 | Season N | 122,400,000 |
-| Squid Game | 2026Jan-Jun.xlsx | Squid Game: Season 1 // 오징어 게임: 시즌 1 | Season 1 | Season N | 38,600,000 |
-| Squid Game | 2026Jan-Jun.xlsx | Squid Game: Season 3 // 오징어 게임: 시즌 3 | Season 3 | Season N | 32,600,000 |
-| Bridgerton | 2023Jan-Jun.xlsx | Bridgerton: Season 1 | Season 1 | Season N | 136,600,000 |
-| Bridgerton | 2023Jan-Jun.xlsx | Bridgerton: Season 2 | Season 2 | Season N | 133,400,000 |
-| Bridgerton | 2023Jul-Dec.xlsx | Bridgerton: Season 1 | Season 1 | Season N | 59,800,000 |
-| Bridgerton | 2023Jul-Dec.xlsx | Bridgerton: Season 2 | Season 2 | Season N | 57,800,000 |
-| Bridgerton | 2024Jan-Jun.xlsx | Bridgerton: Season 3 | Season 3 | Season N | 733,800,000 |
-| Bridgerton | 2024Jan-Jun.xlsx | Bridgerton: Season 1 | Season 1 | Season N | 314,500,000 |
-| Bridgerton | 2024Jul-Dec.xlsx | Bridgerton: Season 3 | Season 3 | Season N | 173,300,000 |
-| Bridgerton | 2024Jul-Dec.xlsx | Bridgerton: Season 1 | Season 1 | Season N | 86,600,000 |
-| Bridgerton | 2025Jan-Jun.xlsx | Bridgerton: Season 3 | Season 3 | Season N | 77,500,000 |
-| Bridgerton | 2025Jan-Jun.xlsx | Bridgerton: Season 1 | Season 1 | Season N | 76,100,000 |
-| Bridgerton | 2025Jul-Dec.xlsx | Bridgerton: Season 1 | Season 1 | Season N | 67,900,000 |
-| Bridgerton | 2025Jul-Dec.xlsx | Bridgerton: Season 3 | Season 3 | Season N | 61,800,000 |
-| Bridgerton | 2026Jan-Jun.xlsx | Bridgerton: Season 4 | Season 4 | Season N | 889,800,000 |
-| Bridgerton | 2026Jan-Jun.xlsx | Bridgerton: Season 1 | Season 1 | Season N | 194,400,000 |
-| The Walking Dead | 2023Jan-Jun.xlsx | The Walking Dead: Season 11 | Season 11 | Season N | 136,800,000 |
-| The Walking Dead | 2023Jan-Jun.xlsx | The Walking Dead: Season 10 | Season 10 | Season N | 72,200,000 |
-| The Walking Dead | 2023Jul-Dec.xlsx | The Walking Dead: Season 11 | Season 11 | Season N | 81,400,000 |
-| The Walking Dead | 2023Jul-Dec.xlsx | The Walking Dead: Season 3 | Season 3 | Season N | 56,200,000 |
-| The Walking Dead | 2024Jan-Jun.xlsx | The Walking Dead: Season 11 | Season 11 | Season N | 68,400,000 |
-| The Walking Dead | 2024Jan-Jun.xlsx | The Walking Dead: Season 3 | Season 3 | Season N | 59,100,000 |
-| The Walking Dead | 2024Jul-Dec.xlsx | The Walking Dead: Season 3 | Season 3 | Season N | 47,600,000 |
-| The Walking Dead | 2024Jul-Dec.xlsx | The Walking Dead: Season 2 | Season 2 | Season N | 45,700,000 |
-| The Walking Dead | 2025Jan-Jun.xlsx | The Walking Dead: Season 3 | Season 3 | Season N | 49,200,000 |
-| The Walking Dead | 2025Jan-Jun.xlsx | The Walking Dead: Season 2 | Season 2 | Season N | 47,100,000 |
-| The Walking Dead | 2025Jul-Dec.xlsx | The Walking Dead: Season 3 | Season 3 | Season N | 48,800,000 |
-| The Walking Dead | 2025Jul-Dec.xlsx | The Walking Dead: Season 2 | Season 2 | Season N | 47,200,000 |
-| The Walking Dead | 2026Jan-Jun.xlsx | The Walking Dead: Season 3 | Season 3 | Season N | 62,000,000 |
-| The Walking Dead | 2026Jan-Jun.xlsx | The Walking Dead: Season 2 | Season 2 | Season N | 60,000,000 |
-| Young Sheldon | 2023Jan-Jun.xlsx | Young Sheldon: Season 1 | Season 1 | Season N | 24,700,000 |
-| Young Sheldon | 2023Jan-Jun.xlsx | Young Sheldon: Season 2 | Season 2 | Season N | 19,400,000 |
-| Young Sheldon | 2023Jul-Dec.xlsx | Young Sheldon: Season 1 | Season 1 | Season N | 188,400,000 |
-| Young Sheldon | 2023Jul-Dec.xlsx | Young Sheldon: Season 2 | Season 2 | Season N | 123,300,000 |
-| Young Sheldon | 2024Jan-Jun.xlsx | Young Sheldon: Season 1 | Season 1 | Season N | 166,000,000 |
-| Young Sheldon | 2024Jan-Jun.xlsx | Young Sheldon: Season 2 | Season 2 | Season N | 128,800,000 |
-| Young Sheldon | 2024Jul-Dec.xlsx | Young Sheldon: Season 1 | Season 1 | Season N | 109,300,000 |
-| Young Sheldon | 2024Jul-Dec.xlsx | Young Sheldon: Season 2 | Season 2 | Season N | 82,500,000 |
-| Young Sheldon | 2025Jan-Jun.xlsx | Young Sheldon: Season 1 | Season 1 | Season N | 88,900,000 |
-| Young Sheldon | 2025Jan-Jun.xlsx | Young Sheldon: Season 2 | Season 2 | Season N | 69,700,000 |
-| Young Sheldon | 2025Jul-Dec.xlsx | Young Sheldon: Season 1 | Season 1 | Season N | 90,800,000 |
-| Young Sheldon | 2025Jul-Dec.xlsx | Young Sheldon: Season 2 | Season 2 | Season N | 65,500,000 |
-| Young Sheldon | 2026Jan-Jun.xlsx | Young Sheldon: Season 1 | Season 1 | Season N | 109,300,000 |
-| Young Sheldon | 2026Jan-Jun.xlsx | Young Sheldon: Season 2 | Season 2 | Season N | 84,600,000 |
+### Examples across half-years (aggregate; title-level examples kept local, not published)
+Columns of the local example table: base, file, full_title, notation, pattern, hours_viewed. 111 rows: 8 series bases, top 2 titles per file (15 rows for 2023Jan-Jun, 16 for each other file).
+| pattern | rows |
+|---|---|
+| Season N | 95 |
+| trailing number | 9 |
+| none | 5 |
+| other | 2 |

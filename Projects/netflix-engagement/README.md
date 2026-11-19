@@ -32,7 +32,7 @@ Commit prefixes are copied from `git log`. Owner and file are taken from the `Au
 | 04 Genre mapping table | human | `config/genre_mapping.csv`, `config/genre_mapping_notes.md` | `[PROJECT] netflix-engagement 04-mapping` |
 | 04 Plan approval and amendment | human | `workflow/04_analysis_plan.md` | `[PROJECT] netflix-engagement 04-plan` |
 | 05 Analysis execution (stopped twice, see section 4) | AI (analyst) | `workflow/05_analysis.md`, `workflow/05a_scope_stop.md`, `workflow/05b_pilot_stop.md`, `pipeline/`, `outputs/q1/` | `[AI-PROJECT] netflix-engagement 05-analysis` |
-| 05 Pilot check | human (with an AI first pass) | `workflow/05_pilot_check` | `[PROJECT] netflix-engagement 05-pilot` |
+| 05 Pilot check | human (with an AI first pass) | `workflow/05_pilot_check.md` | `[PROJECT] netflix-engagement 05-pilot` |
 | 06 Validation (PASS/FAIL) | AI (validator) | `workflow/06_validation.md`, `tests/test_validation_*.py` | `[AI-PROJECT] netflix-engagement 06-validation` |
 | 07 Insights | human | `workflow/07_insights.md` | `[PROJECT] netflix-engagement 07-insights` |
 | 08 Critique | AI (critic) | `workflow/08_critique.md` | `[AI-PROJECT] netflix-engagement 08-critique` |
@@ -47,7 +47,7 @@ Step 10 is skipped because there is no validated seasonal effect to model (`work
 - **Amendment to Gate 1 (03):** the genre source was changed from TMDB to the IMDb Non-Commercial Datasets (`workflow/03_data_plan.md`, "Amendment to Gate 1"; commit `03-amend`). The genre mapping table was committed before any genre share was computed.
 - **Gate 2, analysis plan (04):** the human approved the plan with decisions on check 3, the labelling scope, the second matching stage, the permutation null, the frozen mapping table and a pilot stop with a hand check (`workflow/04_analysis_plan.md`, "Human decisions at Gate 2").
 - **Gate 2, amendment 1 (04):** after the run stopped at the scope cap (section 4), the human raised the cap, added the media type to the title key and fixed the order of the matching stages (`workflow/04_analysis_plan.md`, "Gate 2, amendment 1").
-- **Pilot check (05):** the pilot gate was an AI first pass. The human did not open the IMDb pages and accepted the AI check as the gate, "knowing it is weaker evidence than a hand check" (`workflow/05_pilot_check`). Match accuracy in the full labelled set therefore rests on that AI check, which is listed as a limit.
+- **Pilot check (05):** the pilot gate was an AI first pass. The human did not open the IMDb pages and accepted the AI check as the gate, "knowing it is weaker evidence than a hand check" (`workflow/05_pilot_check.md`). Match accuracy in the full labelled set therefore rests on that AI check, which is listed as a limit.
 - **Insights revised after the critique (07):** the human revised `07_insights.md` after reading the 08 critique (commit `07-insights: revise after critique`). The answers to each critique point are in `workflow/09_recommendations.md`.
 
 ## 4. What the process caught
@@ -86,7 +86,7 @@ Raw data is not in this repo (see `data_manifest.json` for names, row counts, ch
 
 1. Set up the environment from the repo root: Python 3.12, `pip install -r requirements.txt`.
 2. Get the external files listed in `data_manifest.json`: the seven Netflix What We Watched report files (H1 2023 to H1 2026) and the IMDb files `title.basics.tsv.gz`, `title.ratings.tsv.gz` and `title.akas.tsv.gz`. They are stored outside the repo, see `data_manifest.json`. The code reads them from the folders set in `pipeline/load.py` (`NETFLIX_DIR`, `IMDB_DIR`). Do not commit them.
-3. The frozen genre mapping is `config/genre_mapping.csv`. The `full` stage refuses to run without the pilot check file `workflow/05_pilot_check`.
+3. The frozen genre mapping is `config/genre_mapping.csv`. The `full` stage refuses to run without the pilot check file `workflow/05_pilot_check.md`.
 4. From this folder, run: `MPLBACKEND=Agg python main.py full` (stages in `main.py`: `manifest`, `pilot`, `full`). The log is `outputs/q1/full_run.log`.
 5. Run tests: `pytest -q tests`. The validation tests that read the raw files need the external files from step 2.
 
@@ -95,7 +95,7 @@ Raw data is not in this repo (see `data_manifest.json` for names, row counts, ch
 - **Netflix What We Watched reports** (seven half-year files, H1 2023 to H1 2026). Source URLs are in `data_manifest.json`. Terms: "No license stated; raw files are not redistributed" (checked 2026-11-12, `workflow/03_data_plan.md`). Only aggregates are shared.
 - **IMDb Non-Commercial Datasets** (`title.basics`, `title.ratings`, `title.akas`), used only to label genres. Source URLs are in `data_manifest.json`. The manifest records the terms as personal, non-commercial use with only aggregates published.
 - **IMDb attribution notice:** Genre labels use data from the IMDb Non-Commercial Datasets (https://developer.imdb.com/non-commercial-datasets/), used here for personal, non-commercial purposes. Only aggregated results are published.
-- Raw data of both sources is not in this repo. Only aggregated results are (`outputs/q1/`, `outputs/profile/`).
+- Raw data of both sources is not in this repo. Only aggregated results are (`outputs/q1/`, `outputs/profile/`). `outputs/profile/` now keeps only aggregate files (`column_comparison.csv`, `season_notation_patterns.csv`, `title_overlap.csv`); the per-file profiles and title-level examples stay local and are not tracked.
 
 ## 9. Not done
 
