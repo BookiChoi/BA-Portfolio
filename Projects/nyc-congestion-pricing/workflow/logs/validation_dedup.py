@@ -2,7 +2,7 @@
 Also: how many key duplicates are full-row duplicates (one sample file per year)."""
 import duckdb, pandas as pd
 from pathlib import Path
-ROOT = Path("/Users/booki/Desktop/BA-Portfolio/Projects/nyc-congestion-pricing")
+ROOT = Path(__file__).resolve().parents[2]
 lk = pd.read_csv(ROOT / "data/taxi_zone_lookup.csv")
 valid = sorted(set(lk.LocationID) - {264, 265})
 crz = sorted(pd.read_csv(ROOT / "data/MTA_Central_Business_District_Taxi_Zones_20261113.csv")["Taxi Zone"].astype(int).unique())

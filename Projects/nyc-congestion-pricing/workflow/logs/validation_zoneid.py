@@ -1,5 +1,6 @@
 import pickle, pandas as pd
-ROOT = "/Users/booki/Desktop/BA-Portfolio/Projects/nyc-congestion-pricing"
+from pathlib import Path
+ROOT = str(Path(__file__).resolve().parents[2])
 res = pickle.load(open(ROOT + "/workflow/logs/validation_cache/agg.pkl", "rb"))
 lk = set(pd.read_csv(ROOT + "/data/taxi_zone_lookup.csv").LocationID)
 for svc in ("yellow", "fhvhv"):

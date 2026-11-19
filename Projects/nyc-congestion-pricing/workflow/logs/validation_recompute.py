@@ -6,7 +6,7 @@ import numpy as np, pandas as pd
 from scipy import stats
 import statsmodels.formula.api as smf
 
-ROOT = Path("/Users/booki/Desktop/BA-Portfolio/Projects/nyc-congestion-pricing")
+ROOT = Path(__file__).resolve().parents[2]
 LOG = ROOT / "workflow/logs"
 OUTS = ROOT / "outputs"
 res = pickle.load(open(LOG / "validation_cache/agg.pkl", "rb"))

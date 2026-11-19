@@ -1,7 +1,7 @@
 """Validator: independent per-file aggregation with DuckDB SQL (analyst used pyarrow). Output: pickles in workflow/logs/validation_cache."""
 import pickle, time, pandas as pd, duckdb
 from pathlib import Path
-ROOT = Path("/Users/booki/Desktop/BA-Portfolio/Projects/nyc-congestion-pricing")
+ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "workflow/logs/validation_cache"; OUT.mkdir(parents=True, exist_ok=True)
 lk = pd.read_csv(ROOT/"data/taxi_zone_lookup.csv")
 bad = lk[lk["Borough"].isin(["Unknown", "N/A"]) | lk["Zone"].isin(["Unknown", "Outside of NYC", "N/A"])]
