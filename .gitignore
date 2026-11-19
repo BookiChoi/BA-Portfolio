@@ -33,3 +33,16 @@ LinkedIn/
 
 # Set by the /run-project skill while a subagent runs
 .claude/active_project
+
+# Run logs (may contain local paths or title-level lines)
+Projects/*/outputs/**/*.log
+Projects/*/workflow/logs/*.log
+
+# Title-level or individual-level outputs (aggregate files stay tracked)
+Projects/netflix-engagement/outputs/profile/profile_*.json
+Projects/netflix-engagement/outputs/profile/season_notation_examples.csv
+Projects/netflix-engagement/outputs/profile/title_variants.csv
+Projects/netflix-engagement/outputs/q1/pilot_table.csv
+Projects/netflix-engagement/outputs/q1/collisions_top20.csv
+Projects/airbnb-nyc-business-analytics/outputs/q4_host_priority_ranking.csv
+Projects/online-retail-growth-analysis/outputs/q5_top_customers.csv
